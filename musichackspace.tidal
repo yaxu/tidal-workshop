@@ -189,6 +189,10 @@ d1 $ fast (toRational <$> (slow 8 $ scale 1 4 sine)) $ sound "bd*32"
   # hpf (scale 500 5000 sine)
   # hpq 0.2
 
+  d1 $ sound "bd*32"
+    # lpf (slow "4 2" $ scale 500 5000 rand)
+    # lpq 0.2
+
 d1 $ sound "bd*8"
   # lpf (scale 500 5000 tri)
   # lpq 0.2
