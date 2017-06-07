@@ -32,9 +32,11 @@ d1 $ sound "drum"
 
 d1 $ silence
 
+hush
+
 -- Pick a different drum sound with :
 
-d1 $ sound "drum:2"
+d1 $ sound "drum:4"
 
 -- (you can find these samples and add to them in your Dirt-Samples
 -- folder. In supercollider, File > Open user support directory >
@@ -52,6 +54,13 @@ d1 $ sound "bd sn:1 ht:4"
 d1 $ sound "bd sn:1 ht:4 bd sn"
 
 d1 $ sound "bd sn:1 ht:4 bd sn sn:2 sn:5"
+
+d2 $ sound "bd"
+    # room 0.9
+    # size 0.9
+    # orbit 1 -- separating global effects / channels
+
+d1 $ sound "arpy:2*4"
 
 -- Use ~ for a rest/gap
 
