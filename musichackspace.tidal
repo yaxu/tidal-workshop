@@ -64,15 +64,21 @@ d1 $ sound "arpy:2*4"
 
 -- Use ~ for a rest/gap
 
-d1 $ sound "bd sn:1 ~ ht:4 ~ bd sn:1 bd"
+d1 $ sound "bd sn:1 ~ ~ ~ bd sn:1 bd"
 
 -- Subsequences with []
+d1 $ sound "drum:6"
+
 
 d1 $ sound "bd [sn:1 sn:3] ht:4"
 
+d1 $ sound "bd [sn:1 sn:3] ht:4"
+
+d1 $ slow 0.25 $ sound "[bd sn arpy] [bd sn:2]"
+
 -- Play two sequences at the same time with [,]
 
-d1 $ sound "[bd sn:1 ht:4, arpy arpy:2 arpy:5]"
+d1 $ sound "[bd sn:1 ht:4, arpy arpy:2]"
 
 -- They don't have to be the same length, Tidal works it out for you
 
@@ -84,6 +90,14 @@ d1 $ sound "{bd sn:1 ht:4, arpy arpy:2}"
 
 d1 $ sound "{bd sn:1 ht:4, arpy [arpy:2 arpy:3]}"
 
+d1 $ sound "breaks125*8 breaks125*2"
+  # legato 1
+
+d1 $ fast 400 $ sound "bd sn"
+
+d2 $ sound "{~ ~ ~, cp}"
+
+
 -- You can use [] to specify 'subsequences', each will take up the
 -- space of a step:
 
@@ -91,19 +105,28 @@ d1 $ sound "[bd sn:5] [ht sn:2 cp]"
 
 -- Chopping into bits
 
-d1 $ sound "arpy"
+d1 $ sound "co"
 
-d1 $ chop 4 (sound "arpy")
+d1 $ rev $ chop 32 (sound "co")
 
 -- Chop makes a pattern of bits of sound, that you can transform again
 
-d1 $ rev $ chop 4 (sound "arpy")
+d1 $ loopAt 1 $ jux rev $ chop 8 (sound "arpy arpy:2")
+
+cps 1
 
 -- Compare chop and striate:
 
 d1 $ chop 4 (sound "arpy arpy:1")
 
 d1 $ striate 4 (sound "arpy arpy:1")
+
+d1 $ chop 4 $ sound "arpy:1 arpy:2"
+
+d1 $ striate 4 $ sound "arpy:1 arpy:2"
+
+d1 $ jux (# speed 2) $ striate "<32 64 8 2>" $ sound "alphabet:1"
+
 
 -- Many function parameters can be given as patterns
 
@@ -119,9 +142,9 @@ d1 $ fast "<2 1.5>" $ sound "feel drum ~ feel:2"
 
 -- Use * to speed up, and / to slow down steps
 
-d1 $ sound "bd*4 bd*2"
+d1 $ sound "[bd sn]*2 bd*2"
 
-d1 $ sound "bd cp/2"
+d1 $ sound "bd [alphabet alphabet:1 alphabet:2]/3 sn sn"
 
 d1 $ sound "bd [sn:2 cp]/2"
 
@@ -328,3 +351,7 @@ d1 $ pan "0 1" # sound "bd"
 
 |*| - same as |+|, but instead of adding, values get multiplied
 ``
+
+-- long samples
+
+-- maybe type in sample as a name
