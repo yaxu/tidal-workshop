@@ -8,11 +8,21 @@ Worksheet: https://github.com/yaxu/tidal-workshop
                 and click on musichackspace.tidal
 
 
+-- repetition
+-- symmetry
+-- interefence
+-- glitch / randomness
 
+d1 $ jux rev $ sound "bd*2 feel:1 sn:2 arpy"
 
+d1 $ jux rev $ weave 16 (n "0 .. 8" # sound "arpy")
+   [vowel "a e i",
+    vowel "e o [i e] e",
+    speed "1 2 1",
+    vowel "o i u e"
+   ]
 
-
-
+d1 $ someCycles (fast 2) $ sound "amencutup*8" # n (irand 16)
 
 -- Play a drum sound
 
