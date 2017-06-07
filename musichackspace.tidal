@@ -144,7 +144,7 @@ d1 $ fast "<2 1.5>" $ sound "feel drum ~ feel:2"
 
 d1 $ sound "[bd sn]*2 bd*2"
 
-d1 $ sound "bd [alphabet alphabet:1 alphabet:2]/3 sn sn"
+d1 $ sound "bd [alphabet alphabet:1 alphabet:2]/2 sn sn"
 
 d1 $ sound "bd [sn:2 cp]/2"
 
@@ -253,7 +253,6 @@ d1 $ slow 4 $ jux rev $ n "0 .. 3" # sound "numbers"
 d1 $ every 4 rev $ n "0 .. 3" # sound "alphabet"
   # speed 2
 
-
 d1 $ every 4 (0.25 <~) $ n "0 .. 3" # sound "alphabet"
   # speed 2
 
@@ -350,7 +349,6 @@ d1 $ pan "0 1" # sound "bd"
 |+| - the same as #, but if the same numerical pattern is on both the right and the left, they get added together
 
 |*| - same as |+|, but instead of adding, values get multiplied
-``
 
 -- long samples
 
