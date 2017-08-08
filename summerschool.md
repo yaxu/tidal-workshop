@@ -6,7 +6,10 @@ https://tidalcycles.org/getting_started.html
 # Sequencing
 
 ```haskell
-d1 $ sound "bd sn"
+d1 $ sound "kd sd"
+
+
+
 
 # Syntax
 
