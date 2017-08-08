@@ -6,7 +6,6 @@ https://tidalcycles.org/getting_started.html
 # Sequencing
 
 
-
 11th August
 5pm-7pm – optional session covering basics of installation and sequencing
 
