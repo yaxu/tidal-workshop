@@ -9,6 +9,5 @@ from 5pm – excursion to peak district for battery-powered group improv (or sta
 13th August
 9:30am-5pm – customisation, multichannel, midi control (external synths), dmx control (lights), visualisation
 
-
 from 5pm – pub
 
