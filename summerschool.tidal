@@ -52,3 +52,8 @@ d1 (slow 2 (sound "arpy arpy:2"))
 -- .. but we'd quickly end up with a lot of closing brackets to keep
 -- track of.
 
+-- Earlier we noticed that the first parameter was a *pattern* of
+-- time. This means we can pattern it:
+
+
+d1 $ slow "2 4" $ sound "arpy arpy:2"
