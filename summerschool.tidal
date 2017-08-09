@@ -24,7 +24,7 @@ d1 $ sound "bd sd cp sd"
 -- Composing effects
 
 d1 $ sound "bd sd cp sd"
-	# vowel "a e"
+   # vowel "a e"
 
 -- Types
 
