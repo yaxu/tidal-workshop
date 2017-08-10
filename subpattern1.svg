@@ -1,87 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200pt" height="20pt" viewBox="0 0 200 20" version="1.1" shape-rendering="crispEdges" shape-rendering="crispEdges">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200pt" height="10pt" viewBox="0 0 200 10" version="1.1" shape-rendering="crispEdges" shape-rendering="crispEdges">
 <defs>
-<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="25" y2="0" >
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="10" y2="0" >
+<stop offset="0" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="20" y2="0" >
+<stop offset="0" style="stop-color:rgb(100%,100%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,100%,0%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="20" y1="0" x2="30" y2="0" >
 <stop offset="0" style="stop-color:rgb(100%,0%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(100%,0%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="25" y1="0" x2="50" y2="0" >
+<linearGradient id="linear3" gradientUnits="userSpaceOnUse" x1="30" y1="0" x2="40" y2="0" >
 <stop offset="0" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(0%,0%,100%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="50" y1="0" x2="75" y2="0" >
+<linearGradient id="linear4" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="50" y2="0" >
 <stop offset="0" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear3" gradientUnits="userSpaceOnUse" x1="75" y1="0" x2="100" y2="0" >
+<linearGradient id="linear5" gradientUnits="userSpaceOnUse" x1="50" y1="0" x2="60" y2="0" >
+<stop offset="0" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear6" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="70" y2="0" >
+<stop offset="0" style="stop-color:rgb(100%,100%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,100%,0%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear7" gradientUnits="userSpaceOnUse" x1="70" y1="0" x2="80" y2="0" >
 <stop offset="0" style="stop-color:rgb(100%,0%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(100%,0%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear4" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="125" y2="0" >
+<linearGradient id="linear8" gradientUnits="userSpaceOnUse" x1="80" y1="0" x2="90" y2="0" >
 <stop offset="0" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(0%,0%,100%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear5" gradientUnits="userSpaceOnUse" x1="125" y1="0" x2="150" y2="0" >
+<linearGradient id="linear9" gradientUnits="userSpaceOnUse" x1="90" y1="0" x2="100" y2="0" >
 <stop offset="0" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear6" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="175" y2="0" >
+<linearGradient id="linear10" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="110" y2="0" >
+<stop offset="0" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear11" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="120" y2="0" >
+<stop offset="0" style="stop-color:rgb(100%,100%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,100%,0%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear12" gradientUnits="userSpaceOnUse" x1="120" y1="0" x2="130" y2="0" >
 <stop offset="0" style="stop-color:rgb(100%,0%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(100%,0%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear7" gradientUnits="userSpaceOnUse" x1="175" y1="0" x2="200" y2="0" >
+<linearGradient id="linear13" gradientUnits="userSpaceOnUse" x1="130" y1="0" x2="140" y2="0" >
 <stop offset="0" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(0%,0%,100%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear8" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="25" y2="0" >
+<linearGradient id="linear14" gradientUnits="userSpaceOnUse" x1="140" y1="0" x2="150" y2="0" >
+<stop offset="0" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear15" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="160" y2="0" >
 <stop offset="0" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear9" gradientUnits="userSpaceOnUse" x1="25" y1="0" x2="50" y2="0" >
+<linearGradient id="linear16" gradientUnits="userSpaceOnUse" x1="160" y1="0" x2="170" y2="0" >
 <stop offset="0" style="stop-color:rgb(100%,100%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(100%,100%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear10" gradientUnits="userSpaceOnUse" x1="50" y1="0" x2="75" y2="0" >
-<stop offset="0" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:0.5;"/>
+<linearGradient id="linear17" gradientUnits="userSpaceOnUse" x1="170" y1="0" x2="180" y2="0" >
+<stop offset="0" style="stop-color:rgb(100%,0%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,0%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear11" gradientUnits="userSpaceOnUse" x1="75" y1="0" x2="100" y2="0" >
-<stop offset="0" style="stop-color:rgb(100%,100%,0%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(100%,100%,0%);stop-opacity:0.5;"/>
+<linearGradient id="linear18" gradientUnits="userSpaceOnUse" x1="180" y1="0" x2="190" y2="0" >
+<stop offset="0" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(0%,0%,100%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear12" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="125" y2="0" >
-<stop offset="0" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:0.5;"/>
-</linearGradient>
-<linearGradient id="linear13" gradientUnits="userSpaceOnUse" x1="125" y1="0" x2="150" y2="0" >
-<stop offset="0" style="stop-color:rgb(100%,100%,0%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(100%,100%,0%);stop-opacity:0.5;"/>
-</linearGradient>
-<linearGradient id="linear14" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="175" y2="0" >
-<stop offset="0" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:0.5;"/>
-</linearGradient>
-<linearGradient id="linear15" gradientUnits="userSpaceOnUse" x1="175" y1="0" x2="200" y2="0" >
-<stop offset="0" style="stop-color:rgb(100%,100%,0%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(100%,100%,0%);stop-opacity:0.5;"/>
+<linearGradient id="linear19" gradientUnits="userSpaceOnUse" x1="190" y1="0" x2="200" y2="0" >
+<stop offset="0" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:0.5;"/>
 </linearGradient>
 </defs>
-<g id="surface69">
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 0 0 L 25 0 L 25 10 L 0 10 Z M 0 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 25 0 L 50 0 L 50 10 L 25 10 Z M 25 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 50 0 L 75 0 L 75 10 L 50 10 Z M 50 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear3);" d="M 75 0 L 100 0 L 100 10 L 75 10 Z M 75 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear4);" d="M 100 0 L 125 0 L 125 10 L 100 10 Z M 100 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear5);" d="M 125 0 L 150 0 L 150 10 L 125 10 Z M 125 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear6);" d="M 150 0 L 175 0 L 175 10 L 150 10 Z M 150 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear7);" d="M 175 0 L 200 0 L 200 10 L 175 10 Z M 175 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear8);" d="M 0 10 L 25 10 L 25 20 L 0 20 Z M 0 10 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear9);" d="M 25 10 L 50 10 L 50 20 L 25 20 Z M 25 10 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear10);" d="M 50 10 L 75 10 L 75 20 L 50 20 Z M 50 10 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear11);" d="M 75 10 L 100 10 L 100 20 L 75 20 Z M 75 10 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear12);" d="M 100 10 L 125 10 L 125 20 L 100 20 Z M 100 10 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear13);" d="M 125 10 L 150 10 L 150 20 L 125 20 Z M 125 10 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear14);" d="M 150 10 L 175 10 L 175 20 L 150 20 Z M 150 10 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear15);" d="M 175 10 L 200 10 L 200 20 L 175 20 Z M 175 10 "/>
+<g id="surface73">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 0 0 L 10 0 L 10 10 L 0 10 Z M 0 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 10 0 L 20 0 L 20 10 L 10 10 Z M 10 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 20 0 L 30 0 L 30 10 L 20 10 Z M 20 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear3);" d="M 30 0 L 40 0 L 40 10 L 30 10 Z M 30 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear4);" d="M 40 0 L 50 0 L 50 10 L 40 10 Z M 40 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear5);" d="M 50 0 L 60 0 L 60 10 L 50 10 Z M 50 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear6);" d="M 60 0 L 70 0 L 70 10 L 60 10 Z M 60 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear7);" d="M 70 0 L 80 0 L 80 10 L 70 10 Z M 70 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear8);" d="M 80 0 L 90 0 L 90 10 L 80 10 Z M 80 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear9);" d="M 90 0 L 100 0 L 100 10 L 90 10 Z M 90 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear10);" d="M 100 0 L 110 0 L 110 10 L 100 10 Z M 100 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear11);" d="M 110 0 L 120 0 L 120 10 L 110 10 Z M 110 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear12);" d="M 120 0 L 130 0 L 130 10 L 120 10 Z M 120 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear13);" d="M 130 0 L 140 0 L 140 10 L 130 10 Z M 130 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear14);" d="M 140 0 L 150 0 L 150 10 L 140 10 Z M 140 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear15);" d="M 150 0 L 160 0 L 160 10 L 150 10 Z M 150 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear16);" d="M 160 0 L 170 0 L 170 10 L 160 10 Z M 160 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear17);" d="M 170 0 L 180 0 L 180 10 L 170 10 Z M 170 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear18);" d="M 180 0 L 190 0 L 190 10 L 180 10 Z M 180 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear19);" d="M 190 0 L 200 0 L 200 10 L 190 10 Z M 190 0 "/>
 </g>
 </svg>
