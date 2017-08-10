@@ -29,7 +29,7 @@ hush
 
 -- The longer the sequence, the faster it runs
 
-d1 $ sound "bd bd hh bd sn bd hh bd"
+d1 $ sound "bd bd hh bd sd bd hh bd"
 
 -- Where do these sounds come from? 
 
