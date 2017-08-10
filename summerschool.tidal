@@ -31,6 +31,10 @@ hush
 
 d1 $ sound "bd bd hh bd sd bd hh bd"
 
+-- Add gaps
+
+d1 $ sound "bd ~ hh bd sd ~ hh bd"
+
 -- Where do these sounds come from? 
 
 -- In the menus in SuperCollider (not atom):
