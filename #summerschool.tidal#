@@ -1,0 +1,124 @@
+{-
+
+11th August
+5pm-7pm – optional session covering basics of installation and sequencing
+
+12th August
+10am-5pm – repetition, symmetry, interference and glitch, ensemble play
+from 5pm – potential excursion to the peak district for battery-powered group improv
+
+13th August
+9:30am-5pm – customisation, multichannel, midi control (external synths), dmx control (lights), visualisation
+
+from 5pm – pub?
+-}
+
+-- Installation
+
+https://tidalcycles.org/getting_started.html
+
+-- Sequencing
+
+d1 $ sound "bd sd cp sd"
+
+-- Silencing
+
+d1 $ silence
+
+hush
+
+-- The longer the sequence, the faster it runs
+
+d1 $ sound "bd bd hh bd sd bd hh bd"
+
+-- Add gaps
+
+d1 $ sound "bd ~ hh bd sd ~ hh bd"
+
+-- Pick from a 
+
+-- Where do these sounds come from? 
+
+-- In the menus in SuperCollider (not atom):
+-- - File > Open user support directory > downloaded-quarks > Dirt-Samples
+
+-- How do I add more sounds? Here's some..
+
+http://slab.org/tmp/extra-samples.zip
+
+-- Change the superdirt startup, instructions here:
+https://github.com/musikinformatik/SuperDirt
+
+-- Composing effects
+
+d1 $ sound "bd sd cp sd"
+   # vowel "a e"
+
+-- Types
+
+:t slow
+
+-- gives: slow :: Pattern Time -> Pattern a -> Pattern a
+
+-- Slow takes a pattern of time, a pattern (of something) and results in a pattern (of that something)
+
+d1 $ slow 2 (sound "arpy arpy:2")
+
+-- We have to wrap that last pattern in brackets so that it gets passed as the second parameter of `slow`.
+
+-- Instead we can do this:
+
+d1 $ slow 2 $ sound "arpy arpy:2"
+
+-- The $ means 'pass everything on the right, to the function on the
+-- left'. It saves having to remember to put the closing bracket in.
+-- `d1` is a function as well, which takes exactly one pattern, which
+-- it sends to the synthesiser. We could do this instead:
+
+d1 (slow 2 (sound "arpy arpy:2"))
+
+-- .. but we'd quickly end up with a lot of closing brackets to keep
+-- track of.
+
+-- Earlier we noticed that the first parameter was a *pattern* of
+-- time. This means we can pattern it:
+
+
+d1 $ slow "2 4" $ sound "arpy arpy:2"
+
+-- There are a lot of patterns in the above! Lets look at the bits.
+
+-- This is a pattern of words (also known as 'strings'):
+"arpy arpy:2"
+
+-- This is a pattern of names of sounds:
+sound "arpy arpy:2"
+
+-- This is a pattern of whole numbers (also known as 'integers'):
+"2 4"
+
+-- This isn't actually a pattern, but a function that takes a pattern as input, and returns a slowed down pattern
+slow "2 4"
+
+-- This isn't a pattern either, but a strange little function that
+-- takes everything on the right and gives it to the function on the
+-- left:
+$
+
+-- But it together and you get a pattern again, a pattern of sounds
+slow "2 4" $ sound "arpy arpy:2"
+
+-- This is also a function, that takes a pattern as input and starts
+-- sending it off to the synthesiser to be turned into sound.
+d1
+
+-- There's another one of these dollars to take everything on the right and pass it to d1
+$
+
+-- And the whole thing, which is an action to change what is being sent to the synthesiser
+d1 $ slow "2 4" $ sound "arpy arpy:2"
+
+-- Functions like "slow" will work on any pattern. We could have
+-- slowed down the pattern of words rather than the pattern of sounds:
+d1 $ sound (slow "2 4" "arpy arpy:2")
+
