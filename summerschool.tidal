@@ -21,6 +21,10 @@ https://tidalcycles.org/getting_started.html
 
 d1 $ sound "bd sd cp sd"
 
+-- Silencing
+
+d1 $ silence
+
 -- Composing effects
 
 d1 $ sound "bd sd cp sd"
