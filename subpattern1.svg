@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200pt" height="20pt" viewBox="0 0 200 20" version="1.1" shape-rendering="crispEdges" shape-rendering="crispEdges">
 <defs>
-<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="0" >
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="150" y2="0" >
 <stop offset="0" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="200" y2="0" >
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="200" y2="0" >
 <stop offset="0" style="stop-color:rgb(100%,100%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(100%,100%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="66.666667" y2="0" >
-<stop offset="0" style="stop-color:rgb(100%,0%,0%);stop-opacity:1;"/>
-<stop offset="1" style="stop-color:rgb(100%,0%,0%);stop-opacity:0.5;"/>
-</linearGradient>
-<linearGradient id="linear3" gradientUnits="userSpaceOnUse" x1="66.666667" y1="0" x2="133.333333" y2="0" >
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="0" >
 <stop offset="0" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(0%,0%,100%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear4" gradientUnits="userSpaceOnUse" x1="133.333333" y1="0" x2="200" y2="0" >
+<linearGradient id="linear3" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="133.333333" y2="0" >
+<stop offset="0" style="stop-color:rgb(100%,0%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,0%,0%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear4" gradientUnits="userSpaceOnUse" x1="133.333333" y1="0" x2="166.666667" y2="0" >
+<stop offset="0" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(0%,0%,100%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear5" gradientUnits="userSpaceOnUse" x1="166.666667" y1="0" x2="200" y2="0" >
 <stop offset="0" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:0.5;"/>
 </linearGradient>
 </defs>
-<g id="surface41">
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 0 0 L 100 0 L 100 10 L 0 10 Z M 0 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 100 0 L 200 0 L 200 10 L 100 10 Z M 100 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 0 10 L 66.667969 10 L 66.667969 20 L 0 20 Z M 0 10 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear3);" d="M 66.667969 10 L 133.335938 10 L 133.335938 20 L 66.667969 20 Z M 66.667969 10 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear4);" d="M 133.332031 10 L 200 10 L 200 20 L 133.332031 20 Z M 133.332031 10 "/>
+<g id="surface45">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 100 0 L 150 0 L 150 10 L 100 10 Z M 100 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 150 0 L 200 0 L 200 10 L 150 10 Z M 150 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 0 0 L 100 0 L 100 10 L 0 10 Z M 0 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear3);" d="M 100 10 L 133.332031 10 L 133.332031 20 L 100 20 Z M 100 10 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear4);" d="M 133.332031 10 L 166.664062 10 L 166.664062 20 L 133.332031 20 Z M 133.332031 10 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear5);" d="M 166.667969 10 L 200 10 L 200 20 L 166.667969 20 Z M 166.667969 10 "/>
 </g>
 </svg>
