@@ -32,3 +32,4 @@ d1 $ every 4 rev $ sound "bd sd"
 
 d1 $ sound "bd sd [~ bd] sd"
 
+fast 4 $ iter 4 "black blue lightblue white"
