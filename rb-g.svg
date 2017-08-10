@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600pt" height="30pt" viewBox="0 0 600 30" version="1.1" shape-rendering="crispEdges" shape-rendering="crispEdges">
 <defs>
-<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="150" y2="0" >
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="300" y1="0" x2="375" y2="0" >
+<stop offset="0" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="375" y1="0" x2="450" y2="0" >
+<stop offset="0" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(50.196078%,0%,50.196078%);stop-opacity:0.5;"/>
+</linearGradient>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="150" y2="0" >
 <stop offset="0" style="stop-color:rgb(100%,0%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(100%,0%,0%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="300" y2="0" >
+<linearGradient id="linear3" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="300" y2="0" >
 <stop offset="0" style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(0%,0%,100%);stop-opacity:0.5;"/>
 </linearGradient>
-<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="450" y1="0" x2="600" y2="0" >
+<linearGradient id="linear4" gradientUnits="userSpaceOnUse" x1="450" y1="0" x2="600" y2="0" >
 <stop offset="0" style="stop-color:rgb(0%,50.196078%,0%);stop-opacity:1;"/>
 <stop offset="1" style="stop-color:rgb(0%,50.196078%,0%);stop-opacity:0.5;"/>
 </linearGradient>
 </defs>
-<g id="surface1">
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 0 0 L 150 0 L 150 30 L 0 30 Z M 0 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 150 0 L 300 0 L 300 30 L 150 30 Z M 150 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 450 0 L 600 0 L 600 30 L 450 30 Z M 450 0 "/>
+<g id="surface5">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 300 0 L 375 0 L 375 30 L 300 30 Z M 300 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 375 0 L 450 0 L 450 30 L 375 30 Z M 375 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 0 0 L 150 0 L 150 30 L 0 30 Z M 0 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear3);" d="M 150 0 L 300 0 L 300 30 L 150 30 Z M 150 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear4);" d="M 450 0 L 600 0 L 600 30 L 450 30 Z M 450 0 "/>
 </g>
 </svg>
