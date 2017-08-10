@@ -57,3 +57,5 @@ d1 (slow 2 (sound "arpy arpy:2"))
 
 
 d1 $ slow "2 4" $ sound "arpy arpy:2"
+
+-- There are a lot of patterns in the above!
