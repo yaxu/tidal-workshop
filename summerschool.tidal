@@ -27,6 +27,10 @@ d1 $ silence
 
 hush
 
+-- Adding sounds
+
+
+
 -- Composing effects
 
 d1 $ sound "bd sd cp sd"
