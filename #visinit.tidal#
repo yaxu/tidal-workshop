@@ -1,0 +1,26 @@
+import Sound.Tidal.Vis
+import Sound.OSC.FD
+import Control.Concurrent.MVar
+import Data.Maybe
+import System.IO.Unsafe
+
+import qualified Graphics.Rendering.Cairo as C 
+import Data.Colour
+import Data.Colour.Names
+import Data.Colour.SRGB
+
+import Sound.Tidal.Vis2
+import System.Cmd
+
+let v p = do vis "pen" p
+             rawSystem "convert" ["pen.svg", "pen.pdf"]
+             return()
+    v2 p = do vis "nice" p
+              rawSystem "convert" ["nice.svg", "nice.pdf"]
+              return()             
+    blend' :: Pattern ColourD -> Pattern ColourD -> Pattern ColourD
+    blend' a b = blend 0.5 <$> b <*> a
+    d p = do d10 $ p
+             v $ density 12 $ dirtToColour p
+    dirtToColour :: ParamPattern -> Pattern ColourD
+    dirtToColour = fmap (stringToColour . show)
