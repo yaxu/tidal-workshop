@@ -12,7 +12,7 @@ import Data.Colour.SRGB
 import Sound.Tidal.Vis2
 import System.Cmd
 
-let v name p = do vis name p
+let v name p = do vis (name ++ ".svg") p
                   rawSystem "convert" [name ++ ".svg", name ++ ".pdf"]
                   return()             
                   blend' :: Pattern ColourD -> Pattern ColourD -> Pattern ColourD
