@@ -21,5 +21,9 @@ let v name p = do vis (name) p
 
 
 v "subpattern1" $
-  "[purple yellow, red blue orange]"
+  "{purple yellow, red blue orange}"
+
+
+v "subpattern1" $
+  "{purple yellow, red blue orange}"
 
