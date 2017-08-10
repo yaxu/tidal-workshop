@@ -1429,6 +1429,31 @@
          style="stop-color:rgb(100%,64.705882%,0%);stop-opacity:0.5;"
          id="stop3446" />
     </linearGradient>
+    <linearGradient
+       id="linear1-7"
+       gradientUnits="userSpaceOnUse"
+       x1="100"
+       y1="0"
+       x2="200"
+       y2="0">
+      <stop
+         offset="0"
+         style="stop-color:rgb(0%,0%,100%);stop-opacity:1;"
+         id="stop7995" />
+      <stop
+         offset="1"
+         style="stop-color:rgb(0%,0%,100%);stop-opacity:0.5;"
+         id="stop7997" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linear2-77"
+       id="linearGradient8081"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       y1="0"
+       x2="100"
+       y2="0" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1439,7 +1464,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.1442756"
      inkscape:cx="523.56811"
-     inkscape:cy="460.37933"
+     inkscape:cy="404.41637"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1456,7 +1481,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3347,5 +3372,29 @@
          x="76.266426"
          y="200.05121"
          style="stroke-width:0.26458332px">&quot;blue [purple yellow, red blue orange]&quot;</tspan></text>
+    <g
+       transform="matrix(0.35277777,0,0,0.35277777,45.049467,213.63854)"
+       id="surface65">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient8081);fill-rule:nonzero;stroke:none"
+         d="M 0,0 H 100 V 10 H 0 Z m 0,0"
+         id="path8012" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linear1-7);fill-rule:nonzero;stroke:none"
+         d="M 100,0 H 200 V 10 H 100 Z m 0,0"
+         id="path8014" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linear0-30);fill-rule:nonzero;stroke:none"
+         d="M 0,10 H 100 V 20 H 0 Z m 0,0"
+         id="path8016" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linear1-30);fill-rule:nonzero;stroke:none"
+         d="M 100,10 H 200 V 20 H 100 Z m 0,0"
+         id="path8018" />
+    </g>
   </g>
 </svg>
