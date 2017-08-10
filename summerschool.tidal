@@ -25,6 +25,8 @@ d1 $ sound "bd sd cp sd"
 
 d1 $ silence
 
+hush
+
 -- Composing effects
 
 d1 $ sound "bd sd cp sd"
