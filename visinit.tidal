@@ -25,7 +25,7 @@ v "subpattern1" $
 
 
 v "subpattern1" $
-  "purple yellow red blue orange"
+  "purple yellow ~ blue ~"
 
 
 d1 $ every 4 rev $ sound "bd sd"
