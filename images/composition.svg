@@ -1704,8 +1704,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.1442756"
-     inkscape:cx="445.68633"
+     inkscape:zoom="1.7991667"
+     inkscape:cx="396.85039"
      inkscape:cy="348.45342"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -3531,7 +3531,9 @@
     </g>
     <g
        id="surface37-9"
-       transform="matrix(0.35277777,0,0,-0.35277777,75.897101,192.80783)">
+       transform="matrix(0.35277777,0,0,-0.35277777,75.897101,192.80783)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
       <path
          style="fill:url(#linear0-05);fill-rule:nonzero;stroke:none"
          d="M 0,0 H 100 V 10 H 0 Z m 0,0"
@@ -3563,7 +3565,9 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="75.515015"
        y="183.93866"
-       id="text3417"><tspan
+       id="text3417"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan3415"
          x="75.515015"
