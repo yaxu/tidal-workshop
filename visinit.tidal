@@ -12,13 +12,10 @@ import Data.Colour.SRGB
 import Sound.Tidal.Vis2
 import System.Cmd
 
-let v p = do vis "pen" p
-             rawSystem "convert" ["pen.svg", "pen.pdf"]
-             return()
-    v2 p = do vis "nice" p
-              rawSystem "convert" ["nice.svg", "nice.pdf"]
-              return()             
-    blend' :: Pattern ColourD -> Pattern ColourD -> Pattern ColourD
+let v name p = do vis name p
+                  rawSystem "convert" ["nice.svg", "nice.pdf"]
+                  return()             
+                  blend' :: Pattern ColourD -> Pattern ColourD -> Pattern ColourD
     blend' a b = blend 0.5 <$> b <*> a
     d p = do d10 $ p
              v $ density 12 $ dirtToColour p
