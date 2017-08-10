@@ -15,7 +15,7 @@ import System.Cmd
 let v name p = do vis (name ++ ".svg") p
                   rawSystem "convert" [name ++ ".svg", name ++ ".pdf"]
                   return()             
-                  blend' :: Pattern ColourD -> Pattern ColourD -> Pattern ColourD
+    blend' :: Pattern ColourD -> Pattern ColourD -> Pattern ColourD
     blend' a b = blend 0.5 <$> b <*> a
     d p = do d10 $ p
              v $ density 12 $ dirtToColour p
