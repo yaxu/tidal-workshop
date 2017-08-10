@@ -27,7 +27,13 @@ d1 $ silence
 
 hush
 
--- Adding sounds, here's some
+
+-- Where do these sounds come from? 
+
+-- In the menus in SuperCollider (not atom):
+-- - File > Open user support directory > downloaded-quarks > Dirt-Samples
+
+-- How do I add more sounds? Here's some..
 
 http://slab.org/tmp/extra-samples.zip
 
