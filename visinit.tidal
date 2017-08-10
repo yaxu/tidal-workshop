@@ -20,5 +20,6 @@ let v name p = do vis (name) p
     blend' a b = blend 0.5 <$> b <*> a
 
 
-v "subpattern1" "red blue [orange purple pink] green"
+v "subpattern1"
+  "red blue [orange [purple yellow] pink] green"
 
