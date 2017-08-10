@@ -69,4 +69,7 @@ sound "arpy arpy:2"
 -- This is a pattern of whole numbers (also known as 'integers'):
 "2 4"
 
--- This isn't actually a pattern
+-- This isn't actually a pattern, but a function that takes a pattern as input, and returns a slowed down pattern
+slow "2 4"
+
+slow "2 4" $ sound "arpy arpy:2"
