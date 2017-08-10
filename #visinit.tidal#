@@ -20,4 +20,4 @@ let v name p = do vis (name) p
     blend' a b = blend 0.5 <$> b <*> a
 
 
-v "rb-g" "red blue ~ green"
+v "rb-g" "red blue [orange purple] green"
