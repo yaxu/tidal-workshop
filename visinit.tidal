@@ -25,5 +25,5 @@ v "subpattern1" $
 
 
 v "subpattern1" $
-  "{purple yellow, red blue orange}"
+  fast 4 "{purple yellow, red blue orange}"
 
