@@ -12,7 +12,7 @@ import Data.Colour.SRGB
 import Sound.Tidal.Vis2
 import System.Cmd
 
-let v name p = do vis (name ++ ".svg") p
+let v name p = do vis (name) p
                   -- rawSystem "/home/alex/Dropbox/bin/fixsvg.pl" [name]
                   rawSystem "convert" [name ++ ".svg", name ++ ".pdf"]
                   return ()             
