@@ -25,7 +25,7 @@ v "subpattern1" $
 
 
 v "subpattern1" $
-  fast 4 $ iter 4 "green blue orange yellow"
+  fast 4 $ iter 4 "black blue skyblue lightblue"
 
 
 d1 $ every 4 rev $ sound "bd sd"
