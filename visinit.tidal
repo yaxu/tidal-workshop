@@ -17,7 +17,5 @@ let v name p = do vis (name ++ ".svg") p
                   return ()             
     blend' :: Pattern ColourD -> Pattern ColourD -> Pattern ColourD
     blend' a b = blend 0.5 <$> b <*> a
-    d p = do d10 $ p
-             v $ density 12 $ dirtToColour p
     dirtToColour :: ParamPattern -> Pattern ColourD
     dirtToColour = fmap (stringToColour . show)
