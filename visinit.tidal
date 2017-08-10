@@ -18,3 +18,6 @@ let v name p = do vis (name ++ ".svg") p
                   return ()             
     blend' :: Pattern ColourD -> Pattern ColourD -> Pattern ColourD
     blend' a b = blend 0.5 <$> b <*> a
+
+
+v "rbg" "red blue green"
