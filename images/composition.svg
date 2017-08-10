@@ -2645,7 +2645,7 @@
        inkscape:export-xdpi="300.26056"
        inkscape:export-ydpi="300.26056" />
     <g
-       transform="matrix(0.35277777,0,0,0.35277777,77.296271,116.54751)"
+       transform="matrix(0.35277777,0,0,0.35277777,76.402598,118.58048)"
        id="surface1">
       <path
          inkscape:connector-curvature="0"
@@ -2676,16 +2676,16 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="76.729149"
-       y="115.88956"
+       x="75.936821"
+       y="117.47703"
        id="text878"><tspan
          sodipodi:role="line"
          id="tspan876"
-         x="76.729149"
-         y="115.88956"
+         x="75.936821"
+         y="117.47703"
          style="stroke-width:0.26458332px">&quot;red blue [orange purple] green&quot;</tspan></text>
     <g
-       transform="matrix(0.35277777,0,0,0.35277777,76.577098,128.23905)"
+       transform="matrix(0.35277777,0,0,0.35277777,76.402598,129.04319)"
        id="surface5">
       <path
          inkscape:connector-curvature="0"
@@ -2731,16 +2731,16 @@
          id="flowPara1024" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="76.402596"
-       y="127.01756"
+       x="75.936821"
+       y="127.93975"
        id="text1028"><tspan
          sodipodi:role="line"
          id="tspan1026"
-         x="76.402596"
-         y="127.01756"
+         x="75.936821"
+         y="127.93975"
          style="stroke-width:0.26458332px">&quot;red blue [orange purple pink] green&quot;</tspan></text>
     <g
-       transform="matrix(0.35277777,0,0,0.35277777,76.402598,138.70909)"
+       transform="matrix(0.35277777,0,0,0.35277777,76.402598,139.50591)"
        id="surface9">
       <path
          inkscape:connector-curvature="0"
@@ -2781,32 +2781,32 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="76.402596"
-       y="138.70909"
+       x="75.936821"
+       y="138.40245"
        id="text1189"><tspan
          sodipodi:role="line"
          id="tspan1187"
-         x="76.402596"
-         y="138.70909"
+         x="75.936821"
+         y="138.40245"
          style="stroke-width:0.26458332px">&quot;red blue [orange [purple yellow] pink] green&quot;</tspan><tspan
          sodipodi:role="line"
-         x="76.402596"
-         y="142.23686"
+         x="75.936821"
+         y="141.93022"
          style="stroke-width:0.26458332px"
          id="tspan1191" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="76.780258"
-       y="147.6275"
+       x="75.936821"
+       y="148.86516"
        id="text1195"><tspan
          sodipodi:role="line"
          id="tspan1193"
-         x="76.780258"
-         y="147.6275"
+         x="75.936821"
+         y="148.86516"
          style="stroke-width:0.26458332px">&quot;[red blue orange] [purple yellow pink green]&quot;</tspan></text>
     <g
-       transform="matrix(0.35277777,0,0,0.35277777,77.163853,148.83012)"
+       transform="matrix(0.35277777,0,0,0.35277777,76.402598,149.96863)"
        id="surface17">
       <path
          inkscape:connector-curvature="0"
@@ -2845,7 +2845,8 @@
          id="path1246" />
     </g>
     <g
-       id="g2993">
+       id="g2993"
+       transform="translate(-1.283671,3.5681123e-6)">
       <g
          id="g2974">
         <path
@@ -2937,16 +2938,16 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="77.24247"
-       y="169.38808"
+       x="76.133881"
+       y="169.79059"
        id="text2857"><tspan
          sodipodi:role="line"
          id="tspan2855"
-         x="77.24247"
-         y="169.38808"
+         x="76.133881"
+         y="169.79059"
          style="stroke-width:0.26458332px">fast 4 &quot;&lt;red blue orange&gt; [purple yellow]&quot;</tspan></text>
     <g
-       transform="matrix(0.35277777,0,0,0.35277777,77.562878,161.23397)"
+       transform="matrix(0.35277777,0,0,0.35277777,76.402598,160.43134)"
        id="surface33">
       <path
          inkscape:connector-curvature="0"
@@ -2967,13 +2968,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="76.977417"
-       y="160.56624"
+       x="75.936821"
+       y="159.32788"
        id="text2857-6"><tspan
          sodipodi:role="line"
          id="tspan2855-4"
-         x="76.977417"
-         y="160.56624"
+         x="75.936821"
+         y="159.32788"
          style="stroke-width:0.26458332px">&quot;&lt;red blue orange&gt; [purple yellow]&quot;</tspan></text>
   </g>
 </svg>
