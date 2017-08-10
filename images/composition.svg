@@ -1884,9 +1884,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.7991667"
-     inkscape:cx="258.21606"
-     inkscape:cy="353.56489"
+     inkscape:zoom="5.0888118"
+     inkscape:cx="127.69975"
+     inkscape:cy="304.86398"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -4599,7 +4599,7 @@
            y="182.13237"
            x="16.481411"
            id="tspan8904-9"
-           sodipodi:role="line">&quot;3 5 2 1&quot; + &quot;10 20 30&quot;</tspan></text>
+           sodipodi:role="line">&quot;10 20 30&quot; + &quot;3 5 2 1&quot;</tspan></text>
     </g>
   </g>
 </svg>
