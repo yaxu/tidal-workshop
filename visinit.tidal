@@ -13,7 +13,7 @@ import Sound.Tidal.Vis2
 import System.Cmd
 
 let v name p = do vis name p
-                  rawSystem "convert" ["nice.svg", "nice.pdf"]
+                  rawSystem "convert" [name ++".svg", name ++ ".pdf"]
                   return()             
                   blend' :: Pattern ColourD -> Pattern ColourD -> Pattern ColourD
     blend' a b = blend 0.5 <$> b <*> a
