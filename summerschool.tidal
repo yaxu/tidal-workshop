@@ -35,6 +35,10 @@ d1 $ sound "bd bd hh bd sd bd hh bd"
 
 d1 $ sound "bd ~ hh bd sd ~ hh bd"
 
+-- Pick from a sampleset
+
+d1 $ sound "arpy arpy:4 arpy:5"
+
 -- Where do these sounds come from? 
 
 -- In the menus in SuperCollider (not atom):
