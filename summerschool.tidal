@@ -124,3 +124,5 @@ d1 $ slow "2 4" $ sound "arpy arpy:2"
 d1 $ sound (slow "2 4" "arpy arpy:2")
 
 
+-- Granular Synthesis
+
