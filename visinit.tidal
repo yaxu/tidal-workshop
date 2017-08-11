@@ -25,7 +25,12 @@ v "subpattern1" $
 
 
 v "subpattern1" $
-  fast 4 $ iter 4 "black blue lightblue white"
+  "tomato*8"
+
+d1 $ loopAt 1 $ sound "arc"
+
+d1 $ sound "arc"
+  # speed 2.45
 
 
 d1 $ every 4 rev $ sound "bd sd"
