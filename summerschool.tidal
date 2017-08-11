@@ -132,3 +132,7 @@ d1 $ sound (slow "2 4" "arpy arpy:2")
 -- loopAt
 
 -- Granular Synthesis
+
+-- every
+
+-- off
