@@ -5693,7 +5693,9 @@
          style="stroke-width:0.26458332px">7/8</tspan></text>
     <g
        id="g13247"
-       transform="translate(-0.44012642)">
+       transform="translate(-0.44012642,-4.3470427)"
+       inkscape:export-xdpi="299.40451"
+       inkscape:export-ydpi="299.40451">
       <g
          transform="matrix(0.34771731,0,0,0.34771731,-9.3873444,273.90655)"
          id="g12976">
@@ -5849,7 +5851,9 @@
     </g>
     <g
        id="g13221"
-       transform="translate(-0.26048577)">
+       transform="translate(-0.26048577,-3.3608645e-6)"
+       inkscape:export-xdpi="299.40451"
+       inkscape:export-ydpi="299.40451">
       <g
          id="g12976-6"
          transform="matrix(0.34771731,0,0,0.34771731,55.017167,289.90495)">
@@ -6005,7 +6009,9 @@
     </g>
     <g
        id="g13271"
-       transform="translate(-0.49283898)">
+       transform="translate(-0.49283898,-0.62916711)"
+       inkscape:export-xdpi="299.40451"
+       inkscape:export-ydpi="299.40451">
       <g
          transform="matrix(0.34771731,0,0,0.34771731,-9.3873445,243.96086)"
          id="g12827">
@@ -6720,7 +6726,9 @@ AAAASUVORK5CYII=
     </g>
     <g
        id="g13283"
-       transform="translate(-0.95801366)">
+       transform="translate(-0.95801366,1.5265152)"
+       inkscape:export-xdpi="299.40451"
+       inkscape:export-ydpi="299.40451">
       <g
          transform="matrix(0.55634773,0,0,0.34771759,-19.068682,221.47489)"
          id="g12827-6">
@@ -6801,27 +6809,33 @@ AAAASUVORK5CYII=
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="6.8151679"
-       y="328.19586"
-       id="text13107"><tspan
+       y="329.78336"
+       id="text13107"
+       inkscape:export-xdpi="299.40451"
+       inkscape:export-ydpi="299.40451"><tspan
          sodipodi:role="line"
          id="tspan13105"
          x="6.8151679"
-         y="328.19586"
+         y="329.78336"
          style="stroke-width:0.26458332px">d1 $ sound &quot;arc&quot;</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="6.8151679"
-       y="350.27609"
-       id="text13107-2"><tspan
+       y="349.94138"
+       id="text13107-2"
+       inkscape:export-xdpi="299.40451"
+       inkscape:export-ydpi="299.40451"><tspan
          sodipodi:role="line"
          id="tspan13105-8"
          x="6.8151679"
-         y="350.27609"
+         y="349.94138"
          style="stroke-width:0.26458332px">d1 $ sound &quot;arc&quot; # speed 2.45</tspan></text>
     <g
        id="g13259"
-       transform="translate(-0.4674083)">
+       transform="translate(-0.4674083,0.18236719)"
+       inkscape:export-xdpi="299.40451"
+       inkscape:export-ydpi="299.40451">
       <g
          transform="matrix(0.34771732,0,0,0.34771732,-9.4127768,263.49477)"
          id="g12827-8">
@@ -6902,34 +6916,40 @@ AAAASUVORK5CYII=
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="6.8151679"
-       y="369.81"
-       id="text13107-2-0"><tspan
+       y="370.28683"
+       id="text13107-2-0"
+       inkscape:export-xdpi="299.40451"
+       inkscape:export-ydpi="299.40451"><tspan
          sodipodi:role="line"
          id="tspan13105-8-7"
          x="6.8151679"
-         y="369.81"
+         y="370.28683"
          style="stroke-width:0.26458332px">d1 $ loopAt 1 $ sound &quot;arc&quot;</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="6.8151679"
-       y="397.16632"
-       id="text13177"><tspan
+       y="390.63226"
+       id="text13177"
+       inkscape:export-xdpi="299.40451"
+       inkscape:export-ydpi="299.40451"><tspan
          sodipodi:role="line"
          id="tspan13175"
          x="6.8151679"
-         y="397.16632"
+         y="390.63226"
          style="stroke-width:0.26458332px">d1 $ loopAt 1 $ chop 8 $ sound &quot;arc&quot;</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="6.8151679"
-       y="412.79498"
-       id="text13177-3"><tspan
+       y="410.97772"
+       id="text13177-3"
+       inkscape:export-xdpi="299.40451"
+       inkscape:export-ydpi="299.40451"><tspan
          sodipodi:role="line"
          id="tspan13175-9"
          x="6.8151679"
-         y="412.79498"
+         y="410.97772"
          style="stroke-width:0.26458332px">d1 $ rev $ loopAt 1 $ chop 8 $ sound &quot;arc&quot;</tspan></text>
   </g>
 </svg>
