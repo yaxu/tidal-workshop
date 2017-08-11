@@ -16,6 +16,18 @@ from 5pm – potential excursion to the peak district for battery-powered group 
 from 5pm – pub?
 -}
 
+-- repetition
+
+
+
+d1 $ every 3 rev (sound "arpy arpy:2 arpy:5")
+   # gain 1.5
+
+
+
+d1 $ sound "bd"
+   # gain 1.5
+
 -- Installation
 
 https://tidalcycles.org/getting_started.html
@@ -136,3 +148,30 @@ d1 $ sound (slow "2 4" "arpy arpy:2")
 -- every
 
 -- off
+
+d1 $ sound "bev arc"
+   # gain 1.5
+   # legato 1
+
+-- logorithmic shortening of samples
+
+
+d1 $ degradeBy 0.6 $ sometimes (|+| n "-12") $ every 3 (0.25 <~) $
+    jux rev $ slow 2 $ off 0.25 (# s "pulse") $
+    n (off 0.125 (+12) $ off 0.25 (+7)
+    $ slow 2 "d5*2 e6(3,8) a6*2 c6(3,8)") # sound "rash"
+   # lpf (scale 1000 3000 sine)
+   # lpq 0.2
+   # room 0.7
+
+d2 $ jux rev $ slow 2 $ struct "x(6,16)" $ loopAt 2 $ chop 8 $ sound "arc"
+
+d3 $ (slow 2 $ jux rev $ chunk 4 (hurry 2) $ sound "bd [~ bd*2] sd cp")
+   # orbit 1
+   # room (slow 4 "0.2 0.99")
+   # size 0.7
+
+
+d1 $ sound "bd cp"
+
+d2 $ slow 1.001 $ sound "bd(3,8)"
