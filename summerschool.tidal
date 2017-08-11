@@ -1,9 +1,8 @@
 -- wifi:
 -- accessspacelabs
--- beansandchips
+-- beansandchipsyum
 
 {-
-
 11th August
 5pm-7pm – optional session covering basics of installation and sequencing
 
@@ -128,5 +127,8 @@ d1 $ slow "2 4" $ sound "arpy arpy:2"
 d1 $ sound (slow "2 4" "arpy arpy:2")
 
 -- Playing long samples
+
+-- legato
+-- loopAt
 
 -- Granular Synthesis
