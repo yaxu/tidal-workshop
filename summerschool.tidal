@@ -341,6 +341,6 @@ d3 $ (slow 2 $ jux rev $ chunk 4 (hurry 2) $ sound "bd [~ bd*2] sd cp")
    # room (slow 4 "0.2 0.99")
    # size 0.7
 
-d1 $ sound "bd cp"
+d1 $ echo 0.25 $ sound "bd cp"
 
 d2 $ slow 1.001 $ sound "bd(3,8)"
