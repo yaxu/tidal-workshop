@@ -1,6 +1,6 @@
 import Sound.Tidal.Light
 
-lightServer "dev/ttyUSB0"
+lightServer "/dev/ttyUSB0"
 l1 <- lightStream
 l2 <- lightStream
 l3 <- lightStream
