@@ -255,8 +255,19 @@ d1 $ off 0.25 (# crush 3) $
 d1 $ off 0.125 (# crush 3)
    $ n (shuffle 4 "0 [3 6] [~ 2] 4") # sound "micron"
 
-   d1 $ off 0.125 (# crush 3)
-      $ n ("0 [3 6] [~ 2] 4" + irand 4) # sound "micron"
+d1 $ off 0.125 (# crush 3)
+   $ n ("0 [3 6] [~ 2] 4" + irand 4) # sound "micron"
+
+d1 $ sound "supermandolin"
+
+d1 $ slow 2 $ n (off 0.125 (+12) $ off 0.25 (+7) 
+                 $ slow 2 "d6(3,8) a7(3,8) [c7*2 c6] e7(3,8)")
+                 # sound "rash"
+
+
+d1 $ n ("0 [3 6] [~ 2] 4" + 4) # sound "micron"
+
+d1 $ n ("0 [3 6] [~ 2] 4" + irand 4) # sound "micron"
 
 d1 $ n ("0 [3 6] [~ 2] 4" + "<0 2>") # sound "micron"
 
