@@ -102,8 +102,12 @@ https://tidalcycles.org/functions.html#synth_parameters
 
 sound :: Pattern String -> ParamPattern
 
-d1 $ fast 4 $ sound (fast 2 "bd(3,8)") # vowel "a e"
+d1 $ fast 4 (sound (fast 2 "bd(3,8)") # vowel "a e")
 
+(1 + 3) * 2
+1 + (3 * 2)
+-- fast takes a number and a pattern
+-- sound takes a single pattern of words
 
 d1 $ fast "1 2 3" $ sound "cp"
 
@@ -114,7 +118,7 @@ d2 $ sound "jv:50 jv:50 jv:50 jv:50"
 d1 $ vowel "a [e e i o] i*4 u*2" # sound "bd"
   # lpf 1000
 
-d2 $ n "50 55 43 ~" # sound "jx"
+d2 (n "50 55 43 ~" # sound "jx")
 
 d1 $ (n $ "3 5 2 1" + "10 20 30") # sound "jv"
 
@@ -244,6 +248,16 @@ d1 $ slow "2 4" $ sound "arpy arpy:2"
 -- Functions like "slow" will work on any pattern. We could have
 -- slowed down the pattern of words rather than the pattern of sounds:
 d1 $ sound (slow "2 4" "arpy arpy:2")
+
+d1 $ off 0.25 (# crush 3) $
+
+d1 $ off 0.125 (# crush 3) $ n "0 [3 6] [~ 2] 4" # sound "micron"
+
+d1 $ n "0 [3 6] [~ 2] 4" # sound "micron"
+
+d2 $ 0.125 <~ (n "0 [3 6] [~ 2] 4" # sound "micron")
+   # crush 3
+
 
 -- Playing long samples
 
