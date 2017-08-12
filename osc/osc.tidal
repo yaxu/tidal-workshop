@@ -14,7 +14,6 @@ let myShape :: Shape
     (red, red_p) = pF "red" (Just 0)
     (blue, blue_p) = pF "blue" (Just 0)
     (green, green_p) = pF "green" (Just 0)
-    (fx4, fx4_p) = pF "fx4" (Just 0)
     str = do s <- makeConnection "127.0.0.1" 57120 mySlang
              let backend = Backend s (\_ _ _ -> return ())
              stream backend myShape
