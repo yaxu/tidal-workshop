@@ -30,7 +30,7 @@ version = Version [0,0,1] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/alex/.cabal/bin"
-libdir     = "/home/alex/.cabal/lib/x86_64-linux-ghc-8.0.1/tidal-light-0.0.1-9VnfG0bCCgeBoWsgIb62BK"
+libdir     = "/home/alex/.cabal/lib/x86_64-linux-ghc-8.0.1/tidal-light-0.0.1-66bt0Ux6tPU8K5mYqAR7AK"
 dynlibdir  = "/home/alex/.cabal/lib/x86_64-linux-ghc-8.0.1"
 datadir    = "/home/alex/.cabal/share/x86_64-linux-ghc-8.0.1/tidal-light-0.0.1"
 libexecdir = "/home/alex/.cabal/libexec"
