@@ -141,7 +141,8 @@ d1 $ sound (slow "2 4" "arpy arpy:2")
 
 -- sometimes
 
-
+-- hurry
+let hurry x = (|*| speed (fromRational <$> x)) . fast x
 
 -- logorithmic shortening of samples
 
