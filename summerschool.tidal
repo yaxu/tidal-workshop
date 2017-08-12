@@ -149,12 +149,14 @@ d1 $ sound (slow "2 4" "arpy arpy:2")
 
 -- off
 
+-- logorithmic shortening of samples
+
+
+-- scratchpad
+
 d1 $ sound "bev arc"
    # gain 1.5
    # legato 1
-
--- logorithmic shortening of samples
-
 
 d1 $ degradeBy 0.6 $ sometimes (|+| n "-12") $ every 3 (0.25 <~) $
     jux rev $ slow 2 $ off 0.25 (# s "pulse") $
