@@ -348,6 +348,10 @@ d2 $ slow 1.001 $ sound "bd(3,8)"
 
 -- vis
 
+brew install cairo
+brew install pkg-config
+cabal install tidal-vis
+
 import Sound.Tidal.Vis
 
 import qualified Graphics.Rendering.Cairo as C
