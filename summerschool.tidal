@@ -58,6 +58,9 @@ https://github.com/musikinformatik/SuperDirt
 d1 $ sound "bd sd cp sd"
    # vowel "a e"
 
+-- All the effects:
+https://tidalcycles.org/functions.html#synth_parameters
+
 -- Types
 
 :t slow
