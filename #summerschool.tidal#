@@ -1,5 +1,8 @@
-{-
+-- wifi:
+-- accessspacelabs
+-- beansandchipsyum
 
+{-
 11th August
 5pm-7pm – optional session covering basics of installation and sequencing
 
@@ -39,13 +42,12 @@ d1 $ sound "bd ~ hh bd sd ~ hh bd"
 
 d1 $ sound "arpy arpy:4 arpy:5"
 
--- Where do these sounds come from? 
+-- Where do these sounds come from?
 
 -- In the menus in SuperCollider (not atom):
 -- - File > Open user support directory > downloaded-quarks > Dirt-Samples
 
 -- How do I add more sounds? Here's some..
-
 http://slab.org/tmp/extra-samples.zip
 
 -- Change the superdirt startup, instructions here:
@@ -55,6 +57,8 @@ https://github.com/musikinformatik/SuperDirt
 
 d1 $ sound "bd sd cp sd"
    # vowel "a e"
+
+
 
 -- Types
 
@@ -123,8 +127,46 @@ d1 $ slow "2 4" $ sound "arpy arpy:2"
 -- slowed down the pattern of words rather than the pattern of sounds:
 d1 $ sound (slow "2 4" "arpy arpy:2")
 
+-- Playing long samples
+
+-- legato
+-- loopAt
 
 -- Granular Synthesis
 
+-- every
 
-d1 $ rev $ loopAt 2 $ chop 8 $ sound "arc"
+-- off
+
+
+
+-- logorithmic shortening of samples
+
+d1 $ sound "bev*3 bev*8"
+  # end (slow 2 $ sine * 0.04)
+
+-- scratchpad
+
+d1 $ sound "bev arc"
+   # gain 1.5
+   # legato 1
+
+d1 $ degradeBy 0.6 $ sometimes (|+| n "-12") $ every 3 (0.25 <~) $
+    jux rev $ slow 2 $ off 0.25 (# s "pulse") $
+    n (off 0.125 (+12) $ off 0.25 (+7)
+    $ slow 2 "d5*2 e6(3,8) a6*2 c6(3,8)") # sound "rash"
+   # lpf (scale 1000 3000 sine)
+   # lpq 0.2
+   # room 0.7
+
+d2 $ jux rev $ slow 2 $ struct "x(6,16)" $ loopAt 2 $ chop 8 $ sound "arc"
+
+d3 $ (slow 2 $ jux rev $ chunk 4 (hurry 2) $ sound "bd [~ bd*2] sd cp")
+   # orbit 1
+   # room (slow 4 "0.2 0.99")
+   # size 0.7
+
+
+d1 $ sound "bd cp"
+
+d2 $ slow 1.001 $ sound "bd(3,8)"
