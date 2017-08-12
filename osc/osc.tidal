@@ -15,8 +15,8 @@ let myShape :: Shape
     (fx2, fx2_p) = pF "fx2" Nothing
     (fx3, fx3_p) = pF "fx3" Nothing
     (fx4, fx4_p) = pF "fx4" Nothing
-    mykb = do s <- makeConnection "127.0.0.1" 57120 mykSlang
-              return $ Backend s (\_ _ _ -> return ())
+    mybackend = do s <- makeConnection "127.0.0.1" 57120 mySlang
+                   return $ Backend s (\_ _ _ -> return ())
 
 backend <- mykb
 
