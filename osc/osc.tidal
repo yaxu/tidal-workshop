@@ -19,5 +19,5 @@ let myShape :: Shape
                    return $ Backend s (\_ _ _ -> return ())
 
 backend <- myBackend
-bb <- stream bb myShape
+bb <- stream backend myShape
 
