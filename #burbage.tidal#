@@ -1,0 +1,6 @@
+d1 $ chunk 4 (hurry 2) $ chop "<32 64 128>" $ slow 2 $ up "0*4" # sound "bd sd sd sd"
+
+cps (1.1)
+
+
+
