@@ -16,18 +16,6 @@ from 5pm – potential excursion to the peak district for battery-powered group 
 from 5pm – pub?
 -}
 
--- repetition
-
-
-
-d1 $ every 3 rev (sound "arpy arpy:2 arpy:5")
-   # gain 1.5
-
-
-
-d1 $ sound "bd"
-   # gain 1.5
-
 -- Installation
 
 https://tidalcycles.org/getting_started.html
