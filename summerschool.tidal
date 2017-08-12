@@ -1,6 +1,6 @@
 -- wifi:
--- accessspacelabs
--- beansandchipsyum
+-- tidalclub
+-- firstrule
 
 {-
 11th August
@@ -23,6 +23,8 @@ https://tidalcycles.org/getting_started.html
 -- Sequencing
 
 d1 $ sound "bd sd cp sd"
+
+https://slab.org/tidalcycles-summer-school/
 
 -- Silencing
 
@@ -169,7 +171,6 @@ d3 $ (slow 2 $ jux rev $ chunk 4 (hurry 2) $ sound "bd [~ bd*2] sd cp")
    # orbit 1
    # room (slow 4 "0.2 0.99")
    # size 0.7
-
 
 d1 $ sound "bd cp"
 
