@@ -4,7 +4,9 @@ cps (1.1)
 
 
 
-d2 $ jux rev $ chunk 4 (hurry 0.5) $ slow 2 $ n "0 7(3,8)" # sound "stabs"
+d2 $ stut "<4 8 6>" 0.8 1 $ jux rev $ chunk 4 (hurry 0.5) $ slow 2 $ n "0 7(3,8)" # sound "stabs"
+  |*| up "<0 0 7 7 12 12>"
+
 
 
 nudger 0.03
