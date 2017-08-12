@@ -358,5 +358,5 @@ import qualified Graphics.Rendering.Cairo as C
 
 let vis name pat = vLines (C.withSVGSurface) (name ++ ".svg") (600,50) pat 1 1
 
-vis "test" $ "red blue"
+vis "test" $ "red blue green orange"
 
