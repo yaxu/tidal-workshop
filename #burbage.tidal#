@@ -4,11 +4,18 @@ cps (1.1)
 
 
 
-d2 $ stut "8" 0.8 3 $ jux rev $ chunk 4 (hurry 0.5) $ slow 2 $ n "0 7(3,8)" # sound "stabs"
+d2 $ stut 8 0.8 3 $ jux rev $ chunk 4 (hurry 0.5) $ slow 2 $ n "0 7(3,8)" # sound "stabs"
   |*| up "<0 0 7 7 12 12>"
 
 
-d1 $ sound "bd(3,8)"
+d1 $ sound "can"
 
 
-nudger 0.03
+
+d1 $ slow 8 $ n "c6 e6 f6 g" # s "xx"
+
+
+d2 $ slow 2 $ iter 4 $ n "0 .. 15" # sound "amencutup"
+
+
+nudger 0.01
