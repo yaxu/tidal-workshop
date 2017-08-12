@@ -1,10 +1,23 @@
 import Sound.Tidal.Vis
+import qualified Graphics.Rendering.Cairo as C
+import Data.Colour
+import Data.Colour.Names
+import Data.Colour.SRGB
+import System.Cmd
+
+let vis name pat = vLines (C.withSVGSurface) (name ++ ".svg") (600,50) pat 1 1
+
+vis "test" $ "red blue"
+
+
+
+import Sound.Tidal.Vis
 import Sound.OSC.FD
 import Control.Concurrent.MVar
 import Data.Maybe
 import System.IO.Unsafe
 
-import qualified Graphics.Rendering.Cairo as C 
+import qualified Graphics.Rendering.Cairo as C
 import Data.Colour
 import Data.Colour.Names
 import Data.Colour.SRGB
@@ -15,7 +28,7 @@ import System.Cmd
 let v name p = do vis (name) p
                   rawSystem "/home/alex/Dropbox/bin/fixsvg.pl" [name ++ ".svg"]
                   rawSystem "convert" [name ++ ".svg", name ++ ".pdf"]
-                  return ()             
+                  return ()
     blend' :: Pattern ColourD -> Pattern ColourD -> Pattern ColourD
     blend' a b = blend 0.5 <$> b <*> a
 
@@ -33,8 +46,16 @@ d1 $ sound "arc"
   # speed 2.45
 
 
-d1 $ every 4 rev $ sound "bd sd"
+d1 $ sound "bd sd ~ bd drum:2 ~ ~ arpy"
+
+d1 $ silence
 
 d1 $ sound "bd sd [~ bd] sd"
 
 fast 4 $ iter 4 "black blue lightblue white"
+
+v "hello" $ "red"
+
+now
+
+let v1 = v "/home/alex/SparkleShare/tidal-workshop/vis"
