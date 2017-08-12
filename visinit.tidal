@@ -1,12 +1,6 @@
 import Sound.Tidal.Vis
 import qualified Graphics.Rendering.Cairo as C
-import Data.Colour
-import Data.Colour.Names
-import Data.Colour.SRGB
-import System.Cmd
-
 let vis name pat = vLines (C.withSVGSurface) (name ++ ".svg") (600,50) pat 1 1
-
 vis "test" $ "red blue"
 
 
