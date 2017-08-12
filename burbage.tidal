@@ -4,9 +4,31 @@ cps (1.1)
 
 
 
-d2 $ stut "<4 8 6>" 0.8 1 $ jux rev $ chunk 4 (hurry 0.5) $ slow 2 $ n "0 7(3,8)" # sound "stabs"
+d2 $ stut 8 0.8 3 $ jux rev $ chunk 4 (hurry 0.5) $ slow 2 $ n "0 7(3,8)" # sound "stabs"
   |*| up "<0 0 7 7 12 12>"
 
 
+d1 $ sound "can"
 
-nudger 0.03
+
+d1 $ iter 4 $ jux rev $ brak $ chop 8 $ sound "{jungbass*2 sd(1,8) bd [~ jungbass]}"
+  # gain 1
+  # speed 1
+  # accelerate "-1"
+  # crush 7
+
+d1 $ chunk 4 (hurry 2) $ brak $ sound "drum [sd8 ~ ~ sd]"
+  # gain 1.2
+  # room 0.98
+  # size 0.4
+
+
+nudger 0.01
+
+d1 $ slow 8 $ n (off (1/16) (+12) $ slow 2 $ off 0.125 (+7) "c8*2 e7(3,8) f6 g8") # s "xx"
+
+
+d2 $ slow 2 $ iter 4 $ n "0 .. 15" # sound "amencutup"
+
+
+nudger 0.01
