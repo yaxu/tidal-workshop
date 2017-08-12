@@ -124,6 +124,7 @@ d1 $ n ("40 50 60 30" + "<10 20>") # sound "jv"
 
 d1 $ shuffle 4 $ loopAt 2 $ chop 32 $ sound "arc" # gain 1.1
 
+
 d1 $ slow 2 $ (chop 128 $ sound "bd cp*4 sd arpy")
   # nudge (slow 4 sine)
 
