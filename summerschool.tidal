@@ -107,11 +107,43 @@ d1 $ fast 4 $ sound (fast 2 "bd(3,8)") # vowel "a e"
 
 d1 $ fast "1 2 3" $ sound "cp"
 
-d2 $ sound "bd"
+d2 $ sound "jv:50 jv:50 jv:50 jv:50"
+  # lpf "1000 3000 400"
+  # lpq 0.2
 
-d1 $ slow "4 2 3" (sound "bd cp")
+d1 $ vowel "a [e e i o] i*4 u*2" # sound "bd"
+  # lpf 1000
 
-d1 $ sound "[bd cp sd cp] [arpy arpy:2 arpy:4]"
+d2 $ n "50 55 43 ~" # sound "jx"
+
+d1 $ (n $ "3 5 2 1" + "10 20 30") # sound "jv"
+
+d1 $ n ("40 50 60 30" + "<0 7>") # sound "jv"
+h
+d1 $ n ("40 50 60 30" + "<10 20>") # sound "jv"
+
+
+d1 $ sound "jv:40 jv:50"
+
+"3 5 2 1" :: Pattern Int
+
+d3 $ sound "superpiano"
+   # freq 2000
+
+-- frequency
+
+d1 $
+
+:t lpq
+
+d2 $ sound "{jx:50 jx:40 jx:42 jx:53, bd sd bd}%2"
+
+d1 $ slow "  2 3" (sound "bd cp")
+
+d1 $ sound "[bd cp sd cp] [arpy [arpy:2 bd [bd bd] bd] arpy:4]"
+
+d1 $ sound "<arpy arpy:3 arpy:2> bd bd bd"
+
 
 -- gives:
 
