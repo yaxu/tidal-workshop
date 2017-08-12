@@ -1,6 +1,7 @@
 -- wifi:
 -- tidalclub
 -- firstrule
+https://github.com/supercollider/sc3-plugins
 
 {-
 11th August
@@ -260,12 +261,17 @@ d1 $ off 0.125 (# crush 3)
 
 d1 $ sound "supermandolin"
 
-d1 $ off 0.125 (# sound "pulse") $ 
-                 slow 2 $ n (off 0.125 (+12) $ off 0.25 (+ "<5 7>")
+d1 $ jux (slow 2) $ off 0.125 (# sound "pulse") $
+                 slow 2 $ n (off 0.125 (+12) $ off 0.25 (+ "<7>")
                  $ slow 2 "d6(3,8) a7(3,8) [c7*2 c6] e7(3,8)")
                  # sound "rash"
 
-h
+
+d1 jux rev $
+
+d1 $ jux rev $ n "0 [~ 3] [~ 2*2] 5" # sound "micron"
+
+
 d1 $ n ("0 [3 6] [~ 2] 4" + 4) # sound "micron"
 
 d1 $ n ("0 [3 6] [~ 2] 4" + irand 4) # sound "micron"
@@ -311,6 +317,8 @@ let hurry x = (|*| speed (fromRational <$> x)) . fast x
 
 d1 $ sound "bev*3 bev*8"
   # end (slow 2 $ sine * 0.04)
+
+d1 $ sound "superpiano"
 
 -- scratchpad
 
