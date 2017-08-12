@@ -18,6 +18,6 @@ let myShape :: Shape
     myBackend = do s <- makeConnection "127.0.0.1" 57120 mySlang
                    return $ Backend s (\_ _ _ -> return ())
 
-backend <- mykb
-bb <- stream bb mykShape
+backend <- myBackend
+bb <- stream bb myShape
 
