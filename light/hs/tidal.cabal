@@ -27,4 +27,4 @@ library
     , serialport
     , hosc
     , colour
-
+    , bytestring
