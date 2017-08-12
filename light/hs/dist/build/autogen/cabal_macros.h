@@ -14,6 +14,20 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 0)
 
+/* package colour-2.3.3 */
+#define VERSION_colour "2.3.3"
+#define MIN_VERSION_colour(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  3 || \
+  (major1) == 2 && (major2) == 3 && (minor) <= 3)
+
+/* package hosc-0.15 */
+#define VERSION_hosc "0.15"
+#define MIN_VERSION_hosc(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  15 || \
+  (major1) == 0 && (major2) == 15 && (minor) <= 0)
+
 /* package serialport-0.4.7 */
 #define VERSION_serialport "0.4.7"
 #define MIN_VERSION_serialport(major1,major2,minor) (\
@@ -98,7 +112,7 @@
   (major1) == 2 && (major2) <  28 || \
   (major1) == 2 && (major2) == 28 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "tidal-light-0.0.1-500E6LFnd9d1CaPyYAL9O9"
+#define CURRENT_COMPONENT_ID "tidal-light-0.0.1-9VnfG0bCCgeBoWsgIb62BK"
 
-#define CURRENT_PACKAGE_KEY "tidal-light-0.0.1-500E6LFnd9d1CaPyYAL9O9"
+#define CURRENT_PACKAGE_KEY "tidal-light-0.0.1-9VnfG0bCCgeBoWsgIb62BK"
 
