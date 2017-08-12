@@ -137,8 +137,12 @@ d1 $ sound (slow "2 4" "arpy arpy:2")
 
 -- off
 
+
+
 -- logorithmic shortening of samples
 
+d1 $ sound "bev*3 bev*8"
+  # end (slow 2 $ sine * 0.04)
 
 -- scratchpad
 
