@@ -1,7 +1,7 @@
 import Sound.Tidal.OscStream
 
 let myShape :: Shape
-    myShape = Shape {params = [ s_p ],
+    myShape = Shape {params = [ red_p, blue_p, green_p ],
                      cpsStamp = False,
                      latency = 0
                     }
