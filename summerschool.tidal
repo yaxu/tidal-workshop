@@ -252,7 +252,22 @@ d2 $ off 0.25 (# speed 2) $ sound (slow "2 4" "arpy(3,8) arpy:2")
 
 d1 $ off 0.25 (# crush 3) $
 
-d1 $ off 0.125 (# crush 3) $ n "0 [3 6] [~ 2] 4" # sound "micron"
+d1 $ off 0.125 (# crush 3)
+   $ n (shuffle 4 "0 [3 6] [~ 2] 4") # sound "micron"
+
+   d1 $ off 0.125 (# crush 3)
+      $ n ("0 [3 6] [~ 2] 4" + irand 4) # sound "micron"
+
+d1 $ n ("0 [3 6] [~ 2] 4" + "<0 2>") # sound "micron"
+
+d1 $ n ("2 [5 8] [~ 4] 6") # sound "micron"
+
+d1 $ sound ("micron:0 [micron:3 micron:6] [~ micron:2] micron:4")
+
+
+d1 $ cat [chop 8 $ sound "bd",
+          rev $ chop 3 $ sound "cp"
+         ]
 
 cps (140/60/2)
 
