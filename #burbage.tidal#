@@ -11,8 +11,14 @@ d2 $ stut 8 0.8 3 $ jux rev $ chunk 4 (hurry 0.5) $ slow 2 $ n "0 7(3,8)" # soun
 d1 $ sound "can"
 
 
+d1 $ brak $ chop 8 $ sound "{jungbass sd(1,8) bd [~ jungbass]}"
+  # gain 1.5
+  # speed 1
+  # accelerate "-1"
 
-d1 $ slow 8 $ n "c6 e6 f6 g" # s "xx"
+nudger 0.01
+
+d1 $ slow 8 $ n (off (1/16) (+12) $ slow 2 $ off 0.125 (+7) "c8*2 e7(3,8) f6 g8") # s "xx"
 
 
 d2 $ slow 2 $ iter 4 $ n "0 .. 15" # sound "amencutup"
