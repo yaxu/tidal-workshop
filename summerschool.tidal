@@ -122,9 +122,27 @@ d1 $ n ("40 50 60 30" + "<0 7>") # sound "jv"
 h
 d1 $ n ("40 50 60 30" + "<10 20>") # sound "jv"
 
-d1 $ shuffle 4 $ loopAt 2 $ chop 32 $ sound "arc" # gain 1.1
+d1 $ every 4 (shuffle 4) $ loopAt 2 $ chop 32 $ sound "arc" # gain 1.1
+
+d1 $ every 4 (rev) $ sound "arpy ~ arpy:2"
+
+d1 $ every 3 (# speed 2) $ every 4 (# vowel "a") $ sound "arpy arpy:5 arpy:2 arpy:4"
+
+d1 $ iter 4 (loopAt 2 $ chop 16 $ sound "arc")
+
+d1 $ iter 4 $ sound "bd sd*2 cp ~"
+
+-- phasing
 
 
+d1 $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"
+
+d2 $ (2/12) ~> (sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~")
+
+d3 $ do x <- slow (pure $ 12 * 12) $ run  12
+        jux ((pure $ x/12) <~) $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"
+
+v1 $ fast 4 $ iter 4 "red blue green orange"
 
 d1 $ slow 2 $ (chop 128 $ sound "bd cp*4 sd arpy")
   # nudge (slow 4 sine)
