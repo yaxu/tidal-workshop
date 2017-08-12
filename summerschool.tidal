@@ -34,7 +34,15 @@ hush
 
 -- The longer the sequence, the faster it runs
 
-d1 $ sound "bd bd hh bd sd bd hh bd"
+d1 $ sound "bd(7,16)"
+
+d1 $ sound "bd ~ ~ bd ~ bd ~ ~"
+
+d1 $ sound "bd*3 bd bd*8 bd"
+
+d1 $ sound "bd bd? sd*2 bd(3,8)"
+
+d1 $ sound "bd*16?"
 
 -- Add gaps
 
