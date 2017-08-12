@@ -344,3 +344,15 @@ d3 $ (slow 2 $ jux rev $ chunk 4 (hurry 2) $ sound "bd [~ bd*2] sd cp")
 d1 $ echo 0.25 $ sound "bd cp"
 
 d2 $ slow 1.001 $ sound "bd(3,8)"
+
+
+-- vis
+
+import Sound.Tidal.Vis
+
+import qualified Graphics.Rendering.Cairo as C
+
+let vis name pat = vLines (C.withSVGSurface) (name ++ ".svg") (600,50) pat 1 1
+
+vis "test" $ "red blue"
+
