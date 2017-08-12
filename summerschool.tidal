@@ -256,6 +256,8 @@ d1 $ off 0.125 (# crush 3) $ n "0 [3 6] [~ 2] 4" # sound "micron"
 
 cps (140/60/2)
 
+cps 1
+
 d1 $ n "0 [3 6] [~ 2] 4" # sound "micron"
 
 d2 $ 0.125 <~ (n "0 [3 6] [~ 2] 4" # sound "micron")
