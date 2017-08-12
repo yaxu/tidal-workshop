@@ -42,10 +42,10 @@ lightSlang = OscSlang {
   }
 lightBackend = do s <- makeConnection "127.0.0.1" 9099 lightSlang
                   return $ Backend s (\_ _ _ -> return ())
-lightServer = do s <- udpServer "127.0.0.1" 9099
-                 output <- SP.openSerial "/dev/ttyUSB0" (SP.defaultSerialSettings {SP.commSpeed = SP.CS115200})
-                 sM <- startQueue output
-                 forkIO $ lightLoop s output sM
+lightServer port = do s <- udpServer "127.0.0.1" 9099
+                      output <- SP.openSerial port (SP.defaultSerialSettings {SP.commSpeed = SP.CS115200})
+                      sM <- startQueue output
+                      forkIO $ lightLoop s output sM
 lightLoop s output sM = do m <- recvMessage s
                            act m output sM
                            lightLoop s output sM
