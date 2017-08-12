@@ -142,6 +142,10 @@ d2 $ (2/12) ~> (sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~")
 d3 $ do x <- slow (pure $ 12 * 12) $ run  12
         jux ((pure $ x/12) <~) $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"
 
+d3 $ sound "[bd arpy]*3 sd"
+
+d3 $ sound "[bd arpy]!3 sd"
+
 v1 $ fast 4 $ iter 4 "red blue green orange"
 
 d1 $ slow 2 $ (chop 128 $ sound "bd cp*4 sd arpy")
