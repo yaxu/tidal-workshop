@@ -25,4 +25,6 @@ library
       base < 5
     , tidal
     , serialport
+    , hosc
+    , colour
 
