@@ -12,10 +12,27 @@
 from 5pm – potential excursion to the peak district for battery-powered group improv
 
 13th August
-9:30am-5pm – customisation, multichannel, midi control (external synths), dmx control (lights), visualisation
+9:30am-5pm –
+  recap /
+  - slowcat,
+  - fastcat
+  - randcat
+  - choose / rand / sine / saw
+  - # |=| |+| |*| |/|
+  - weave
+  - whenmod
+  - hurry / making your own abstractions
+  customisation,
+  multichannel,
+  midi control (external synths),
+  dmx control (lights),
+  visualisation
 
 from 5pm – pub?
 -}
+
+# - |=|
+|+| |*| |/|
 
 -- Installation
 
@@ -359,4 +376,3 @@ import qualified Graphics.Rendering.Cairo as C
 let vis name pat = vLines (C.withSVGSurface) (name ++ ".svg") (600,50) pat 1 1
 
 vis "test" $ "red blue green orange"
-
