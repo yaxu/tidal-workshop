@@ -397,6 +397,14 @@ d1 $ cat [sound "bd(3,8)",
 
 d2 $ every 3 (const (sound "jvbass*4")) $ sound "arpy cp"
 
-d3 $ seqPLoop
+d3 $ seqPLoop [
+  (1,4, n "c7 a7" # sound "xx"),
+  (0,8, sound "bd(3,8)"),
+  (6,8, loopAt 4 $ chop 16 $ sound "arc")
+]
+
+x x x x x x x x
+  x x x
+
 
 d3 $ sound "cp(3,8)"
