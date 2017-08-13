@@ -417,5 +417,6 @@ d3 $ sound "cp(3,8)"
 
 d1 $ slow 2 $ n "0 .. 15" # sound "amencutup"
 
-d1 $ n ("0 7") # sound "supermandolin"
-  # n 3
+d1 $ n ("0 7 ~ 3")
+  # sound "supermandolin"
+  |+| n "<0 7 12>"
