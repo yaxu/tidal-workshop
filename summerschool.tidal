@@ -452,11 +452,6 @@ d2 $ sound "drum(3,8)"
 
 m2 $ n "0 7*3"
 
-mkdir src
-cd src
-git clone https://github.com/tidalcycles/TidaLink.git
-cd TidaLink
-/bin/bash compile.sh
 
 
 https://github.com/musikinformatik/SuperDirt
@@ -540,3 +535,12 @@ s.waitForBoot {
 )
 
 cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.9.5.tar.gz
+
+mkdir src
+cd src
+git clone https://github.com/tidalcycles/TidaLink.git
+
+cd TidaLink
+
+-- You might need to do: brew install cmake
+/bin/bash compile.sh
