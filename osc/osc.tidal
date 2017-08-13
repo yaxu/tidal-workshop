@@ -28,7 +28,7 @@ o <- str
 let myShape :: Shape
     myShape = Shape {params = [ offset_p,
                                 n_p,
-                                type_p,
+                                typ_p,
                                 x_p,
                                 y_p,
                                 hue_p,
