@@ -26,6 +26,9 @@ simple $ hue 0.9 # saturation 1 # brightness 1
 
 simple $ discretise 128 $ hue (slow 2 saw) # saturation rand # brightness (slow 4 saw)
 
+
+
+
 -- A more complex one..
 
 let myShape :: Shape
