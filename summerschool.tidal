@@ -594,6 +594,13 @@ d1 $ weave 16 (n "0 .. 7" # sound "arpy")
     vowel "i"
    ]
 
+import Sound.Tidal.Scales
+
+d1 $ slow 2 $ n (toScale egyptian "0 .. 15") # sound "supermandolin"
+
+-- see here for the available scales:
+https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Scales.hs
+
 d1 $ jux rev $ weave 8 (palindrome $ n "0 3 5 7 10 12 15 17" # sound "supermandolin")
     [vowel "a o",
      vowel "i(3,8)",
