@@ -42,7 +42,7 @@ let myShape :: Shape
       namedParams = False,
       preamble = []
     }
-    (n, n_p)               = pF "n" (Just 0)
+    (n, n_p)                   = pI "n" (Just 0)
     (hue, hue_p)               = pF "hue" (Just 0)
     (saturation, saturation_p) = pF "saturation" (Just 0)
     (value, value_p) = pF "value" (Just 0)
