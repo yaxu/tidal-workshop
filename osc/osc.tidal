@@ -1,6 +1,6 @@
 import Sound.Tidal.OscStream
 
--- A simple hue-saturation-value OSC stream
+-- A simple hue-saturation-brightness OSC stream
 
 let myShape :: Shape
     myShape = Shape {params = [ hue_p, saturation_p, brightness_p ],
