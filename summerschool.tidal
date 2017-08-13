@@ -415,8 +415,10 @@ d1 $ n ("c6 a7") # sound "supermandolin"
 d3 $ sound "cp(3,8)"
 
 
-d1 $ slow 2 $ n "0 .. 15" # sound "amencutup"
+d1 $ slow 2 $ n (shuffle 16 "0 .. 15") # sound "amencutup"
 
 d1 $ n ("0 7 ~ 3")
   # sound "supermandolin"
   |+| n "<0 7 12>"
+
+d1 $ sound "drum*8" # n (choose [0 .. 15])
