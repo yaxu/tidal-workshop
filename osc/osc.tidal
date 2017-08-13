@@ -16,12 +16,14 @@ let myShape :: Shape
     (hue, hue_p) = pF "hue" (Just 0)
     (saturation, saturation_p) = pF "saturation" (Just 0)
     (brightness, brightness_p) = pF "brightness" (Just 0)
-    simpleStream = do s <- makeConnection "127.0.0.1" 57120 mySlang
+    simpleStream = do s <- makeConnection "127.0.0.1" 7111 mySlang
                       let backend = Backend s (\_ _ _ -> return ())
                       stream backend myShape
 
-o <- simpleStream
+simple <- simpleStream
 
+
+simple $ hue "0" # 
 
 -- A more complex one..
 
