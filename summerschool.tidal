@@ -610,3 +610,13 @@ d1 $ jux rev $ weave 8 (palindrome $ n "0 3 5 7 10 12 15 17" # sound "supermando
 
 -- superDirt hacks:
 https://github.com/musikinformatik/SuperDirt/tree/master/hacks
+
+d1 $ sound "cp"
+   # tsdelay 0.4
+   # xsdelay 4
+
+let tsdelay = make' VF tsdelay_p
+    tsdelay_p = F "tsdelay" Nothing
+
+let xsdelay = make' VI xsdelay_p
+    xsdelay_p = I "xsdelay" Nothing
