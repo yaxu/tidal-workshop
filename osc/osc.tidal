@@ -26,8 +26,14 @@ o <- str
 -- A more complex one..
 
 let myShape :: Shape
-    myShape = Shape {params = [ hue_p, saturation_p, value_p ],
-                     cpsStamp = False,
+    myShape = Shape {params = [ n_p,
+                                type_p,
+                                x_p,
+                                y_p,
+                                hue_p,
+                                dur_p
+                              ],
+                     cpsStamp = True,
                      latency = 0
                     }
     mySlang = OscSlang {
@@ -36,7 +42,8 @@ let myShape :: Shape
       namedParams = False,
       preamble = []
     }
-    (hue, hue_p) = pF "hue" (Just 0)
+    (n, n_p)               = pF "n" (Just 0)
+    (hue, hue_p)               = pF "hue" (Just 0)
     (saturation, saturation_p) = pF "saturation" (Just 0)
     (value, value_p) = pF "value" (Just 0)
     str = do s <- makeConnection "127.0.0.1" 57120 mySlang
