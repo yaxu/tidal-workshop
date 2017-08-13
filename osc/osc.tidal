@@ -72,10 +72,10 @@ onset1 $ every 4 (fast 4) $ typ "strobe(3,8)"
 d1 $ sound "bd(3,8)"
 
 onset $ typ "strobe(3,8)"
-  # nudge 0.4
 
 cps 0.4
 
 onset $ typ "strobe(3,8)"
+  # nudge 0.02
 
 onset silence
