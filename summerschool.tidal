@@ -620,3 +620,8 @@ let tsdelay = make' VF tsdelay_p
 
 let xsdelay = make' VI xsdelay_p
     xsdelay_p = I "xsdelay" Nothing
+
+import qualified Sound.Tidal.Chords as Chords
+
+d1 $ n (Chords.enchord [Chords.major, Chords.minor] "c g" "0 1") 
+     # sound "supermandolin"
