@@ -1,7 +1,7 @@
 import Sound.Tidal.OscStream
 
 let myShape :: Shape
-    myShape = Shape {params = [ red_p, blue_p, green_p ],
+    myShape = Shape {params = [ hue_p, saturation_p, value_p ],
                      cpsStamp = False,
                      latency = 0
                     }
@@ -11,9 +11,9 @@ let myShape :: Shape
       namedParams = False,
       preamble = []
     }
-    (red, red_p) = pF "red" (Just 0)
-    (blue, blue_p) = pF "blue" (Just 0)
-    (green, green_p) = pF "green" (Just 0)
+    (hue, hue_p) = pF "hue" (Just 0)
+    (saturation, saturation_p) = pF "saturation" (Just 0)
+    (value, value_p) = pF "value" (Just 0)
     str = do s <- makeConnection "127.0.0.1" 57120 mySlang
              let backend = Backend s (\_ _ _ -> return ())
              stream backend myShape
