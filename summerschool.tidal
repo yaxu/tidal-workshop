@@ -538,7 +538,6 @@ s.waitForBoot {
 mkdir src
 cd src
 git clone https://github.com/tidalcycles/TidaLink.git
-
 cd TidaLink
 
 -- You might need to do: brew install cmake
