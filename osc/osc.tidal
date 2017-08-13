@@ -53,4 +53,4 @@ let myShape :: Shape
 
 onset <- str
 
-onset $ discretise 32 $ x saw # y sine # dur 0.4 # hue saw
+onset $ every 3 rev $ discretise 32 $ x saw # y sine # dur 0.4 # hue saw
