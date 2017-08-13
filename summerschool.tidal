@@ -538,3 +538,5 @@ s.waitForBoot {
 	~dirt.start(57120, [0,0,0,0,0,0]);   // start listening on port 57120, create two orbits, each sending audio to channel 0. You can direct sounds to the orbits from tidal e.g. by: `# orbit "0 1 1"
 }
 )
+
+cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.9.5.tar.gz
