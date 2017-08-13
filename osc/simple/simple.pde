@@ -21,8 +21,6 @@ void oscEvent(OscMessage m) {
     float hue = m.get(0).floatValue();
     float saturation = m.get(1).floatValue();
     float brightness = m.get(2).floatValue();
-    backgroundColor = color(hue, saturation, brightness);
-    println("hue: " + hue);
-    
+    backgroundColoyr = color(hue, saturation, brightness);
   }
 }
