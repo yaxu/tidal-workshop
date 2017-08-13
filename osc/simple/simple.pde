@@ -6,7 +6,7 @@ color backgroundColour;
 void setup() {
   size(displayWidth, displayHeight,P2D);
   oscP5 = new OscP5(this, 7111);
-  colorMode(HSB, 100);
+  colorMode(HSB, 1);
   smooth();
   noStroke();
   backgroundColour=color(0,0,0);
@@ -21,6 +21,6 @@ void oscEvent(OscMessage m) {
     float hue = m.get(0).floatValue();
     float saturation = m.get(1).floatValue();
     float brightness = m.get(2).floatValue();
-    backgroundColour = color(hue*255, saturation*255, brightness*255);
+    backgroundColour = color(hue, saturation, brightness);
   }
 }
