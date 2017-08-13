@@ -13,7 +13,9 @@ void setup() {
 }
 
 void draw() {
-  background(backgroundColour);
+  synchronized(backgroundColour) {
+    background(backgroundColour);
+  }
 }
 
 void oscEvent(OscMessage m) {
@@ -21,6 +23,8 @@ void oscEvent(OscMessage m) {
     float hue = m.get(0).floatValue();
     float saturation = m.get(1).floatValue();
     float brightness = m.get(2).floatValue();
-    backgroundColour = color(hue*255, saturation*255, brightness*255);
+    synchronized(backgroundColour) {
+      backgroundColour = color(hue*255, saturation*255, brightness*255);
+    };
   }
 }
