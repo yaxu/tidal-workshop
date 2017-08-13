@@ -559,8 +559,13 @@ d1 $ fast 2 $ whenmod 8 6 (fast 4) $ sound "odx"
 d2 $ slow 2 $ sound "blue"
    # pan 0.25
 
+
+let revchop p = rev $ chop 16 p
+                 # speed 2
+    fastspeed p = fast 2 $ p # speed 2
+
 d1 $ revchop $ sound "bd"
    # pan 0.25
 
-let revchop p = rev $ chop 16 p
-      # speed 2
+d1 $ every 3 fastspeed $ sound "bd"
+   # pan 0.25
