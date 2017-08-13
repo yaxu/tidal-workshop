@@ -580,7 +580,7 @@ d1 $ weave 16 (pan saw)
      sound "sn:2*2"
     ]
 
-d1 $ weave' 16 (n "0 1 2 3 4 5 6 7" # sound "arpy")
+d1 $ weave 16 (n "0 1 2 3 4 5 6 7" # sound "arpy")
    [vowel "a e i",
     vowel "o i*2",
     speed "1 0.25*2 2*2 0.5",
