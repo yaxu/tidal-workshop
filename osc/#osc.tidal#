@@ -1,0 +1,80 @@
+import Sound.Tidal.OscStream
+
+-- A simple hue-saturation-brightness OSC stream
+
+let myShape :: Shape
+    myShape = Shape {params = [ hue_p, saturation_p, brightness_p ],
+                     cpsStamp = Fainlse,
+                     latency = 0
+                    }
+    mySlang = OscSlang {
+      path = "/colour",
+      timestamp = NoStamp,
+      namedParams = False,
+      preamble = []
+    }
+    (hue, hue_p) = pF "hue" (Just 0)
+    (saturation, saturation_p) = pF "saturation" (Just 1)
+    (brightness, brightness_p) = pF "brightness" (Just 0)
+    simpleStream = do s <- makeConnection "127.0.0.1" 7111 mySlang
+                      let backend = Backend s (\_ _ _ -> return ())
+                      stream backend myShape
+
+simple <- simpleStream
+
+simple $ hue 0.9 # saturation 1 # brightness 1
+
+simple $ every 3 (fast 2)$ discretise 64 $ hue (slow 2 saw) # saturation 1 # brightness (slow 4 saw)
+
+simple $ saturation 0
+
+
+
+-- A more complex one..
+
+let myShape :: Shape
+    myShape = Shape {params = [ offset_p,
+                                n_p,
+                                typ_p,
+                                x_p,
+                                y_p,
+                                hue_p,
+                                dur_p
+                              ],
+                     cpsStamp = True,
+                     latency = 0.4
+                    }
+    mySlang = OscSlang {
+      path = "/onset",
+      timestamp = MessageStamp,
+      namedParams = False,
+      preamble = []
+    }
+    (typ, typ_p)               = pS "type" (Just "line")
+    (x, x_p)                   = pF "x" (Just 0.5)
+    (y, y_p)                   = pF "y" (Just 0.5)
+    (hue, hue_p)               = pF "hue" (Just 0)
+    onsetStream = do s <- makeConnection "127.0.0.1" 7110 mySlang
+                     let backend = Backend s (\_ _ _ -> return ())
+                     stream backend myShape
+
+onset <- onsetStream
+
+onset1 <- onsetStream
+
+onset $ x "0 0.25 0.5 1" # y sine # hue saw # dur 0.4
+
+onset $ discretise 32 $ x saw # y sine # dur 0.3 # hue "0.3 0.5"
+
+onset1 $ every 4 (fast 4) $ typ "strobe(3,8)"
+
+d1 $ sound "bd(3,8)"
+
+onset $ typ "strobe(3,8)"
+
+cps 0.4
+
+onset $ typ "strobe(3,8)"
+  # nudge 0.02
+
+onset silence
