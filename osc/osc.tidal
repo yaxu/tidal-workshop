@@ -43,6 +43,7 @@ let myShape :: Shape
       preamble = []
     }
     (n, n_p)                   = pI "n" (Just 0)
+    (typ, typ_p)               = pS "type" (Just "line")
     (hue, hue_p)               = pF "hue" (Just 0)
     (saturation, saturation_p) = pF "saturation" (Just 0)
     (value, value_p) = pF "value" (Just 0)
