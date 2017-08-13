@@ -444,8 +444,8 @@ d1 $ swingBy (1/16) 4 $ sound "cp*8"
 d1 $ sound "bd*64"
   # nudge (scale 0 0.2 sine)
 
-  d1 $ (chop 63 $ sound ("bd cp ~ sn:2"))
-    # nudge (slow 4 sine)
+d1 $ (chop 63 $ sound ("bd cp ~ sn:2"))
+  # nudge (slow 4 sine)
 
 
 d2 $ sound "drum(3,8)"
