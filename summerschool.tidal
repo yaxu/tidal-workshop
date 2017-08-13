@@ -534,7 +534,6 @@ s.waitForBoot {
 }
 )
 
-cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.9.5.tar.gz
 
 mkdir src
 cd src
@@ -544,3 +543,6 @@ cd TidaLink
 
 -- You might need to do: brew install cmake
 /bin/bash compile.sh
+
+
+cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.9.5.tar.gz
