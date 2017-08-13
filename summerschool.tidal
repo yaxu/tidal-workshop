@@ -543,6 +543,7 @@ cd TidaLink
 -- You might need to do: brew install cmake
 /bin/bash compile.sh
 
+-- to run TidaLink
 cd build
 ./TidaLink
 
