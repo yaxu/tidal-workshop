@@ -13,5 +13,5 @@ let x1 p = d1 p >> l1 p
     x4 p = d4 p >> l4 p
     hush = mapM_ ($ silence) [d1,d2,d3,d4,d5,d6,d7,d8,d9,x1,x2,x3,x4]
 
-l1 $ sound "~"
+l1 $ sound "bd"
   # pan 0.5
