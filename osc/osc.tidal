@@ -3,7 +3,7 @@ import Sound.Tidal.OscStream
 -- A simple hue-saturation-value OSC stream
 
 let myShape :: Shape
-    myShape = Shape {params = [ hue_p, saturation_p, value_p ],
+    myShape = Shape {params = [ hue_p, saturation_p, brightness_p ],
                      cpsStamp = False,
                      latency = 0
                     }
@@ -15,7 +15,7 @@ let myShape :: Shape
     }
     (hue, hue_p) = pF "hue" (Just 0)
     (saturation, saturation_p) = pF "saturation" (Just 0)
-    (value, value_p) = pF "value" (Just 0)
+    (brightness, brightness_p) = pF "brightness" (Just 0)
     simpleStream = do s <- makeConnection "127.0.0.1" 57120 mySlang
                       let backend = Backend s (\_ _ _ -> return ())
                       stream backend myShape
