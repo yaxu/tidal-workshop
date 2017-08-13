@@ -426,3 +426,13 @@ d1 $ sound "drum*8" # n (irand 8)
 d1 $ sound "cp*8"
    # speed (scale 0.5 2 rand)
    # pan (fast 2 rand)
+
+import Sound.Tidal.MIDI.Context
+
+import Sound.Tidal.MIDI.Synth
+
+displayOutputDevices >>= putStrLn
+devices <- midiDevices
+m2 <- midiStream devices "X18/XR18 MIDI 1" 1 synthController
+
+m2 $ n "0 7*3"
