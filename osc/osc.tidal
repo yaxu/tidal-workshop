@@ -47,11 +47,11 @@ let myShape :: Shape
     (x, x_p)                   = pF "x" (Just 0.5)
     (y, y_p)                   = pF "y" (Just 0.5)
     (hue, hue_p)               = pF "hue" (Just 0)
-    str = do s <- makeConnection "127.0.0.1" 7110 mySlang
-             let backend = Backend s (\_ _ _ -> return ())
-             stream backend myShape
+    onsetStream = do s <- makeConnection "127.0.0.1" 7110 mySlang
+                     let backend = Backend s (\_ _ _ -> return ())
+                     stream backend myShape
 
-onset <- str
+onsetStream <- str
 
 
 onset $ x "0 0.25 0.5 1" # y sine # hue saw # dur 0.4
