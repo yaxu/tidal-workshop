@@ -381,3 +381,20 @@ import qualified Graphics.Rendering.Cairo as C
 let vis name pat = vLines (C.withSVGSurface) (name ++ ".svg") (600,50) pat 1 1
 
 vis "test" $ "red blue green orange"
+
+d1 $ sound "arpy(3,8)"
+   # speed "-2"
+
+d1 $ every 3 (fast 2) $ stack [every 3 (# speed "-1") $ sound "arpy sd",
+                               sound "cp(3,8)" # speed 2
+                              ]
+    # crush 4
+
+d1 $ cat [sound "bd(3,8)",
+          sound "arpy",
+          sound "jvbass*4"
+         ]
+
+d2 $ sound "arpy cp"
+
+d3 $ sound "cp(3,8)"
