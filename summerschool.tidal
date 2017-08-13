@@ -457,3 +457,6 @@ cd src
 git clone https://github.com/tidalcycles/TidaLink.git
 cd TidaLink
 /bin/bash compile.sh
+
+
+https://github.com/musikinformatik/SuperDirt
