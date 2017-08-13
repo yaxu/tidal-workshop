@@ -26,7 +26,8 @@ o <- str
 -- A more complex one..
 
 let myShape :: Shape
-    myShape = Shape {params = [ n_p,
+    myShape = Shape {params = [ offset_p,
+                                n_p,
                                 type_p,
                                 x_p,
                                 y_p,
@@ -42,12 +43,11 @@ let myShape :: Shape
       namedParams = False,
       preamble = []
     }
-    (n, n_p)                   = pI "n" (Just 0)
     (typ, typ_p)               = pS "type" (Just "line")
+    (x, x_p)                   = pF "x" (Just 0.5)
+    (y, y_p)                   = pF "y" (Just 0.5)
     (hue, hue_p)               = pF "hue" (Just 0)
-    (saturation, saturation_p) = pF "saturation" (Just 0)
-    (value, value_p) = pF "value" (Just 0)
-    str = do s <- makeConnection "127.0.0.1" 57120 mySlang
+    str = do s <- makeConnection "127.0.0.1" 7110 mySlang
              let backend = Backend s (\_ _ _ -> return ())
              stream backend myShape
 
