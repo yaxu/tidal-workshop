@@ -586,3 +586,17 @@ d1 $ weave 16 (n "0 1 2 3 4 5 6 7" # sound "arpy")
     speed "1 0.25*2 2*2 0.5",
     speed "0.5 1"
    ]
+
+d1 $ n "0 .. 7" # sound "arpy"
+
+d1 $ weave 16 (n "0 .. 7" # sound "arpy")
+   [vowel "a o",
+    vowel "i"
+   ]
+
+d1 $ jux rev $ weave 8 (palindrome $ n "0 3 5 7 10 12 15 17" # sound "supermandolin")
+    [vowel "a o",
+     vowel "i(3,8)",
+     speed "1 0.5",
+     speed "1 ~ 0.25"
+    ]
