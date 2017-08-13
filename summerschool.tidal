@@ -569,3 +569,7 @@ d1 $ revchop $ sound "bd"
 
 d1 $ every 3 fastspeed $ sound "bd"
    # pan 0.25
+
+d1 $ sound "arpy(3,8)" # accelerate (slow 4 $ sine)
+   # pan 0.25
+   
