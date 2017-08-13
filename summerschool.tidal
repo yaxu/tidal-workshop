@@ -635,5 +635,12 @@ d1 $ n (Ch.enchord [Ch.major, Ch.minor, Ch.minor7]
 -- or make an abstraction:
 let chs = Ch.enchord [Ch.major, Ch.minor, Ch.minor7]
 
+
 d1 $ n (chs "c g e f*2" "0 2")
      # sound "superpiano"
+
+
+     d1 $ ifp ((> 2).(flip mod 4))
+     (striate 4)
+     (# coarse "24 48") $
+     sound "hh hc"
