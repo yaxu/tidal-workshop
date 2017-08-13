@@ -62,7 +62,6 @@ onset <- onsetStream
 
 onset1 <- onsetStream
 
-
 onset $ x "0 0.25 0.5 1" # y sine # hue saw # dur 0.4
 
 onset $ discretise 32 $ x saw # y sine # dur 0.3 # hue "0.3 0.5"
