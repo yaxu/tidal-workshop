@@ -32,7 +32,7 @@ let myShape :: Shape
                     }
     mySlang = OscSlang {
       path = "/hello",
-      timestamp = NoStamp,
+      timestamp = MessageStamp,
       namedParams = False,
       preamble = []
     }
