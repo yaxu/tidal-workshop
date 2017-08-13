@@ -551,7 +551,8 @@ cd build
 
 -- install the development version of tidal
 cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.9.5.tar.gz
-
+-- and tidalmidi
+cabal install https://hackage.haskell.org/package/tidal-midi-0.9.4/candidate/tidal-midi-0.9.4.tar.gz
 
 d1 $ fast 2 $ whenmod 8 6 (fast 4) $ sound "odx"
    # pan 0.25
