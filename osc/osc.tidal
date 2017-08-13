@@ -16,11 +16,11 @@ let myShape :: Shape
     (hue, hue_p) = pF "hue" (Just 0)
     (saturation, saturation_p) = pF "saturation" (Just 0)
     (value, value_p) = pF "value" (Just 0)
-    str = do s <- makeConnection "127.0.0.1" 57120 mySlang
-             let backend = Backend s (\_ _ _ -> return ())
-             stream backend myShape
+    simpleStream = do s <- makeConnection "127.0.0.1" 57120 mySlang
+                      let backend = Backend s (\_ _ _ -> return ())
+                      stream backend myShape
 
-o <- str
+o <- simpleStream
 
 
 -- A more complex one..
