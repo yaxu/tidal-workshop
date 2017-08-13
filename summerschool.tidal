@@ -563,3 +563,4 @@ d1 $ revchop $ sound "bd"
    # pan 0.25
 
 let revchop p = rev $ chop 16 p
+      # speed 2
