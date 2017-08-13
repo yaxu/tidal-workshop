@@ -55,11 +55,13 @@ let myShape :: Shape
     (y, y_p)                   = pF "y" (Just 0.5)
     (hue, hue_p)               = pF "hue" (Just 0)
     onsetStream = do s <- makeConnection "127.0.0.1" 7110 mySlang
+                     let backend = Backend s (\_ _ _ -> return ())
                      stream backend myShape
 
-onsetStream <- onsetStream
+onset <- onsetStream
 
 
+onset $ x "0 0.25 0.5 1" # y sine # hue saw # dur 0.4
 
 onset $ every 3 rev $ discretise 32 $ x saw # y sine # dur 0.4 # hue saw
 
