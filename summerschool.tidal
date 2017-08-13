@@ -439,9 +439,15 @@ m2 <- midiStream devices "X18/XR18 MIDI 1" 1 synthController
 
 d1 $ sometimesBy 0.2 (rev) $ sound "cp sn:2"
 
-d1 $ sound "hc*8"
-  # nudge (scale 0 0.1 sine)
+d1 $ swingBy (1/16) 4 $ sound "cp*8"
 
-d2 $ sound "bd(3,8)"
+d1 $ sound "bd*64"
+  # nudge (scale 0 0.2 sine)
+
+  d1 $ (chop 63 $ sound ("bd cp ~ sn:2"))
+    # nudge (slow 4 sine)
+
+
+d2 $ sound "drum(3,8)"
 
 m2 $ n "0 7*3"
