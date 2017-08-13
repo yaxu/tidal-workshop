@@ -621,7 +621,19 @@ let tsdelay = make' VF tsdelay_p
 let xsdelay = make' VI xsdelay_p
     xsdelay_p = I "xsdelay" Nothing
 
-import qualified Sound.Tidal.Chords as Chords
+chord names:
+https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Chords.hs
 
-d1 $ n (Chords.enchord [Chords.major, Chords.minor] "c g" "0 1") 
-     # sound "supermandolin"
+-- import the chords:
+import qualified Sound.Tidal.Chords as Ch
+
+
+d1 $ n (Ch.enchord [Ch.major, Ch.minor, Ch.minor7]
+        "c g e f*2" "2")
+     # sound "superpiano"
+
+-- or make an abstraction:
+let chs = Ch.enchord [Ch.major, Ch.minor, Ch.minor7]
+
+d1 $ n (chs "c g e f*2" "2")
+          # sound "superpiano"
