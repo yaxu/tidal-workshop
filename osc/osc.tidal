@@ -51,4 +51,4 @@ let myShape :: Shape
              let backend = Backend s (\_ _ _ -> return ())
              stream backend myShape
 
-o <- str
+onset <- str
