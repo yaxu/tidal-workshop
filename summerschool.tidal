@@ -540,7 +540,9 @@ cd src
 git clone https://github.com/tidalcycles/TidaLink.git
 cd TidaLink
 
--- You might need to do: brew install cmake
+-- You might need to do:
+brew install cmake
+
 /bin/bash compile.sh
 
 -- to run TidaLink
