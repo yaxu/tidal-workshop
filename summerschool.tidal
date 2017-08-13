@@ -555,3 +555,11 @@ cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.
 
 d1 $ fast 2 $ whenmod 8 6 (fast 4) $ sound "odx"
    # pan 0.25
+
+d2 $ slow 2 $ sound "blue"
+   # pan 0.25
+
+d1 $ revchop $ sound "bd"
+   # pan 0.25
+
+let revchop p = rev $ chop 16 p
