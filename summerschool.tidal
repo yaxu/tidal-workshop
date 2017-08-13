@@ -406,7 +406,7 @@ d3 $ seqPLoop [
 x x x x x x x x
   x x x
 
-  d1 $ n ("c6 a7") # sound "supermandolin"
-     # sustain 2
+d1 $ n ("c6 a7") # sound "supermandolin"
+  # sustain 2
 
 d3 $ sound "cp(3,8)"
