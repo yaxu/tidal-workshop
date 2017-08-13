@@ -8,7 +8,7 @@ let myShape :: Shape
                      latency = 0
                     }
     mySlang = OscSlang {
-      path = "/hello",
+      path = "/colour",
       timestamp = NoStamp,
       namedParams = False,
       preamble = []
