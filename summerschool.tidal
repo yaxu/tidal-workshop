@@ -607,3 +607,6 @@ d1 $ jux rev $ weave 8 (palindrome $ n "0 3 5 7 10 12 15 17" # sound "supermando
      speed "1 0.5",
      speed "1 ~ 0.25"
     ]
+
+-- superDirt hacks:
+https://github.com/musikinformatik/SuperDirt/tree/master/hacks
