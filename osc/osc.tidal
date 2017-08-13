@@ -52,3 +52,5 @@ let myShape :: Shape
              stream backend myShape
 
 onset <- str
+
+onset $ discretise 32 $ x saw # y sine # dur 0.4 # hue saw
