@@ -2,7 +2,7 @@ import oscP5.*;
 import netP5.*;
 
 OscP5 oscP5;
-
+color backgroundColour = color(0,0,0);
 void setup() {
   size(displayWidth, displayHeight,P2D);
   oscP5 = new OscP5(this, 7111);
