@@ -13,6 +13,7 @@ void setup() {
 }
 
 void draw() {
+  background(backgroundColour);
 }
 
 void oscEvent(OscMessage m) {
