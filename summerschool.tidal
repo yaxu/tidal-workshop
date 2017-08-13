@@ -639,9 +639,19 @@ let chs = Ch.enchord [Ch.major, Ch.minor, Ch.minor7]
 d1 $ n (chs "c g e f*2" "0 2")
      # sound "superpiano"
 
-d1 $ sound "bd"
+d1 $ spread ($) [fast 2,
+                 (# speed 2),
+                 (# crush 3)
+                ]
+   $ sound "bd(3,8)"
 
-     d1 $ ifp ((> 2).(flip mod 4))
+d1 $ ifp ((> 2).(flip mod 4))
      (striate 4)
      (# coarse "24 48") $
      sound "hh hc"
+
+-- need to write a better function for this
+d1 $ chop 16 $ sound "sd:2 arpy"
+
+-- striate is the same as chop but mixes up the bits
+d1 $ striate 16 $ sound "sd:2 arpy"
