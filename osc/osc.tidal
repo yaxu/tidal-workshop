@@ -23,7 +23,7 @@ let myShape :: Shape
 simple <- simpleStream
 
 
-simple $ hue "0" # 
+simple $ hue "0" # saturation 1 # brightness 1
 
 -- A more complex one..
 
