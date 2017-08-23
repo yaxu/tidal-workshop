@@ -19,3 +19,14 @@ d1 $ n ("c6 a7") # sound "supermandolin"
    # sustain 2
 
 d1 $ n "f a c e" # sound "supermandolin"
+
+d1 $ sound "bd sn:2"
+
+d1 $ sound "bd sn"
+
+d1 $ n "f a c e" # sound "supermandolin"
+d1 $ sound "bd sn"
+
+d1 $ n "f a c e" # sound "supermandolin"
+   # shape 0.3
+   
