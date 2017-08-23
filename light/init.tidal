@@ -17,3 +17,5 @@ x1 $ chunk 4 (hurry 2) $ jux rev $ chop 16 $ sound "bd(3,8) cp supermandolin:5 ~
 
 d1 $ n ("c6 a7") # sound "supermandolin"
    # sustain 2
+
+d1 $ n "f a c e" # sound "supermandolin"
