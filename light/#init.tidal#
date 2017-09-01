@@ -36,4 +36,6 @@ import qualified Data.ByteString.Char8 as B
 import qualified System.Hardware.Serialport as SP
 output <- SP.openSerial "/dev/ttyUSB0" (SP.defaultSerialSettings {SP.commSpeed = SP.CS115200})
 
-SP.send output $ B.pack $ ("1 1 1") ++ "\r"
+let to256 f = show $ floor (f * 255)
+
+sendRight output 1 1 1 0.02

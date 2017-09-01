@@ -20,6 +20,8 @@ d1 $ n ("c6 a7") # sound "supermandolin"
 
 d1 $ n "f a c e" # sound "supermandolin"
 
+l1 $ sound "red"
+
 d1 $ sound "bd sn:2"
 
 d1 $ sound "bd sn"
@@ -30,3 +32,10 @@ d1 $ sound "bd sn"
 d1 $ n "f a c e" # sound "supermandolin"
    # shape 0.3
    
+import qualified Data.ByteString.Char8 as B
+import qualified System.Hardware.Serialport as SP
+output <- SP.openSerial "/dev/ttyUSB0" (SP.defaultSerialSettings {SP.commSpeed = SP.CS115200})
+
+let to256 f = show $ floor (f * 255)
+
+sendRight output 1 1 1 1
