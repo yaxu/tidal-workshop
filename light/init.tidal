@@ -38,4 +38,4 @@ output <- SP.openSerial "/dev/ttyUSB0" (SP.defaultSerialSettings {SP.commSpeed =
 
 let to256 f = show $ floor (f * 255)
 
-sendRight output 1 1 1 1
+sendRight output 1 1 1 0.02
