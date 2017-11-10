@@ -144,9 +144,6 @@ d1 $ jux (slow 2) $ off 0.125 (# sound "pulse") $
                  $ slow 2 "d6(3,8) a7(3,8) [c7*2 c6] e7(3,8)")
                  # sound "rash"
 
-
-d1 jux rev $
-
 d1 $ jux rev $ n "0 [~ 3] [~ 2*2] 5" # sound "micron"
 
 
