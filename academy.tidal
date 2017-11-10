@@ -60,9 +60,6 @@ d1 $ sound "arpy arpy:4 arpy:5"
 -- How do I add more sounds? Just drop them in and restart superdirt. Here's some..
 -- http://slab.org/tmp/extra-samples.zip
 
--- Change the superdirt startup, instructions here:
-https://github.com/musikinformatik/SuperDirt
-
 -- Composing effects
 
 d1 $ sound "bd sd cp sd"
