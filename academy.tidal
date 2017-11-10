@@ -98,8 +98,6 @@ d3 $ sound "superpiano"
 
 -- frequency
 
-d1 $
-
 :t lpq
 
 d2 $ sound "{jx:50 jx:40 jx:42 jx:53, bd sd bd}%2"
