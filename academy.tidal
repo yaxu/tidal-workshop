@@ -45,7 +45,6 @@ d1 $ sound "cp(5,8)"
 (11,24,14) : A rhythm necklace of the Aka Pygmies of Central Africa.
 (13,24,5) : Another rhythm necklace of the Aka Pygmies of the upper Sangha.
 
-
 -- Add gaps
 
 d1 $ sound "bd ~ hh bd sd ~ hh bd"
