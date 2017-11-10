@@ -96,18 +96,9 @@ d1 (slow 2 (sound "arpy arpy:2"))
 -- .. but we'd quickly end up with a lot of closing brackets to keep
 -- track of.
 
--- Earlier we noticed that the first parameter was a *pattern* of
--- time. This means we can pattern it:
+-- We can pattern that first parameter:
 
 d1 $ slow "2 4" $ sound "arpy arpy:2"
-
--- There are a lot of patterns in the above! Lets look at the bits.
-
--- This is a pattern of words (also known as 'strings'):
-"arpy arpy:2"
-
--- This is a pattern of names of sounds:
-sound "arpy arpy:2"
 
 -- This is a pattern of whole numbers (also known as 'integers'):
 "2 4"
