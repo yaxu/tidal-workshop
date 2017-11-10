@@ -12,12 +12,7 @@ d1 $ silence
 
 -- The longer the sequence, the faster it runs
 
-d1 $ sound "bd ~ ~ bd ~ bd ~ ~"
-
-d1 $ sound "bd*3 bd bd*8 bd"
-
-d1 $ sound "bd*16?"
-
+d1 $ sound "bd sd cp sd bd sn cp sd"
 
 -- Euclidean rhythms
 
