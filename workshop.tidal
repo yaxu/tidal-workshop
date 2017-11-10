@@ -172,7 +172,7 @@ d1 $ palindrome $ n (run 4) # sound "arpy"
 
 d1 $ slow 4 $ n "[0 1 2 3] [0 1 2 3]*2 [0 1 2 3]*4 [0 1 2 3]*8" # sound "arpy"
 
-d1 $ slowspread (density) [1,2,4,8] $ n "0 1 2 3" # sound "arpy"
+d1 $ density "<1 2 4 8>" $ n "0 1 2 3" # sound "arpy"
 
 -- ** interference
 
