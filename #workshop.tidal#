@@ -654,7 +654,7 @@ d1 $ weave 16 (pan sine1) [sound "gabba(3,8)",
 For more examples see:
   http://twitter.com/tidalbot/
 
-
+d1 $ sound "bd"
 
 
  cabal update
