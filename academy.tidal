@@ -71,61 +71,11 @@ d1 $ sound "bd sd cp sd"
 -- All the effects:
 https://tidalcycles.org/functions.html#synth_parameters
 
--- Types
-
-:t slow
-:t fast
-:t sound
-
-sound :: Pattern String -> ParamPattern
-
-d1 $ fast 4 (sound (fast 2 "bd(3,8)") # vowel "a e")
-
-(1 + 3) * 2
-1 + (3 * 2)
 -- fast takes a number and a pattern
 -- sound takes a single pattern of words
 
 d1 $ fast "1 2 3" $ sound "cp"
 
-d2 $ sound "jv:50 jv:50 jv:50 jv:50"
-  # lpf "1000 3000 400"
-  # lpq 0.2
-
-d1 $ vowel "a [e e i o] i*4 u*2" # sound "bd"
-  # lpf 1000
-
-d2 (n "50 55 43 ~" # sound "jx")
-
-d1 $ (n $ "3 5 2 1" + "10 20 30") # sound "jv"
-
-d1 $ n ("40 50 60 30" + "<0 7>") # sound "jv"
-h
-d1 $ n ("40 50 60 30" + "<10 20>") # sound "jv"
-
-d1 $ every 4 (shuffle 4) $ loopAt 2 $ chop 32 $ sound "arc" # gain 1.1
-
-d1 $ every 4 (rev) $ sound "arpy ~ arpy:2"
-
-d1 $ every 3 (# speed 2) $ every 4 (# vowel "a") $ sound "arpy arpy:5 arpy:2 arpy:4"
-
-d1 $ iter 4 (loopAt 2 $ chop 16 $ sound "arc")
-
-d1 $ iter 4 $ sound "bd sd*2 cp ~"
-
--- phasing
-
-
-d1 $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"
-
-d2 $ (2/12) ~> (sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~")
-
-d3 $ do x <- slow (pure $ 12 * 12) $ run  12
-        jux ((pure $ x/12) <~) $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"
-
-d3 $ sound "[bd arpy]*3 sd"
-
-d3 $ sound "[bd arpy]!3 sd"
 
 v1 $ fast 4 $ iter 4 "red blue green orange"
 
