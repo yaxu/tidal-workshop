@@ -658,4 +658,4 @@ For more examples see:
 
 
  cabal update
- cabal install
+ cabal install tidal
