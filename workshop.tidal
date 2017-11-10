@@ -221,10 +221,8 @@ d1 $ every 4 (density 2) $ sound "arpy arpy:1 arpy:2 arpy:3"
 
 d1 $ jux (rev . (slow 1.5)) $ sound "arpy arpy:1 arpy:2 arpy:3"
 
--- slowspread
-
--- cycles through a list of parameters:
-d1 $ slowspread (density) [2, 1.5, 4, 16] $ sound "bd sn:2 hh sn:1"
+-- Patterns of parameters:
+d1 $ density "<2 1.5 4 16>" $ sound "bd sn:2 hh sn:1"
 
 -- slowcat
 
