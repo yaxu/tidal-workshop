@@ -57,7 +57,7 @@ d1 $ sound "arpy arpy:4 arpy:5"
 -- In the menus in SuperCollider (not atom):
 -- - File > Open user support directory > downloaded-quarks > Dirt-Samples
 
--- How do I add more sounds? Here's some..
+-- How do I add more sounds? Just drop them in and restart superdirt. Here's some..
 -- http://slab.org/tmp/extra-samples.zip
 
 -- Change the superdirt startup, instructions here:
