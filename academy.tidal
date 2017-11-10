@@ -10,6 +10,10 @@ d1 $ sound "bd sd cp sd"
 
 d1 $ silence
 
+-- or
+
+hush
+
 -- The longer the sequence, the faster it runs
 
 d1 $ sound "bd sd cp sd bd sn cp sd"
