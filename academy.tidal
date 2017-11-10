@@ -111,7 +111,7 @@ slow "2 4"
 -- left:
 $
 
--- But it together and you get a pattern again, a pattern of sounds
+-- Put it together and you get a pattern again, a pattern of sounds
 slow "2 4" $ sound "arpy arpy:2"
 
 -- This is also a function, that takes a pattern as input and starts
