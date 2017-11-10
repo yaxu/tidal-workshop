@@ -76,43 +76,6 @@ https://tidalcycles.org/functions.html#synth_parameters
 
 d1 $ fast "1 2 3" $ sound "cp"
 
-
-v1 $ fast 4 $ iter 4 "red blue green orange"
-
-d1 $ slow 2 $ (chop 128 $ sound "bd cp*4 sd arpy")
-  # nudge (slow 4 sine)
-
-hush
-
-d1 $ loopAt 8 $ sound "bev"
-
-
-
-
-d1 $ sound "jv:40 jv:50"
-
-"3 5 2 1" :: Pattern Int
-
-d3 $ sound "superpiano"
-   # freq 2000
-
--- frequency
-
-:t lpq
-
-d2 $ sound "{jx:50 jx:40 jx:42 jx:53, bd sd bd}%2"
-
-d1 $ slow "  2 3" (sound "bd cp")
-
-d1 $ sound "[bd cp sd cp] [arpy [arpy:2 bd [bd bd] bd] arpy:4]"
-
-d1 $ sound "<arpy arpy:3 arpy:2> bd bd bd"
-
-
--- gives:
-
-slow :: Pattern Time -> Pattern a -> Pattern a
-
 -- Slow takes a pattern of time, a pattern (of something) and results in a pattern (of that something)
 
 d1 $ slow 2 (sound "arpy arpy:2")
