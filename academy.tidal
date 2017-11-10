@@ -58,7 +58,7 @@ d1 $ sound "arpy arpy:4 arpy:5"
 -- - File > Open user support directory > downloaded-quarks > Dirt-Samples
 
 -- How do I add more sounds? Here's some..
-http://slab.org/tmp/extra-samples.zip
+-- http://slab.org/tmp/extra-samples.zip
 
 -- Change the superdirt startup, instructions here:
 https://github.com/musikinformatik/SuperDirt
