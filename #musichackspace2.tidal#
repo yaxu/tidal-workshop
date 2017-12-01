@@ -1,0 +1,11 @@
+
+import Sound.Tidal.VisCycle
+import Data.Colour.Names
+import Data.Colour.SRGB
+import Data.Colour
+import System.Process
+
+let v s p = do visCycle ("images/" ++ s) "" p
+               runCommand ("convert images/" ++ s ++ ".pdf images/" ++ s ++ ".png")
+
+v "b" "purple yellow red blue orange"
