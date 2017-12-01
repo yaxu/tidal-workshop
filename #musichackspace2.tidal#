@@ -4,6 +4,6 @@ import Data.Colour.Names
 import Data.Colour.SRGB
 import Data.Colour
 
-let v s p = visCycle "images/" ++ s "" p
-:t 
-v "purple yellow red"
+let v s p = visCycle ("images/" ++ s) "" p
+
+v "a" "purple yellow red"
