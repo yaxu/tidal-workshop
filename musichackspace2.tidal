@@ -8,4 +8,4 @@ import System.Process
 let v s p = do visCycle ("images/" ++ s) "" p
                runCommand ("convert images/" ++ s ++ ".pdf images/" ++ s ++ ".png")
 
-v "a" "purple yellow red"
+v "b" "purple ~ red ~ orange"
