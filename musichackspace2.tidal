@@ -422,6 +422,27 @@ d1 $ iter 4 $ n "0 .. 7" # sound "arpy"
 
 d1 $ iter' 4 $ loopAt 4 $ chop 16 $ sound "paper"
 
+d1 $ n "f a c e" # sound "supermandolin"
+   # shape 0.3
 
+d1 $ sound "bd sn"
 
 hush
+
+d1 $ sound "bd sn"
+
+let thingie = sound "bd sn(3,8)"
+    foo = vowel "e"
+in
+d1 $ thingie # shape 0.4 # foo
+
+
+d1 $ every 2 (crush "2 4 6" #) $ sound "bd sn"
+
+
+d2 $ every 2 (fast 4) $ sound "bd sn"
+
+
+
+let x = (+ 3)
+x 4
