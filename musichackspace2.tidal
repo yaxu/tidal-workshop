@@ -1,9 +1,28 @@
-https://slab.org/tidalcycles-summer-school/
+Potential topics
+
+-- Sequencing (polymeter, euclidean rhythms, ..)
+-- Effects
+-- Transforming pattern (iter, off, rev, weave, fast/slow, ..)
+-- Higher order transformation (every, jux)
+-- Granulation (chop, striate, gap etc)
+-- Randomisation
+-- Superdirt hacks
+-- Chords and scales
+-- History of tidal / algorave etc
+-- How to make an algorave
+
+-- Find this file (musichackspace2.tidal)
+https://github.com/yaxu/tidal-workshop
+
+-- install the development version of tidal
+cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.9.5.tar.gz
+
+-- if you use midi you'll probably need to update that too
+cabal install https://hackage.haskell.org/package/tidal-midi-0.9.4/candidate/tidal-midi-0.9.4.tar.gz
 
 -- Sequencing
 
 d1 $ sound "bd sd cp sd"
-
 
 -- Silencing
 
@@ -83,9 +102,7 @@ https://tidalcycles.org/functions.html#synth_parameters
 :t (#)
 :t ($)
 
--- $
-
--- gives:
+-- Lets look at slow
 
 slow :: Pattern Time -> Pattern a -> Pattern a
 
@@ -112,7 +129,7 @@ d1 (slow 2 (sound "arpy arpy:2"))
 -- Earlier we noticed that the first parameter was a *pattern* of
 -- time. This means we can pattern it:
 
-d1 $ slow "2 4" $ sound "arpy arpy:2"
+d1 $ slow "2 0.5" $ sound "arpy arpy:2"
 
 -- There are a lot of patterns in the above! Lets look at the bits.
 
@@ -192,6 +209,7 @@ visCycle "testcycle" "" "red blue green orange"
 -- Superdirt
 
 https://github.com/musikinformatik/SuperDirt
+https://github.com/musikinformatik/SuperDirt/tree/master/hacks
 
 -- Global effects + orbits
 
@@ -203,13 +221,6 @@ d1 $ sound "bd"
   # room 0.9
   # size 0.9
   # orbit 1
-
-d2 $ sound "arpy arpy"
-  # orbit 0
-
-d1 $ sound "bd*32"
-  # pan saw
-
 
   -- quadrophonic, five orbits
 
@@ -231,8 +242,6 @@ s.waitForBoot {
 	~dirt.start(57120, [0, 0, 0, 0, 0]);   // start listening on port 57120, create two orbits, each sending audio to channel 0. You can direct sounds to the orbits from tidal e.g. by: `# orbit "0 1 1"
 }
 )
-
---
 
 -- eight stereo channels, going to eight tracks on a DAW (via soundflower or something)
 
@@ -291,111 +300,9 @@ brew install cmake
 cd build
 ./TidaLink
 
--- install the development version of tidal
-cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.9.5.tar.gz
-
--- and tidal-midi
-cabal install https://hackage.haskell.org/package/tidal-midi-0.9.4/candidate/tidal-midi-0.9.4.tar.gz
-
 d1 $ fast 2 $ whenmod 8 6 (fast 4) $ sound "odx"
    # pan 0.25
 
 d2 $ slow 2 $ sound "blue"
    # pan 0.25
 
-
-let revchop p = rev $ chop 16 p
-                 # speed 2
-    fastspeed p = fast 2 $ p # speed 2
-
-d1 $ revchop $ sound "bd"
-   # pan 0.25
-
-d1 $ every 3 fastspeed $ sound "bd"
-   # pan 0.25
-
-d1 $ sound "arpy(3,8)" # accelerate (slow 4 $ sine)
-   # pan 0.25
-
-d1 $ weave 16 (pan saw)
-    [sound "bd(3,8)",
-     sound "arpy*2" # crush 3,
-     sound "~ cp",
-     sound "sn:2*2"
-    ]
-
-d1 $ weave 16 (n "0 1 2 3 4 5 6 7" # sound "arpy")
-   [vowel "a e i",
-    vowel "o i*2",
-    speed "1 0.25*2 2*2 0.5",
-    speed "0.5 1"
-   ]
-
-d1 $ n "0 .. 7" # sound "arpy"
-
-d1 $ weave 16 (n "0 .. 7" # sound "arpy")
-   [vowel "a o",
-    vowel "i"
-   ]
-
-import Sound.Tidal.Scales
-
-d1 $ slow 2 $ n (toScale egyptian "0 .. 15") # sound "supermandolin"
-
--- see here for the available scales:
-https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Scales.hs
-
-d1 $ jux rev $ weave 8 (palindrome $ n "0 3 5 7 10 12 15 17" # sound "supermandolin")
-    [vowel "a o",
-     vowel "i(3,8)",
-     speed "1 0.5",
-     speed "1 ~ 0.25"
-    ]
-
--- superDirt hacks:
-https://github.com/musikinformatik/SuperDirt/tree/master/hacks
-
-d1 $ sound "cp"
-   # tsdelay 0.4
-   # xsdelay 4
-
-let tsdelay = make' VF tsdelay_p
-    tsdelay_p = F "tsdelay" Nothing
-
-let xsdelay = make' VI xsdelay_p
-    xsdelay_p = I "xsdelay" Nothing
-
-chord names:
-https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Chords.hs
-
--- import the chords:
-import qualified Sound.Tidal.Chords as Ch
-
-
-d1 $ n (Ch.enchord [Ch.major, Ch.minor, Ch.minor7]
-        "c g e f*2" "2")
-     # sound "superpiano"
-
--- or make an abstraction:
-let chs = Ch.enchord [Ch.major, Ch.minor, Ch.minor7]
-
-
-d1 $ n (chs "c g e f*2" "0 2")
-     # sound "superpiano"
-
-d1 $ spread ($) [fast 2,
-                 (# speed 2),
-                 (# crush 3)
-                ]
-   $ sound "bd(3,8)"
-
-d1 $ ifp ((> 2).(flip mod 4))
-     (striate 4)
-     (# coarse "24 48") $
-     sound "hh hc"
-
--- need to write a better function for this
-d1 $ chop 16 $ sound "sd:2 arpy"
-
--- striate is the same as chop but mixes up the bits
-d1 $ striate 16 $ sound "sd:2 arpy"
