@@ -319,7 +319,7 @@ d2 $ slow 2 $ sound "blue"
 
 
 
-d1 $ every 4 (fast 4) (sound "bd sn")
+d1 $ every 4 (fast 4) $ sound "bd sn"
 
 
 
