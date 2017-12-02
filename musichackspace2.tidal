@@ -21,7 +21,9 @@ d1 $ sound "bd*3 bd bd*8 bd"
 
 d1 $ sound "bd bd? sd*2 bd(3,8)"
 
-d1 $ sound "bd*16?"
+-- Euclidean rhythms
+
+d1 $ sound "bd(3,8)"
 
 (2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.
 (3,4) : The archetypal pattern of the Cumbia from Colombia, as well as a Calypso rhythm from Trinidad.
@@ -44,7 +46,6 @@ d1 $ sound "bd*16?"
 (9,16) : A rhythm necklace used in the Central African Republic.
 (11,24,14) : A rhythm necklace of the Aka Pygmies of Central Africa.
 (13,24,5) : Another rhythm necklace of the Aka Pygmies of the upper Sangha.
-
 
 -- Add gaps
 
