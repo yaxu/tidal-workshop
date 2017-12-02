@@ -1,2 +1,13 @@
 
-v $ "red blue"
+import Sound.Tidal.VisCycle
+import Data.Colour.Names
+import Data.Colour.SRGB
+import Data.Colour
+import System.Process
+
+let v s p = do visCycle ("images/" ++ s) "" p
+               runCommand ("convert images/" ++ s ++ ".pdf images/" ++ s ++ ".png")
+
+v "gd" (3 <~ "{purple yellow, red blue orange}")
+
+v "he" $ 4 <~ iter 4 "black blue lightblue white"
