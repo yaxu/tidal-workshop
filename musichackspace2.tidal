@@ -445,8 +445,3 @@ d1 $ every 2 (crush "2 4 6" #) $ sound "bd sn"
 
 
 d2 $ every 2 (fast 4) $ sound "bd sn"
-
-
-
-let x = (+ 3)
-x 4
