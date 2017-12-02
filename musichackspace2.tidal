@@ -499,8 +499,6 @@ d1 $ weave 16 (pan saw)
     sound "~ kurt"
    ]
 
-
-
 d2 $ n ("0 .. 7") # sound "superpiano"
 
 
