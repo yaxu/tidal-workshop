@@ -3,7 +3,7 @@
 -- Syntax - $ and #, etc
 -- Sequencing (polymeter, euclidean rhythms, ..)
 -- Effects
--- Chords and scales
+-- Chords and scales <- dev version of tidal
 -- Transforming pattern (iter, off, rev, weave, fast/slow, ..)
 -- Higher order transformation (every, jux)
 -- Granulation (chop, striate, gap etc)
