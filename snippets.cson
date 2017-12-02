@@ -8,8 +8,3 @@
       d1 $ n "f a c e" # sound "supermandolin"
          # shape 0.3
     """
-  'hello':
-    'prefix': 'hello'
-    'body': """
-      d1 $ sound "gabba(3,8)"
-    """
