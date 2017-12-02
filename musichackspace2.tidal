@@ -189,77 +189,15 @@ vis "test" $ "red blue green orange"
 
 visCycle "testcycle" "" "red blue green orange"
 
-d1 $ sound "arpy(3,8)"
-   # speed "-2"
-
-d1 $ every 3 (fast 2) $ stack [every 3 (# speed "-1") $ sound "arpy sd",
-                               sound "cp(3,8)" # speed 2
-                              ]
-    # crush 4
-
-d1 $ cat [sound "bd(3,8)",
-          sound "arpy",
-          sound "jvbass*4"
-         ]
-
-d2 $ every 3 (const (sound "jvbass*4")) $ sound "arpy cp"
-
-d3 $ seqPLoop [
-  (1,4, n "c7 a7" # sound "xx"),
-  (0,8, sound "bd(3,8)"),
-  (6,8, loopAt 4 $ chop 16 $ sound "arc")
-]
-
-x x x x x x x x
-  x x x
-
-d1 $ n ("c6 a7") # sound "supermandolin"
-  # sustain 2
-
-d3 $ sound "cp(3,8)"
-
-
-d1 $ slow 2 $ n (choose [0 .. 15]) # sound "amencutup"
-
-d1 $ n ("0 7 ~ 3")
-  # sound "supermandolin"
-  |+| n "<0 7 12>"
-
-d1 $ sound "drum*8" # n (irand 8)
-
-d1 $ sound "cp*8"
-   # speed (scale 0.5 2 rand)
-   # pan (fast 2 rand)
-
-import Sound.Tidal.MIDI.Context
-
-import Sound.Tidal.MIDI.Synth
-
-displayOutputDevices >>= putStrLn
-
-devices <- midiDevices
-
-m2 <- midiStream devices "X18/XR18 MIDI 1" 1 synthController
-
-d1 $ sometimesBy 0.2 (rev) $ sound "cp sn:2"
-
-d1 $ swingBy (1/16) 4 $ sound "cp*8"
-
-d1 $ sound "bd*64"
-  # nudge (scale 0 0.2 sine)
-
-d1 $ (chop 63 $ sound ("bd cp ~ sn:2"))
-  # nudge (slow 4 sine)
-
-
-d2 $ sound "drum(3,8)"
-
-m2 $ n "0 7*3"
-
-
+-- Superdirt
 
 https://github.com/musikinformatik/SuperDirt
 
+-- Global effects + orbits
+
+-- Normally if you set a global effect like reverb on one pattern,
+-- it'll mess up other patterns.. Unless you put them in different
+-- 'orbits'
 
 d1 $ sound "bd"
   # room 0.9
