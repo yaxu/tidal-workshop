@@ -23,8 +23,8 @@ https://github.com/yaxu/spicule/tree/master/extra-samples
 https://github.com/yaxu/tidal-workshop
 
 -- install the development version of tidal
-cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.9.5.tar.gz
 
+cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.9.5.tar.gz
 -- if you use midi you'll probably need to update that too
 cabal install https://hackage.haskell.org/package/tidal-midi-0.9.4/candidate/tidal-midi-0.9.4.tar.gz
 
@@ -445,3 +445,14 @@ d1 $ every 2 (crush "2 4 6" #) $ sound "bd sn"
 
 
 d2 $ every 2 (fast 4) $ sound "bd sn"
+
+
+d1 $ n ("c" + chord "<major>") # sound "superpiano"
+
+d1 $ jux rev $ n (off 0.25 (+ chord "minor") $ "<c a f e>(3,8)")
+   # sound "supermandolin"
+   # legato 4
+
+d2 $ n (iter 4 $ scaleP "majorPent" "0 .. 7" + "c2")
+  # sound "superpiano"
+  # gain 0.8
