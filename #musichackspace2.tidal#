@@ -8,7 +8,7 @@ import System.Process
 let v s p = do visCycle ("images/" ++ s) "" p
                runCommand ("convert images/" ++ s ++ ".pdf images/" ++ s ++ ".png")
 
-v "fc" (3 <~ "<red blue orange> [purple yellow]")
+v "gd" (3 <~ "{purple yellow, red blue orange}")
 
 
 -- Installation
