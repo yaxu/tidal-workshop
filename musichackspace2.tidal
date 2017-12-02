@@ -503,6 +503,19 @@ d2 $ n ("0 .. 7") # sound "superpiano"
 
 http://10.2.34.60:8000/index16.html
 
+t1 (xfadeIn 8) $ sound "arpy:4(3,8)"
+
+t1 (histpan 4) $ sound "kurt:6*3"
+
+d1 $ randcat [sound "bd(3,8)]" # vowel "a",
+            sound "can(5,8)"
+           ] # speed "4"
+
+d3 $ sound "cp"
+
+do d1 $ sound "bd"
+   d2 $ sound "can"
+   d3 silence
 
 nudger 0.1
 
