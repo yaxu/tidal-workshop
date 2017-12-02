@@ -173,7 +173,9 @@ d1 $ off 0.25 (# crush 3) $
 
 brew install cairo
 brew install pkg-config
-cabal install tidal-vis
+git clone https://github.com/tidalcycles/tidal-vis.git
+cd tidal-vis
+cabal install
 
 import Sound.Tidal.Vis
 
@@ -184,6 +186,8 @@ import qualified Graphics.Rendering.Cairo as C
 let vis name pat = vLines (C.withSVGSurface) (name ++ ".svg") (600,50) pat 1 1
 
 vis "test" $ "red blue green orange"
+
+visCycle "testcycle" "" "red blue green orange"
 
 d1 $ sound "arpy(3,8)"
    # speed "-2"
