@@ -10,6 +10,8 @@ let v s p = do visCycle ("images/" ++ s) "" p
 
 v "gd" (3 <~ "{purple yellow, red blue orange}")
 
+v "he" $ 4 <~ iter 4 "black blue lightblue white"
+
 
 -- Installation
 
