@@ -10,7 +10,7 @@ let vc s p = do visCycle ("images/" ++ s) "" p
 
 visCycle "vis"  "" $ "blue"
 
-d1 $ sound "bd"
+d1 $ sound "bd sn:2 bd arpy bd bd bd bd bd bd bd bd bd"
 
 hush
 
