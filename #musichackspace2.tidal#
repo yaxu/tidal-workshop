@@ -317,4 +317,9 @@ d2 $ slow 2 $ sound "blue"
 
 
 
-d1 $ sound "bd sn"
+
+
+d1 sound "bd sn"
+
+
+(10 + 4) * 2
