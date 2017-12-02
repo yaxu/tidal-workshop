@@ -436,6 +436,10 @@ let thingie = sound "bd sn(3,8)"
 in
 d1 $ thingie # shape 0.4 # foo
 
+d1 $ n "f a c e" # sound "supermandolin"
+   # shape 0.3
+
+he
 
 d1 $ every 2 (crush "2 4 6" #) $ sound "bd sn"
 
