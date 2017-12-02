@@ -48,7 +48,39 @@ d1 $ sound "bd bd? sd*2 bd(3,8)"
 
 -- Euclidean rhythms
 
-d1 $ sound "bd(3,8)"
+d1 $ sound "[bd sn, arpy arpy:3 arpy:5]"
+
+d1 $ sound "bd(5,9)"
+
+d2 $ sound "cp(3,4)"
+
+
+d1 $ sound "bd sn:2"
+   # vowel "a"
+
+d2 $ vowel "a i u" # sound "feel"
+
+d3 $ off 0.25 (|-| n 12) $ jux rev $
+  n (off 0.25 (+12) $ off 0.125 (+7)
+  "<c(3,8) <e5 g6>(3,8) f*2 g5(3,8)>")
+  # sound "superpiano"
+
+d4 $ iter 4 $ loopAt 4 $ chop 8 $ sound "paper"
+  # gain 1.1
+
+d1 $ rev $ loopAt 2 $ chop 8 $ sound "arc"
+  # gain 1.3
+
+d2 $ sound "gabba(3,8)"
+   # speed 2
+
+hush
+
+x - x - - x - -
+
+d1 $ slow 2 $ sound "bd(5,12)"
+
+
 
 (2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.
 (3,4) : The archetypal pattern of the Cumbia from Colombia, as well as a Calypso rhythm from Trinidad.
@@ -345,4 +377,12 @@ d1 $ every 4 (fast 2) $ n (every 4 (+24) "{0 5 7 12, 0 12 [2 5]}")
    # vowel "<a i e>"
 
 
-d1 $ n "0 7" # sound "superpiano"
+
+
+d1 $ n "0 7 12 7"
+    # sound "superpiano"
+
+d2 $ sound "superpiano supermandolin superpiano superzow"
+    # n "c af6"
+
+d1 $ n ("c7 a7 f6*2 e7" + 7) # sound "rash"
