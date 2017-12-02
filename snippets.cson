@@ -1,0 +1,15 @@
+'.source.tidalcycles':
+  'bdsn':
+    'prefix': 'thing1'
+    'body': 'd1 $ sound "bd sn"'
+  '':
+    'prefix': 'thing2'
+    'body': """
+      d1 $ n "f a c e" # sound "supermandolin"
+         # shape 0.3
+    """
+  'hello':
+    'prefix': 'hello'
+    'body': """
+      d1 $ sound "gabba(3,8)"
+    """
