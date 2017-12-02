@@ -453,6 +453,6 @@ d1 $ jux rev $ n (off 0.25 (+ chord "minor") $ "<c a f e>(3,8)")
    # sound "supermandolin"
    # legato 4
 
-d2 $ n (iter 4 $ scaleP "majorPent" "0 .. 7" + "c2")
+d2 $ n (iter 4 $ scaleP "majorPent" "0 .. 7")
   # sound "superpiano"
   # gain 0.8
