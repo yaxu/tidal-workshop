@@ -492,6 +492,14 @@ d2 $ jux rev $
     crush "12 [4 2]"
    ]
 
+d1 $ weave 16 (pan saw)
+   [sound "bd(3,8)",
+    sound "cp(5,8)",
+    sound "arpy*2",
+    sound "~ kurt"
+   ]
+
+
 
 d2 $ n ("0 .. 7") # sound "superpiano"
 
