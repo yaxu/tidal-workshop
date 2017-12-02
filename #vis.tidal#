@@ -16,6 +16,8 @@ d1 $ sound "[bd sn cp] [arpy arpy:2 [arpy:4 arpy:7] arpy:5]"
 
 d1 $ sound "[bd cp:3] <sn:4 sn:2 kurt> bd bd"
 
+d1 $ sound "[bd sn:2 cp, mt:2 lt:3 ht lt, arpy arpy:5 arpy:6 arpy:6 arpy:7]"
+
 
 
 
