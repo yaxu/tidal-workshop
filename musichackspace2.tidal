@@ -71,7 +71,14 @@ d4 $ iter 4 $ loopAt 4 $ chop 8 $ sound "paper"
 d1 $ every 3 (0.25 <~) $ rev $ loopAt 2 $ chop 8 $ sound "arc"
   # gain 1.3
 
-d1 $ rev $ loopAt 2 $ chop 4 $ sound "arc"
+d1 $ struct "x ~ x [~ x]" $ (loopAt 2 $ chop 16 $ sound "arc")
+   # vowel "a e i"
+
+d1 $ struct "x ~ x x*2" $ sound "bd"
+
+d1 $ sound "arc"
+  # begin "0.75"
+  # end "0.8"
 
 d1 $ rev $ loopAt "<16 8>" $ chop "32 64" $ sound "bev"
 
