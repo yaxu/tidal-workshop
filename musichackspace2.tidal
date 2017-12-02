@@ -1,3 +1,6 @@
+https://docs.google.com/presentation/d/1Emu5NB_0gUaQhk317B5MkgsfBLgTI_mDvJNRJ8aiaeU/edit?usp=sharing
+
+
 -- Potential topics
 
 -- Syntax - $ and #, etc
@@ -337,8 +340,7 @@ hush
 
 (10 + 4) * 2
 
-d1 $ every 4 (fast 2)
-  $ n (every 4 (+24) "{0 5 7 12, 0 12 [2 5]}") 
+d1 $ every 4 (fast 2) $ n (every 4 (+24) "{0 5 7 12, 0 12 [2 5]}")
    # sound "superpiano"
    # vowel "<a i e>"
 
