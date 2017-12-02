@@ -400,3 +400,18 @@ d2 $ sound "superpiano supermandolin superpiano superzow"
     # n "c af6"
 
 d1 $ n ("c7 a7 f6*2 e7" + 7) # sound "rash"
+
+d1 $ sound "sd(3,8)"
+   # room 0.9
+   # size 0.9
+   # orbit 1
+
+d2 $ n "0 .. 7" # sound "sn:3"
+  # delay 0.9
+  # delaytime (0.06)
+  # delayfb 0.9
+  # orbit 0
+  # room 0
+
+d1 $ sound "bd*8"
+   # pan saw
