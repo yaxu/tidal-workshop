@@ -25,6 +25,7 @@ https://github.com/yaxu/tidal-workshop
 -- install the development version of tidal
 
 cabal install https://hackage.haskell.org/package/tidal-0.9.5/candidate/tidal-0.9.5.tar.gz
+
 -- if you use midi you'll probably need to update that too
 cabal install https://hackage.haskell.org/package/tidal-midi-0.9.4/candidate/tidal-midi-0.9.4.tar.gz
 
@@ -456,3 +457,20 @@ d1 $ jux rev $ n (off 0.25 (+ chord "minor") $ "<c a f e>(3,8)")
 d2 $ n (iter 4 $ scaleP "majorPent" "0 .. 7")
   # sound "superpiano"
   # gain 0.8
+
+d1 $ jux rev $ (chop 128 $ n "0 ~ [~ 5] 3" # sound "drum")
+    # nudge (slow 4 sine)
+
+d2 $ degradeBy 0.8 $ chunk 4 (hurry 2) $ off 0.25 (# (crush 3 # speed 4)) $ up "~ 7 ~ 0*2" # sound "jvbass"
+  # lpf (scale 1000 4000 rand)
+  # lpq (slow 4 $ scale 0.2 0.3 sine)
+
+d3 $ degrade $ iter 4 $ jux (rev . (# speed 4)) $ n "0 6 [~ 5] 4"
+   # sound "feel"
+   |*| speed 2
+
+d4 $ degrade $ jux rev $ foldEvery [4,5] (0.25 <~) $ n "0 .. 7" # sound "funky"
+   # shape 0.3
+   # speed 4
+
+   
