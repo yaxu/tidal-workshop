@@ -68,8 +68,15 @@ d3 $ off 0.25 (|-| n 12) $ jux rev $
 d4 $ iter 4 $ loopAt 4 $ chop 8 $ sound "paper"
   # gain 1.1
 
-d1 $ rev $ loopAt 2 $ chop 8 $ sound "arc"
+d1 $ every 3 (0.25 <~) $ rev $ loopAt 2 $ chop 8 $ sound "arc"
   # gain 1.3
+
+d1 $ rev $ loopAt 2 $ chop 4 $ sound "arc"
+
+d1 $ rev $ loopAt "<16 8>" $ chop "32 64" $ sound "bev"
+
+
+d1 $ sound "arpy" # speed "-1"
 
 d2 $ sound "gabba(3,8)"
    # speed 2
