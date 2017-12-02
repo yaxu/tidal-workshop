@@ -83,20 +83,7 @@ https://tidalcycles.org/functions.html#synth_parameters
 :t (#)
 :t ($)
 
--- frequency
-
-d1 $
-
-:t lpq
-
-d2 $ sound "{jx:50 jx:40 jx:42 jx:53, bd sd bd}%2"
-
-d1 $ slow "  2 3" (sound "bd cp")
-
-d1 $ sound "[bd cp sd cp] [arpy [arpy:2 bd [bd bd] bd] arpy:4]"
-
-d1 $ sound "<arpy arpy:3 arpy:2> bd bd bd"
-
+-- $
 
 -- gives:
 
@@ -165,50 +152,6 @@ d2 $ off 0.25 (# speed 2) $ sound (slow "2 4" "arpy(3,8) arpy:2")
  # crush 3
 
 d1 $ off 0.25 (# crush 3) $
-
-d1 $ off 0.125 (# crush 3)
-   $ n (shuffle 4 "0 [3 6] [~ 2] 4") # sound "micron"
-
-d1 $ off 0.125 (# crush 3)
-   $ n ("0 [3 6] [~ 2] 4" + irand 4) # sound "micron"
-
-d1 $ sound "supermandolin"
-
-d1 $ jux (slow 2) $ off 0.125 (# sound "pulse") $
-                 slow 2 $ n (off 0.125 (+12) $ off 0.25 (+ "<7>")
-                 $ slow 2 "d6(3,8) a7(3,8) [c7*2 c6] e7(3,8)")
-                 # sound "rash"
-
-
-d1 jux rev $
-
-d1 $ jux rev $ n "0 [~ 3] [~ 2*2] 5" # sound "micron"
-
-
-d1 $ n ("0 [3 6] [~ 2] 4" + 4) # sound "micron"
-
-d1 $ n ("0 [3 6] [~ 2] 4" + irand 4) # sound "micron"
-
-d1 $ n ("0 [3 6] [~ 2] 4" + "<0 2>") # sound "micron"
-
-d1 $ n ("2 [5 8] [~ 4] 6") # sound "micron"
-
-d1 $ sound ("micron:0 [micron:3 micron:6] [~ micron:2] micron:4")
-
-
-d1 $ cat [chop 8 $ sound "bd",
-          rev $ chop 3 $ sound "cp"
-         ]
-
-cps (140/60/2)
-
-cps 1
-
-d1 $ n "0 [3 6] [~ 2] 4" # sound "micron"
-
-d2 $ 0.125 <~ (n "0 [3 6] [~ 2] 4" # sound "micron")
-   # crush 3
-
 
 -- Playing long samples
 
