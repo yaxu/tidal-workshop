@@ -309,3 +309,8 @@ d1 $ fast 2 $ whenmod 8 6 (fast 4) $ sound "odx"
 d2 $ slow 2 $ sound "blue"
    # pan 0.25
 
+
+
+
+
+
