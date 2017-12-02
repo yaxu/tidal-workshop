@@ -90,13 +90,12 @@ sound :: Pattern String -> ParamPattern
 cps 0.6
 
 d1 $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"
+  # pan 0
 
-d2 $ (2/12) ~> (sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~")
-hus
+d2 $ (toR <$> saw) ~> (sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~")
+  # pan 1
 
-let t = slow (pure $ 4 * 12) $ run 12
-in
-d3 $ jux ((pure $ t/12) <~) $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"
+d3 $ jux ((slow 12 $ run 12) <~) $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"
 
 d3 $ sound "[bd arpy]*3 sd"
 
