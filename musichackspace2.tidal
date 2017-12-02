@@ -83,42 +83,6 @@ https://tidalcycles.org/functions.html#synth_parameters
 :t (#)
 :t ($)
 
-sound :: Pattern String -> ParamPattern
-
--- phasing
-
-cps 0.6
-
-d1 $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"
-
-d2 $ (2/12) ~> (sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~")
-
-d3 $ do x <- slow (pure $ 12 * 12) $ run 12
-        jux ((pure $ x/12) <~) $ sound "cp ! ! ~ cp ! ~ cp ~ cp ! ~"
-
-d3 $ sound "[bd arpy]*3 sd"
-
-d3 $ sound "[bd arpy]!3 sd"
-
-v1 $ fast 4 $ iter 4 "red blue green orange"
-
-d1 $ slow 2 $ (chop 128 $ sound "bd cp*4 sd arpy")
-  # nudge (slow 4 sine)
-
-hush
-
-d1 $ loopAt 8 $ sound "bev"
-
-
-
-
-d1 $ sound "jv:40 jv:50"
-
-"3 5 2 1" :: Pattern Int
-
-d3 $ sound "superpiano"
-   # freq 2000
-
 -- frequency
 
 d1 $
