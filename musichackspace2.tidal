@@ -1,5 +1,7 @@
 https://docs.google.com/presentation/d/1Emu5NB_0gUaQhk317B5MkgsfBLgTI_mDvJNRJ8aiaeU/edit?usp=sharing
 
+https://github.com/yaxu/spicule/tree/master/extra-samples
+
 -- Potential topics
 
 -- Syntax - $ and #, etc
@@ -415,3 +417,9 @@ d2 $ n "0 .. 7" # sound "sn:3"
 
 d1 $ sound "bd*8"
    # pan saw
+
+d1 $ iter 4 $ n "0 .. 7" # sound "arpy"
+
+d1 $ iter' 4 $ loopAt 4 $ chop 16 $ sound "paper"
+
+hush
