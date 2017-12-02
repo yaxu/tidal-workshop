@@ -8,18 +8,11 @@ import System.Process
 let vc s p = do visCycle ("images/" ++ s) "" p
                 runCommand ("convert images/" ++ s ++ ".pdf images/" ++ s ++ ".png")
 
-visCycle "vis"  "" $ "blue"
+v "gd" (3 <~ "{purple yellow, red blue orange}")
 
-d1 $ sound "bd sn:2 bd arpy bd bd bd bd bd bd bd bd bd"
+vc "vis" $ weave 16 (dark)
+       "black blue lightblue white"
 
-d1 $ sound "[bd sn cp] [arpy arpy:2 [arpy:4 arpy:7] arpy:5]"
-
-d1 $ sound "[bd cp:3] <sn:4 sn:2 kurt> bd bd"
-
-d1 $ sound "{bd sn:2 cp, arpy:1 arpy:3 arpy:5 arpy:6}"
-
-
-d1 $ sound "feel:2"
 
 
 
