@@ -473,4 +473,28 @@ d4 $ degrade $ jux rev $ foldEvery [4,5] (0.25 <~) $ n "0 .. 7" # sound "funky"
    # shape 0.3
    # speed 4
 
-   
+
+
+d1 $ n ("c a" + chord "major major") # sound "superpiano"
+
+d1 $ slow 1 $ n (off 0.25 (+ chord "major major major minor")
+                 "<0(3,8) 3(3,8) 5(3,8,2) 4(3,8)>")
+  # sound "superpiano"
+  # legato 2
+
+d2 $ n (scaleP "majPent" "0 .. 7") # sound "superpiano"
+
+d2 $ jux rev $
+   weave 16 (n (scaleP "majPent" "0 .. 7") # sound "superpiano")
+   [vowel "a e i",
+    vowel "o ~ [u e] e",
+    crush "12 4",
+    crush "12 [4 2]"
+   ]
+
+
+d2 $ n ("0 .. 7") # sound "superpiano"
+
+
+d1 $ slow 1 $ n "0*8" # sound "superpiano"
+   # legato "0.125 0.5"
