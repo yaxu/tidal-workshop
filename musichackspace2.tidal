@@ -76,9 +76,12 @@ https://tidalcycles.org/functions.html#synth_parameters
 
 -- Types
 
+:t (+)
 :t slow
 :t fast
 :t sound
+:t (#)
+:t ($)
 
 sound :: Pattern String -> ParamPattern
 
