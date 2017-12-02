@@ -10,4 +10,13 @@ let vc s p = do visCycle ("images/" ++ s) "" p
 
 v "gd" (3 <~ "{purple yellow, red blue orange}")
 
-v "he" $ 4 <~ iter 4 "black blue lightblue white"
+vc "vis" $ fast 16 $ weave' 16 ("red blue orange grey purple")
+  [\x -> darken <$> "0.8 0.5" <*> x,
+   \x -> darken <$>"0.8 0.25 0.5" <*> x,
+   \x -> darken <$> "0.5 0.75" <*> x,
+   \x -> darken <$>"0.25 [0.5 1] 0.5" <*> x
+  ]
+
+
+
+
