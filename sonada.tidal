@@ -1,3 +1,7 @@
+
+
+https://docs.google.com/spreadsheets/d/1vtqxi98Z4JzO8Csm5omI_y0acJu4QA5E9GXaSduqgpU/edit#gid=0
+
 -- Presentation:
 https://docs.google.com/presentation/d/1Emu5NB_0gUaQhk317B5MkgsfBLgTI_mDvJNRJ8aiaeU/edit?usp=sharing
 
@@ -87,6 +91,20 @@ d1 $ n "0" # sound "supermandolin"
 
 d1 $ someCycles (hurry 0.5)
   $ jux rev $ iter 4 $ loopAt 1 $ chop 8 $ sound "breaks125"
+
+d1 $ sound "bd*4"
+
+d1 silence
+
+-- swing
+d2 $ sound "[hh*8, micron micron:4]"
+  # gain 1.1
+  # nudge "[0 0.04]*4"
+
+hu
+
+d1 $ sound "superpiano"
+
 
 
 d1 $ n "0 .. 8" # sound "amencutup"
@@ -318,3 +336,30 @@ visCycle "testcycle" "" "red blue green orange"
 
 https://github.com/musikinformatik/SuperDirt
 https://github.com/musikinformatik/SuperDirt/tree/master/hacks
+
+
+./run-client.py --mode tidalcycles
+
+192.168.1.70
+
+24BCA04721
+
+
+d1 $ chunk 4 (fast 2) $ n "0(3,8,<0 2>)" # sound "osd1"
+   # size (slow 8 saw)
+   # room (slow 8 saw)
+   # legato 1
+   # lpf (slow 4 $ scale 1000 2000 sine)
+   # lpq 0.2
+   # orbit 1
+   # speed (scale 1 2 saw)
+
+d3 $ chunk 4 (hurry 2) $ iter 4 $ loopAt 2 $ chop 8 $ sound "arc"
+  # gain 1.3
+
+d2 $ jux (fast 2) $ iter 4 $ n "0 .. 3" # sound "micron"
+  # lpf 3000
+  # lpq 0.2
+
+
+hush
