@@ -14,8 +14,10 @@ https://github.com/yaxu/spicule/tree/master/extra-samples
 -- Transforming pattern (iter, off, rev, weave, fast/slow, ..)
 -- Higher order transformation (every, jux, chunk, ...)
 -- Randomisation
--- Superdirt hacks
---   orbit
+-- Superdirt
+--   adding samples
+--   orbits
+--   hacks
 -- History of tidal / algorave etc
 -- How to make an algorave
 
