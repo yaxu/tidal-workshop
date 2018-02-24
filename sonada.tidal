@@ -16,8 +16,11 @@ d2 $ every 2 (const silence) $ up "0 [~ 7] 5 2" # sound "arpy" # lpf 3000 # lpq 
 d1 $ jux rev $ sound "arpy arpy:3 arpy:4 arpy:5"
 
 
+
+
 -- Potential topics
 
+-- pitching up samples
 -- Syntax - $ and #, etc
 -- Sequencing (polymeter, euclidean rhythms, ..)
 -- Effects
