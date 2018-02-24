@@ -1,5 +1,3 @@
-test
-
 -- Presentation:
 https://docs.google.com/presentation/d/1Emu5NB_0gUaQhk317B5MkgsfBLgTI_mDvJNRJ8aiaeU/edit?usp=sharing
 
@@ -18,8 +16,10 @@ https://github.com/yaxu/spicule/tree/master/extra-samples
 -- Randomisation
 -- Superdirt
 --   adding samples
+--   recording
 --   orbits
 --   hacks
+--   midinote ?
 -- History of tidal / algorave etc
 -- How to make an algorave
 
@@ -29,9 +29,12 @@ https://github.com/yaxu/tidal-workshop
 
 -- Sequencing
 
-d1 $ sound "bd sd cp sd"
+d1 $ sound "bd [sd bd] cp sd"
 
--- Silencing
+d1 $ slow 4 $ sound "numbers:0 {arpy:4 arpy:5, bd sn:2 cp} numbers:4"
+
+d1 $ sound "speakspell:2"
+
 
 d1 $ silence
 
