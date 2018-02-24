@@ -7,6 +7,13 @@ https://github.com/yaxu/spicule/tree/master/extra-samples
 
 d1 $ sound "bd sn:2 [~ bd] sn:3"
 
+d2 $ up "0 [~ 7] 5 2" # sound "arpy" # lpf 3000 # lpq 0.1
+
+d2 $ up "<[0 [~ 7] 5 2] ~>" # sound "arpy" # lpf 3000 # lpq 0.1
+
+d2 $ every 2 (const silence) $ up "0 [~ 7] 5 2" # sound "arpy" # lpf 3000 # lpq 0.1
+
+d1 $ jux rev $ sound "arpy arpy:3 arpy:4 arpy:5"
 
 
 -- Potential topics
