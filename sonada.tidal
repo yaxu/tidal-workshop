@@ -177,6 +177,7 @@ d1 $ slow "2 4" $ sound "arpy arpy:2"
 
 -- vis
 
+-- installing on a mac:
 brew install cairo
 brew install pkg-config
 git clone https://github.com/tidalcycles/tidal-vis.git
