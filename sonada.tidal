@@ -78,9 +78,12 @@ hush
 
 cps 0.9
 
-d1 $ n "c a g e" # sound "supermandolin"
+d1 $ n (off 0.125 (+12) $ off 0.25 (+7) "<c(3,8) a(3,8) g*2 e(3,8)>" )
+     # sound "supermandolin"
+     # legato 8
 
-
+d1 $ n "0" # sound "supermandolin"
+  # legato 4
 
 d1 $ up ("0 5 7 12" + "<0 12>") # sound "arpy"
 
