@@ -85,6 +85,14 @@ d1 $ n (off 0.125 (+12) $ off 0.25 (+7) "<c(3,8) a(3,8) g*2 e(3,8)>" )
 d1 $ n "0" # sound "supermandolin"
   # legato 4
 
+d1 $ someCycles (hurry 0.5)
+  $ jux rev $ iter 4 $ loopAt 1 $ chop 8 $ sound "breaks125"
+
+
+d1 $ n "0 .. 8" # sound "amencutup"
+
+
+
 d1 $ up ("0 5 7 12" + "<0 12>") # sound "arpy"
 
 d1 $ up (every 2 (+7) $ "0 5 7 12") # sound "arpy"
