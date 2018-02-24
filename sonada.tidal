@@ -27,6 +27,40 @@ d1 $ weave 16 (n "0 .. 7" # sound "arpy")
     speed "2 1 0.5"
    ]
 
+-- glitch
+d1 $ degrade $ n "0 .. 3" # sound "arpy"
+
+d1 $ sometimes (fast 2) $ n "0 .. 3" # sound "arpy"
+
+d2 $ sound "gabba(3,8)"
+
+d1 $ up "{0 7 12 2, -12 -24*2}" # sound "arpy"
+
+d2 $ sound "gabba" # speed (-2)
+
+d1 $ speed "1 2 3 4" # sound "drum"
+
+d1 $ iter 4 $ fast "2 [4 16] 3 8" $ sound "drum drum:2"
+
+d1 $ sound "bd feel:2? bd? bd?"
+
+d1 $ fast 4 $ sound "feel feel:3" # speed (scale 1 2 rand)
+
+d1 $ sound "drum*8" # n (irand 16)
+
+d1 $ randcat [sound "bd sn",
+              sound "arpy",
+              chop 8 $ sound "arc"
+             ]
+
+d1 $ sometimes (# speed 2) $ sound "bd(3,8)"
+
+d1 $ someCycles (# speed 2) $ sound "bd(3,8)"
+
+
+d1 silence
+
+d2 silence
 
 -- Potential topics
 
