@@ -55,7 +55,37 @@ d1 $ randcat [sound "bd sn",
 
 d1 $ sometimes (# speed 2) $ sound "bd(3,8)"
 
-d1 $ someCycles (# speed 2) $ sound "bd(3,8)"
+d1 $ someCycles (fast 2) $ sound "bd(3,8)"
+
+d1 $ sound "arpy*4"
+   # speed (fast 2 rand)
+   # crush (scale 5 8 rand)
+
+d1 $ loopAt 2 $ chop 16 $ sound "arc"
+
+
+d1 $ loopAt 2 $ rev $ chop 8 $ sound "arc"
+
+d1 $ (chop 128 $ sound "bd cp sn:2 bd*2")
+   # nudge (slow 4 sine)
+
+d1 $ iter 4 $ loopAt 16 $ chop 64 $ sound "bev"
+  # gain 1.1
+
+d2 silence
+
+hush
+
+cps 0.9
+
+d1 $ n "c a g e" # sound "supermandolin"
+
+
+
+d1 $ up (every 2 (+7) $ "0 5 7 12") # sound "arpy"
+d1 $ up (every 2 (+7) $ "0 5 7 12") # sound "arpy"
+d1 $ up (every 2 (+7) $ "0 5 7 12") # sound "arpy"
+
 
 
 d1 silence
