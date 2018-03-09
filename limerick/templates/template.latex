@@ -421,7 +421,11 @@ $include-after$
 $endfor$
 
 % more of alex's customisations
-\newpage
-\theendnotes
+
+\IfFileExists{\input.ent}{
+   \theendnotes
+}{
+   %no endnotes
+}
 
 \end{document}
