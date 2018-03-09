@@ -320,10 +320,9 @@ $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
 
-% Had to hardcode this - alex
-%\author{Alex McLean\qquad Giovanni Fanfani\qquad Ellen Harlizius-Klück\\Deutsches Museum, Munich}
 
-\date{$date$}
+% \date{$date$}
+
 $if(beamer)$
 $if(titlegraphic)$
 \titlegraphic{\includegraphics{$titlegraphic$}}
