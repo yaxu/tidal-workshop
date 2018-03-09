@@ -1,4 +1,4 @@
-import Sound.Tidal.Context (p, superDirtSetters, cpsUtils)
+import Sound.Tidal.Context (p, superDirtSetters, cpsUtils, ParamPattern)
 import Language.Haskell.Interpreter as Hint
 import System.Exit
 import System.Environment (getArgs)
