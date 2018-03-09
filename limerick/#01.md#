@@ -1,0 +1,58 @@
+---
+title: Tidal
+author:
+institute:
+...
+
+# Introduction
+
+Welcome to this workshop on tidalcycles, known as *tidal* for short.
+
+## What is a cycle?
+
+* Cyclic notion of time from Indian Classical music
+* The end is also the beginning (the *sam*)
+* Time in Tidal is based on cycles, rather than beats
+* Cycles are ticking over all the time
+* Cycles have fixed duration (which you can change with the *cps* command)
+
+# Basics of polyrhythmic sequencing with Tidal
+
+Before we get hands on, lets look at some visual renderings of tidal patterns.
+
+Sequences in tidal are generally denoted with double quotes:
+
+```{.haskell render="colour"}
+"red pink"
+```
+
+You can 'read' the above diagram clockwise, from the top.
+
+
+
+```{.haskell render="colour"}
+"red pink blue"
+```
+
+# Introduction to patterns - repetition, symmetry, interference and glitch
+
+# Haskell syntax
+
+# Ensemble play
+
+# More complex patternings
+
+# Strategies for live coding performance
+
+# Composing with tidal
+
+# Superdirt - synths, customisation, multichannel, midi control
+
+# Visualisation
+
+# Community
+
+* http://tidalcycles.org/
+* http://talk.lurk.org (e.g. #tidal, #livecode, #algorave channels)
+* http://algorave.com/
+* http://github.com/tidalcycles/
