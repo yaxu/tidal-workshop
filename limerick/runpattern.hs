@@ -6,7 +6,7 @@ import Control.Concurrent
 import System.Cmd
 import Text.HTML.TagSoup.Entity (lookupEntity)
 import System.Posix.Resource
-import Data.List (intercalcate)
+import Data.List (intercalate)
 
 unescapeEntities :: String -> String
 unescapeEntities [] = []
