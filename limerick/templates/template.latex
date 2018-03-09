@@ -339,8 +339,6 @@ $endif$
 \subsectionfont{\normalfont\itshape}
 \subsubsectionfont{\normalfont\itshape}
 
-\usepackage{endnotes}
-\let\footnote=\endnote
 
 \begin{document}
 $if(title)$
@@ -420,12 +418,5 @@ $include-after$
 
 $endfor$
 
-% more of alex's customisations
-
-\IfFileExists{\input.ent}{
-   \theendnotes
-}{
-   %no endnotes
-}
 
 \end{document}
