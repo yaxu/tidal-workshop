@@ -1,0 +1,779 @@
+---
+title: Tidal
+geometry: margin=2cm
+...
+
+# Introduction
+
+Welcome to this workshop on tidalcycles, known as *tidal* for short.
+
+I'm Alex - alex@slab.org + http://slab.org/
+
+Rough schedule for the two days:
+
+Morning session: 9.30 - 12.30, 13.30 - 16:30
+
+With natural breaks for tea drinking..
+
+Join us at Pharmacia from 9pm on Tuesday.
+
+## What is a cycle?
+
+* Cyclic notion of time from Indian Classical music
+* The end is also the beginning (the *sam*)
+* Time in Tidal is based on cycles, rather than beats
+* Cycles are ticking over all the time
+* Cycles have fixed duration (which you can change with the *cps* command)
+
+## Background
+
+* TOPLAP
+* Algorave
+
+## Pattern
+
+Types of pattern:
+
+* Repetition
+* Symmetry
+* Interference
+* Randomness/glitch
+
+# Basics of (polyrhythmic) sequencing with Tidal
+
+Before we get hands on, lets look at some visual renderings of tidal patterns.
+
+Sequences in tidal are generally denoted with double quotes:
+
+```{.haskell render="colour" cycles=6}
+"red pink"
+```
+
+You can 'read' the above diagram clockwise, from the top. You can see
+that the pattern repeats once per cycle. Six cycles are shown, but it
+will go on for ever. Here's what happens if we add another step to the sequence:
+
+
+```{.haskell render="colour" cycles=6}
+"red pink blue"
+```
+
+You can see that the steps have got shorter, so that they fit into
+the space. This already demonstrates how tidal is about cycles, not beats.
+
+## Make a sound
+
+Lets make a sound.
+
+Make sure supercollider is running, and SuperDirt is running inside
+that (via the `SuperDirt.start` command, which you can put in the
+supercollider startup file so it automatically runs).
+
+Run the following in atom, via ctrl-Enter (or on a mac, cmd-Enter):
+
+```
+d1 $ sound "bd"
+```
+
+Stop making a sound!
+
+```
+d1 silence
+```
+
+Tip: Make sure your tidal patterns have an empty line above and below,
+as tidal can't currently run two commands at once (there are
+workarounds for this).
+
+Lets break that down..
+
+* `d1` is a connection to the sound synthesiser, SuperDirt. There is also `d2`, up to `d9` or so.
+* `$` passes what's on the right (`sound "bd"`) to what's on the left
+  (`d1`). Without this, Tidal would only read as far as `sound` and
+  get confused!
+* `sound` says that a pattern of sounds (samples or synths) is coming up. That is, it turns a pattern of words into a pattern of sounds.
+* `"bd"` is a pattern of words, in this case the single word `bd`,
+  refering to a bass drum sound sample somewhere on your computer.
+
+## Sub-sequences
+
+You can break down an step put it inside `[` and `]` with a comma.
+
+```
+d1 $ sound "[bd]"
+```
+
+
+# Introduction to patterns - repetition, symmetry, interference and glitch
+
+# Haskell syntax
+
+# Ensemble play
+
+# More complex patternings
+
+# Strategies for live coding performance
+
+# Composing with tidal
+
+# Superdirt - synths, customisation, multichannel, midi control
+
+# Visualisation
+
+# Community
+
+* http://tidalcycles.org/
+* http://talk.lurk.org (e.g. #tidal, #livecode, #algorave channels)
+* http://toplap.org/
+* https://www.youtube.com/kindohm
+* http://algorave.com/
+* http://github.com/tidalcycles/
+
+
+
+-- * Pick a different sound from the same set, with ':'
+
+d1 $ sound "arpy:1"
+
+-- * Explore more sounds:
+
+-- flick sid can metal future gabba sn mouth co gretsch mt arp h cp cr
+-- newnotes bass hc tabla bass0 hh bass1 bass2 oc bass3 ho odx
+-- diphone2 house off ht tink perc bd industrial pluck trump
+-- printshort jazz voodoo birds3 procshort blip drum jvbass psr wobble
+-- drumtraks koy rave bottle kurt latibro rm sax lighter lt arpy feel
+-- less stab ul
+
+-- * Where do these sounds come from? How do I add more?
+
+-- In the menus in SuperCollider (not atom):
+-- - File > Open user support directory > downloaded-quarks > Dirt-Samples
+
+-- * Make a sequence
+
+d1 $ sound "bd hh sn hh"
+
+-- * Add a silence/rest in a sequence with '~'
+
+d1 $ sound "bd ~ sn:3 bd sn:5 ~ bd:2 sn:2"
+
+-- * The longer the sequence, the faster it runs
+
+d1 $ sound "bd bd hh bd sn bd hh bd"
+
+-- * Play more than one sequence at once with d1 ... d9
+
+d2 $ sound "sn [sn:2 sn] bd sn"
+
+-- * Change the global cycles per second (equivalent to BPM)
+
+cps 0.6
+
+-- * Pause everything (remember to put negative numbers in parenthesis)
+
+cps (-1)
+
+-- * Start again
+
+cps 0.6
+
+-- * Hush stops makes everything silent at once
+
+hush
+
+-- * Effects
+
+-- ** vowel
+
+d1 $ sound "drum drum drum drum" # vowel "a o"
+
+-- The 'structure' comes from the left - try swapping the parameters
+
+d1 $ vowel "a o ~ i" # sound "drum" 
+
+-- ** gain
+
+d1 $ sound "bd hh sn:1 hh sn:1 hh" # gain "1 0.7 0.5"
+
+-- 'sine1' is a continuous pattern following a sine curve from 0 to 1 and back
+
+d1 $ sound "bd*32" # gain sine1
+
+-- ** 'speed' and up
+
+-- speed of playback, e.g. 2 = up an octave
+d1 $ speed "1 2 4" # sound "jungbass:6"
+
+-- up - semitones, e.g. 12 = up an octave
+d1 $ up "0 ~ 12 24" # sound "jungbass:6"
+
+d1 $ sound "numbers:1 numbers:2 numbers:3 numbers:4"
+
+d1 $ sound "numbers:1 numbers:2 numbers:3 numbers:4" # speed "1 1.5 2 0.5"
+
+-- ** pan - 0 = left, 0.5 = middle, 1 = right
+d1 $ sound "numbers:1 numbers:2 numbers:3 numbers:4" # pan "0 0.5 1"
+
+-- We can use * to repeat a step, e.g. this plays 16 kick drums per cycle,
+-- panned from left to right following a sine curve, pitched right up:
+
+d1 $ sound "drum*16" # pan sine1 # speed "4"
+
+-- ** shape - distortion (careful - also makes the sound much louder)
+
+d1 $ sound "kurt:4 kurt:4" # shape "0 0.78" # gain "0.7"
+
+-- * feeling brave ?
+
+-- http://tidalcycles.org/patterns.html#effects
+
+-- delay / delaytime / delayfeedback
+-- cutoff / resonance
+-- room / size
+
+-- * Subsequences
+
+-- Fit a subsequence into a step with square brackets:
+
+d1 $ sound "bd [bd cp] bd bd"
+
+-- This can make for flexible time signatures:
+
+d1 $ sound "[bd bd sn:5] [bd sn:3]"
+
+-- You can put subsequences inside subsequences:
+d1 $ sound "[[bd bd] bd sn:5] [bd sn:3]"
+
+-- Keep going..
+d1 $ sound "[[bd [bd bd bd bd]] bd sn:5] [bd sn:3]"
+
+-- * Polymetric / polyrhythmic sequences
+
+-- Play two subsequences at once by separating with a comma:
+
+d1 $ sound "[voodoo voodoo:3, arpy arpy:4 arpy:2]"
+
+-- compare how [,] and {,} work:
+
+d1 $ sound "[voodoo voodoo:3, arpy arpy:4 arpy:2]"
+
+d1 $ sound "{voodoo voodoo:3, arpy arpy:4 arpy:2}"
+
+d1 $ sound "[drum bd hh bd, can can:2 can:3 can:4 can:2]"
+
+d1 $ sound "{drum bd hh bd, can can:2 can:3 can:4 can:2}"
+
+d1 $ sound "[bd sn, can:2 can:3 can:1, arpy arpy:1 arpy:2 arpy:3 arpy:5]"
+
+d1 $ sound "{bd sn, can:2 can:3 can:1, arpy arpy:1 arpy:2 arpy:3 arpy:5}"
+
+-- * What is pattern, anyway?
+
+-- Lets think about different kinds of pattern and how Tidal can
+-- represent them
+
+-- ** cyclic / repetitive
+
+d1 $ n "0 1 2 3" # sound "arpy"
+
+d1 $ n (run 4) # sound "arpy"
+
+-- ** symmetry
+
+-- compare these:
+
+d1 $ slow 2 $ n "0 1 2 3 3 2 1 0" # sound "arpy"
+
+d1 $ palindrome $ n (run 4) # sound "arpy"
+
+-- ** self similarity
+
+d1 $ slow 4 $ n "[0 1 2 3] [0 1 2 3]*2 [0 1 2 3]*4 [0 1 2 3]*8" # sound "arpy"
+
+d1 $ fast "<1 2 4 8>" $ n "0 1 2 3" # sound "arpy"
+
+-- ** interference
+
+-- There's a lot of ways of making patterns interfere with each other, e.g.
+-- polyrhythm:
+
+d1 $ sound "{arpy arpy:2 arpy:4, arpy:5 arpy:0}"
+
+-- A canon / round
+d1 $ jux rev $ weave 16 (n (run 8) # sound "arpy")
+  [vowel "a e i",
+   vowel "e i*2 o u",
+   speed "1 1.5 ~ 1",
+   speed "2 1 0.5"
+  ]
+
+-- transforming sequences
+
+-- slow
+
+d1 $ sound "arpy arpy:1 arpy:2 arpy:3"
+
+d1 $ slow 2 $ sound "arpy arpy:1 arpy:2 arpy:3"
+
+-- density
+d1 $ density 2 $ sound "arpy arpy:1 arpy:2 arpy:3"
+
+-- density 2 is the same as slow 0.5 ..
+d1 $ slow 0.5 $ sound "arpy arpy:1 arpy:2 arpy:3"
+
+-- Reversing
+
+d1 $ rev $ sound "arpy arpy:1 arpy:2 arpy:3"
+
+-- iter
+
+d1 $ iter 4 $ sound "arpy arpy:1 arpy:2 arpy:3"
+
+-- every
+
+-- every fourth cycle, make twice as dense:
+
+d1 $ every 4 (density 2) $ sound "arpy arpy:1 arpy:2 arpy:3"
+
+-- Feeling brave? More than one transformation is possible
+
+d1 $ jux (rev . (slow 1.5)) $ sound "arpy arpy:1 arpy:2 arpy:3"
+
+-- Patterns of parameters:
+d1 $ density "<2 1.5 4 16>" $ sound "bd sn:2 hh sn:1"
+
+-- slowcat
+
+d1 $ slowcat [sound "bd sn:3",
+              sound "arpy can arpy:3 can"
+             ]
+
+-- stack
+
+d1 $ stack [sound "bd sn:3",
+            sound "arpy can arpy:3 can"
+           ]
+
+-- * Transforming effect sequences
+
+-- Everything is a pattern!
+
+d1 $ sound (density 2 "arpy arpy:1 arpy:2 arpy:3")
+  # speed (every 2 (density 2) "1 2 3 4")
+
+-- * Longer samples and 'granular synthesis'
+
+-- ** chop
+
+d1 $ sound "bev"
+
+-- when you hush, it keeps playing through:
+hush
+
+-- chop it into bits:
+d1 $ chop 32 $ sound "bev"
+
+-- slow it down to fit 8 cycles:
+d1 $ loopAt 8 $ chop 128 $ sound "bev"
+
+-- ** transform the grain pattern:
+
+d1 $ rev $ loopAt 8 $ chop 128 $ sound "bev"
+
+-- ** striate vs chop
+
+d1 $ slow 4 $ chop 4 $ sound "arpy:1 arpy:2 arpy:3 arpy:4"
+
+d1 $ slow 4 $ striate 4 $ sound "arpy:1 arpy:2 arpy:3 arpy:4"
+
+-- * Arbitrariness and 'random numbers'
+
+-- ** randslice
+
+d1 $ randslice 32 $ sound "bev"
+
+-- ** random sample
+
+d1 $ sound "arpy*8" # n (irand 16)
+
+-- ** sometimes
+
+d1 $ sometimes (# speed "2") $ sound "drum*8"
+
+-- ** often
+
+d1 $ often (# speed "2") $ sound "drum*8"
+
+-- ** degrade
+
+d1 $ degrade $ sound "bd sn cp sn:2"
+
+-- ** Use ? to make sounds optional..
+
+d1 $ sound "bd sn:2? bd sn?"
+
+-- Some more complex examples:
+
+
+d1 $ spin (3) $ smash 4 [1,0.5,0.25,2] $ sound "odx*4"
+  |+| speed "0.5"
+
+-- Weave vocal strands
+d1 $ weave' 16 ((slow 16 $ striate' 128 (1/64) $ sound "bev*2") |+| pan sine1)
+  [(vowel "a e i o u" |+|),
+   (vowel "i e p u" |+|),
+   (speed "1 1.5 0.5" |+|)]
+
+-- pour the wine
+d1 $ stack [slow 4 $ every 2 (rev) $ slow 32 $ striate 256 $ sound "[bev]*6"
+            |+| pan "1",
+            slow 2 $ every 2 (rev) $ slow 32 $ striate 256 $ sound "[bev]*4"
+            |+| pan "0"]
+
+-- Weave kicks
+d1 $ jux (density 1.5) $ weave 16 (shape (scale 0 0.8 sine1)) (map (every 4 rev) $
+  [sound "bd8(3,8)", sound "drum(5,8)"])
+  |+| speed "1"
+  |+| accelerate "-1"
+
+-- plastik
+d1 $ weave 16 (speed (scale 1 1.4 sine1)) [jux (iter 8) $ sound "sd8:4*4",
+                                           jux (iter 4) $ sound "bd*2",
+                                           jux (iter 3) $ sound "sd8:3*4"]
+
+d2 $ weave 32 (speed (scale 0.9 1.6 sine1)) [jux (iter 8) $ sound "sd8:4*4",
+                                             jux (iter 4) $ sound "bd*2",
+                                             jux (iter 3) $ sound "sd8:3*4"]
+
+-- scrape it
+d1 $ sometimes rev $ slowspread (stut 4 1) [0.03,0.1, 0.2, 0.01] $ jux (|+| speed "4") $ every 2 (density 2) $
+  sound "bd8*2"
+  |+| shape "0.5"
+
+-- rissetesque rise, try replacing (rev) with (iter 4)
+d1 $ jux (rev) $ weave 16 (sound (samples "arpy*8" (run 8)))
+  [vowel "a e o",
+   vowel "a e o i",
+   vowel "o i a o i",
+   speed "2 3 1",
+   speed "-0.75 -0.5"]
+
+-- shackup cut up
+d1 $ jux (iter 4) $ weave 16 (chop 32 $ sound "shackup") [vowel "a e o" |+| speed "2",
+                                                          speed "2 3 1 0.5",
+                                                          crush "[8 4 5 8]*2"]
+
+-- additive rhythm
+d1 $ sound (samples "[sd8, jvbass]*8" (slow 8 $ scan 8))
+
+-- additive rhythm + woven parameters
+d1 $ weave' 4 (sound (samples "[sd8, ht8]*8" (slow 8 $ scan 8)))
+  [(|+| speed "1 2 3"),
+   chop 8 . (pan "0 0.25 0.5 0.75" |+|)]
+
+-- move densities between sounds
+d1 $ jux (iter 4) $ spread' density (iter 4 "1 8 2 4") $ sound "bd sd8:2 bd sd8"
+
+-- every four times, twice as fast, every other of those, reversed
+d1 $ every 4 (every 8 (rev) . density 2) $ brak $ sound "drum drum:1"
+  |+| shape "0.8"
+  |+| speed "2"
+
+-- Do something random twice, and it stops sounding random
+let e'' c a b = e a b c in
+  d1 $ jux (1 <~) $ sound $ unwrap ((e'' (samples "bd sd8" (irand 16))) <$> "[3 6 2 8 4 3]/6" <*> "[8 4 16 12]/4")
+
+-- is it on or off?
+d1 $ smash 4 [1,2,3,4] $ sound "onoff onoff:3"
+
+-- broken dub
+d1 $ every 2 (slowspread (chop) [2,4,8,16])
+  $ slowspread ($) [density 2, rev, iter 4, density 1.5]
+  $ sound (samples "feel less" (slow 16 $ scan 16))
+
+-- random gabber offsets
+d1 $ jux (spread' (<~) (toRational <$> rand)) $ sound (samples "gab*2" (slow 8 $ run 8))
+
+-- round we go
+d1 $ slowspread (stut 3 1) ([0.001, 0.005 .. 0.01]) $ jux (iter 8) $ sound "bd sn:2 sn drum:1"
+
+-- comb rave
+d1 $ (every 3 (density 1.5) $ sound (pick <$> "bd [sn rave2]" <*> ((floor . (*12)) <$> rand)))
+   |+| speed (slow 4 $ (+1) <$> sine1)
+   |+| delay "1"
+   |+| delayfeedback "0.7"
+   |+| delaytime "[0.02 0.01 0.03 0.02]/4"
+
+-- nobakazu takemura
+
+d1 $ stack [slow 2 $ jux (whenmod 6 4 (density 2)) $ brak $ sound (samples "newnotes newnotes" (slow 8 $ run 9))
+            |+| speed "[1,2 4 3]/4",
+            slow 2 $ (1/32) <~ (rev $ brak $ sound (samples "newnotes newnotes newnotes" (slow 8 $ run 12))
+            |+| speed "[1,2 4 8]/4")]
+
+-- kitchen techno
+d1 $ every 2 (density 2) $ stack [sound "{jungbass*3 jungbass:1*4, jungbass:5 [east*3 east:3*2] east:2*4}"
+                                  |+| speed "[2 1 3]/2"
+                                  |+| shape "0.5",
+                                  every 3 (density 2) $ every 2 (jux rev) $ sound (samples "east*8" "{1 2 3, 4 5 6 7, 8 9 10 11 12}")
+                                  |+| speed "[2 1]/2"
+                                  |+| end "0.2"]
+
+-- What he said
+d1 $ weave 16 (shape $ ((* 0.6) <$> sinewave1))
+  [slow 2 $ striate 32 (sound $ samples "diphone2/1 diphone2 diphone2/5" (irand 16))
+   |+| speed ((+ 0.8) . (* 0.05) <$> sinewave1),
+   (1%8) <~ (slow 8 $ striate 16 (sound "diphone2/0 diphone2/3*2 diphone2/4")
+             |+| speed ((+ 0.9) . (* 0.05) <$> sinewave1))]
+
+-- bossanova
+d1 $ slow 2 $ sound $ pick <$> "[casio]*8" <*> "1 0 2 0 1 0 2 2"
+
+-- difficult gabber
+d1 $ stut 8 0.7 (-(1/8))$ superimpose (iter 4) $ sound "[gabbalouder*2 gabba*3 less*2]/3 hc"
+  |+| speed "[4 3 24 4]/5"
+
+-- drum solo
+d1 $ stack [slowspread density [1,64,1,4,1,3,1,12] $ striate 8 $ sound "[bd sn/2 [~ bd] sn/2]/4"
+            |+| speed "0.9"
+            |+| pan "1",
+            slowspread density [1,128,1,4,1,3,1,12] $ striate 4 $ sound "[bd sn/2 [~ bd] sn/2]/4"
+            |+| speed "0.9"
+            |+| pan "0"]
+
+-- kicks are all around
+d1 $ every 3 (iter 4) $ jux (slow 2 . rev) $ slow 2 $ brak $ sound "bd*16 drum*8 bd*12 drum*12"
+
+-- breaks
+d1 $ every 2 (slow 2) $ (juxcut (rev . iter 8) $ every 4 (0.25 <~) $ striate 4 $ sound "[breaks165, breaks125]")
+  |+| speed "[2 1 1]/2"
+
+-- unbelievable
+d1 $ weave 32 (crush (scale 2 4 sine1)) $
+  [jux rev $ slowspread ($) [id, iter 8] $ sound "bd ~ sn:2*3?",
+   every 2 (|+| vowel "a") $ jux rev $ iter 4 $ chop 128 $ sound "breaks165"
+     |+| gain "1",
+   spin 2 $ slow 4 $ chop 16 $ superimpose (slowspread (<~) [0.25, 0.75]) $
+     sound "bass3 bass3:3"
+     |+| shape "0.6"
+     |+| speed "[2, -2.03]",
+   palindrome . chop 8 $ jux (2 <~) $
+     sound (pick <$> "h*4" <*> (slow 8 $ floor <$> scale 0 16 sine1))
+     |+| speed "0.7"]
+
+-- cut pulse
+d1 $ every 4 (const (sound "feel:2"))  $ superimpose (iter 4) $ stut 4 0.9 (1/4) $ every 4 rev $ striate 4 $ sound "[[bd*4, can] [bass3:2, can:2]]/2"
+   |+| speed "4"
+
+-- up and down
+d1 $ every 3 (slow 1.5) $ every 2 (density 1.5) $ (density 2 $ striate 32 $ sound "wobble wobble wobble wobble")
+   |+| speed "2 8 ~ 5"
+
+-- jolly old rave
+d1 $ superimpose (iter 4) $ sound "feel [rave2 rave2:4]/2 feel:2 ~"
+   |+| speed "[1 2 3 2]/4"
+
+-- very quiet nibbling
+d1 $ superimpose (iter 8) $ sound "chin*4 chin*3 ~ chin*4"
+
+-- roll over
+d1 $ every 2 (smash 4 [1,2,3,4]) $ sound "bd8:4 ~ sd8 bd8:2*2 bd8:4 ~ [~ bd] sn"
+
+-- err
+d1 $ every 2 (slow 2) $ stut 5 0.9 (1/16) $ every 4 (0.25 <~) $ jux (iter 4) $ slow 2 $ sound "{bd bd bd ~ , cp [~ sn:2] [kurt:4 kurt:8]}"
+   |+| gain "0.9"
+   |+| end "0.2"
+
+-- soft cell gabber remix
+d1 $ slowspread ($) [iter 8, rev, density 2, slow 2] $  jux (rev) $ every 3 (|+| speed "2") $ every 2 (striate 4) $ sound "if if:2 if:3 ~"
+  |+| speed "8"
+
+-- slightly electroacoustic dnb intro
+d1 $ slowspread ($) [rev, (|+| speed "[0.5]"), density 2, (|+| speed "[1,2]")] $  every 3 (|+| vowel "a e") $ every 4 (|+| speed "0.25") $ jux (rev) $ slow 4 $ striate 16 $ sound "pad:3"
+  |+| speed "0.5"
+  |+| gain "0.8"
+
+-- tap
+d1 $ stut 4 0.9 (-3) $ slowspread ($) [id, density 2, iter 8, density 3] $ jux (|+| speed "1.3") $ slow 2 $ sound "bd8*2 sd8"
+   |+| shape "0.2"
+   |+| speed "[1.2 3]/2"
+
+-- walking
+d1 $ stack [slow 2 $ every 4 (density 2) $ jux (iter 8) $ sound (pick <$> "bass3*2 bass3" <*> (slow 3 $ "1 2 3 4 5"))
+            |+| speed "2"
+            |+| vowel (every 3 rev "a e"),
+            brak $ every 3 (slow 2) $ jux (iter 4) $ sound (pick <$> "jvbass*2 jvbass*3" <*> (slow 3 $ "1 2 3 4 5"))
+            |+| speed "2"
+            |+| shape "0.7"
+            |+| vowel (every 3 rev "a e")]
+
+-- itch no more
+d1 $ every 4 (rev . chop 8) $ superimpose (iter 4) $
+     every 2 (slow 2) $ stack [sound (samples "lt8(3,8)" (slow 10 $ scan 12)) |+| speed "1" |+| pan "0",
+                               sound (samples "bd8(5,8)" (slow 12 $ scan 12)) |+| speed "0.9" |+| pan "1"]
+   |+| delay "0.9"
+   |+| delaytime "0.02 0.01"
+
+-- here we are and there we are
+d1 $ every 2 rev $ striate 16 $ sound "[tabla tabla:2]"
+  |+| speed (slow 4 $ (+0.4) <$> sine1)
+
+-- clapclap
+d1 $ every 2 (density 2) $ every 3 (rev) $ superimpose (iter 8) $ sound "bd ~ sn:2 cp"
+  |+| speed "[1 2]/2"
+
+-- rasp
+d1 $ spin 2 $ slow 2 $ every 2 (slow 0.75) $ sound "bd*8 bd:3*2 bd*32 ~"
+   |+| gain "0.9"
+
+-- righteous happysadcore
+d1 $ stack [(slowspread (chop) [4, 8, 3] $ sound "~ off")
+            |+| speed (slow 4 $ scale 0.5 2 $ sine1),
+            slow 2 $ every 2 (0.25 <~) $ stut 3 0.9 (0.75) $ every 2 (within (0,0.25) (density 2)) $ chop 32 $ sound "breaks125"]
+
+-- smashed melody
+d1 $ (slow 4 $ jux rev $ every 2 (slow 2) $ (striate 32 $ sound (samples "[newnotes*8 newnotes*12 newnotes*8 newnotes]" (slow 5 $ run 16))))
+  |+| speed ((+0.5) <$> (slow 8 $ sinewave1))
+  |+| vowel "[a o o e i o u]"
+  |+| shape "0.4"
+
+-- poignant duet
+d1 $
+  stack [
+    every 2 (density 2) $ jux4 (iter 8) $ slowspread ($) [slow 2, iter 8, id, (|+| speed "0.9")] $ sound (pick <$> "kurt*8" <*> (slow 3 $ run 12))
+    |+| speed "2",
+    smash 4 [1,2,3,4] $ brak $ spin 2 $ slow 2 $ chop 3 $ sound "rave:6"]
+
+-- all you need
+d1 $ stack [jux (((every 3 rev) . every 2 ((1/16) <~)) . (|+| speed "[2,3]")) $ slow 2 $ sound (samples "jvbass*2 jvbass*4 jvbass*2" "[3 5 2,8 2 1]/4")
+            |+| shape "0.3"
+            |+| end "0.25",
+            jux (rev) $ striate 4 $ sound (samples "[newnotes*2] newnotes" "3 2 1")
+            |+| speed (every 2 ((*0.5) <$>) "[1 0.75 1 0.5, 3 2 1]/3")]
+
+-- buy my plugin
+d1 $ density 2 $ slowcat [superimpose (smash 4 [4,2,1,4]) $ jux rev $ sound (samples "{gretsch*4, gretsch*3 bd*2 sn/2}" (stack [(slow 3 $ run 8), "1 5 2"]))
+              |+| speed "2",
+              interlace (jux (0.25 <~) $ (striate 4) $ sound "bd/4*4 bleep/7")
+  (sound (samples "mouth*8" (every 3 rev $ run 8)))]
+
+-- raise your hands
+d1 $ stack [(every 4 (0.5 <~) $ every 3 (0.25 <~) $ striate 64 $ sound "breaks125")
+            |+| speed "[1 2 3]/5",
+            (spin 2 $ every 3 (0.5 <~) $ every 3 (0.25 <~) $ striate 64 $ sound "breaks125")
+            |+| speed "[1 2 3 4]/5"]
+
+-- spot the tactus
+d1 $ slow 2 $ (superimpose (iter 8) $ every 4 (slow 3) $ every 3 (density 5) $ sound "[feel ~ lt8:5, sd8:3 ht8:3]" |+| speed ((+1) . (*0.2) <$> slow 4 sine1))
+
+-- bass interlace
+d1 $ interlace (sound "bass3:2 ~ jvbass:3 jvbass:4")
+  (rev $ sound "bass3:2 jvbass:3 jvbass:4")
+
+-- recital
+d1 $ (spread' (striate' 4) ((+0.2) <$> slow 8 sine1)) $ jux rev $ sound (samples "[latibro*6,bd]/2" "0 7 4") |+| speed "[1 2 1.5]/4"
+
+-- heavy hardcore
+d1 $ stack [superimpose (iter 4) $ every 4 rev $ sound "[[feel feel:0] feel*3, haw:4*3 haw]",
+            sound "~ sid:2 peri:1 ~"
+            |+| gain "1.5"
+            |+| speed "1 2 3",
+            slow 2 $ stut 4 0.98 (-0.25) $ slow 2 $ sound "[feel*2 feel:2 [~ feel*2] feel:2, ~ feel mod:2]"
+            |+| speed "4"
+            |+| gain "1.4",
+            slow 16 $ striate 128 $ sound "bev*2"
+            |+| gain "1.4"
+            |+| speed "1.5"]
+
+-- cave rave
+d1 $ spin (4) $ (every 3 (density 1.5) $ slow 2 $ sound (pick <$> "[rave2 ~ rave2] [rave2*8]" <*> "[3 4 2 3]/3"))
+  |+| speed (slow 4 $ (+1.5) <$> sine1)
+
+-- don't sneeze
+d1 $ slowspread ($) [echo 0.5, rev, density 2, density 1.5] $ jux (iter 4) $ every 2 (iter 3) $ sound "bd:3 [sn:1 ~ sn:1]"
+  |+| speed (every 3 rev "2 1")
+  |+| end "0.2"
+
+-- put some effort in
+d1 $ stack [slow 2 $ every 2 (0.25 <~) $ superimpose (rev) $ every 4 (striate 4) $ sound (pick <$> "bd*2 bd*4" <*> (slow 4 $ ((floor . (*16)) <$> sine1))),
+            smash 2 [1,2] $ jux (brak) $ whenmod 4 2 (density 2) $ slow 2 $ sound (pick <$> "amencutup*8" <*> (slow 4 $ run 32))
+            |+| speed ((+1) <$>sine1)]
+
+-- euphoric squee
+d1 $ interlace (smash 8 [1,2,1,4] $ every 2 (density 2) $ jux (brak) $ whenmod 4 2 (density 2) $ slow 2 $ sound (pick <$> "future*8" <*> (slow 4 $ run 32))
+  |+| speed ((+1) <$>sine1))
+  (sound "~ bleep:9"
+  |+| speed (slow 8 sine1))
+
+-- woodpeckstep
+d1 $ slow 2 $ every 3 (slow 2) $ every 4 (density 2) $ superimpose (iter 4) $ jux (every 2 rev) $ sound "bd ~ sn*16 ~ bd*8 ~ sn*6 ~"
+  |+| speed "2"
+  |+| vowel "a"
+
+-- knock em back
+d1 $ stack [every 2 (slow 2) $ superimpose (iter 4) $ slow 2 $ every 8 ((1/4) <~) $ sound "future*3 bd*2 wobble [cp bd bd]"
+            |+| shape "0.9"
+            |+| gain "2"
+            |+| speed "[2,3,4]"
+            |+| cutoff ((+0.01) <$> (slow 16 $ scale 0 0.01 sine1))
+            |+| resonance ((+0.2) <$> (slow 12 $ scale 0 0.5 sine1)),
+            slowspread ($) [rev, iter 8, (|+| speed "0.75"), density 2] $ jux (0.25 <~) $ sound (pick <$> "amencutup*4 amencutup*2" <*> (slow 8 $ run 128))
+            |+| shape "0.7"
+            |+| gain "2"]
+
+-- if a cat made techno
+d1 $ slowspread ($) [rev, iter 4, (0.5 <~)] $ slowspread (stut 8 0.95) [0.25,0.5,1,0.75] $ slow 2 $ superimpose rev $ sound "[bd bleep:5 bd*2 bd bd cp drum:1 ~, gabbalouder ~ rave2:4 ~]"
+  |+| gain "0.5"
+  |+| speed "[1,[2 3 0.75]/3]"
+--  |+| delay "1"
+
+-- snel hest
+d1 $ stack [every 3 (stut 3 0.9 (1/3)) $ sound "{lighter lighter:3 ~ lighter:4, lighter:9 bd drum:2}",
+            slow 2 $ slowspread ($) [id, density 2, iter 4, rev] $ sound "~ [jungbass:4 ! jungbass:4*2 jungbass:5]/2"
+            |+| speed "2",
+            every 4 (within (0, 0.25) (density 2)) $ (slow 2 $ sound (pick <$> "{lighter ~ can ~ bd rave2 bd sn, bd*3 cp:2 bd}" <*> (slow 5 $ run 12)))
+            |+| speed "16"]
+
+-- wakkawakka
+d1 $ stack [slowspread ($) [(|+| speed "2"), rev, iter 4, rev] $ stut 3 (0.25) (-0.25) $ sound (pick <$> "industrial*8" <*> (every 6 (const (irand 32)) "[0 [1 4]/3 2 [3 6 4]/3]*2"))
+            |+| end (every 8 (const 0.04 <$>) $ "0.03")
+            |+| cutoff (every 4 ((*4) <$>) "0.04 0.05")
+            |+| resonance "[0.6 0.4 0.1]/3",
+            jux rev $ density 4 $ striate' 2 0.2 $ sound (pick <$> "[bass3:2 bass3:7]/2" <*> (slow 8 $ run 8))
+            |+| speed (every 4 ((*2) <$> ) "[[1,2] 1 1 [4.1 2]/2]/4")
+            |+| accelerate "1"
+            |+| gain "0.8"]
+
+-- bad noise, don't run
+d1 $ every 2 (density 2) $
+  stack [slow 2 $ sound "{jungbass*3 jungbass/1*4, jungbass/5 [east*3 east/3*2] east/2*4}"
+         |+| speed "[2 1 0.5]/2"
+         |+| shape "0.5",
+         every 3 (density 2) $ every 2 (jux rev) $ sound (samples "east*8" "{1 2 3, 4 5 6 7, 8 9 10 11 12}")
+         |+| speed "[0.5 1]/2"
+         |+| end "0.2"]
+
+-- drab bleep
+d1 $ weave 16 (shape (scale 0 0.7 sine1))
+  [jux (iter 4) $ slow 4 $ sound "sb {sb ~ sb casio, sb:1 casio:1 sb:1}" |+| speed "[0.5, 0.051]",
+   sound (unwrap $ (\a b -> e a b "bd") <$> "[3 5 6]/2" <*> "[8,16]")]
+
+-- move gabba
+d1 $ weave 16 (pan sine1) [sound "gabba(3,8)",
+                           sound "gabba(5,8)",
+                           sound "arpy*4" |+| gain "1.2",
+                           jux (iter 4. chop 8 . rev) $ sound (samples "arpy*2 kurt" "[1 2]/2")
+                           |+| gain "1.4"
+                           |+| speed "[0.5 1]/2"
+                           |+| accelerate "[-1 2]/2"]
+
+
+
+For more examples see:
+  http://twitter.com/tidalbot/
+
+d1 $ sound "bd"
+
+
+ cabal update
+ cabal install tidal
