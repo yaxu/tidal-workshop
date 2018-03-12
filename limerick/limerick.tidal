@@ -94,13 +94,21 @@ cps 1.05
 
 d1 $ every 3 rev $ slow 2 $ n "0 1 2 3" # sound "alphabet"
 
-d1 $ every 3 (# speed "-1") $ n "0 3 1 4" # sound "alphabet"
+d1 $ every 3 (# speed "-1") (n "0 3 1 4" # sound "alphabet")
+
+d1 $ sound "cp*4"
+  # vowel "<e i o u>"
+
+d1 $ sound "bd(3,8) sn:2" # hpf "300 5000" # hpq 0.2
+
+hush
+
 
 d1 $ every 3 (fast 4) $ sound "bd sn:2"
 
 d1 $ jux (# speed "-1") $ sound "bd ~ cp sn:2"
 
-h
+
 
 0 1
 2 3
