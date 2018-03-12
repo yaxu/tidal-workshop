@@ -1,4 +1,6 @@
 -- Tidal workshop Limerick, 12-13 March 2018
 -- To get to this file: https://is.gd/limerick
 
-d1 $ sound "bd sn:2"
+-- http://slab.org/tmp/extra-samples.zip
+
+d1 $ sound "bd sn:1"
