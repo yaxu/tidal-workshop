@@ -115,7 +115,7 @@ d1 $ sound "bd*8" # pan rand # speed (fast 2 rand)
 d1 $ n (irand 8) # sound "drum"
 
 d1 $ every 2 (slow 2)
-   $ fast 2 $ n (struct "x x x x" $ irand 16)
+   $ fast 2 $ n (struct "x x x x" $ irand 32)
    # sound "amencutup"
 
 
