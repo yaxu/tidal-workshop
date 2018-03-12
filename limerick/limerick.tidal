@@ -111,6 +111,8 @@ d1 $ jux (rev) $ every 4 (fast 2) $
       # hpf (slow 2 $ scale 100 5000 saw)
       # hpq 0.2
 
+
+
 d1 $ sound "bd(<5 3>,8)"
 
 (4,7,1)
