@@ -52,9 +52,61 @@ d1 $ slow 4 $ n "0 ! ! ! ! ! 0*4 0*4" # sound "odx"
 -- effects
 d1 $ n "0 [1 5] 3 [4 9]"
    # sound "drum arpy"
+   # vowel "a i o"
 
+-- structure comes from the left
+d1 $ sound "arpy" # vowel "a e"
 
+d1 $ vowel "a e" # sound "arpy"
 
+d1 $ sound "drum" # n "0 3 4 1"
+
+d1 $ n "0 3 4 1" # sound "drum"
+
+d1 $ n "0 3 4 1" # sound "drum"
+
+d1 $ fast 2 $ n "0 1 2 3" # sound "drum"
+
+d1 $ fast "2 4" $ sound "ht mt lt mt"
+
+-- * - 'speed up' a step
+d1 $ sound "bd bd bd*2 bd"
+
+d1 $ sound "bd bd [bd sn:1]*0.5 bd"
+
+d1 $ sound "bd bd [bd sn:1]*1.5 bd"
+
+-- / - 'slow down' a step
+
+d1 $ sound "bd sn:2/2"
+
+-- <> - pick one per cycle
+d1 $ sound "bd sn <arpy arpy:2> bd"
+
+d1 $ sound "bd sn [arpy arpy:2]/2 bd"
+
+-- ? - randomly 'drop' a step
+
+d1 $ sound "bd sn mt? lt"
+
+hush
+
+-- every
+d1 $ every 3 (const silence) $ sound "bd sn"
+
+d1 $ every 3 (fast 2) $ sound "bd sn"
+
+d1 $ every 3 (# speed 2) $ sound "bd sn"
+
+hush
+
+d2 $ sound "bd"
+
+hush
+
+"0 1 2 3" :: Pattern Int
+
+sound "drum bd"
 
 hush
 
