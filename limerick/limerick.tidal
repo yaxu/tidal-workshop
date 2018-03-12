@@ -39,12 +39,22 @@ d1 $ sound "{bd sn:1 [bd bd] sn:2, arpy arpy:4 arpy:2}"
 
 d1 $ slow 4 $ sound "odx odx odx odx odx odx odx*4 odx*4"
 
-d2 $ sound "arpy*4"
-  |*| up "<0 4>"
+
+-- patterning sample numbers + sample names
+d1 $ n "0 [1 5] 3 [4 9]"
+   # sound "drum arpy"
+
+-- blue monday kick
+d1 $ slow 4 $ n "0 0 0 0 0 0 0*4 0*4" # sound "odx"
+
+d1 $ slow 4 $ n "0 ! ! ! ! ! 0*4 0*4" # sound "odx"
+
+-- effects
+d1 $ n "0 [1 5] 3 [4 9]"
+   # sound "drum arpy"
 
 
 
-d3 $ s
 
 hush
 
