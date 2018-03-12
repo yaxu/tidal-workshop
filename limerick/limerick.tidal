@@ -35,8 +35,6 @@ d1 $ sound "[bd ~ mt] [bd sn ~ cp]"
 
 d1 $ sound "[bd sn:1, arpy arpy:4 arpy:2, gabba cp cp]"
 
-
-
 d1 $ sound "{bd sn:1 [bd bd] sn:2, arpy arpy:4 arpy:2}"
 
 d1 $ slow 4 $ sound "odx odx odx odx odx odx odx*4 odx*4"
