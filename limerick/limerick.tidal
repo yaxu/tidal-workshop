@@ -30,3 +30,24 @@ d1 $ sound "[bd sn mt] [bd sn arpy cp]"
 
 -- ~ for 'rest'
 d1 $ sound "[bd ~ mt] [bd sn ~ cp]"
+
+-- polyphony
+
+d1 $ sound "[bd sn:1, arpy arpy:4 arpy:2, gabba cp cp]"
+
+
+
+d1 $ sound "{bd sn:1 [bd bd] sn:2, arpy arpy:4 arpy:2}"
+
+d1 $ slow 4 $ sound "odx odx odx odx odx odx odx*4 odx*4"
+
+d2 $ sound "arpy*4"
+  |*| up "<0 4>"
+
+
+
+d3 $ s
+
+hush
+
+hush
