@@ -124,16 +124,20 @@ d1 $ jux rev $ every 2 (slow 2)
 d1 $ n ("0*2 4*2" + fastcat[0, irand 32])
     # sound "amencutup"
 
+-- play in turn (fastcat does the same but squeezes in one cycle)
 d1 $ cat [sound "bd sn:2",
           sound "arpy arpy:3" # crush 3,
           sound "bd(3,8)"
          ]
 
+-- play in random order
 d1 $ randcat [sound "bd sn:2",
               sound "arpy arpy:3" # crush 3,
               sound "bd(3,8)"
              ]
 
+-- play on top of each other.
+-- note the effect on the end applies to all
 d1 $ stack [sound "bd sn:2",
             sound "arpy arpy:3" # crush 3,
             sound "bd(3,8)"
