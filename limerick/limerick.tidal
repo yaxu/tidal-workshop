@@ -204,5 +204,8 @@ d1 $ jux (# speed "-1") $ sound "bd ~ cp sn:2"
 d1 $ sound "bd sn:1/3"
 
 
+d1 $ rev $ loopAt 4 $ chop 16 $ sound "breaks152"
+
+hush
 
 http://slab.org:8080/index16.html
