@@ -106,12 +106,11 @@ d1 $ jux (0.125 <~) $ every 4 (fast 2) $
    # hpf (slow 2 $ scale 100 5000 saw)
    # hpq 0.2
 
-d1 $ jux (rev) $ every 4 (fast 2) $
-      sound "bd cp arpy cp:2"
-      # hpf (slow 2 $ scale 100 5000 saw)
-      # hpq 0.2
+d1 $ sound "bd*8"
+  # pan (slow 4 rand)
+  # speed (slow 4 rand)
 
-
+hush
 
 d1 $ sound "bd(<5 3>,8)"
 
