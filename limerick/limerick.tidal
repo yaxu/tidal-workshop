@@ -106,11 +106,23 @@ d1 $ jux (0.125 <~) $ every 4 (fast 2) $
    # hpf (slow 2 $ scale 100 5000 saw)
    # hpq 0.2
 
-d1 $ sound "bd*8"
-  # pan (slow 4 rand)
-  # speed (slow 4 rand)
+d1 $ sound "bd*8" # pan rand
+
+d1 $ sound "bd*8" # pan rand # speed rand
+
+d1 $ sound "bd*8" # pan rand # speed (fast 2 rand)
+
+d1 $ degrade $ sound "bd*8"
+
+d1 $ sometimes (# crush 3) $ sound "bd*8"
+
+d1 $ someCycles (# crush 3) $ sound "bd*8"
 
 hush
+
+d1 $ sound "bd cp? ~ bd"
+
+
 
 d1 $ sound "bd(<5 3>,8)"
 
