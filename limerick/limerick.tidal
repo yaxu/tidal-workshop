@@ -90,3 +90,4 @@ d1 $ sound "bd sn [arpy arpy:2]/2 bd"
 d1 $ sound "bd sn mt? lt"
 
 -- up a level - higher order functions
+cps 1.05
