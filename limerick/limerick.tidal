@@ -115,12 +115,20 @@ d1 $ sound "bd*8" # pan rand # speed (fast 2 rand)
 d1 $ n (irand 8) # sound "drum"
 
 d1 $ n (struct "x(3,8)" $ irand 5) # sound "arpy"
-
+hush
 
 d1 $ jux rev $ every 2 (slow 2)
-   $ fast 2 $ n (struct "x x x x" $ irand 32)
+   $ fast 2 $ n (struct "x ~ ~ ~" $ irand 32)
    # sound "amencutup"
 
+d1 $ n ("0*2 4*2" + fastcat[0, irand 32])
+    # sound "amencutup"
+
+d1 $ randcat [sound "bd sn:2",
+              sound "arpy arpy:3"
+             ]
+
+hush
 
 d1 $ degrade $ sound "bd*8"
 
