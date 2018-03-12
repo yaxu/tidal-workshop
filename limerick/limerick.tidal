@@ -97,17 +97,3 @@ d1 $ every 3 (const silence) $ sound "bd sn"
 d1 $ every 3 (fast 2) $ sound "bd sn"
 
 d1 $ every 3 (# speed 2) $ sound "bd sn"
-
-hush
-
-d2 $ sound "bd"
-
-hush
-
-"0 1 2 3" :: Pattern Int
-
-sound "drum bd"
-
-hush
-
-hush
