@@ -91,3 +91,17 @@ d1 $ sound "bd sn mt? lt"
 
 -- up a level - higher order functions
 cps 1.05
+
+d1 $ every 3 rev $ slow 2 $ n "0 1 2 3" # sound "alphabet"
+
+d1 $ every 3 (# speed "-1") $ n "0 3 1 4" # sound "alphabet"
+
+
+
+0 1
+2 3
+
+3 2 0 1
+1 0 3 2
+
+hush
