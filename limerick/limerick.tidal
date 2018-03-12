@@ -201,4 +201,4 @@ d1 $ jux (# speed "-1") $ sound "bd ~ cp sn:2"
 3 2 0 1
 1 0 3 2
 
-hush
+d1 $ sound "bd sn:1/3"
