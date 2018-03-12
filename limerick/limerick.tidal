@@ -89,7 +89,7 @@ d1 $ sound "bd sn [arpy arpy:2]/2 bd"
 
 d1 $ sound "bd sn mt? lt"
 
-hush
+
 
 -- every
 d1 $ every 3 (const silence) $ sound "bd sn"
