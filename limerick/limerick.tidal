@@ -18,3 +18,15 @@ hush
 
 -- change the 'tempo'
 cps 1.1
+
+-- break down steps
+d1 $ sound "bd [mt ht] lt cp"
+
+d1 $ sound "bd [mt [ht cp]] lt cp"
+
+d1 $ sound "[bd sn mt] [bd sn]"
+
+d1 $ sound "[bd sn mt] [bd sn arpy cp]"
+
+-- ~ for 'rest'
+d1 $ sound "[bd ~ mt] [bd sn ~ cp]"
