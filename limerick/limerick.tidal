@@ -129,7 +129,10 @@ d1 $ cat [sound "bd sn:2",
           sound "bd(3,8)"
          ]
 
-hush
+d1 $ randcat [sound "bd sn:2",
+              sound "arpy arpy:3" # crush 3,
+              sound "bd(3,8)"
+             ]
 
 d1 $ stack [sound "bd sn:2",
             sound "arpy arpy:3" # crush 3,
