@@ -101,7 +101,7 @@ d1 $ sound "cp*4"
 
 d1 $ sound "bd(3,8) sn:2" # hpf "300 5000" # hpq 0.2
 
-d1 $ every 4 (fast 2) $
+d1 $ jux rev $ every 4 (fast 2) $
    sound "bd cp arpy cp:2"
    # hpf (slow 2 $ scale 100 5000 saw)
    # hpq 0.2
