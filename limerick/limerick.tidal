@@ -121,6 +121,7 @@ d1 $ jux rev $ every 2 (slow 2)
    $ fast 2 $ n (struct "x x x x" $ irand 32)
    # sound "amencutup"
 
+
 d1 $ degrade $ sound "bd*8"
 
 d1 $ sometimes (# crush 3) $ sound "bd*8"
