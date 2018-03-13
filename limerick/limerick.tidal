@@ -249,7 +249,11 @@ d1 $ n "c(3,8) e(3,8)" # sound "supermandolin"
 d1 $ off "<0.25 0.125>" (# crush 3)
    $ n "0 3 [~ 3] 4" # sound "feel"
 
+d1 $ n ("c(3,8)" + chord "major minor")
+  # sound "supermandolin"
+  # legato 4
 
+d1 $ n ("c e" + chord "major minor") # s "supermandolin"
 
 hush
 
