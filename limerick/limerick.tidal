@@ -263,6 +263,10 @@ d1 $ n (off 0.25 (+ chord "major")
    # legato 4
    # lpf 3000 # lpq 0.2
 
+d1 $ off "<0 0.5>" (# crush 2) $ sound "bd"
+
+hush
+
 -- find all the chords in here:
 https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Chords.hs
 
