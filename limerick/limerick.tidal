@@ -322,22 +322,11 @@ d1 $ every 4 (hurry 4) $ sound "bd sn:2"
 d1 $ jux rev $ chunk 4 (hurry 2)
    $ sound "bd sn:2"
 
-
-
-hush
-
-cps 1.1
-
-hush
-
--- find all the chords in here:
+-- find all the chord names in here:
 https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Chords.hs
-
-hush
-
 
 https://github.com/supercollider/sc3-plugins
 
-hush
-
 http://slab.org/tmp/extra-samples.zip
+
+https://github.com/yaxu/p5dirt
