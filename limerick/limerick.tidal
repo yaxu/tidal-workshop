@@ -227,10 +227,10 @@ d3 $ n "c6 ~ g6 ~"
    # sound "supermandolin"
    # legato 4
 
-
+-- sustain to give decay in seconds
 d3 $ n "c6 ~ g6 ~"
-      # sound "supermandolin"
-      # sustain
+  # sound "supermandolin"
+  # sustain 0.4
 
 
 http://slab.org/tmp/extra-samples.zip
