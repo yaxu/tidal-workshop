@@ -369,9 +369,7 @@ d1 $ ur' 16 "[rise drums, break break:distort]"
     ("drums", n "0 .. 7" # sound "micron"),
     ("break", loopAt 2 $ chop 16 $ sound "arc")
    ]
-   [
-    ("distort", (# shape 0.9))
-   ]
+   [("distort", (# shape 0.9))]
 
 
 
