@@ -274,7 +274,7 @@ d1 $ jux rev $ loopAt 16 $
 d2 $ every 3 rev $
    loopAt 2 $ chop 4 $ sound "breaks125"
 
-d1 $ s
+d1 $ jux rev $ chop 16 $ sound "bd(3,8)"
 
 hush
 
