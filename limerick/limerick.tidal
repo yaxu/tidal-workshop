@@ -364,6 +364,15 @@ d1 $ seqPLoop [(0, 2,
                (4,6, drums)
               ]
 
+d1 $ ur' 16 "[rise drums, break break:distort]"
+   [("rise", n "0 .. 3" # sound "arpy"),
+    ("drums", n "0 .. 7" # sound "micron"),
+    ("break", loopAt 2 $ chop 16 $ sound "arc")
+   ]
+   [
+    ("distort", (# shape 0.9))
+   ]
+
 
 
 floor <$> getNow
