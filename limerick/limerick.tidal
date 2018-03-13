@@ -263,7 +263,11 @@ d1 $ n (off 0.25 (+ chord "major")
    # legato 4
    # lpf 3000 # lpq 0.2
 
-d1 $ off "<0 0.5>" (# crush 2) $ sound "bd"
+d1 $ off "<0 0.25 0.5>"
+     (# crush 2) $ sound "odx(3,8)"
+
+d1 $ jux rev $ loopAt 16 $
+  chop 256 $ sound "bev"
 
 hush
 
