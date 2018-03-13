@@ -279,7 +279,13 @@ d1 $ jux rev $ chop 16 $ sound "cp(3,8)"
 d2 $ (chop 128 $ sound "bd(3,8) sn:2")
   # nudge (slow 8 sine)
 
-d1 $ sound "bd"
+t1 (mortal 16 32) $ sound "bd(3,8) sn:1"
+
+t2 (mortal 16 32) $ up "0 [7 12]" # sound "jungbass"
+
+t1 (anticipate) 
+  $ n "0 2*2 [3 4] 3" # sound "drum"
+
 
 cps 1.1
 
