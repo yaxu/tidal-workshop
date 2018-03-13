@@ -379,7 +379,13 @@ d1 $ sound "bd*8"
 t1 (xfade) $ sound "bd(3,8)"
 t1 (xfadeIn 8) $ sound "bd(3,8)"
 
-t1 (clutch) $ sound "arpy*8"
+t1 (clutchIn 16) $ sound "bd(3,8) mt ht lt"
+
+d1 $ speed ("[1 0.5 0.75, 2.25 3 6 0.5]")
+   # n "c6 e6*3 f6 g6" # sound "rash"
+
+
+
 
 d1 $ sound "bd*8"
 
@@ -390,3 +396,44 @@ floor <$> getNow
 cps (-1)
 
 cps 1.1
+
+d1 $ degrade $ off 0.125 (|*| speed 2) $ chunk 4 (hurry 2) $ (off 0.25 (|*| speed "<2 3>")
+  $ n "0 .. 3" # sound "[micron]")
+  # orbit 1
+
+
+d2 $ degrade $ slow 2 $ chunk 4 (hurry 2) $ jux (rev . (|*| crush 4)) $ sound "osc1:1(3,8,<0 5 2>)"
+  # legato (scale 0.5 1 $ slow 4 sine) |*| speed "[1,1.5 2]"
+
+
+
+d1 $ sound "arc [~ arc]"
+ # legato (slow 4 sine)
+
+d1 silence
+
+d3 $ jux (rev . (|+| n 2)) $ chop "<8 4>" $
+  chunk 4 (hurry 0.5) $ n "0 2 3 1" # sound "speakspell"
+  # hpf "<1004 2000>" # hpq 0.2
+
+d1 $ speed "1 2 1 1.5" # sound "arpy"
+  |+| speed (scale 1 2 $ slow 4 sine)
+
+
+
+d4 silence
+
+d4 $ sound "bd*8"
+
+
+
+d2 $ never (off 0.25 (# s "pulse")) $
+  n (off 0.125 (+12) $ off 0.25 (+ "<7 -12>") $
+  slow 2 $ "c7(3,8) [~ g8*2]")
+  # sound "rash"
+  -- # orbit 2 # room 0.4 # size 0.9 |+| n "<0 7 2 5>"
+
+-- never, almostNever, sometimes, often, almostAlways, always
+d1 $ never (# speed 2) $ sound "bd sn"
+
+hush
