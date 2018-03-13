@@ -288,6 +288,15 @@ t1 (anticipate)
 
 t1 (histpan 4) $ sound "off bd"
 
+d1 $ sound "bd"
+  # delay 0.9
+  # delaytime 0.4
+  # delayfeedback 0.9
+
+d2 $ sound "arpy"
+
+hush
+
 cps 1.1
 
 hush
