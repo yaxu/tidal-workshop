@@ -213,7 +213,12 @@ http://slab.org:8080/index16.html
 
 d1 $ up ("0 7 12" + "<7 12>") # sound "arpy"
 
-d2 $ n "40 41 42 52" # sound "rash"
+
+-- softsynths + note names
+d2 $ n "c5 d*2 [~ e] gs4"
+   # sound "supermandolin"
+
+
 
 http://slab.org/tmp/extra-samples.zip
 
