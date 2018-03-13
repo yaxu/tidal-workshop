@@ -266,8 +266,13 @@ d1 $ n (off 0.25 (+ chord "major")
 d1 $ off "<0 0.25 0.5>"
      (# crush 2) $ sound "odx(3,8)"
 
+cps 1.1
+
 d1 $ jux rev $ loopAt 16 $
   chop 256 $ sound "bev"
+
+d2 $ every 3 rev $ 
+   loopAt 2 $ chop 4 $ sound "arc"
 
 hush
 
