@@ -218,6 +218,9 @@ d1 $ up ("0 7 12" + "<7 12>") # sound "arpy"
 d2 $ n "c5 d*2 [~ e] gs4"
    # sound "supermandolin"
 
+d2 $ n ("c5 d*2 [~ e] gs4" + "<0 7>")
+     # sound "supermandolin"
+     # crush 4
 
 
 http://slab.org/tmp/extra-samples.zip
