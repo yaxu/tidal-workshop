@@ -294,9 +294,33 @@ d1 $ sound "bd*4"
   # delaytime (slow 4 $ scale 0.01 0.03 sine)
   # delayfeedback 0.9
 
-d2 silence
+d1 silence
 
-d2 $ sound "arpy"
+d2 $ sound "drum" # gain 1.1
+
+d1 $ jux rev $ n "c6 [c8 c7] g8 e6"
+  # sound "rash"
+  # lpf 3000 # lpq 0.1
+
+d2 $ iter 4 $ jux rev $ loopAt 4 $ chop 16 $ sound "repetition"
+  # n (irand 5)
+
+d3 $ chunk 4 (hurry 2) $ iter 4 $ loopAt 2 $ chop 8 $ sound "arc"
+   # gain 1.2
+
+d1 $ chunk 4 (slow 2)
+   $ loopAt 2 $ chop 8 $ sound "arc"
+
+-- these are the same
+d1 $ fast 4 $ sound "bd" # speed 4
+d1 $ hurry 4 $ sound "bd"
+
+d1 $ every 4 (hurry 4) $ sound "bd sn:2"
+
+d1 $ jux rev $ chunk 4 (hurry 2)
+   $ sound "bd sn:2"
+
+
 
 hush
 
