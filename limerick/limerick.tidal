@@ -276,7 +276,10 @@ d2 $ every 3 rev $
 
 d1 $ jux rev $ chop 16 $ sound "cp(3,8)"
 
+d1 $ (chop 128 $ sound "bd(3,8) sn:2")
+  # nudge (slow 8 sine)
 
+cps 1.1
 
 hush
 
