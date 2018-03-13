@@ -352,13 +352,18 @@ d1 $ seqP [(0, 2,
            (1,3, sound "gabba(3,8)")
           ]
 
+let melody = sound "arpy"
+    drums = sound "drum drum:2"
+in
 d1 $ seqPLoop [(0, 2,
                 n "[0 .. 3] 6" # sound "drum"
                 # crush 3
                ),
-               (1,3, sound "gabba(3,8)"),
-               (2,4, sound "arpy")
+               (1,3, drums),
+               (2,4, melody),
+               (4,6, drums)
               ]
+
 
 
 floor <$> getNow
