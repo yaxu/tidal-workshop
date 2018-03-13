@@ -209,3 +209,12 @@ d1 $ rev $ loopAt 4 $ chop 16 $ sound "breaks152"
 hush
 
 http://slab.org:8080/index16.html
+
+
+d1 $ up ("0 7 12" + "<7 12>") # sound "arpy"
+
+d2 $ sound "supermandolin"
+
+https://github.com/supercollider/sc3-plugins
+
+hush
