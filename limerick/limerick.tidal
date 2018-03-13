@@ -235,12 +235,19 @@ d3 $ n "c6 ~ g6 ~"
 d1 $ off 0.125 (# crush 2) $
    sound "bd(3,8) cp"
 
-d3 $ jux rev $ slow 2
+d3 $ off 0.25 (# (s "superpiano" # gain 0.6))
+     $ jux rev $ slow 2
      $ n (off 0.25 (+12) $ off 0.125 (+7)
      $ slow 2 "c5(3,8) e3*2 g5(3,8) a4(3,8)")
      # sound "supermandolin"
      # sustain 0.6
 
+http://is.gd/limerick
+
+d1 $ n "c(3,8) e(3,8)" # sound "supermandolin"
+
+d1 $ off "<0.25 0.125>" (# crush 3)
+   $ n "0 3 [~ 3] 4" # sound "feel"
 
 hush
 
