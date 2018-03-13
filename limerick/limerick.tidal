@@ -271,7 +271,7 @@ cps 1.1
 d1 $ jux rev $ loopAt 16 $
   chop 256 $ sound "bev"
 
-d2 $ every 3 rev $ 
+d2 $ every 3 rev $
    loopAt 2 $ chop 4 $ sound "arc"
 
 hush
