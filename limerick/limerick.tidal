@@ -283,9 +283,10 @@ t1 (mortal 16 32) $ sound "bd(3,8) sn:1"
 
 t2 (mortal 16 32) $ up "0 [7 12]" # sound "jungbass"
 
-t1 (anticipate) 
+t1 (anticipate)
   $ n "0 2*2 [3 4] 3" # sound "drum"
 
+t1 (histpan 4) $ sound "off bd"
 
 cps 1.1
 
