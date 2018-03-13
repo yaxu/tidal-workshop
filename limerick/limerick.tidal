@@ -232,6 +232,17 @@ d3 $ n "c6 ~ g6 ~"
   # sound "supermandolin"
   # sustain 0.4
 
+d1 $ off 0.125 (# crush 2) $
+   sound "bd(3,8) cp"
+
+d3 $ slow 2
+     $ n (off 0.25 (+12) $ off 0.125 (+7)
+     $ slow 2 "c5(3,8) e3*2 g5(3,8) a4(3,8)")
+     # sound "supermandolin"
+     # sustain 0.6
+
+
+hush
 
 http://slab.org/tmp/extra-samples.zip
 
