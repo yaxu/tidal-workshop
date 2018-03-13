@@ -257,6 +257,12 @@ d1 $ n ("c(3,8)" + chord "major minor")
 d1 $ n ("c e" + chord "minor")
    # s "supermandolin"
 
+d1 $ n (off 0.25 (+ chord "major")
+        "<c(3,8) e f g>" )
+   # s "supermandolin"
+   # legato 4
+   # lpf 3000 # lpq 0.2
+
 hush
 
 http://slab.org/tmp/extra-samples.zip
