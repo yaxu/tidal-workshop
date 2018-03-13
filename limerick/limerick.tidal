@@ -253,7 +253,8 @@ d1 $ n ("c(3,8)" + chord "major minor")
   # sound "supermandolin"
   # legato 4
 
-d1 $ n ("c e" + chord "major minor") # s "supermandolin"
+d1 $ n ("c e" + chord "minor")
+   # s "supermandolin"
 
 hush
 
