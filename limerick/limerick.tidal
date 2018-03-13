@@ -263,6 +263,9 @@ d1 $ n (off 0.25 (+ chord "major")
    # legato 4
    # lpf 3000 # lpq 0.2
 
+-- find all the chords in here:
+https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Chords.hs
+
 hush
 
 http://slab.org/tmp/extra-samples.zip
