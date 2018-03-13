@@ -325,7 +325,7 @@ d1 $ jux rev $ chunk 4 (hurry 2)
 -- find all the chord names in here:
 https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Chords.hs
 
-https://github.com/supercollider/sc3-plugins
+htotps://github.com/supercollider/sc3-plugins
 
 http://slab.org/tmp/extra-samples.zip
 
