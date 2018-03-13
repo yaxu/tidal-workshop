@@ -288,10 +288,13 @@ t1 (anticipate)
 
 t1 (histpan 4) $ sound "off bd"
 
-d1 $ sound "bd"
+d1 $ sound "bd*4"
+  # orbit 1
   # delay 0.9
-  # delaytime 0.4
+  # delaytime (slow 4 $ scale 0.01 0.03 sine)
   # delayfeedback 0.9
+
+d2 silence
 
 d2 $ sound "arpy"
 
