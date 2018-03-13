@@ -218,9 +218,19 @@ d1 $ up ("0 7 12" + "<7 12>") # sound "arpy"
 d2 $ n "c5 d*2 [~ e] gs4"
    # sound "supermandolin"
 
-d2 $ n ("c5 d*2 [~ e] gs4" + "<0 7>")
+d2 $ n ("c5 d*2 [~ e] gs4" + "0 7")
      # sound "supermandolin"
      # crush 4
+
+-- legato to make the decay longer by a factor
+d3 $ n "c6 ~ g6 ~"
+   # sound "supermandolin"
+   # legato 4
+
+
+d3 $ n "c6 ~ g6 ~"
+      # sound "supermandolin"
+      # sustain
 
 
 http://slab.org/tmp/extra-samples.zip
