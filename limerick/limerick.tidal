@@ -337,3 +337,23 @@ https://docs.google.com/spreadsheets/d/1vtqxi98Z4JzO8Csm5omI_y0acJu4QA5E9GXaSduq
 
 stream with this!
 https://obsproject.com/download
+
+-- composition
+
+d1 $ cat [n "[0 .. 3] 6" # sound "drum"
+          # crush 3,
+          sound "cp"
+         ]
+
+d1 $ seqP [(0, 2,
+            n "[0 .. 3] 6" # sound "drum"
+            # crush 3
+           ),
+           (1,3, sound "gabba(3,8)")
+          ]
+
+floor <$> getNow
+
+cps (-1)
+
+cps 1.1
