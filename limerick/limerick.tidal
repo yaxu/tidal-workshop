@@ -302,10 +302,12 @@ d1 $ jux rev $ n "c6 [c8 c7] g8 e6"
   # sound "rash"
   # lpf 3000 # lpq 0.1
 
-d2 $ iter 4 $ jux rev $ loopAt 4 $ chop 16 $ sound "repetition"
+d2 $ iter 4 $ jux rev $ loopAt 4 $ chop 16
+  $ sound "repetition"
   # n (irand 5)
 
-d3 $ chunk 4 (hurry 2) $ iter 4 $ loopAt 2 $ chop 8 $ sound "arc"
+d3 $ chunk 4 (hurry 2) $ iter 4 $ loopAt 2 $ chop 8
+   $ sound "arc"
    # gain 1.2
 
 d1 $ chunk 4 (slow 2)
