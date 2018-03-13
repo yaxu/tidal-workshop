@@ -371,7 +371,16 @@ d1 $ ur' 16 "[rise drums, break break:distort]"
    ]
    [("distort", (# shape 0.7))]
 
+d1 $ sound "bd*8"
+   # gain (slow 8 $ rev saw)
 
+t1 (xfade) $ sound "bd(3,8)"
+
+t1 (clutch) $ sound "arpy*8"
+
+d1 $ sound "bd*8"
+
+hush
 
 floor <$> getNow
 
