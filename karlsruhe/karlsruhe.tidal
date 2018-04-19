@@ -25,9 +25,9 @@ d2 $ sound "[arpy arpy:2 arpy:1] [sn:1 cp]"
 
 d3 $ sound "[bd sn sn:2, arpy:2 arpy:3*2 arpy:5, off gabba]"
 
--- changing cps
+-- changing cps (cycles per seconds)
 cps 1.15
 
+-- convert from bpm to cps - divide by 60
+-- and the number of beats per cycle
 cps (126 / 60 / 2)
-
-hush
