@@ -1,1 +1,10 @@
-karlsruhe
+import Sound.Tidal.OscStream
+
+sd ip port = do s <- makeConnection "127.0.0.1" port superDirtSlang
+                let backend = Backend s (\_ _ _ -> return ())
+                st <- Sound.Tidal.Stream.state backend dirt
+                return $ setter st
+
+d1 <- sd "192.168.1.100" 57120
+
+let sd ip port = do {s <- makeConnection "127.0.0.1" port superDirtSlang; let backend = Backend s (\_ _ _ -> return ()); st <- Sound.Tidal.Stream.state backend dirt; return $ setter st}
