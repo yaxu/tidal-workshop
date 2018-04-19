@@ -92,6 +92,16 @@ d1 $ every 3 (# crush 3) (sound "bd bd sn:2 mt")
 
 d1 $ off 0.125 (# crush "3 2") (sound "bd bd sn:2 mt")
 
+d1 $ off 0.125 (# speed 2)
+        (every 3 (# crush 3) (sound "bd bd sn:2 mt"))
+
+d1 $ every 2 (# vowel "a") $ off 0.125 (# speed 2)
+   $ every 3 (# crush 3) $ sound "bd bd sn:2 mt"
+
+-- combine multiple patterns:
+d1 $ stack [sound "bd",
+            sound "cp*3"
+           ]
 
 -- more:
 https://tidalcycles.org/functions.html#synth_parameters
