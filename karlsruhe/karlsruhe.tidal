@@ -147,7 +147,7 @@ d2 $ off 0.25 (# speed 2) $ sound "bd ~ [~ kicklinn] odx"
    # pan rand
    # gain 1.2
 
-d3 $  juxBy 0.25 (rev) $ off 0.25 ((# s "rash") . (sometimes (# speed 2))) $ n (off 0.125 (+12) $ off 0.25 (+7) $ slow 2 "[c6 g6] e7(3,8)") # sound "xx"
+d3 $ juxBy 0.25 (rev) $ off 0.25 ((# s "rash") . (sometimes (# speed 2))) $ n (off 0.125 (+12) $ off 0.25 (+7) $ slow 2 "[c6 g6] e7(3,8)") # sound "xx"
    # gain 1.1
    # lpf (slow 8 $ scale 1000 500 sine)
    # lpq 0.2
