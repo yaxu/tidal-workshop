@@ -60,4 +60,11 @@ d1 $ sound "bd sn:2*2 cp*2 sn:2"
   # room 0.4
   # size 0.2
 
+-- low pass filter
+d1 $ sound "bd*8"
+  # lpf "500 600" # lpq 0.2
+
+-- high pass filter
+  d1 $ sound "bd*8"
+    # lpf "500 600" # lpq 0.2
   
