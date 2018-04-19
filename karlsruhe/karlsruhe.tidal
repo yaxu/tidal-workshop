@@ -103,5 +103,14 @@ d1 $ stack [sound "bd",
             sound "cp*3"
            ]
 
+-- Pattern transformations
+
+-- pattern speed = fast / slow
+
+d1 $ fast "[2 8 2]" $ sound "bd [sn:2 bd]"
+
+-- pattern and sample playback speed = hurry
+d1 $ hurry "<2 4 0.5>" $ sound "bd sn:2 mt ht*2"
+
 -- more:
 https://tidalcycles.org/functions.html#synth_parameters
