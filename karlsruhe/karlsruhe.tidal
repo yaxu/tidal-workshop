@@ -1,6 +1,8 @@
 -- Tidal workshop Karlsruhe
--- To get to this file: https://is.gd/lcworkshop
+
+To get to this file: https://is.gd/lcworkshop
 
 -- download extra samples
 -- http://slab.org/tmp/extra-samples.zip
 
+d1 $ sound "bd(3,8)"
