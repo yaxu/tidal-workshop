@@ -81,7 +81,17 @@ d1 $ speed "1 [2 3]" # sound "arpy"
 
 d1 $ sound "arpy:0 arpy:2 arpy:5 arpy:4"
 
-d1 $ n "0 2 5 4" # sound "arpy"
+-- patterns as numbers
+d1 $ n ("0 [2 4] 5 4" + "<1 1 1 4>") # sound "arpy"
+  # room 0.2
+  # size 0.5
+
+--  higher order functions
+
+d1 $ every 3 (# crush 3) (sound "bd bd sn:2 mt")
+
+d1 $ off 0.125 (# crush "3 2") (sound "bd bd sn:2 mt")
+
 
 -- more:
 https://tidalcycles.org/functions.html#synth_parameters
