@@ -81,7 +81,7 @@ d1 $ speed "1 [2 3]" # sound "arpy"
 
 d1 $ sound "arpy:0 arpy:2 arpy:5 arpy:4"
 
-d1 $ sound "arpy" # n "0 2 5 4"
+d1 $ n "0 2 5 4" # sound "arpy"
 
 -- more:
 https://tidalcycles.org/functions.html#synth_parameters
