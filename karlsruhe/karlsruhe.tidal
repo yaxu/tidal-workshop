@@ -5,8 +5,11 @@ To get to this file: https://is.gd/lcworkshop
 -- download extra samples
 -- http://slab.org/tmp/extra-samples.zip
 
-d1 $ sound "arpy ~ arpy:0 ~ arpy:1 ~ arpy:3"
+-- * to speed up
+d1 $ sound "bd*4 ~ sn:2*2 ~"
 
-d2 $ sound "bd ~ cp"
+-- / to slow down
+d1 $ sound "bd ~ ht/2 mt/3"
+
 
 hush
