@@ -4,7 +4,7 @@
 -- download extra samples
 -- http://slab.org/tmp/extra-samples.zip
 
--- ctrl-enter to run
+-- ctrl-enter to run - leave space around
 d1 $ sound "bd"
 
 -- 'stop' a pattern
