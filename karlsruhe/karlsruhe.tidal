@@ -114,7 +114,45 @@ d1 $ hurry "<2 4 0.5>" $ sound "bd sn:2 mt ht*2"
 
 -- random numbers
 
+d1 $ sound "amencutup*8" # n (scale 0 14 rand)
+  # pan (fast 1.1 rand)
 
+d1 $ jux (fast 2) $ sound "bd sn:2 [~ mt] ht"
+
+d1 $ sound "bd sn:2 [~ mt] ht"
 
 -- more:
 https://tidalcycles.org/functions.html#synth_parameters
+
+
+http://algorave.com:8080/index16.html
+tidal
+
+cps 0.8
+
+d1 $ rev $ loopAt 8 $ chop 32 $ sound "bev"
+   # gain 1.3
+
+d2 $ every 3 (hurry 2) $ off 0.25 (# speed 0.5)
+  $ iter 4 $ loopAt 2 $ chop 8 $ sound "arc"
+  # gain 1.1
+
+d1 $ every 3 (fast 4 . (# crush 4)) $ sound "bd sn:2"
+
+d1 $ juxBy 0.5 (hurry 2) $ n "0 .. 7" # sound "can"
+   # gain 1.3
+   |+| pan (slow 4 saw)
+
+d2 $ off 0.25 (# speed 2) $ sound "bd ~ [~ kicklinn] odx"
+   # pan rand
+   # gain 1.2
+
+d3 $  juxBy 0.25 (rev) $ off 0.25 ((# s "rash") . (sometimes (# speed 2))) $ n (off 0.125 (+12) $ off 0.25 (+7) $ slow 2 "[c6 g6] e7(3,8)") # sound "xx"
+   # gain 1.1
+   # lpf (slow 8 $ scale 1000 500 sine)
+   # lpq 0.2
+
+d5 $ iter 4 $ off 0.25 (# lpf 600)$ sound "dbass(3,8,<5 8>)" # gain 1.5
+
+d4 $ jux' [id, rev, slow 2] $ off 0.25 (# crush "<3 5>")$ sound "drum(3,8,<0 2>)" # orbit 1 # room 0.9
+  # gain 1.1
