@@ -72,5 +72,16 @@ d1 $ sound "bd*32"
     # hpf (scale 400 700 sine) # hpq 0.2
     # pan saw
 
+-- gain/volume
+d1 $ sound "bd*16" # gain saw
+
+-- order of combination - structure comes from the left
+
+d1 $ speed "1 [2 3]" # sound "arpy"
+
+d1 $ sound "arpy:0 arpy:2 arpy:5 arpy:4"
+
+d1 $ sound "arpy" # n "0 2 5 4"
+
 -- more:
 https://tidalcycles.org/functions.html#synth_parameters
