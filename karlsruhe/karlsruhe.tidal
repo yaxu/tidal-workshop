@@ -25,8 +25,7 @@ d2 $ sound "[arpy arpy:2 arpy:1] [sn:1 cp]"
 
 d3 $ sound "[bd sn sn:2, arpy:2 arpy:3*2 arpy:5, off gabba]"
 
-d2 $ sound "arpy cp arpy:2"
-
+-- changing cps
 cps 1.15
 
 cps (126 / 60 / 2)
