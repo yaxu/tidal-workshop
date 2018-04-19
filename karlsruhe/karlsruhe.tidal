@@ -5,6 +5,8 @@ To get to this file: https://is.gd/lcworkshop
 -- download extra samples
 -- http://slab.org/tmp/extra-samples.zip
 
-d1 $ sound "arpy arpy:0 arpy:1 arpy:3"
+d1 $ sound "arpy ~ arpy:0 ~ arpy:1 ~ arpy:3"
+
+d2 $ sound "bd ~ cp"
 
 hush
