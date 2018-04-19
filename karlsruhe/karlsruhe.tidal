@@ -21,6 +21,8 @@ d1 $ sound "bd [sn [cp sn:2]]"
 
 d2 $ sound "[arpy arpy:2 arpy:1] [sn:1 cp]"
 
+d1 $ sound "bd mt bd [arpy arpy:2 arpy:3]/2"
+
 -- changing cps (cycles per seconds)
 cps 1.15
 
