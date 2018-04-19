@@ -41,4 +41,6 @@ d1 $ sound "{bd bd*2 sn:2, arpy:3/2 [mt*2 ht/2]}"
 
 -- one step per cycle
 
-d1 $ sound "bd <arpy arpy:2 arpy:3>"
+d1 $ sound "bd mt bd <arpy arpy:2 arpy:3>"
+-- the same as..
+d1 $ sound "bd mt bd [arpy arpy:2 arpy:3]/3"
