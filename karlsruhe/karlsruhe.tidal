@@ -67,4 +67,6 @@ d1 $ sound "bd*8"
 -- high pass filter
   d1 $ sound "bd*8"
     # lpf "500 600" # lpq 0.2
-  
+
+-- more:
+https://tidalcycles.org/functions.html#synth_parameters
