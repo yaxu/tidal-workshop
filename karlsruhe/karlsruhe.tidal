@@ -49,3 +49,15 @@ d1 $ sound "bd mt bd [arpy arpy:2 arpy:3]/3"
 
 -- combining effects
 d1 $ sound "odx odx:1 [~ odx] odx:1"
+    # vowel "<a e i o u>"
+
+d1 $ sound "arpy arpy arpy arpy"
+    # speed "4 1 -1"
+
+d1 $ sound "bd sn:2*2 cp*2 sn:2"
+  # crush "4 1"
+  # speed 4
+  # room 0.4
+  # size 0.2
+
+  
