@@ -11,5 +11,19 @@ d1 $ sound "bd*4 ~ sn:2*2 ~"
 -- / to slow down
 d1 $ sound "bd ~ ht/2 mt/3"
 
+d1 $ sound "bd*2"
+
+d2 $ sound "bd sn:1 cp sn:2"
+
+-- subsequences
+
+d1 $ sound "bd [sn [cp sn:2]]"
+
+d2 $ sound "[arpy arpy:2 arpy:1] [sn:1 cp]"
+
+
+cps 1.15
+
+cps (126 / 60 / 2)
 
 hush
