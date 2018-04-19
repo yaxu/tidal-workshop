@@ -46,3 +46,6 @@ d1 $ sound "{bd bd*2 sn:2, arpy:3/2 [mt*2 ht/2]}"
 d1 $ sound "bd mt bd <arpy arpy:2 arpy:3>"
 -- the same as..
 d1 $ sound "bd mt bd [arpy arpy:2 arpy:3]/3"
+
+-- combining effects
+d1 $ sound "odx odx:1 [~ odx] odx:1"
