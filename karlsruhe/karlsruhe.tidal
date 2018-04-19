@@ -21,6 +21,11 @@ d1 $ sound "bd [sn [cp sn:2]]"
 
 d2 $ sound "[arpy arpy:2 arpy:1] [sn:1 cp]"
 
+-- polymeter
+
+d3 $ sound "[bd sn sn:2, arpy:2 arpy:3*2 arpy:5, off gabba]"
+
+d2 $ sound "arpy cp arpy:2"
 
 cps 1.15
 
