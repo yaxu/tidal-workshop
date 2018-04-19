@@ -31,3 +31,10 @@ cps (126 / 60 / 2)
 -- polymeter
 
 d3 $ sound "[bd sn sn:2, arpy:2 arpy:3*2 arpy:5, off gabba]"
+
+-- polyrhythm
+
+d1 $ sound "[bd sn:1, arpy:2 ~ arpy:1]"
+d1 $ sound "{bd sn:1, arpy:2 ~ arpy:1}"
+
+d1 $ sound "{bd bd*2 sn:2, arpy:3/2 [mt*2 ht/2]}"
