@@ -258,9 +258,13 @@ d1 $ chunk 4 (# crush 4) $ loopAt 2 $ chop 8 $ sound "arc"
 d1 $ n ("c5" + "[0,5,7]") # sound "supermandolin"
   # gain 0.8
 
-  d1 $ n ("c5 a4" + chord "major") # sound "supermandolin"
+https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Chords.hs
+d1 $ n ("c5 a4" + chord "major") # sound "supermandolin"
     # gain 0.8
 
 d1 $ n (off 0.25 (+ chord "major") "<c5*2 a4(3,8) f5 g4*2>")
       # sound "superpiano"
       # gain 0.6
+
+https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Scales.hs
+d1 $ n (scaleP "<minPent majPent>" "0 .. 7") #  sound "supermandolin" # gain 0.8
