@@ -270,6 +270,8 @@ https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Scales.hs
 d1 $ n (scaleP "<minPent majPent>" "0 .. 7") #  sound "supermandolin"
    # gain 0.8
 
+-- composition - ur function (currently undocumented, sorry!)
+
 d1 $ ur 16 "[break bassline:speedy, rhythm:crushup] weird"
    [("break", loopAt 2 $ chop 8 $ sound "arc"),
     ("bassline", n "0 [7 2]" # sound "jvbass"),
@@ -281,6 +283,7 @@ d1 $ ur 16 "[break bassline:speedy, rhythm:crushup] weird"
    ]
   # gain 0.7
 
+-- patterns of patterns of patterns
   d1 $ ur 4 "foo simple"
    [("foo", ur 16 "[break bassline:speedy, rhythm:crushup] weird"
      [("break", loopAt 2 $ chop 8 $ sound "arc"),
