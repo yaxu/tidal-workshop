@@ -158,3 +158,25 @@ d4 $ jux' [id, rev, slow 2] $ off 0.25 (# crush "<3 5>")$ sound "drum(3,8,<0 2>)
   # gain 1.1
 
 d1 $ sound "bd"
+
+
+-- transposing pitches - |+| n
+-- microtonal
+
+d1 $ every 3 (fast 2 . rev) $ (sound "bd sn")
+   # vowel "a"
+
+d1 $ sound "bd"
+   |=| vowel "a"
+
+d1 $ n ("0 1 2" + "<3 2>") # sound "drum"
+
+d1 $ up "0 0.5 1 7"  # sound "sid"
+
+d1 $ n "0 7 0.5" # sound "supermandolin"
+
+-- note names
+d1 $ n "c as4 fs5 ef6" # sound "supermandolin"
+  |+| n "<0 6>"
+
+hush
