@@ -156,3 +156,5 @@ d5 $ iter 4 $ off 0.25 (# lpf 600)$ sound "dbass(3,8,<5 8>)" # gain 1.5
 
 d4 $ jux' [id, rev, slow 2] $ off 0.25 (# crush "<3 5>")$ sound "drum(3,8,<0 2>)" # orbit 1 # room 0.9
   # gain 1.1
+
+d1 $ sound "bd"
