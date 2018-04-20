@@ -228,7 +228,11 @@ d1 $ every 2 (slow 1.5) $ every 3 (0.25 <~) $ every 4 (fast 2) $ n "0 .. 7" # so
 d1 $ jux (0.25 <~) $ every 4 (0.5 <~) $ every 3 (0.25 ~>) (loopAt 2 $ chop 8 $ sound "arc"
   # gain 0.8)
 
-cps 1.15
+d1 $ iter 4 $ loopAt 2 $ chop 8 $ sound "arc"
+  # gain 0.8
+
+d1 $ loopAt 2 $ chop 16 $ sound "arc"
+   # gain 0.8
 
 hush
 
