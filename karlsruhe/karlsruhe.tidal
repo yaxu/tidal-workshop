@@ -234,6 +234,13 @@ d1 $ iter 4 $ loopAt 2 $ chop 8 $ sound "arc"
 d1 $ loopAt 2 $ chop 16 $ sound "arc"
    # gain 0.8
 
+
+d1 $ every 3 (const $ sound "cp") $ sound "bd sn"
+
+d1 $ someCycles (const $ sound "cp") $ sound "bd sn"
+
+-- sequence - randomly choose from subpatterns [|] - to implement!
+
 hush
 
   -- euclidian
