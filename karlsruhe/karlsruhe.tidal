@@ -221,5 +221,15 @@ d2 $ often (# speed 2) $ sound "bd*8" # orbit 1
 
 d2 $ degradeBy 0.25 $ sound "amencutup*8" # orbit 1 # n "0 .. 16"
 
+d1 $ every 2 (slow 1.5) $ every 3 (0.25 <~) $ every 4 (fast 2) $ n "0 .. 7" # sound "can" # orbit 1
+
+-- shifting time <~ ~>
+
+d1 $ jux (0.25 <~) $ every 4 (0.5 <~) $ every 3 (0.25 ~>) (loopAt 2 $ chop 8 $ sound "arc"
+  # gain 0.8)
+
+cps 1.15
+
+hush
 
   -- euclidian
