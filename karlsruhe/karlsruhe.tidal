@@ -179,4 +179,47 @@ d1 $ n "0 7 0.5" # sound "supermandolin"
 d1 $ n "c as4 fs5 ef6" # sound "supermandolin"
   |+| n "<0 6>"
 
-hush
+d1 $ sound "supermandolin*32" # n sine # pan sine
+
+-- $ - evaluates/runs everything on the right
+-- first before passing to the function on the left
+
+d1 $ every 3 rev sound "bd sn"
+
+:t every
+every :: Pattern Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+
+d1 $ every 3 rev (sound "bd sn")
+
+d1 $ every 3 rev $ sound "bd sn"
+
+d1 $ every 4 (fast 2) $ every 3 rev (sound "bd sn cp" # vowel "a" # crush 3)
+
+d1 $ sound "supermandolin"
+   # orbit 0
+   # room 0.3
+
+d2 $ sound "bd(3,8)"
+      # orbit 1
+      # room 0
+
+-- # (aka |=|)
+-- .
+
+-- more randomness
+
+d1 $ sound "bd [bd bd bd bd]? bd bd? bd bd bd? bd" # speed rand
+  # room 0
+
+d2 $ sometimes (# speed 2) $ sound "bd*8" # orbit 1
+
+d2 $ someCycles (# speed 2) $ sound "bd*2 sn:2*4" # orbit 1
+
+d2 $ rarely (# speed 2) $ sound "bd*8" # orbit 1
+
+d2 $ often (# speed 2) $ sound "bd*8" # orbit 1
+
+d2 $ degradeBy 0.25 $ sound "amencutup*8" # orbit 1 # n "0 .. 16"
+
+
+  -- euclidian
