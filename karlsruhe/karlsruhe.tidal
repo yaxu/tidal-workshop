@@ -252,6 +252,4 @@ d2 $ sound "~ off"
 d3 $ slow 2 $ sound ((discretise 1 $ (irand 4)/4) <~ (e 3 8 "bd"))
 
 
-x o x o x o x o
-
   -- euclidian
