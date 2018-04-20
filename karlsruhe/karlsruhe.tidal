@@ -267,4 +267,16 @@ d1 $ n (off 0.25 (+ chord "major") "<c5*2 a4(3,8) f5 g4*2>")
       # gain 0.6
 
 https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Scales.hs
-d1 $ n (scaleP "<minPent majPent>" "0 .. 7") #  sound "supermandolin" # gain 0.8
+d1 $ n (scaleP "<minPent majPent>" "0 .. 7") #  sound "supermandolin"
+   # gain 0.8
+
+d1 $ ur 16 "[break bassline:speedy, rhythm:crushup] weird"
+   [("break", loopAt 2 $ chop 8 $ sound "arc"),
+    ("bassline", n "0 [7 2]" # sound "jvbass"),
+    ("rhythm", sound "bd [sn:2 cp]" # speed 2),
+    ("weird", (chop 16 $ sound "bd sn:2") # nudge (slow 8 sine))
+   ]
+   [("crushup", (# crush 4). fast 2),
+    ("speedy", fast 2)
+   ]
+  # gain 0.7
