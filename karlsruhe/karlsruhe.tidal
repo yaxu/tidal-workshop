@@ -253,4 +253,14 @@ d2 $ sound "~ off"
 d3 $ slow 2 $ sound ((discretise 1 $ (irand 4)/4) <~ (e 3 8 "bd"))
 
 
-  -- euclidian
+d1 $ chunk 4 (# crush 4) $ loopAt 2 $ chop 8 $ sound "arc"
+
+d1 $ n ("c5" + "[0,5,7]") # sound "supermandolin"
+  # gain 0.8
+
+  d1 $ n ("c5 a4" + chord "major") # sound "supermandolin"
+    # gain 0.8
+
+d1 $ n (off 0.25 (+ chord "major") "<c5*2 a4(3,8) f5 g4*2>")
+      # sound "superpiano"
+      # gain 0.6
