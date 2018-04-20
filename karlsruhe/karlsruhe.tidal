@@ -239,8 +239,19 @@ d1 $ every 3 (const $ sound "cp") $ sound "bd sn"
 
 d1 $ someCycles (const $ sound "cp") $ sound "bd sn"
 
+
+
 -- sequence - randomly choose from subpatterns [|] - to implement!
 
-hush
+d1 $ sound "bd*8"
+
+d2 $ sound "~ off"
+
+-- https://tidalcycles.org/patterns.html#bjorklund
+
+d3 $ slow 2 $ sound ((discretise 1 $ (irand 4)/4) <~(e 3 8 "bd"))
+
+
+x o x o x o x o
 
   -- euclidian
