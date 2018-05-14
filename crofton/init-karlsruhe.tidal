@@ -1,0 +1,15 @@
+import Sound.Tidal.OscStream
+
+sd ip port = do {s <- makeConnection ip port superDirtSlang;st <- Sound.Tidal.Stream.state (Backend s (\_ _ _ -> return ())) dirt; return $ nudgeit $ setter st} where nudgeit d p = d $ p |+| nudge (-2.5)
+
+d1 <- sd "192.168.1.100" 57120
+d2 <- sd "192.168.1.100" 57120
+d3 <- sd "192.168.1.100" 57120
+d4 <- sd "192.168.1.100" 57120
+d5 <- sd "192.168.1.100" 57120
+d6 <- sd "192.168.1.100" 57120
+d7 <- sd "192.168.1.100" 57120
+d8 <- sd "192.168.1.100" 57120
+d9 <- sd "192.168.1.100" 57120
+
+let hush = mapM_ ($ silence) [d1,d2,d3,d4,d5,d6,d7,d8,d9]

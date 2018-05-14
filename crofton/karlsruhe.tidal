@@ -1,0 +1,300 @@
+-- Tidal workshop Karlsruhe
+
+To get to this file: https://is.gd/lcworkshop
+
+-- download extra samples
+-- http://slab.org/tmp/extra-samples.zip
+
+-- * to speed up
+d1 $ sound "bd*4 ~ sn:2*2 ~"
+
+-- / to slow down
+d1 $ sound "bd ~ ht/2 mt/3"
+
+d1 $ sound "bd*2"
+
+d2 $ sound "bd sn:1 cp sn:2"
+
+-- subsequences
+
+d1 $ sound "bd [sn [cp sn:2]]"
+
+d2 $ sound "[arpy arpy:2 arpy:1] [sn:1 cp]"
+
+d1 $ sound "bd mt bd [arpy arpy:2 arpy:3]/2"
+
+-- changing cps (cycles per seconds)
+cps 1.15
+
+-- convert from bpm to cps - divide by 60
+-- and the number of beats per cycle
+cps (126 / 60 / 2)
+
+-- polymeter
+
+d3 $ sound "[bd sn sn:2, arpy:2 arpy:3*2 arpy:5, off gabba]"
+
+-- polyrhythm
+
+d1 $ sound "[bd sn:1, arpy:2 ~ arpy:1]"
+d1 $ sound "{bd sn:1, arpy:2 ~ arpy:1}"
+
+d1 $ sound "{bd bd*2 sn:2, arpy:3/2 [mt*2 ht/2]}"
+
+-- one step per cycle
+
+d1 $ sound "bd mt bd <arpy arpy:2 arpy:3>"
+-- the same as..
+d1 $ sound "bd mt bd [arpy arpy:2 arpy:3]/3"
+
+-- combining effects
+d1 $ sound "odx odx:1 [~ odx] odx:1"
+    # vowel "<a e i o u>"
+
+d1 $ sound "arpy arpy arpy arpy"
+    # speed "4 1 -1"
+
+d1 $ sound "bd sn:2*2 cp*2 sn:2"
+  # crush "4 1"
+  # speed 4
+  # room 0.4
+  # size 0.2
+
+-- low pass filter
+d1 $ sound "bd*8"
+  # lpf "500 600" # lpq 0.2
+
+-- high pass filter
+d1 $ sound "bd*8"
+  # hpf "500 600" # hpq 0.2
+
+d1 $ sound "bd*32"
+    # hpf (scale 400 700 sine) # hpq 0.2
+    # pan saw
+
+-- gain/volume
+d1 $ sound "bd*16" # gain saw
+
+-- order of combination - structure comes from the left
+
+d1 $ speed "1 [2 3]" # sound "arpy"
+
+d1 $ sound "arpy:0 arpy:2 arpy:5 arpy:4"
+
+-- patterns as numbers
+d1 $ n ("0 [2 4] 5 4" + "<1 1 1 4>") # sound "arpy"
+  # room 0.2
+  # size 0.5
+
+--  higher order functions
+
+d1 $ every 3 (# crush 3) (sound "bd bd sn:2 mt")
+
+d1 $ off 0.125 (# crush "3 2") (sound "bd bd sn:2 mt")
+
+d1 $ off 0.125 (# speed 2)
+        (every 3 (# crush 3) (sound "bd bd sn:2 mt"))
+
+d1 $ every 2 (# vowel "a") $ off 0.125 (# speed 2)
+   $ every 3 (# crush 3) $ sound "bd bd sn:2 mt"
+
+-- combine multiple patterns:
+d1 $ stack [sound "bd",
+            sound "cp*3"
+           ]
+
+-- Pattern transformations
+
+-- pattern speed = fast / slow
+
+d1 $ fast "[2 8 2]" $ sound "bd [sn:2 bd]"
+
+-- pattern and sample playback speed = hurry
+d1 $ hurry "<2 4 0.5>" $ sound "bd sn:2 mt ht*2"
+
+-- random numbers
+
+d1 $ sound "amencutup*8" # n (scale 0 14 rand)
+  # pan (fast 1.1 rand)
+
+d1 $ jux (fast 2) $ sound "bd sn:2 [~ mt] ht"
+
+d1 $ sound "bd sn:2 [~ mt] ht"
+
+-- more:
+https://tidalcycles.org/functions.html#synth_parameters
+
+
+http://algorave.com:8080/index16.html
+tidal
+
+cps 0.8
+
+d1 $ rev $ loopAt 8 $ chop 32 $ sound "bev"
+   # gain 1.3
+
+d2 $ every 3 (hurry 2) $ off 0.25 (# speed 0.5)
+  $ iter 4 $ loopAt 2 $ chop 8 $ sound "arc"
+  # gain 1.1
+
+d1 $ every 3 (fast 4 . (# crush 4)) $ sound "bd sn:2"
+
+d1 $ juxBy 0.5 (hurry 2) $ n "0 .. 7" # sound "can"
+   # gain 1.3
+   |+| pan (slow 4 saw)
+
+d2 $ off 0.25 (# speed 2) $ sound "bd ~ [~ kicklinn] odx"
+   # pan rand
+   # gain 1.2
+
+d3 $ juxBy 0.25 (rev) $ off 0.25 ((# s "rash") . (sometimes (# speed 2))) $ n (off 0.125 (+12) $ off 0.25 (+7) $ slow 2 "[c6 g6] e7(3,8)") # sound "xx"
+   # gain 1.1
+   # lpf (slow 8 $ scale 1000 500 sine)
+   # lpq 0.2
+
+d5 $ iter 4 $ off 0.25 (# lpf 600)$ sound "dbass(3,8,<5 8>)" # gain 1.5
+
+d4 $ jux' [id, rev, slow 2] $ off 0.25 (# crush "<3 5>")$ sound "drum(3,8,<0 2>)" # orbit 1 # room 0.9
+  # gain 1.1
+
+d1 $ sound "bd"
+
+
+-- transposing pitches - |+| n
+-- microtonal
+
+d1 $ every 3 (fast 2 . rev) $ (sound "bd sn")
+   # vowel "a"
+
+d1 $ sound "bd"
+   |=| vowel "a"
+
+d1 $ n ("0 1 2" + "<3 2>") # sound "drum"
+
+d1 $ up "0 0.5 1 7"  # sound "sid"
+
+d1 $ n "0 7 0.5" # sound "supermandolin"
+
+-- note names
+d1 $ n "c as4 fs5 ef6" # sound "supermandolin"
+  |+| n "<0 6>"
+
+d1 $ sound "supermandolin*32" # n sine # pan sine
+
+-- $ - evaluates/runs everything on the right
+-- first before passing to the function on the left
+
+d1 $ every 3 rev sound "bd sn"
+
+:t every
+every :: Pattern Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+
+d1 $ every 3 rev (sound "bd sn")
+
+d1 $ every 3 rev $ sound "bd sn"
+
+d1 $ every 4 (fast 2) $ every 3 rev (sound "bd sn cp" # vowel "a" # crush 3)
+
+d1 $ sound "supermandolin"
+   # orbit 0
+   # room 0.3
+
+d2 $ sound "bd(3,8)"
+      # orbit 1
+      # room 0
+
+-- # (aka |=|)
+-- .
+
+-- more randomness
+
+d1 $ sound "bd [bd bd bd bd]? bd bd? bd bd bd? bd" # speed rand
+  # room 0
+
+d2 $ sometimes (# speed 2) $ sound "bd*8" # orbit 1
+
+d2 $ someCycles (# speed 2) $ sound "bd*2 sn:2*4" # orbit 1
+
+d2 $ rarely (# speed 2) $ sound "bd*8" # orbit 1
+
+d2 $ often (# speed 2) $ sound "bd*8" # orbit 1
+
+d2 $ degradeBy 0.25 $ sound "amencutup*8" # orbit 1 # n "0 .. 16"
+
+d1 $ every 2 (slow 1.5) $ every 3 (0.25 <~) $ every 4 (fast 2) $ n "0 .. 7" # sound "can" # orbit 1
+
+-- shifting time <~ ~>
+
+d1 $ jux (0.25 <~) $ every 4 (0.5 <~) $ every 3 (0.25 ~>) (loopAt 2 $ chop 8 $ sound "arc"
+  # gain 0.8)
+
+d1 $ iter 4 $ loopAt 2 $ chop 8 $ sound "arc"
+  # gain 0.8
+
+d1 $ loopAt 2 $ chop 16 $ sound "arc"
+   # gain 0.8
+
+
+d1 $ every 3 (const $ sound "cp") $ sound "bd sn"
+
+d1 $ someCycles (const $ sound "cp") $ sound "bd sn"
+
+
+
+-- sequence - randomly choose from subpatterns [|] - to implement!
+
+d1 $ sound "bd*8"
+
+d2 $ sound "~ off"
+
+-- https://tidalcycles.org/patterns.html#bjorklund
+
+-- random shifting - a bit complicated !
+d3 $ slow 2 $ sound ((discretise 1 $ (irand 4)/4) <~ (e 3 8 "bd"))
+
+
+d1 $ chunk 4 (# crush 4) $ loopAt 2 $ chop 8 $ sound "arc"
+
+d1 $ n ("c5" + "[0,5,7]") # sound "supermandolin"
+  # gain 0.8
+
+https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Chords.hs
+d1 $ n ("c5 a4" + chord "major") # sound "supermandolin"
+    # gain 0.8
+
+d1 $ n (off 0.25 (+ chord "major") "<c5*2 a4(3,8) f5 g4*2>")
+      # sound "superpiano"
+      # gain 0.6
+
+https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Scales.hs
+d1 $ n (scaleP "<minPent majPent>" "0 .. 7") #  sound "supermandolin"
+   # gain 0.8
+
+-- composition - ur function (currently undocumented, sorry!)
+
+d1 $ ur 16 "[break bassline:speedy, rhythm:crushup] weird"
+   [("break", loopAt 2 $ chop 8 $ sound "arc"),
+    ("bassline", n "0 [7 2]" # sound "jvbass"),
+    ("rhythm", sound "bd [sn:2 cp]" # speed 2),
+    ("weird", (chop 16 $ sound "bd sn:2") # nudge (slow 8 sine))
+   ]
+   [("crushup", (# crush 4). fast 2),
+    ("speedy", fast 2)
+   ]
+  # gain 0.7
+
+-- patterns of patterns of patterns
+d1 $ ur 4 "foo simple"
+   [("foo", ur 16 "[break bassline:speedy, rhythm:crushup] weird"
+     [("break", loopAt 2 $ chop 8 $ sound "arc"),
+      ("bassline", n "0 [7 2]" # sound "jvbass"),
+      ("rhythm", sound "bd [sn:2 cp]" # speed 2),
+      ("weird", (chop 16 $ sound "bd sn:2") # nudge (slow 8 sine))
+     ]
+     [("crushup", (# crush 4). fast 2),
+      ("speedy", fast 2)
+     ]
+    # gain 0.7),
+    ("simple", sound "bd*8")
+    ]
+    []
