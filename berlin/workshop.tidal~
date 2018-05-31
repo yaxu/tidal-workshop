@@ -1,14 +1,10 @@
 -- Tidal workshop Berlin, 2nd June 2018
 -- To get to this file: https://is.gd/tidalberlin
 
--- Intro
 
--- shift-enter = run one line
--- ctrl-enter  = run a block of code - can only contain one pattern!
 
+-- ctrl-enter to run
 d1 $ sound "bd"
-
-
 
 -- download extra samples
 -- http://slab.org/tmp/extra-samples.zip

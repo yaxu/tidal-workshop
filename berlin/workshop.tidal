@@ -1,25 +1,40 @@
 -- Tidal workshop Berlin, 2nd June 2018
 -- To get to this file: https://is.gd/tidalberlin
 
+-- Intro
 
+-- shift-enter = run one line
 
--- ctrl-enter to run
+-- ctrl-enter = run a multi-line pattern
+--              (must have blank lines around it)
+
 d1 $ sound "bd"
-
--- download extra samples
--- http://slab.org/tmp/extra-samples.zip
 
 -- 'stop' a pattern
 d1 silence
 
--- start another
-d2 $ sound "arpy arpy:4 arpy:3 arpy:5"
+-- start another pattern:
+d2 $ sound "bd sn"
+
+-- start that first one again:
+d1 $ sound "bd"
 
 -- stop everything
 hush
 
 -- change the 'tempo'
 cps 1.1
+
+-- What are 'bd' and 'sn'? They're sets of samples
+
+-- Find them in supercollider.. Open user support directory >
+-- downloaded quarks > dirt-samples
+
+-- download extra samples and put them in:
+-- http://slab.org/tmp/extra-samples.zip
+
+-- More info about working with SuperDirt here:
+-- https://github.com/musikinformatik/superdirt
 
 -- break down steps
 d1 $ sound "bd [mt ht] lt cp"
