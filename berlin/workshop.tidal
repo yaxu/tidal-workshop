@@ -123,8 +123,4 @@ d1 $ n "0 1 2 3" # sound "drum"
 -- https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Chords.hs
 -- https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Scales.hs
 
--- find all the chord names in here:
-
 -- composition with seqP, seqPLoop, ur
-
-
