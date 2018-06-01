@@ -30,35 +30,35 @@ cps 1.1
 -- Find them in supercollider..
 -- In the menus, "User support directory" > downloaded quarks > dirt-samples
 
--- 'bd' is the name of a sample
-d1 $ sound "bd"
+-- In this:
+
+d1 $ sound "drum"
+
+-- 'drum' is the name of a folder of samples. By default it will play
+-- the first one. To play the first four in sequence, give its place
+-- in the folder (in alphabetical order) with ':'
+
+d1 $ sound "drum:0 drum:1 drum:2 drum:3"
+
+-- Or jumping ahead a bit, we can also specify numbers like this:
+
+d1 $ n "0 1 2 3" # sound "drum"
 
 -- download extra samples and put them in:
 -- http://slab.org/tmp/extra-samples.zip
 
+-- Restart SuperDirt and you'll be able to play them too.
+
 -- More info about working with SuperDirt here:
 -- https://github.com/musikinformatik/superdirt
 
+-- cycles
+
 -- break down steps
-d1 $ sound "bd [mt ht] lt cp"
 
-d1 $ sound "bd [mt [ht cp]] lt cp"
+-- for 'rest'
 
-d1 $ sound "[bd sn mt] [bd sn]"
-
-d1 $ sound "[bd sn mt] [bd sn arpy cp]"
-
--- ~ for 'rest'
-d1 $ sound "[bd ~ mt] [bd sn ~ cp]"
-
--- polyphony
-
-d1 $ sound "[bd sn:1, arpy arpy:4 arpy:2, gabba cp cp]"
-
-d1 $ sound "{bd sn:1 [bd bd] sn:2, arpy arpy:4 arpy:2}"
-
-d1 $ slow 4 $ sound "odx odx odx odx odx odx odx*4 odx*4"
-
+-- polyphony, polymeter and polyrhythm
 
 -- patterning sample numbers + sample names
 d1 $ n "0 [1 5] 3 [4 9]"
