@@ -52,12 +52,6 @@ d1 $ n "0 1 2 3" # sound "drum"
 -- More info about working with SuperDirt here:
 -- https://github.com/musikinformatik/superdirt
 
-
--- Back to our loop:
-
-d1 $ n "0 1 2 3" # sound "drum"
-
-
 -- cycles
 
 -- break down steps
