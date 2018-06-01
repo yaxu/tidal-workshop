@@ -126,3 +126,10 @@ d1 $ n "0 1 2 3" # sound "drum"
 -- https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Scales.hs
 
 -- composition with seqP, seqPLoop, ur
+
+-- more complex examples
+
+d1 $ stack [every 4 (struct "x(3,8)") $ chunk 4 (hurry 0.5) $ off 0.25 ((# s "cp") . (|*| speed 2))
+            $ every 4 (within (0,0.5) (fast 2)) $ jux rev $ n (every 2 (+1) $ "0 2 [~ 1] 4") # sound "psr",
+            every 4 (struct "x(3,8)") $ off 0.25 (# speed 2) $ n "4 ~ [~ 3] 3" # sound "future" # gain 1.1
+           ]
