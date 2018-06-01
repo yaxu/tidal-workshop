@@ -60,6 +60,7 @@ d1 $ n "0 1 2 3" # sound "drum"
 ----
 -- CYCLES
 
+-- Compare these:
 
 d1 $ sound "bd bd sd mt"
 d1 $ sound "bd bd sd mt ht lt"
