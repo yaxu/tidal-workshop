@@ -40,7 +40,8 @@ d1 $ sound "drum"
 
 d1 $ sound "drum:0 drum:1 drum:2 drum:3"
 
--- Or jumping ahead a bit, we can also specify samples numbers like this:
+-- Or jumping ahead a bit, we can also specify sample numbers with a
+-- 'n' pattern, like this:
 
 d1 $ n "0 1 2 3" # sound "drum"
 
