@@ -81,8 +81,8 @@ d1 $ sound "bd ~ sd mt ht lt ~ mt"
 ----
 -- SUB-SEQUENCES
 
--- Here we take the third step in the above pattern, and squeeze four
--- sounds in there..
+-- Below is the same as the above, except we squeeze four sounds in
+-- the third step of the sequence..
 
 d1 $ sound "bd ~ [sd sd sd sd] mt ht lt ~ mt"
 
