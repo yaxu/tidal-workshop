@@ -71,9 +71,13 @@ d1 $ sound "bd bd sd mt ht lt bd mt"
 -- The cycle duration stays constant, i.e. the sounds are squashed
 -- into a single cycle, so the more you add, the faster it goes.
 
+-- '~' is a 'rest'
+
+d1 $ sound "bd ~ sd mt ht lt ~ mt"
+
 -- break down steps
 
--- for 'rest'
+d1 $ sound "bd bd sd mt ht lt bd mt"
 
 -- polyphony, polymeter and polyrhythm
 
