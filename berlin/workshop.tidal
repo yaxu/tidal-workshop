@@ -86,6 +86,11 @@ d1 $ sound "bd ~ sd mt ht lt ~ mt"
 
 d1 $ sound "bd ~ [sd sd sd sd] mt ht lt ~ mt"
 
+-- Likewise the below has two subpatterns of equal duration, but the
+-- first has two steps in, while the second has three..
+
+d1 $ sound "[bd sd] [bd sd ~]"
+
 -- polyphony, polymeter and polyrhythm
 
 -- patterning sample numbers + sample names
