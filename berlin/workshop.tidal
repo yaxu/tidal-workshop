@@ -95,6 +95,12 @@ d1 $ sound "[bd kurt] [bd ~ [sd sn:2]]"
 
 -- polyphony, polymeter and polyrhythm
 
+-- By using a comma, you can put more than one subpattern in, and have
+-- them play on top of each other:
+
+d1 $ sound "[bd sd, kurt kurt:1 kurt:3]"
+
+
 -- patterning sample numbers + sample names
 
 -- effects
