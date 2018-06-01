@@ -27,8 +27,8 @@ cps 1.1
 
 -- What are 'bd' and 'sn'? They're sets of samples
 
--- Find them in supercollider.. Open user support directory >
--- downloaded quarks > dirt-samples
+-- Find them in supercollider..
+-- In the menus, "User support directory" > downloaded quarks > dirt-samples
 
 -- download extra samples and put them in:
 -- http://slab.org/tmp/extra-samples.zip
