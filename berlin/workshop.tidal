@@ -30,6 +30,9 @@ cps 1.1
 -- Find them in supercollider..
 -- In the menus, "User support directory" > downloaded quarks > dirt-samples
 
+-- 'bd' is the name of a sample
+d1 $ sound "bd"
+
 -- download extra samples and put them in:
 -- http://slab.org/tmp/extra-samples.zip
 
