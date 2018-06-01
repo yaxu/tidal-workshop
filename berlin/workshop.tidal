@@ -100,7 +100,6 @@ d1 $ sound "[bd kurt] [bd ~ [sd sn:2]]"
 
 d1 $ sound "[bd sd, kurt kurt:1 kurt:3]"
 
-
 -- patterning sample numbers + sample names
 
 -- effects
