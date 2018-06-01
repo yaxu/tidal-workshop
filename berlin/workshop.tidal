@@ -14,7 +14,7 @@ d1 $ sound "bd"
 d1 silence
 
 -- start another pattern:
-d2 $ sound "bd sn"
+d2 $ sound "bd sd"
 
 -- start that first one again:
 d1 $ sound "bd"
@@ -25,7 +25,7 @@ hush
 -- change the 'tempo'
 cps 1.1
 
--- What are 'bd' and 'sn'? They're sets of samples
+-- What are 'bd' and 'sd'? They're sets of samples
 
 -- Find them in supercollider..
 -- In the menus, "User support directory" > downloaded quarks > dirt-samples
@@ -81,6 +81,8 @@ d1 $ n "0 1 2 3" # sound "drum"
 -- randcat - like cat, but in random order
 
 -- stack - play on top of each other.
+
+-- chunk
 
 -- randomness
 
