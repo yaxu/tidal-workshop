@@ -78,9 +78,13 @@ d1 $ sound "bd bd sd mt ht lt bd mt"
 
 d1 $ sound "bd ~ sd mt ht lt ~ mt"
 
--- break down steps
+----
+-- SUB-SEQUENCES
 
-d1 $ sound "bd bd sd mt ht lt bd mt"
+-- Here we take the third step in the above pattern, and squeeze four
+-- sounds in there..
+
+d1 $ sound "bd ~ [sd sd sd sd] mt ht lt ~ mt"
 
 -- polyphony, polymeter and polyrhythm
 
