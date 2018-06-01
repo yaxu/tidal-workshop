@@ -44,13 +44,15 @@ d1 $ sound "drum:0 drum:1 drum:2 drum:3"
 
 d1 $ n "0 1 2 3" # sound "drum"
 
--- download extra samples and put them in:
+-- Try dropping some extra samples in there, for example:
 -- http://slab.org/tmp/extra-samples.zip
 
 -- Restart SuperDirt and you'll be able to play them too.
 
 -- More info about working with SuperDirt here:
 -- https://github.com/musikinformatik/superdirt
+
+d1 $ n "0 1 2 3" # sound "drum"
 
 -- cycles
 
