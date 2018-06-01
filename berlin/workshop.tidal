@@ -53,6 +53,8 @@ d1 $ sound "drum:0 drum:1 drum:2 drum:3"
 
 d1 $ n "0 1 2 3" # sound "drum"
 
+-- In the above the `#` combines the 'n' and 'sound' patterns. We'll
+-- come back to this..
 
 -- cycles
 
