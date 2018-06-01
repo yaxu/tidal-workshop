@@ -86,10 +86,8 @@ d1 $ n "0 1 2 3" # sound "drum"
 
 -- * degrade
 -- * never, almostNever, sometimes, often, almostAlways, always
--- * irand / rand
+-- * rand
 -- * someCycles
-
-d1 $ sometimes (# crush 3) $ sound "bd*8"
 
 -- 'Euclidean' off-kilter rhythms
 
