@@ -30,6 +30,14 @@ cps 1.1
 -- Find them in supercollider..
 -- In the menus, "User support directory" > downloaded quarks > dirt-samples
 
+-- Try dropping some extra samples in there, for example:
+-- http://slab.org/tmp/extra-samples.zip
+
+-- Restart SuperDirt and you'll be able to play them too.
+
+-- (More info about working with SuperDirt here:
+--  https://github.com/musikinformatik/superdirt )
+
 -- In this:
 
 d1 $ sound "drum"
@@ -45,13 +53,6 @@ d1 $ sound "drum:0 drum:1 drum:2 drum:3"
 
 d1 $ n "0 1 2 3" # sound "drum"
 
--- Try dropping some extra samples in there, for example:
--- http://slab.org/tmp/extra-samples.zip
-
--- Restart SuperDirt and you'll be able to play them too.
-
--- More info about working with SuperDirt here:
--- https://github.com/musikinformatik/superdirt
 
 -- cycles
 
