@@ -63,8 +63,13 @@ d1 $ n "0 1 2 3" # sound "drum"
 -- Compare these:
 
 d1 $ sound "bd bd sd mt"
+
 d1 $ sound "bd bd sd mt ht lt"
+
 d1 $ sound "bd bd sd mt ht lt bd mt"
+
+-- The cycle duration stays constant, i.e. the sounds are squashed
+-- into a single cycle, so the more you add, the faster it goes.
 
 -- break down steps
 
