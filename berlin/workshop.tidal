@@ -1,7 +1,7 @@
 -- Tidal workshop Berlin, 2nd June 2018
 -- To get to this file: https://is.gd/tidalberlin
 
--- Intro
+-- INTRO
 
 -- shift-enter = run one line
 
@@ -56,9 +56,13 @@ d1 $ n "0 1 2 3" # sound "drum"
 -- In the above the `#` combines the 'n' and 'sound' patterns. We'll
 -- come back to this..
 
--- cycles
+-- CYCLES
+
+
 
 d1 $ sound "bd bd sd mt"
+d1 $ sound "bd bd sd mt ht lt"
+d1 $ sound "bd bd sd mt ht lt bd mt"
 
 -- break down steps
 
