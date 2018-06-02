@@ -13,8 +13,7 @@
 
 d1 $ sound "can:4 ~ ~ can:4 bd ~ arpy"
 
-cps 1.1
-
+cps 0.8
 
 
 -- start another pattern:
