@@ -108,7 +108,7 @@ d1 $ sound "{bd sd, kurt kurt:1 kurt:3}"
 
 d1 $ sound "{bd*2 sd, kurt*2 kurt:1 kurt:3}"
 
-d1 $ sound "bd*2 sd [~ bd*3] sd"
+d1 $ sound "bd*2 sd [~ bd*3] sd:1"
 
 -- / - 'slow down' a step with /
 
