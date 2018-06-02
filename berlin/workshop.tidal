@@ -1,7 +1,7 @@
 -- Tidal workshop Berlin, 2nd June 2018
 -- To get to this file: https://is.gd/tidalberlin
 -- To get to the main docs: http://tidalcycles.org
--- WIFI: 
+-- WIFI: 8thFloor
 
 ----
 -- PLAYING SOUNDS - The Basics
@@ -12,6 +12,8 @@
 --              (must have blank lines around it)
 
 d1 $ sound "bd bd bd"
+
+-- hello
 
 -- start another pattern:
 d2 $ sound "arpy sd"
@@ -27,6 +29,8 @@ hush
 
 -- change the 'tempo'
 cps 1.1
+
+d1 $ sound "cp bd"
 
 -- What are 'bd' and 'sd'? They're sets of samples
 
@@ -221,3 +225,4 @@ d1 $ stack [every 4 (struct "x(3,8)") $ chunk 4 (hurry 0.5) $ off 0.25 ((# s "cp
             $ every 4 (within (0,0.5) (fast 2)) $ jux rev $ n (every 2 (+1) "0 2 [~ 1] 4") # sound "psr",
             every 4 (struct "x(3,8)") $ off 0.25 (# speed 2) $ n "4 ~ [~ 3] 3" # sound "future" # gain 1.1
            ]
+h
