@@ -1,0 +1,179 @@
+-- Tidal workshop Berlin, 2nd June 2018
+-- To get to this file: https://is.gd/tidalberlin
+
+----
+-- PLAYING SOUNDS - The Basics
+
+-- shift-enter = run one line
+
+-- ctrl-enter = run a multi-line pattern
+--              (must have blank lines around it)
+
+d1 $ sound "bd"
+
+-- 'stop' a pattern
+d1 silence
+
+-- start another pattern:
+d2 $ sound "bd sd"
+
+-- start that first one again:
+d1 $ sound "bd"
+
+-- stop everything
+hush
+
+-- change the 'tempo'
+cps 1.1
+
+-- What are 'bd' and 'sd'? They're sets of samples
+
+-- Find them in supercollider..
+-- In the menus, "User support directory" > downloaded quarks > dirt-samples
+
+-- Try dropping some extra samples in there, for example:
+-- http://slab.org/tmp/extra-samples.zip
+
+-- Restart SuperDirt and you'll be able to play them too.
+
+-- (More info about working with SuperDirt here:
+--  https://github.com/musikinformatik/superdirt )
+
+-- In this:
+
+d1 $ sound "drum"
+
+-- 'drum' is the name of a folder of samples. By default it will play
+-- the first one. To play the first four in sequence, give its place
+-- in the folder (in alphabetical order) with ':'
+
+d1 $ sound "drum:0 drum:1 drum:2 drum:3"
+
+-- Or jumping ahead a bit, we can also specify sample numbers with a
+-- 'n' pattern, like this:
+
+d1 $ n "0 1 2 3" # sound "drum"
+
+-- In the above the `#` combines the 'n' and 'sound' patterns. We'll
+-- come back to this..
+
+----
+-- CYCLES
+
+-- Compare these:
+
+d1 $ sound "bd bd sd mt"
+
+d1 $ sound "bd bd sd mt ht lt"
+
+d1 $ sound "bd bd sd mt ht lt bd mt"
+
+-- The cycle duration stays constant, i.e. the sounds are squashed
+-- into a single cycle, so the more you add, the faster it goes.
+
+----
+-- RESTS / GAPS
+
+-- '~' is a 'rest'
+
+d1 $ sound "bd ~ sd mt ht lt ~ mt"
+
+----
+-- SUB-SEQUENCES
+
+-- Below is the same as the above, except we squeeze four sounds in
+-- the third step of the sequence..
+
+d1 $ sound "bd ~ [sd sd sd sd] mt ht lt ~ mt"
+
+-- Likewise the below has two subpatterns of equal duration, but the
+-- first has two steps in, while the second has four..
+
+d1 $ sound "[bd sd] [bd sd bd sd]"
+
+d1 $ sound "[bd kurt] [bd ~ [sd sn:2]]"
+
+-- polyphony, polymeter and polyrhythm
+
+-- By using a comma, you can put more than one subpattern in, and have
+-- them play on top of each other:
+
+d1 $ sound "[bd sd, kurt kurt:1 kurt:3]"
+
+-- By using curly brackets, the behaviour is changed, so the step duration,r
+
+d1 $ sound "{bd sd, kurt kurt:1 kurt:3}"
+
+-- * - 'speed up' a step with *
+
+-- / - 'slow down' a step with /
+
+-- <> - pick one per cycle
+
+-- ? - randomly 'drop' a step
+
+-- effects
+
+-- patterning sample numbers + sample names
+
+-- structure comes from the left
+
+-- up a level - higher order functions
+
+-- cat - play a cycle from each pattern in turn
+
+-- randcat - like cat, but in random order
+
+-- stack - play on top of each other.
+
+-- chunk
+
+-- randomness
+
+-- * degrade
+-- * never, almostNever, sometimes, often, almostAlways, always
+-- * rand
+-- * someCycles
+
+-- 'Euclidean' off-kilter rhythms
+
+{-
+    (2,5) : A thirteenth century Persian rhythm called Khafif-e-ramal.
+    (3,4) : The archetypal pattern of the Cumbia from Colombia, as well as a Calypso rhythm from Trinidad.
+    (3,5,2) : Another thirteenth century Persian rhythm by the name of Khafif-e-ramal, as well as a Rumanian folk-dance rhythm.
+    (3,7) : A Ruchenitza rhythm used in a Bulgarian folk-dance.
+    (3,8) : The Cuban tresillo pattern.
+    (4,7) : Another Ruchenitza Bulgarian folk-dance rhythm.
+    (4,9) : The Aksak rhythm of Turkey.
+    (4,11) : The metric pattern used by Frank Zappa in his piece titled Outside Now.
+    (5,6) : Yields the York-Samai pattern, a popular Arab rhythm.
+    (5,7) : The Nawakhat pattern, another popular Arab rhythm.
+    (5,8) : The Cuban cinquillo pattern.
+    (5,9) : A popular Arab rhythm called Agsag-Samai.
+    (5,11) : The metric pattern used by Moussorgsky in Pictures at an Exhibition.
+    (5,12) : The Venda clapping pattern of a South African children’s song.
+    (5,16) : The Bossa-Nova rhythm necklace of Brazil.
+    (7,8) : A typical rhythm played on the Bendir (frame drum).
+    (7,12) : A common West African bell pattern.
+    (7,16,14) : A Samba rhythm necklace from Brazil.
+    (9,16) : A rhythm necklace used in the Central African Republic.
+    (11,24,14) : A rhythm necklace of the Aka Pygmies of Central Africa.
+    (13,24,5) : Another rhythm necklace of the Aka Pygmies of the upper Sangha.
+-}
+
+-- note names and softsynths
+
+-- legato / sustain
+
+-- chords and scales
+-- https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Chords.hs
+-- https://github.com/tidalcycles/Tidal/blob/master/Sound/Tidal/Scales.hs
+
+-- composition with seqP, seqPLoop, ur
+
+-- more complex examples
+
+d1 $ stack [every 4 (struct "x(3,8)") $ chunk 4 (hurry 0.5) $ off 0.25 ((# s "cp") . (|*| speed 2))
+            $ every 4 (within (0,0.5) (fast 2)) $ jux rev $ n (every 2 (+1) $ "0 2 [~ 1] 4") # sound "psr",
+            every 4 (struct "x(3,8)") $ off 0.25 (# speed 2) $ n "4 ~ [~ 3] 3" # sound "future" # gain 1.1
+           ]
