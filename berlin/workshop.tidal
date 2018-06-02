@@ -106,6 +106,10 @@ d1 $ sound "{bd sd, kurt kurt:1 kurt:3}"
 
 -- * - 'speed up' a step with *
 
+d1 $ sound "{bd*2 sd, kurt*2 kurt:1 kurt:3}"
+
+d1 $ sound "bd*2 sd [~ bd*3] sd"
+
 -- / - 'slow down' a step with /
 
 -- <> - pick one per cycle
