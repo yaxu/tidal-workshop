@@ -172,11 +172,15 @@ d1 $ sound "[bd sd:2 cp arpy]?"
 
 d1 $ fast "4 2" (sound "bd sd bd bd")
 
-d1 $ fast "4 2" (sound "bd sd bd bd")
+d1 $ fast "4 2" $ sound "bd sd bd bd"
 
 d1 $ hurry "4 [2 0.5]" $ sound "bd sd bd [bd cp]"
 
 d1 $ slow 0.5 $ sound "bd sd bd bd"
+
+d1 $ slow 4 $ fast "4 2"
+  $ sound "numbers:0 numbers:1 numbers:2 numbers:3"
+
 
 hush
 
