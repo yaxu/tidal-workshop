@@ -10,16 +10,16 @@
 -- ctrl-enter = run a multi-line pattern
 --              (must have blank lines around it)
 
-d1 $ sound "bd"
+d1 $ sound "bd bd bd"
+
+-- start another pattern:
+d2 $ sound "arpy sd"
 
 -- 'stop' a pattern
 d1 silence
 
--- start another pattern:
-d2 $ sound "bd sd"
-
 -- start that first one again:
-d1 $ sound "bd"
+d1 $ sound "bd bd bd"
 
 -- stop everything
 hush
