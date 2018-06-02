@@ -112,6 +112,8 @@ d1 $ sound "bd*2 sd [~ bd*3] sd:1"
 
 -- / - 'slow down' a step with /
 
+d1 $ sound "bd*2 sd [~ bd*3] sd:1/2"
+
 -- <> - pick one per cycle
 
 -- ? - randomly 'drop' a step
