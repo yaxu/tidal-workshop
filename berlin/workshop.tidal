@@ -198,7 +198,10 @@ d2 $ sound "bd bd"
 --   full list here: https://tidalcycles.org/functions.html#synth_parameters
 -- * structure comes from the left
 
+d1 $ sound "bd bd bd bd"
+     # crush "4 2"
 
+hush
 
 -- up a level - higher order functions
 
