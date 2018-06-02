@@ -235,9 +235,11 @@ d1 $ n "c6 a6 f e" # sound "superpiano"
 
 d1 $ slow 2 $ sound "cb(<7 5>,12)"
 
-x o o x o o x o
+d1 $ chop "<8 3>" $ sound "off" # gain 1.2
+  # speed 2
 
-hush
+d1 $ (chop 128 $ sound "bd sd cp*2 arpy")
+  # nudge (slow 8 sine)
 
 
 -- up a level - higher order functions
