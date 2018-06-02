@@ -226,6 +226,13 @@ d1 $ sound "sid*4" # lpf (scale 100 3000 rand)
 d1 $ sound "sid*4" # lpf (scale 100 3000 rand)
   # lpq 0.2 # gain 1
 
+d1 $ sound "bd" # room 0.8 # sz 0.8 # orbit 1
+
+d2 $ sound "cp*4"
+
+d1 $ n "c a f e" # sound "supermandolin"
+  # legato 4
+
 hush
 
 -- up a level - higher order functions
