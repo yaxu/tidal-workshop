@@ -145,6 +145,18 @@ d1 $ sound "bd*2 sd [~ bd*3] sd:1"
 -- * striate
 -- * slice
 
+-- slice is 'coming soon' - get it now by running this:
+
+let slice :: Pattern Int -> Pattern Int -> ParamPattern -> ParamPattern
+    slice pi pn p = begin b # end e # p
+      where b = (\i n -> (div' i n)) <$> pi <*> pn
+            e = (\i n -> (div' i n) + (div' 1 n)) <$> pi <*> pn
+            div' a b = fromIntegral (a `mod` b) / fromIntegral b
+
+    _slice :: Int -> Int -> ParamPattern -> ParamPattern
+    _slice i n p = p # begin (pure $ fromIntegral i / fromIntegral n)
+                     # end (pure $ fromIntegral (i+1) / fromIntegral n)
+
 -- 'Euclidean' off-kilter rhythms
 
 {-
