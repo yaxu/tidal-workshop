@@ -181,6 +181,11 @@ d1 $ slow 0.5 $ sound "bd sd bd bd"
 d1 $ slow 4 $ fast "4 2"
   $ sound "numbers:0 numbers:1 numbers:2 numbers:3"
 
+d1 $ every 3 rev $ sound "alphabet:0 alphabet:1 alphabet:2"
+
+d1 $ every 3 (fast 2) $ sound "alphabet:0 alphabet:1 alphabet:2"
+
+d1 $ every 3 (fast 2) (sound "alphabet:0 alphabet:1 alphabet:2")
 
 hush
 
