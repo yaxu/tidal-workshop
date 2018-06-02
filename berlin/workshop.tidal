@@ -116,6 +116,8 @@ d1 $ sound "bd*2 sd [~ bd*3] sd:1/2"
 
 -- <> - pick one per cycle
 
+d1 $ sound "bd*2 <sd kurt kurt:1> [~ bd*3] <sd:1 cp>"
+
 -- ? - randomly 'drop' a step
 
 -- effects
