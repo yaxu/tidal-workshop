@@ -100,11 +100,9 @@ d1 $ sound "[bd kurt] [bd ~ [sd sn:2]]"
 
 d1 $ sound "[bd sd, kurt kurt:1 kurt:3]"
 
--- patterning sample numbers + sample names
+-- By using curly brackets, the steps align:
 
--- effects
-
--- structure comes from the left
+d1 $ sound "{bd sd, kurt kurt:1 kurt:3}"
 
 -- * - 'speed up' a step with *
 
@@ -113,6 +111,12 @@ d1 $ sound "[bd sd, kurt kurt:1 kurt:3]"
 -- <> - pick one per cycle
 
 -- ? - randomly 'drop' a step
+
+-- effects
+
+-- patterning sample numbers + sample names
+
+-- structure comes from the left
 
 -- up a level - higher order functions
 
