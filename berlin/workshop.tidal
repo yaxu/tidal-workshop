@@ -233,7 +233,13 @@ d2 $ sound "cp*4"
 d1 $ n "c6 a6 f e" # sound "superpiano"
   # legato 2 # attack 0.3
 
+d1 $ sound "midi" # n ""0
+
 d1 $ slow 2 $ sound "cb(<7 5>,12)"
+
+
+
+
 
 d1 $ chop "<8 3>" $ sound "off" # gain 1.2
   # speed 2
@@ -315,8 +321,32 @@ let slice :: Pattern Int -> Pattern Int -> ParamPattern -> ParamPattern
 
 -- more complex examples
 
+d1 $ off "<0.25 0.125>" (# crush 4) $ slow 4 $ note (off 0.125 (+"7") "c(3,8) e f g") # sound "supermandolin"
+  # legato 2
+
+
 d1 $ stack [every 4 (struct "x(3,8)") $ chunk 4 (hurry 0.5) $ off 0.25 ((# s "cp") . (|*| speed 2))
             $ every 4 (within (0,0.5) (fast 2)) $ jux rev $ n (every 2 (+1) "0 2 [~ 1] 4") # sound "psr",
             every 4 (struct "x(3,8)") $ off 0.25 (# speed 2) $ n "4 ~ [~ 3] 3" # sound "future" # gain 1.1
            ]
 h
+
+
+d1 silence
+
+d2 $ chunk 4 (hurry 2) $ every 4 (0.25 <~)
+   $ sound "kick:2(<3 5>,8)" # speed 1
+
+d3 $ off 0.125 (|+| note 7) $ off 0.25 (# s "dbass:1") $ jux rev $ degradeBy 0.8 $ note (off 0.125 (+12)
+$ off 0.25 (+7) "<c(3,8) a [g e] g*2>")
+ # sound "dbass" # lpf (slow 4 $ scale 300 6000 sine) # lpq 0.3
+ # end 0.6
+ |*| gain 0.8
+
+d4 $ degrade $ jux rev $ chunk 4 (hurry 2) $ off 0.25 (# speed 2)
+   $ sound "bd*4?" # shape 0.8
+
+d3 silence
+
+d5 $ degrade $ jux rev $ off "<0.125 0.25 0.5>" (|*| hpf 2) $ off 0.25 (# crush 3) $ struct "x(<3 5>,8)" $ sound "clap:3 clap:2"
+  # hpf "<400 500>" # hpq 0.1 # room 0.9 # sz 0.99 # orbit 1 # gain 0.7
