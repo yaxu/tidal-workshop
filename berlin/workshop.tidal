@@ -153,6 +153,8 @@ d1 $ sound "<arpy bd cp> arpy:2"
 
 d1 $ sound "bd*2 <sd kurt kurt:1> [~ bd*3] <sd:1 cp>"
 
+d1 $ sound "cp <arpy:6 arpy:7> ~ ~"
+
 -- ? - randomly 'drop' a step
 
 d1 $ sound "bd sd?"
@@ -167,6 +169,18 @@ d1 $ sound "[bd sd:2 cp arpy]?"
 -- * fast
 -- * slow
 -- * rev
+
+d1 $ fast "4 2" (sound "bd sd bd bd")
+
+d1 $ fast "4 2" (sound "bd sd bd bd")
+
+d1 $ hurry "4 [2 0.5]" $ sound "bd sd bd [bd cp]"
+
+d1 $ slow 0.5 $ sound "bd sd bd bd"
+
+hush
+
+d2 $ sound "bd bd"
 
 ----
 -- EFFECTS, etc - combining pattern parameters
