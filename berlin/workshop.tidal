@@ -198,8 +198,33 @@ d2 $ sound "bd bd"
 --   full list here: https://tidalcycles.org/functions.html#synth_parameters
 -- * structure comes from the left
 
-d1 $ sound "bd bd bd bd"
+d1 $ sound "bd bd bd"
      # crush "4 2"
+
+d1 $ crush "4 2 8 1*2"
+     # sound "bd sd:1"
+
+d1 $ sound "arpy arpy:2"
+   # vowel "a e i o u"
+
+d1 $ vowel "a e i o u"
+  # sound "cp:4" # lpf 400
+
+d1 $ sound "bd*8 sd*4" # lpf "800 400" # lpq 0.2
+
+d1 $ sound "arpy" # speed 0.25 # room "<0.125 0.75>" # size 0.9
+
+d1 $ sound "bd*2 [~ sd]"
+   # room (slow 8 saw) # sz (slow 8 saw)
+
+d1 $ sound "sid*8" # lpf (scale 100 10000 sine)
+  # lpq 0.2
+
+d1 $ sound "sid*4" # lpf (scale 100 3000 rand)
+    # lpq 0.2
+
+d1 $ sound "sid*4" # lpf (scale 100 3000 rand)
+  # lpq 0.2 # gain 1
 
 hush
 
