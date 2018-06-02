@@ -58,7 +58,7 @@ d1 $ sound "drum:0 drum:1 drum:2 drum:3"
 -- Or jumping ahead a bit, we can also specify sample numbers with a
 -- 'n' pattern, like this:
 
-d1 $ n "0 1 2 3" # sound "drum"
+d1 $ n "0 1 2 3 5 6 7 8" # sound "drum"
 
 -- In the above the `#` combines the 'n' and 'sound' patterns. We'll
 -- come back to this..
@@ -82,7 +82,7 @@ d1 $ sound "bd bd sd mt ht lt bd mt"
 
 -- '~' is a 'rest'
 
-d1 $ sound "bd ~ sd mt ht lt ~ mt"
+d1 $ sound "cp ~ sd mt ht lt ~ mt"
 
 ----
 -- SYNTAX #1
@@ -98,6 +98,11 @@ d1 $ sound "bd ~ sd mt ht lt ~ mt"
 
 d1 $ sound "bd ~ [sd sd sd sd] mt ht lt ~ mt"
 
+d1 $ sound "[bd arpy kurt] [bd sd [[cp bd bd bd] arpy] bd]"
+
+-- TODO: transition to just play a cycle once
+
+hush
 -- Likewise the below has two subpatterns of equal duration, but the
 -- first has two steps in, while the second has four..
 
