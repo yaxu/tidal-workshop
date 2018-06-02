@@ -11,7 +11,9 @@
 -- ctrl-enter = run a multi-line pattern
 --              (must have blank lines around it)
 
-d1 $ sound "can:4 can:2 can:1 can:4"
+d1 $ sound "can:4 ~ ~ can:4 bd ~ arpy"
+
+cps 0.5
 
 -- start another pattern:
 d2 $ sound "arpy sd"
