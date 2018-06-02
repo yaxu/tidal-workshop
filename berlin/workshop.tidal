@@ -230,10 +230,15 @@ d1 $ sound "bd" # room 0.8 # sz 0.8 # orbit 1
 
 d2 $ sound "cp*4"
 
-d1 $ n "c a f e" # sound "supermandolin"
-  # legato 4
+d1 $ n "c6 a6 f e" # sound "superpiano"
+  # legato 2 # attack 0.3
+
+d1 $ slow 2 $ sound "cb(<7 5>,12)"
+
+x o o x o o x o
 
 hush
+
 
 -- up a level - higher order functions
 
