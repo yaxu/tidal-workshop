@@ -80,6 +80,12 @@ d1 $ sound "bd bd sd mt ht lt bd mt"
 d1 $ sound "bd ~ sd mt ht lt ~ mt"
 
 ----
+-- SYNTAX #1
+
+-- '$' means 'of' - everything to the right is given to
+-- the function on the left
+
+----
 -- SUB-SEQUENCES
 
 -- Below is the same as the above, except we squeeze four sounds in
