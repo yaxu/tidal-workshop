@@ -136,11 +136,12 @@ d1 $ sound "bd? sd ht? [mt mt mt mt]?"
 -- * slow
 -- * rev
 
--- effects
+----
+-- EFFECTS, etc - combining pattern parameters
 
--- patterning sample numbers + sample names
-
--- structure comes from the left
+-- * n, crush, vowel, speed, pan...
+--   full list here: https://tidalcycles.org/functions.html#synth_parameters
+-- * structure comes from the left
 
 -- up a level - higher order functions
 
