@@ -123,6 +123,12 @@ d1 $ sound "bd*2 <sd kurt kurt:1> [~ bd*3] <sd:1 cp>"
 
 d1 $ sound "bd? sd ht? [mt mt mt mt]?"
 
+-- simple transformations
+
+-- * fast
+-- * slow
+-- * rev
+
 -- effects
 
 -- patterning sample numbers + sample names
