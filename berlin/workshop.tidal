@@ -13,8 +13,6 @@
 
 d1 $ sound "bd bd bd"
 
--- hello
-
 -- start another pattern:
 d2 $ sound "arpy sd"
 
