@@ -120,7 +120,7 @@ d1 $ sound "bd*2 <sd kurt kurt:1> [~ bd*3] <sd:1 cp>"
 
 -- ? - randomly 'drop' a step
 
-d1 $ sound "bd? sd ht? mt"
+d1 $ sound "bd? sd ht? [mt mt mt mt]?"
 
 -- effects
 
