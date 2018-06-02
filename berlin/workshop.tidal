@@ -139,7 +139,9 @@ d1 $ sound "{bd*2 sd, kurt*2 kurt:1 kurt:3}"
 
 d1 $ sound "bd*2 sd [~ bd*3] sd:1"
 
-d1 $ sound "bd [sd cp]/2 bd/2 bd"
+d1 $ sound "bd <kurt sn:1 cp arpy>"
+
+d1 $ sound "bd [kurt sn:1 cp arpy]/2"
 
 -- / - 'slow down' a step with /
 
@@ -151,7 +153,9 @@ d1 $ sound "bd*2 <sd kurt kurt:1> [~ bd*3] <sd:1 cp>"
 
 -- ? - randomly 'drop' a step
 
-d1 $ sound "bd? sd ht? [mt mt mt mt]?"
+d1 $ sound "bd sd?"
+
+d1 $ sound "[bd sd:2 cp arpy]?"
 
 ----
 -- Manipulating time
