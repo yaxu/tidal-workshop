@@ -139,6 +139,11 @@ d1 $ sound "bd*2 sd [~ bd*3] sd:1"
 -- * rand
 -- * someCycles
 
+-- granular synthesis
+
+-- * chop
+-- * striate
+
 -- 'Euclidean' off-kilter rhythms
 
 {-
