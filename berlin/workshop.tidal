@@ -143,6 +143,7 @@ d1 $ sound "bd*2 sd [~ bd*3] sd:1"
 
 -- * chop
 -- * striate
+-- * slice
 
 -- 'Euclidean' off-kilter rhythms
 
