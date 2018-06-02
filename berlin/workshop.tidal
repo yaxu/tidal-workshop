@@ -198,6 +198,8 @@ d2 $ sound "bd bd"
 --   full list here: https://tidalcycles.org/functions.html#synth_parameters
 -- * structure comes from the left
 
+
+
 -- up a level - higher order functions
 
 -- cat - play a cycle from each pattern in turn
