@@ -115,17 +115,31 @@ d1 $ sound "[bd kurt] [bd ~ [sd sn:2]]"
 -- By using a comma, you can put more than one subpattern in, and have
 -- them play on top of each other:
 
-d1 $ sound "[bd sd, kurt kurt:1 kurt:3]"
+d1 $ sound "[bd sd, kurt kurt:1 [kurt:3 bd]]"
+
+-- longer samples..
+d1 $ sound "[bev ~] bev" # legato 1
+
+d1 $ sound "drum drum:1" # sustain 0.02
+
+
+cps 1.1
 
 -- By using curly brackets, the steps align:
 
 d1 $ sound "{bd sd, kurt kurt:1 kurt:3}"
 
+hush
+
 -- * - 'speed up' a step with *
+
+d1 $ sound "bd*3 sd*4 cp*8 cp"
 
 d1 $ sound "{bd*2 sd, kurt*2 kurt:1 kurt:3}"
 
 d1 $ sound "bd*2 sd [~ bd*3] sd:1"
+
+d1 $ sound "bd [sd cp]/2 bd/2 bd"
 
 -- / - 'slow down' a step with /
 
