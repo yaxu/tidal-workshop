@@ -149,11 +149,15 @@ d1 $ sound "bd*2 sd [~ bd*3] sd:1/2"
 
 -- <> - pick one per cycle
 
+d1 $ sound "<arpy bd cp> arpy:2"
+
 d1 $ sound "bd*2 <sd kurt kurt:1> [~ bd*3] <sd:1 cp>"
 
 -- ? - randomly 'drop' a step
 
 d1 $ sound "bd sd?"
+
+d1 $ sound "bd*8"
 
 d1 $ sound "[bd sd:2 cp arpy]?"
 
