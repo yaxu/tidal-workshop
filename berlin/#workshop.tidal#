@@ -352,4 +352,8 @@ d5 $ degrade $ jux rev $ off "<0.125 0.25 0.5>" (|*| hpf 2) $ off 0.25 (# crush 
   # hpf "<400 500>" # hpq 0.1 # room 0.9 # sz 0.99 # orbit 1 # gain 0.7
 
 
-stut' 8 (toRational <$> (scale 0.001 0.1 $ slow 20 sine)) id $ s "bd"
+stut' 8 (scale 0.001 0.1 $ slow 20 sine') id $ s "bd"
+
+pan sine
+
+let sine' = realToFrac <$> sine
