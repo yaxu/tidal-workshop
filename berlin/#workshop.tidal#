@@ -13,8 +13,7 @@
 
 d1 $ sound "can:4 ~ ~ can:4 bd ~ arpy"
 
-cps 1.1
-
+cps 0.5
 
 -- start another pattern:
 d2 $ sound "arpy sd"
@@ -351,3 +350,6 @@ d3 silence
 
 d5 $ degrade $ jux rev $ off "<0.125 0.25 0.5>" (|*| hpf 2) $ off 0.25 (# crush 3) $ struct "x(<3 5>,8)" $ sound "clap:3 clap:2"
   # hpf "<400 500>" # hpq 0.1 # room 0.9 # sz 0.99 # orbit 1 # gain 0.7
+
+
+stut' 8 (toRational <$> (scale 0.001 0.1 $ slow 20 sine)) id $ s "bd"
