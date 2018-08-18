@@ -2,6 +2,7 @@ d1 $ ply "<2 3 4 8>" $ sound "bd [sd cp:2]"
 
 -- sew :: Pattern Bool -> Pattern a -> Pattern a -> Pattern a
 
-d1 $ sew ""
-    (sound "bd [mt8 mt*4] [~ cp:2] sd")
+d1 $ sew "t f [t f]"
+    (loopAt 4 $ chop 32 $ sound "paper")
     (sound "[kicklinn(<3 5>,8), clap:2*2]")
+
