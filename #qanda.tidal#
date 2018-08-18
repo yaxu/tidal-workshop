@@ -32,3 +32,5 @@ use 'n' function or load 12 samples (chromatic scale)?
 
 d1 $ n "c7 a7 f7 e7" # sound "rash"
 
+d1 $ sound "drum"
+
