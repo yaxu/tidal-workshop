@@ -13,4 +13,5 @@ d1 $ breakUp $ note ("c [f a] e" + chord "major")
   # legato 4
   # gain 1.2
 
-d1 $ breakUp $ sound "[bd, sn:2, cp] [bd,arpy:2]"
+d1 $ sound "[bd,sn:2, cp] [bd,arpy:2]"
+
