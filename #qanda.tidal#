@@ -1,1 +1,2 @@
-d1 $ ply 4 $ sound "bd"
+d1 $ ply "<2 3>" $ sound "bd [sd cp:2]"
+
