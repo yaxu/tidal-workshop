@@ -25,4 +25,10 @@ d1 $ jux rev $ note (off 0.25 (+12) $ off 0.125 (+7)
   
 
 
+Talking about notes, I would like to use tempered samples
+from a synth: what it would better: one sample in C and
+use 'n' function or load 12 samples (chromatic scale)?
+
+
+d1 $ note "30" # sound "rash"
 
