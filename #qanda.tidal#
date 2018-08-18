@@ -6,4 +6,7 @@ d1 $ sew "t f [t f]"
     (loopAt 4 $ chop 32 $ sound "paper")
     (sound "[kicklinn(<3 5>,8), clap:2*2]")
 
-d1 $ sound $ superimpose (fill "clap") "bd ~ bd ~"
+d1 $ sound $ someCycles (fill "clap") "bd ~ [bd ~]*2"
+
+d1 $ breakUp $ note (chord "<major min>") # sound "supermandolin"
+
