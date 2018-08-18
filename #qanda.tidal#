@@ -30,5 +30,5 @@ from a synth: what it would better: one sample in C and
 use 'n' function or load 12 samples (chromatic scale)?
 
 
-d1 $ note "30" # sound "rash"
+d1 $ n "c7 a7 f7 e7" # sound "rash"
 
