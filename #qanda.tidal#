@@ -15,3 +15,8 @@ d1 $ breakUp $ note ("c [f a] e" + chord "major")
 
 d1 $ sound "[bd,sn:2, cp] [bd,arpy:2]"
 
+
+Jacob Golden​
+Hi, wondering if you could talk about writing melodies and specifying note lengths ie D - quarter note, E eighth notes, rest etc....
+
+d1 $ note "c ~ f ~" # sound "supersaw"
