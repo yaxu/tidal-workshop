@@ -6,3 +6,33 @@ d1 $ sew "t f [t f]"
     (loopAt 4 $ chop 32 $ sound "paper")
     (sound "[kicklinn(<3 5>,8), clap:2*2]")
 
+d1 $ sound $ someCycles (fill "clap") "bd ~ [bd ~]*2"
+
+d1 $ breakUp $ note ("c [f a] e" + chord "major")
+  # sound "supermandolin"
+  # legato 4
+  # gain 1.2
+
+d1 $ sound "[bd,sn:2, cp] [bd,arpy:2]"
+
+
+Jacob Golden​
+Hi, wondering if you could talk about writing melodies and specifying note lengths ie D - quarter note, E eighth notes, rest etc....
+
+d1 $ jux rev $ note (off 0.25 (+12) $ off 0.125 (+7)
+  $ "<c(3,8) a(5,8) f*2 e(3,8)>" + "<7 12>") # sound "supermandolin"
+  # legato 8
+  
+
+
+Talking about notes, I would like to use tempered samples
+from a synth: what it would better: one sample in C and
+use 'n' function or load 12 samples (chromatic scale)?
+
+
+d1 $ n "c7 a7 f7 e7" # sound "rash"
+
+d1 $ sound "drum"
+
+http://talk.lurk.org/ 
+
