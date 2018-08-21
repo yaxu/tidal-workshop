@@ -11,6 +11,8 @@ d1 $ sound "arpy"
 
 -- * Stop making a sound by replacing with silence
 
+mapM_ ($ silence) [d1,d2,d3,d4]
+
 d1 silence
 >>
 (d2 $ sound "bd" # vowel "a")
