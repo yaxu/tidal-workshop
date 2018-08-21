@@ -13,6 +13,10 @@ d1 $ sound "arpy"
 
 mapM_ ($ silence) [d1,d2,d3,d4]
 
+let quiet = mapM_ ($ silence)
+
+quiet [d1,d2,d3]
+
 d1 silence
 >>
 (d2 $ sound "bd" # vowel "a")
