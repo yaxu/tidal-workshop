@@ -13,7 +13,7 @@ d1 $ sound "arpy"
 
 d1 silence
 >>
-d2 silence
+(d2 $ sound "bd" # vowel "a")
 
 -- * Pick a different sound from the same set, with ':'
 
