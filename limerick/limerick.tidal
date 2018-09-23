@@ -436,4 +436,10 @@ d2 $ never (off 0.25 (# s "pulse")) $
 -- never, almostNever, sometimes, often, almostAlways, always
 d1 $ never (# speed 2) $ sound "bd sn"
 
+d1 $ sound "wobble"
+
+d2 $ sound "bd(3,8) odx"
+
+hush
+
 hush
