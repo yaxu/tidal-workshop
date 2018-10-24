@@ -21,14 +21,12 @@ p "foo" $ off 0.25 (hurry 0.5) $ chunk 4 rev $ striate 2 $ slow 2 $ s "snare" +|
 
 p "foo" silence
 
-p "bing" $ off 0.25 (# crush 1)
+p "bing" $ jux rev
   $ chunk 4 (hurry 2) $ iter 4
-  $ sound "{[bd, kick:4, drum] clap, ~ rim sb}" +| n "3(5,8)" # lpf 3000 # lpq 0.2
+  $ sound "{[bd, kick:4, drum] ~, ~ claus techhit:1}" +| n "3(5,8)" # lpf 3000 # lpq 0.2
   # gain 1.1
 
 p "kicks" $ s "future(3,8)" # gain 1.2 # speed 2
-
-
 
 p "cps" $ cps "<0.6 1.2>"
 
