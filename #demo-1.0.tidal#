@@ -17,7 +17,9 @@
 -- Start it up like this:
 (tempoMVar, ctrlMVar, p, hush, list) <- stream5 superdirtTarget
 
-p "foo" $ off 0.25 (hurry 0.5) $ chunk 4 rev $ striate 8 $ slow 2 $ s "numbers" +| n "0*4 1*8" |+| pan "0 1"
+p "foo" $ off 0.25 (hurry 0.5) $ chunk 4 rev $ striate 8 $ slow 2 $ s "snare" +| n "0*4 1*8" |+| pan "0 1"
+
+p "bing" $ sound "{bd clap, ~ ~ sb}" +| n "3(5,8)" # lpf 3000 # lpq 0.2
 
 -- named patterns
 -- fewer bugs
