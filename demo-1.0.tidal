@@ -52,6 +52,8 @@ p "asdfasd" $ n "3(3,8)" # s "bd" # crush 3
 
 -- patternable cps
 
+p "1" $ sound "{snare:4 [bd ~] sn:2 bd, bd sn:2 ~}"
+  # cps "1 2"
 
 -- external controllers (WIP)
 -- calculation rate in Hz
