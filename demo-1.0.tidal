@@ -47,9 +47,12 @@ p "asdfasd" $ n "3(3,8)" # s "bd" # crush 3
 
 -- no tidal-midi
 
-
+-- wait for kindohm's tutorial up soonish
+-- or ask on http://talk.lurk.org - #tidal channel
 
 -- patternable cps
+
+
 -- external controllers (WIP)
 -- calculation rate in Hz
 
