@@ -37,7 +37,7 @@ p "asa" $ s "clap snare" |> speed ("3 2*3" |* "4 8 3")
 
 -- chop/striate work together properly
 
-
+p "as" $ slow 4 $ iter 4 $ jux rev $ chop 3 $ striate 4 $ s "clap*2 bd*2"
 
 -- nicer 'show'
 -- simpler OSC shapes
