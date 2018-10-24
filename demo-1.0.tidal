@@ -20,6 +20,11 @@
 (tempoMVar, ctrlMVar, p, hush, list) <- stream5 superdirtTarget
 
 -- named patterns
+
+d1 $ sound "bd sn"
+
+p "two" $ sound "bev"
+
 -- fewer bugs
 -- more structural control
 -- chop/striate work together properly
