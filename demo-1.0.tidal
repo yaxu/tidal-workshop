@@ -40,7 +40,12 @@ p "asa" $ s "clap snare" |> speed ("3 2*3" |* "4 8 3")
 p "as" $ slow 4 $ iter 4 $ jux rev $ chop 3 $ striate 4 $ s "clap*2 bd*2"
 
 -- nicer 'show'
+
+p "asdfasd" $ n "3(3,8)" # s "bd" # crush 3
+
 -- simpler OSC shapes
+
+
 -- no tidal-midi
 -- patternable cps
 -- external controllers (WIP)
