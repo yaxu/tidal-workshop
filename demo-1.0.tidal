@@ -45,8 +45,10 @@ p "asdfasd" $ n "3(3,8)" # s "bd" # crush 3
 
 -- simpler OSC shapes
 
-
 -- no tidal-midi
+
+
+
 -- patternable cps
 -- external controllers (WIP)
 -- calculation rate in Hz
