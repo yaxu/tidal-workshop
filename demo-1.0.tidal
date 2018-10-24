@@ -27,7 +27,7 @@ p "two" $ sound "bev"
 
 -- fewer bugs
 
-
+p "sadf" $ jux rev $ note (off 0.25 (+7) "<c(3,8) e*2 a(3,8) g*2>") # sound "supermandolin"
 
 -- more structural control
 -- chop/striate work together properly
