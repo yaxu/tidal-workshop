@@ -33,9 +33,12 @@ p "sadf" $ jux rev $ note (off 0.25 (+7) "<c(3,8) e*2 a(3,8) g*2>") # sound "sup
 
 p "sadf" $ jux rev $ note (off 0.25 (+7) "<c(3,8) e*2 a(3,8) g*2>") |+| sound "supermandolin*8"
 
-p "asa" $ s "clap snare" |+| n ("3 2*3" +| "4 8 3")
+p "asa" $ s "clap snare" |+| speed ("3 2*3" |* "4 8 3")
 
 -- chop/striate work together properly
+
+
+
 -- nicer 'show'
 -- simpler OSC shapes
 -- no tidal-midi
