@@ -32,7 +32,8 @@ p "sadf" $ jux rev $ note (off 0.25 (+7) "<c(3,8) e*2 a(3,8) g*2>") # sound "sup
 -- more structural control
 
 p "sadf" $ jux rev $ note (off 0.25 (+7) "<c(3,8) e*2 a(3,8) g*2>") |+| sound "supermandolin*8"
-hush
+
+p "asa" $ s "clap snare" |+ n "4(5,8)"
 
 -- chop/striate work together properly
 -- nicer 'show'
