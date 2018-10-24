@@ -62,8 +62,6 @@ p "1" $ chop (cI "foo") $ sound "{snare:4 [bd ~] sn:2 bd}"
 
 -- calculation rate in Hz
 
-
-
 import qualified Data.Map.Strict as Map
 import Control.Concurrent
 
