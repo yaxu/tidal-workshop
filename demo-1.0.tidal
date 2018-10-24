@@ -22,11 +22,11 @@
 -- more structural control
 -- chop/striate work together properly
 -- nicer 'show'
--- calculation rate in Hz
 -- simpler OSC shapes
 -- no tidal-midi
 -- patternable cps
 -- external controllers (WIP)
+-- calculation rate in Hz
 
 import qualified Data.Map.Strict as Map
 import Control.Concurrent
