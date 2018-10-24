@@ -54,9 +54,11 @@ p "asdfasd" $ n "3(3,8)" # s "bd" # crush 3
 
 p "1" $ chop 32 $ sound "{snare:4 [bd ~] sn:2 bd}"
 
-p "2" $ cps (slow 8 $ scale 0.6 1.2 sine)
+p "2" $ cps 0.8
 
 -- external controllers (WIP)
+
+
 -- calculation rate in Hz
 
 import qualified Data.Map.Strict as Map
