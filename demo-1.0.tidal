@@ -17,7 +17,6 @@
 -- Start it up like this:
 (tempoMVar, ctrlMVar, p, hush, list) <- stream5 superdirtTarget
 
-
 -- named patterns
 -- fewer bugs
 -- more structural control
