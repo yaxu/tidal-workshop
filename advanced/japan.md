@@ -8,6 +8,10 @@ we will explore some advanced topics, to try to understand what that
 means. I'm not sure myself, but lets try.
 
 I have been making a new version of TidalCycles for these workshops,
-so we can try something new. It's version 1.0-pre, which is not officially
-released, but works and has some exciting new features.
+so we can try something new. It's version 1.0-pre, which is not
+officially released, but works and has some exciting new features. You
+can install it with this command:
 
+```
+cabal install http://slab.org/tokyo/tidal-1.0-pre.tar.gz
+```
