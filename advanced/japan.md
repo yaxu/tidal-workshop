@@ -32,24 +32,9 @@ ghc-pkg unregister tidal-1.0.0
 * Tempo patterns
 * External control
 * Visualisation
+* Open questions
 
 
-
--- patterning sample numbers + sample names
-d1 $ n "0 [1 5] 3 [4 9]"
-   # sound "drum arpy"
-
--- blue monday kick
-d1 $ slow 4 $ n "0 0 0 0 0 0 0*4 0*4" # sound "odx"
-
-d1 $ slow 4 $ n "0 ! ! ! ! ! 0*4 0*4" # sound "odx"
-
--- effects
-d1 $ n "0 [1 5] 3 [4 9]"
-   # sound "drum arpy"
-   # vowel "a i o"
-
--- structure comes from the left
 d1 $ sound "arpy" # vowel "a e"
 
 d1 $ vowel "a e" # sound "arpy"
