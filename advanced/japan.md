@@ -25,31 +25,7 @@ ghc-pkg unregister tidal-1.0.0
 
 ... then your old version will start running again (once you restart your text editor).
 
-# Workshop topics
-
-We have spare time. Please ask questions throughout if you would like me to cover something extra.
-
-* Interaction
-* Structure
-* Tempo patterns
-* External control
-
-* Extra topics, if we have time
-  * Randomisation
-  * Composing functions
-  * Collaboration
-  * Feedforward editor
-
-
--- softsynths + note names
-d2 $ n "c5 d*2 [~ e] gs4"
-   # sound "supermandolin"
-
-d2 $ n ("c5 d*2 [~ e] gs4" + "0 7")
-     # sound "supermandolin"
-     # crush 4
-
--- legato to make the decay longer by a factor
+# Workshop topics-- legato to make the decay longer by a factor
 d3 $ n "c6 ~ g6 ~"
    # sound "supermandolin"
    # legato 4
