@@ -28,29 +28,11 @@ ghc-pkg unregister tidal-1.0.0
 # Workshop topics
 
 * Interaction
-* Visualisation
+* Structure
 * Tempo patterns
 * External control
+* Visualisation
 
--- break down steps
-d1 $ sound "bd [mt ht] lt cp"
-
-d1 $ sound "bd [mt [ht cp]] lt cp"
-
-d1 $ sound "[bd sn mt] [bd sn]"
-
-d1 $ sound "[bd sn mt] [bd sn arpy cp]"
-
--- ~ for 'rest'
-d1 $ sound "[bd ~ mt] [bd sn ~ cp]"
-
--- polyphony
-
-d1 $ sound "[bd sn:1, arpy arpy:4 arpy:2, gabba cp cp]"
-
-d1 $ sound "{bd sn:1 [bd bd] sn:2, arpy arpy:4 arpy:2}"
-
-d1 $ slow 4 $ sound "odx odx odx odx odx odx odx*4 odx*4"
 
 
 -- patterning sample numbers + sample names
