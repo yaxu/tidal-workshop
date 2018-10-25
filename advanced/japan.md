@@ -1,7 +1,6 @@
 
 = Introduction
 
-TidalCycles is a language for the exploration of pattern. It is not
-designed for implementing an idea you already have, but rather for
+TidalCycles is a language for the exploration of pattern. It is for
 working with a pattern until it takes you somewhere new.
 
