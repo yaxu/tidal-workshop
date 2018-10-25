@@ -13,5 +13,11 @@ officially released, but works and has some exciting new features. You
 can install it with this command:
 
 ```
-cabal install http://slab.org/tokyo/tidal-1.0-pre.tar.gz
+cabal install http://slab.org/tokyo/tidal-1.0.0-pre.tar.gz
+```
+
+If you want to uninstall it again you can run this command:
+
+```
+ghc-pkg unregister tidal-1.0.0
 ```
