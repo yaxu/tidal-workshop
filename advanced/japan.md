@@ -8,4 +8,4 @@ we will explore some advanced topics, to try to understand what that
 means. I'm not sure myself, but lets try.
 
 We will use TidalCycles version 1.0-pre, which is not yet released and
-has a lot of new changes.
+has some new features.
