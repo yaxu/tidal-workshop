@@ -25,4 +25,6 @@ ghc-pkg unregister tidal-1.0.0
 
 ... then your old version will start running again (once you restart your text editor).
 
-## 
+# Workshop topics
+
+* 
