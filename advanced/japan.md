@@ -29,22 +29,8 @@ ghc-pkg unregister tidal-1.0.0
 
 * Interaction
 * Visualisation
+* Tempo patterns
 * External control
-
--- ctrl-enter to run
-d1 $ sound "bd"
-
--- 'stop' a pattern
-d1 silence
-
--- start another
-d2 $ sound "arpy arpy:4 arpy:3 arpy:5"
-
--- stop everything
-hush
-
--- change the 'tempo'
-cps 1.1
 
 -- break down steps
 d1 $ sound "bd [mt ht] lt cp"
