@@ -27,29 +27,15 @@ ghc-pkg unregister tidal-1.0.0
 
 # Workshop topics
 
+We have spare time. Please ask questions throughout if you would like me to cover something extra.
+
 * Interaction
 * Structure
-* Composing functions
 * Tempo patterns
 * External control
 
-
 * Extra topics, if we have time
- Visualisation
-
--- patterning sample numbers + sample names
-d1 $ n "0 [1 5] 3 [4 9]"
-   # sound "drum arpy"
-
--- blue monday kick
-d1 $ slow 4 $ n "0 0 0 0 0 0 0*4 0*4" # sound "odx"
-
-d1 $ slow 4 $ n "0 ! ! ! ! ! 0*4 0*4" # sound "odx"
-
--- effects
-d1 $ n "0 [1 5] 3 [4 9]"
-   # sound "drum arpy"
-   # vowel "a i o"
+  * Composing functions
 
 -- structure comes from the left
 d1 $ sound "arpy" # vowel "a e"
