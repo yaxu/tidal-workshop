@@ -16,8 +16,13 @@ can install it with this command in a terminal window:
 cabal install http://slab.org/tokyo/tidal-1.0.0-pre.tar.gz
 ```
 
+
 If you want to uninstall it again you can run this command:
 
 ```
 ghc-pkg unregister tidal-1.0.0
 ```
+
+... then your old version will start running again (once you restart your text editor).
+
+## 
