@@ -117,6 +117,12 @@ Note that `+` is actually an alias for `|+|`. So `|+` is to take the
 structure from the left, `+|` from the right, and `|+|` (or `+`) for
 both.
 
-Function  Both      Left  Right 
---------  --------- ----- ------
-Addition  `|+|`/`+` `|+`  `+|`
+Function     Both      Left  Right 
+--------     --------- ----- ------
+Add          `|+|`/`+` `|+`  `+|`
+Multiply     `|*|`/`*` `|*`  `*|`
+Subtract     `|-|`/`-` `|-`  `-|`
+Divide       `|/|`/`/` `|/`  `/|`
+Modulo       `|%|`     `|%`  `%|`
+Left values  `|<|`     `|<`  `<|`
+Right values `|>|`     `|>`  `>|`
