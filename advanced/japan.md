@@ -138,3 +138,4 @@ values from the right with `|>`, for example:
  = |  2  |  9  |
 ```
 
+This is actually how `#` works in the current tidal.
