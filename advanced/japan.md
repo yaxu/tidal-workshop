@@ -115,7 +115,8 @@ Likewise, you can take the structure from the right, with `+|`:
 
 Note that `+` is actually an alias for `|+|`. So `|+` is to take the
 structure from the left, `+|` from the right, and `|+|` (or `+`) for
-both.
+both. Here are all the basic operators you can use to combine
+structure:
 
 Function     Both      Left  Right 
 --------     --------- ----- ------
