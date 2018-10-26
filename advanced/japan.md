@@ -46,6 +46,8 @@ We have spare time. Please ask questions throughout, and I'm happy to cover some
 
 # Structure
 
+## Structure from both sides
+
 In old Tidal, when combining two patterns, "structure always comes
 from the left". In the new tidal, you can choose where the structure comes from.
 
@@ -61,7 +63,7 @@ These two patterns line up like this:
 | 4 | 5 | 6 |
 ```
 
-Now, the structure comes from _both sides_, so you end up with _four_
+Now by default, the structure comes from _both sides_, so you end up with _four_
 events. I've shown the four events below:
 
 ```
