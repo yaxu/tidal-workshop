@@ -56,7 +56,7 @@ events. I've shown the four events below:
 ```
   |  2  |  3  |
 + | 4 | 5 | 6 |
-= | 6 |7|8| 9|
+= | 6 |7|8| 9 |
 ```
 
 You can see that the event with the value of `4` fits in the event
