@@ -71,6 +71,7 @@ event. Again, the onset and duration of both events is the
 intersection.
 
 
+
 * Tempo patterns
 * Arpeggios
 * External control
