@@ -139,3 +139,29 @@ values from the right with `|>`, for example:
 ```
 
 This is actually how `#` works in the current tidal.
+
+## Simple patterns and control patterns
+
+This is a pattern of numbers:
+
+```
+"0 7"
+```
+
+and this is a pattern of control values
+
+```
+note "0 7"
+```
+
+You can use the above operators on both kinds of values, so this works:
+
+```
+"0 7" + "4 1 2"
+```
+
+and so does this:
+
+```
+note "0 7" + note "4 1 2"
+```
