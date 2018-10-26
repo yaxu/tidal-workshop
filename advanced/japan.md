@@ -85,3 +85,4 @@ events comes from the intersections.
 
 The fourth and final event comes from the intersection of `6` and `9`.
 
+## Structure from the left
