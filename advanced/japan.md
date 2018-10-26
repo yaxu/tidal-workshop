@@ -30,6 +30,9 @@ ghc-pkg unregister tidal-1.0.0
 We have spare time. Please ask questions throughout if you would like me to cover something extra.
 
 * Interaction
+
+
+
 * Structure
 * Tempo patterns
 * Arpeggios
