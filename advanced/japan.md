@@ -68,9 +68,9 @@ value `4`.
 Also see that the event with value `5` is cut in half, to create two,
 shorter events. Half matches with the `2` event and the other half
 matches with the `3` event. Again, the onset and duration of both
-events is the intersection.
+events comes from the intersections.
 
-
+The fourth and final event comes from the intersection of 
 
 * Tempo patterns
 * Arpeggios
