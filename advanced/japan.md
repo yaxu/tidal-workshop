@@ -38,6 +38,27 @@ We have spare time. Please ask questions throughout, and I'm happy to cover some
 In old Tidal, when combining two patterns, "structure always comes
 from the left". In the new tidal, you can choose where the structure comes from.
 
+For example:
+```
+"0 1" + "5 6 7"
+```
+
+These two patterns line up like this:
+
+```
+|  0  |  1  |
+| 5 | 6 | 7 |
+```
+
+Now, the structure comes from _both sides_, so you end up with _four_
+events. I've marked the four events below:
+
+```
+|  0  |  1  |
+| 5 | 6 | 7 |
+| a |b|c| d |
+```
+
 
 
 
