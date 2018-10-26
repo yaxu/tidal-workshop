@@ -118,5 +118,5 @@ structure from the left, `+|` from the right, and `|+|` (or `+`) for
 both.
 
 Function  Both      Left  Right 
---------  -----     ----- ------
+--------  --------- ----- ------
 Addition  `|+|`/`+` `|+`  `+|`
