@@ -42,14 +42,15 @@ For example:
 ```
 "0 1" + "5 6 7"
 ```
-In the old days, the structure would come from the left, so you end up with two events. 
+
+These two patterns line up like this:
 
 ```
-|0    | 1   |
-|5  | 6 | 7 |
+|  0  |  1  |
+| 5 | 6 | 7 |
 ```
 
-Now, the structure comes from _both sides_, so you end up with _four_ events.
+Now, the structure comes from _both sides_, so you end up with _four_ events. This
 
 
 
