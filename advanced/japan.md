@@ -87,3 +87,12 @@ The fourth and final event comes from the intersection of `3` and `6`,
 giving a value of `9`.
 
 ## Structure from the left
+
+The old behaviour was to take the structure from the left. You can
+still do this, but in this case using `|+`
+
+```
+  |  2  |  3  |
++ | 4 | 5 | 6 |
+= | 6 |7|8| 9 |
+```
