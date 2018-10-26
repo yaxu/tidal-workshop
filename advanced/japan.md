@@ -29,7 +29,7 @@ ghc-pkg unregister tidal-1.0.0
 
 # Workshop topics
 
-We have spare time. Please ask questions throughout if you would like me to cover something extra.
+We have spare time. Please ask questions throughout, and I'm happy to cover something extra.
 
 * Interaction
 * Structure
