@@ -135,5 +135,6 @@ values from the right, like this:
 ```
    |  2  |  3  |
 |> | 4 | 5 | 6 |
- = | 6 | 7 | 9 |
+ = |  2  |  9  |
 ```
+
