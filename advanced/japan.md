@@ -157,11 +157,11 @@ note "0 7"
 You can use the above operators on both kinds of values, so this works:
 
 ```
-"0 7" + "4 1 2"
+"0 7" |+| "4 1 2"
 ```
 
 and so does this:
 
 ```
-note "0 7" + note "4 1 2"
+note "0 7" |+| note "4 1 2"
 ```
