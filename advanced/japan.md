@@ -60,7 +60,9 @@ events. I've shown the four events below:
 ```
 
 You can see that `4` fits in `2`, so you get a new event equalling
-their sum `6`. It's onset and duration is the interection.
+their sum `6`. You can see that the onset and duration is the
+interection, which in this case is just the onset and duration of the
+original event with the value `4`.
 
 
 
