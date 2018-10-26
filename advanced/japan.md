@@ -59,7 +59,8 @@ events. I've shown the four events below:
 = | 6 |7|8| 9|
 ```
 
-You can see that `4` fits in `2`, so you get a new event equalling their sum `6`.
+You can see that `4` fits in `2`, so you get a new event equalling
+their sum `6`. It's onset and duration is the interection.
 
 
 
