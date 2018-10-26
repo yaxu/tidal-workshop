@@ -35,6 +35,8 @@ We have spare time. Please ask questions throughout, and I'm happy to cover some
 
 * Structure
 
+
+
 In old Tidal, when combining two patterns, "structure always comes
 from the left". In the new tidal, you can choose where the structure comes from.
 
@@ -72,7 +74,7 @@ events comes from the intersections.
 
 The fourth and final event comes from the intersection of `6` and `9`.
 
-The old default behaviour worked 
+
 
 
 * Tempo patterns
