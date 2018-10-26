@@ -130,7 +130,7 @@ Right values `|>|`/`#` `|>`  `>|`
 
 The last two are interesting, they let you only take values from one
 side. So for example you could take structure from the left, but
-values from the right, like this:
+values from the right with `|>`, for example:
 
 ```
    |  2  |  3  |
