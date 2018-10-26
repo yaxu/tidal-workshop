@@ -111,3 +111,8 @@ Likewise, you can take the structure from the right, with `+|`:
  = | 6 | 7 | 9 |
 ```
 
+## All the operators
+
+Note that `+` is actually an alias for `|+|`. So `|+` is to take the
+structure from the left, `+|` from the right, and `|+|` (or `+`) for
+both.
