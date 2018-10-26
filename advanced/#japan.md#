@@ -121,8 +121,8 @@ Function     Both      Left  Right
 --------     --------- ----- ------
 Add          `|+|`/`+` `|+`  `+|`
 Multiply     `|*|`/`*` `|*`  `*|`
-Subtract    
-Divide
-Modulo
-Left values
-Right values
+Subtract     `|-|`/`-` `|-`  `-|`
+Divide       `|/|`/`/` `|/`  `/|`
+Modulo       `|%|`/`%` `|%`  `%|`
+Left values  `|<|`     `|<`  `<|`
+Right values `|>|`     `|>`  `>|`
