@@ -72,7 +72,7 @@ events comes from the intersections.
 
 The fourth and final event comes from the intersection of `6` and `9`.
 
-
+The old default behaviour worked 
 
 
 * Tempo patterns
