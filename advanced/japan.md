@@ -102,8 +102,3 @@ with `4`, and the start of `3` is in `5`, so you end up with `2+4=6`
 and `3+5=8`.
 
 
-```
-   |  2  |  3  |
-|+ | 4 | 5 | 6 |
- = | 6   |  8  |
-```
