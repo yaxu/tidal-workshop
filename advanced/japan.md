@@ -32,10 +32,19 @@ ghc-pkg unregister tidal-1.0.0
 We have spare time. Please ask questions throughout, and I'm happy to cover something extra.
 
 * Interaction
-
 * Structure
+* Tempo patterns
+* Arpeggios
+* External control
+
+* Extra topics, if we have time
+  * Randomisation
+  * Composing functions
+  * Collaboration
+  * Feedforward editor
 
 
+# Structure
 
 In old Tidal, when combining two patterns, "structure always comes
 from the left". In the new tidal, you can choose where the structure comes from.
@@ -73,16 +82,3 @@ matches with the `3` event. Again, the onset and duration of both
 events comes from the intersections.
 
 The fourth and final event comes from the intersection of `6` and `9`.
-
-
-
-
-* Tempo patterns
-* Arpeggios
-* External control
-
-* Extra topics, if we have time
-  * Randomisation
-  * Composing functions
-  * Collaboration
-  * Feedforward editor
