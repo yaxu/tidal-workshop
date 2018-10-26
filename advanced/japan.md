@@ -116,3 +116,4 @@ Likewise, you can take the structure from the right, with `+|`:
 Note that `+` is actually an alias for `|+|`. So `|+` is to take the
 structure from the left, `+|` from the right, and `|+|` (or `+`) for
 both.
+
