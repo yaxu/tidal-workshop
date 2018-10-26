@@ -70,7 +70,7 @@ shorter events. Half matches with the `2` event and the other half
 matches with the `3` event. Again, the onset and duration of both
 events comes from the intersections.
 
-The fourth and final event comes from the intersection of 
+The fourth and final event comes from the intersection of `6` and `9`.
 
 * Tempo patterns
 * Arpeggios
