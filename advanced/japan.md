@@ -65,10 +65,10 @@ can see that the onset and duration is the interection, which in this
 case is just the onset and duration of the original event with the
 value `4`.
 
-Also see that the event with value `5` is cut in half. Half matches
-with the `2` event and the other half matches with the `3`
-event. Again, the onset and duration of both events is the
-intersection.
+Also see that the event with value `5` is cut in half, to create two
+events. Half matches with the `2` event and the other half matches
+with the `3` event. Again, the onset and duration of both events is
+the intersection.
 
 
 
