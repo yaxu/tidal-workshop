@@ -89,7 +89,7 @@ giving a value of `9`.
 ## Structure from the left
 
 The old behaviour was to take the structure from the left. You can
-still do this, but in this case using `|+`
+still do this, but in this case using `|+`. For example:
 
 ```
    |  2  |  3  |
