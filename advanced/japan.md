@@ -128,3 +128,12 @@ Modulo       `|%|`     `|%`  `%|`
 Left values  `|<|`     `|<`  `<|`
 Right values `|>|`     `|>`  `>|`
 
+The last two are interesting, they let you only take values from one
+side. So for example you could take structure from the left, but
+values from the right, like this:
+
+```
+   |  2  |  3  |
+|> | 4 | 5 | 6 |
+ = | 6 | 7 | 9 |
+```
