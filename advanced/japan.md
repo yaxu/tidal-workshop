@@ -101,4 +101,13 @@ You can see the structure comes from the `2` and `3`. `2` lines up
 with `4`, and the start of `3` is in `5`, so you end up with `2+4=6`
 and `3+5=8`.
 
+## Structure from the right
+
+Likewise, you can take the structure from the right, with `+|`:
+
+```
+   |  2  |  3  |
++| | 4 | 5 | 6 |
+ = | 6 | 7 | 9 |
+```
 
