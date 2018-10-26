@@ -126,7 +126,7 @@ Subtract     `|-|`/`-` `|-`  `-|`
 Divide       `|/|`/`/` `|/`  `/|`
 Modulo       `|%|`     `|%`  `%|`
 Left values  `|<|`     `|<`  `<|`
-Right values `|>|`     `|>`  `>|`
+Right values `|>|`/`#` `|>`  `>|`
 
 The last two are interesting, they let you only take values from one
 side. So for example you could take structure from the left, but
