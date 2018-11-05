@@ -43,10 +43,9 @@ We have spare time. Please ask questions throughout, and I'm happy to cover some
   * Collaboration
   * Feedforward editor
 
+# Interaction
 
 # Structure
-
-## Structure from both sides
 
 In old Tidal, when combining two patterns, "structure always comes
 from the left". In the new tidal, you can choose where the structure comes from.
