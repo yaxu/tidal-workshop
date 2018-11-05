@@ -88,7 +88,16 @@ giving a value of `9`.
 ## Structure from the left
 
 The old behaviour was to take the structure from the left. You can
-still do this, but in this case using `|+`. For example:
+still do this, but in this case using `|+`. 
+
+For example:
+
+```
+"2 3" |+ "4 5 6"
+```
+
+In the above example, you end up with structure from the first, leftmost pattern, like this:
+
 
 ```
    |  2  |  3  |
