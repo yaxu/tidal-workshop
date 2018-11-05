@@ -111,7 +111,8 @@ and `3+5=8`.
 
 ## Structure from the right
 
-Likewise, you can take the structure from the right, with `+|`:
+Likewise, you can take the structure from the right, with `+|`. So `"2
+3" +| "4 5 6"` looks like:
 
 ```
    |  2  |  3  |
