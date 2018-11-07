@@ -42,18 +42,18 @@ still do this, but in this case using <syntaxhighlight lang="Haskell" inline>|+`
 
 For example:
 
-```
+<syntaxhighlight lang="Haskell">
 "2 3" |+ "4 5 6"
-```
+</syntaxhighlight>
 
 In the above example, you end up with structure from the first, leftmost pattern, like this:
 
 
-```
+<pre>
    |  2  |  3  |
 |+ | 4 | 5 | 6 |
  = |  6  |  8  |
-```
+</pre>
 
 You can see the structure comes from the <syntaxhighlight lang="Haskell" inline>2</syntaxhighlight> and <syntaxhighlight lang="Haskell" inline>3</syntaxhighlight>. <syntaxhighlight lang="Haskell" inline>2</syntaxhighlight> lines up
 with <syntaxhighlight lang="Haskell" inline>4</syntaxhighlight>, and the start of <syntaxhighlight lang="Haskell" inline>3</syntaxhighlight> is in <syntaxhighlight lang="Haskell" inline>5</syntaxhighlight>, so you end up with <syntaxhighlight lang="Haskell" inline>2+4=6</syntaxhighlight>
@@ -64,11 +64,11 @@ and <syntaxhighlight lang="Haskell" inline>3+5=8</syntaxhighlight>.
 Likewise, you can take the structure from the right, with <syntaxhighlight lang="Haskell" inline>+|</syntaxhighlight>. So <syntaxhighlight lang="Haskell" inline>"2
 3" +| "4 5 6"</syntaxhighlight> looks like:
 
-```
+<pre>
    |  2  |  3  |
 +| | 4 | 5 | 6 |
  = | 6 | 7 | 9 |
-```
+</pre>
 
 ## All the operators
 
@@ -91,10 +91,10 @@ The last two are interesting, they let you only take values from one
 side. So for example you could take structure from the left, but
 values from the right with <syntaxhighlight lang="Haskell" inline>|></syntaxhighlight>, for example:
 
-```
+<pre>
    |  2  |  3  |
 |> | 4 | 5 | 6 |
  = |  2  |  9  |
-```
+</pre>
 
 This is actually how <syntaxhighlight lang="Haskell" inline>#</syntaxhighlight> works in the current tidal.
