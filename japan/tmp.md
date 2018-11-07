@@ -6,7 +6,7 @@ A core feature of Tidal is the ease in which two patterns can be combined. This 
 "2 3" + "4 5 6"
 </syntaxhighlight>
 
-The two patterns line up over time like this:
+The following table shows how these two patterns line up over time:
 
 <pre>
   |  2  |  3  |
