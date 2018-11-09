@@ -1,8 +1,7 @@
 
-d1 $ _off 0.125 (|+ 7) $ n "<c(3,8) a*2 f e>" # sound "superchip"
-  # legato 0.2
+d1 $ off "<0.125 0.25>" (# s "pulse") $ jux rev $ off 0.125 (|+ n "<-5 7>") $ n "<c(3,8) a(3,8) f*2 e*2>" # sound "rash"
+  |+ n "32" |+ end 0.2
 
 
-
-  
+superimpose ((|+ 1) . (rotR 0.125)) $ "1 3" :: Pattern Int
 
