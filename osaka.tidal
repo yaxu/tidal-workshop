@@ -104,7 +104,9 @@ d1 $ jux rev $ every 3 rev $ sound "bd sn:2 cp ~" # speed 2
 
 d1 $ palindrome $ sound "arpy arpy:1 arpy:2 arpy:3"
 
-d1 $ jux (iter 4) $ sound "arpy ~ arpy:2 arpy:1 arpy:2 arpy:3"
+d1 $ every 4 (hurry 0.5)
+   $ jux (iter 4) $ sound "arpy ~ arpy:2 arpy:1 arpy:2 arpy:3"
+   # lpf (sine * 2000) # lpq 0.2
 
 a b c d
 b c d a
