@@ -88,7 +88,6 @@ d4 $ (up "c [a5] f6 e8*2"
   # lpf (slow 4 $ scale 100 2000 sine) # lpq 0.1
 
 
-
 -- c a f e
 -- g e c b
 -- c g a e f c e b
