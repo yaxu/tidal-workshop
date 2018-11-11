@@ -243,8 +243,30 @@ d1 $ chunk 8 (# crush 2) $ sound "bd*8" # speed (saw + 0.5)
 [a b] [c d] *e f* [g h]
 [a b] [c d] [e f] *g h*
 
+d1 $ slow 4 $ iter' 4 $ n "0 1 2 3" # sound "alphabet"
+
+d1 $ chunk 4 (hurry 0.5) $ iter' 4 $ loopAt "<2 1>" $ chop 8 $ s "arc"
+
+d1 $ sound "bd" # vowel "a"
+
+d1 $ every 2 (rev . chop 8) $ sound "bd sn:2"
+
+let mychop p = rev $ chop 8 p
+
+d1 $ sound "bd sn:2"
 
 
 
+hush
+
+d a b c
+c d a b
+b c d a
+a b c d
+
+a b c d
+b c d a
+c d a b
+d a b c
 
 .
