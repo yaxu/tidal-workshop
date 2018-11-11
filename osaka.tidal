@@ -161,6 +161,24 @@ d1 $ slow 2 $ sound "drum(4,9)" # room 0.4 # sz 0.3
 
 x o x o o x o o
 
+d1 $ slow 2 $ chunk' 4 (# crush 2) $ n "0 1 2 3" # sound "alphabet"
+
+a* b  c  d
+a  b* c  d
+a  b  c* d
+a  b  c  d*
+
+d1 $ slow 2 $ chunk 4 (hurry 2) $ chop 8 $ sound "arc"
+
+hush
+
+d1 $ chunk 8 (# crush 2) $ sound "bd*8" # speed (saw + 0.5)
+
+*a b* [c d] [e f] [g h]
+[a b] *c d* [e f] [g h]
+[a b] [c d] *e f* [g h]
+[a b] [c d] [e f] *g h*
+
 
 
 
