@@ -170,6 +170,15 @@ a  b  c  d*
 
 d1 $ slow 2 $ chunk 4 (hurry 2) $ chop 8 $ sound "arc"
 
+
+d1 $ sound "bev ~ bev*2 ~" # legato 1
+
+d1 $ loopAt 4 $ chop 32 $ sound "arc"
+
+d1 $ slow 4 $ sound "arc" # unit "cycle" # speed 0.25
+
+cps 0.8
+
 hush
 
 d1 $ chunk 8 (# crush 2) $ sound "bd*8" # speed (saw + 0.5)
