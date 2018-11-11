@@ -72,4 +72,6 @@ d3 $ sound "arpy:0 arpy:1 arpy:3 arpy:5"
 d3 $ n "0 [1 3] 3 [5 4] 10 7 4 3" # sound "arpy"
 
 --
-d4 $ up "c a5 f9 e7" # sound "jvbass"
+d4 $ up "c [a5 es7] f6 e7*4" # sound "jvbass"
+
+d5 $ n "c a f6 e" # sound "supermandolin"
