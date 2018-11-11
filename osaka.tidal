@@ -85,8 +85,16 @@ d4 $ (up "c [a5] f6 e8*2"
   # vowel "u"
   # crush 2
   # room 0.4 # sz 0.5)
-  # lpf (slow 4 $ scale 100 2000 sine) # lpq 0.1
+  # lpf (1000) # lpq (slow 4 $ scale 0.1 0.2 sine)
 
+d1 $ sound "bd*8 bd*16" # speed (slow 4 $ scale 0.5 4 saw) # pan (saw)
+
+-- one event per cycle
+d1 $ sound "<arpy sn:2 arpy:3 cp>"
+
+d1 $ fast "4 2" $ sound "bd cp sn:2 arpy"
+
+hush
 
 -- c a f e
 -- g e c b
