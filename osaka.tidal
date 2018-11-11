@@ -270,3 +270,22 @@ c d a b
 d a b c
 
 .
+
+
+-- randomness !
+
+-- random pattern of numbers
+d1 $ fast 4 $ sound "bd sn:2" # pan rand # speed rand
+
+-- choose at random from a list
+d1 $ sound (choose ["cp","bd","arpy"]) # speed (choose [2,1,4])
+
+-- shuffle
+d1 $ shuffle 8 $ n "0 .. 7" # sound "arpy"
+
+-- randomly remove 50% of events
+d1 $ degrade $ sound "bd*4 cp*4"
+
+
+
+hush
