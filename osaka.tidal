@@ -173,7 +173,7 @@ d1 $ slow 2 $ chunk 4 (hurry 2) $ chop 8 $ sound "arc"
 
 d1 $ sound "bev ~ bev*2 ~" # legato 1
 
-d1 $ loopAt 4 $ chop 32 $ sound "arc"
+d1 $ jux rev $ loopAt 2 $ chop 16 $ sound "arc"
 
 d1 $ slow 4 $ sound "arc" # unit "cycle" # speed 0.25
 
