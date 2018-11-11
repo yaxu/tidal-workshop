@@ -122,3 +122,11 @@ hush
 
 
 d1 $ chunk 4 (# crush 2) $ sound  "arpy arpy:1 arpy:2 arpy:3"
+
+d1 $ sound "[bd sn, arpy arpy arpy]"
+d1 $ sound "{bd sn, arpy arpy arpy}"
+
+d1 $ sound "{[bd ravebass] [sd ravebass], [arpy sd:2] arpy:3*2 arpy:2}"
+  # speed 2
+
+d1 $ jux rev $ chunk 4 (hurry 2) $ n "0 .. 7" # sound "kurt" # speed 2
