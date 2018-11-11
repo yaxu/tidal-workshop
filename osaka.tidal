@@ -3,6 +3,11 @@ https://github.com/yaxu/tidal-workshop/blob/master/osaka.tidal
 -- repetition
 d1 $ sound "bd sn"
 
+ctrl + enter to run
+
+hush
+
+
 -- reflection / symmetry
 
 d1 $ palindrome $ n "0 .. 7" # sound "arpy"
@@ -18,3 +23,53 @@ d1 $ n (irand 4) # sound "arpy"
 d1 $ jux (rev . hurry 2) $ n "{0 1 2, 3 4 5 2}" # sound "drum" # speed 2
 
 hush
+
+
+The basic format for making sound in Tidal looks like this
+
+-- dr,asdfaj
+d1 $ sound "drum cp"
+
+d2 $ sound "cp"
+
+d1 $ sound "drum:2 drum:1 drum:1 drum"
+
+hush
+
+-- You can stop making a sound using silence:
+
+d1 $ silence
+
+Pick a different sound from the same set, with `:`
+
+
+-- make comments with two dashes like this
+d1 $ sound "drum:1"
+
+Some of the samples which come with Tidal are listed below. Try some out!
+
+
+d1 $ sound "arpy bd hh sn:1"
+
+d2 $ sound "feel feel:2"
+
+d3 $ sound "~ ~ bd bd"
+
+hush
+
+cps 0.8
+
+The more steps in the sequence, the faster it goes:
+
+-- square brackets -> put a subpattern in a step
+
+d1 $ sound "bd [bd sd bd bd] ~ [sd arpy]"
+
+d2 $ sound "[bd feel:3 sd] [[bd bd] cp]"
+
+d3 $ sound "arpy:0 arpy:1 arpy:3 arpy:5"
+
+d3 $ n "0 [1 3] 3 [5 4] 10 7 4 3" # sound "arpy"
+
+--
+d4 $ up "c a5 f9 e7" # sound "jvbass"
