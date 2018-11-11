@@ -1,1 +1,20 @@
 
+-- repetition
+
+d1 $ sound "bd sn"
+
+-- reflection / symmetry
+
+d1 $ palindrome $ n "0 .. 7" # sound "arpy"
+
+d1 $ every 4 (0.25 <~) $ n "0 .. 7" # sound "arpy"
+
+-- deviation / randomness
+
+d1 $ n (irand 4) # sound "arpy"
+
+-- interference
+
+d1 $ jux (rev . hurry 2) $ n "{0 1 2, 3 4 5 2}" # sound "drum" # speed 2
+
+hush
