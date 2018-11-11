@@ -119,3 +119,6 @@ hush
 -- c a f e
 -- g e c b
 -- c g a e f c e b
+
+
+d1 $ chunk 4 (# crush 2) $ sound  "arpy arpy:1 arpy:2 arpy:3"
