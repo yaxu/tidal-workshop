@@ -94,7 +94,16 @@ d1 $ sound "<arpy sn:2 arpy:3 cp>"
 
 d1 $ hurry "<4 2 3> 0.5" $ sound "bd cp sn:2 arpy"
 
+d1 $ rev $ sound "bd sn:2 [~ sd] kurt"
 
+d1 $ jux (hurry "<2 0.5>") $ n "0 1 2 3" # sound "alphabet"
+
+d1 $ jux (# crush 2) $ n "0 1 2 3" # sound "alphabet"
+
+d1 $ jux rev $ every 3 rev $ sound "bd sn:2 cp ~" # speed 2
+
+
+hush
 
 -- c a f e
 -- g e c b
