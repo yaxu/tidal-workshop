@@ -74,4 +74,12 @@ d3 $ n "0 [1 3] 3 [5 4] 10 7 4 3" # sound "arpy"
 --
 d4 $ up "c [a5 es7] f6 e7*4" # sound "jvbass"
 
-d5 $ n "c a f6 e" # sound "supermandolin"
+d5 $ off 0.125 (|+| n 12)
+  $ off 0.25 (|+| n 7)
+  $ slow 2 $ n "c*2 a*3 f6*2 e*3" # sound "supermandolin"
+
+
+c a f e
+ g e c b
+
+c g a e f c e b
