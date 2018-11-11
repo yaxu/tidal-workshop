@@ -80,6 +80,15 @@ d5 $ off 0.125 (|+| n 12)
   $ slow 2 $ n "c*2 a*3 f6*2 e*3" # sound "supermandolin"
 
 
+d4 $ (up "c [a5] f6 e8*2"
+  # sound "jvbass"
+  # vowel "u"
+  # crush 2
+  # room 0.4 # sz 0.5)
+  # lpf (slow 4 $ scale 100 2000 sine) # lpq 0.1
+
+
+
 -- c a f e
 -- g e c b
 -- c g a e f c e b
