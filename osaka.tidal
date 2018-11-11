@@ -277,6 +277,8 @@ d a b c
 -- random pattern of numbers
 d1 $ fast 4 $ sound "bd sn:2" # pan rand # speed rand
 
+d1 $ sound "arpy(3,8)" # n (irand 16)
+
 -- choose at random from a list
 d1 $ sound (choose ["cp","bd","arpy"]) # speed (choose [2,1,4])
 
@@ -298,6 +300,6 @@ d1 $ sometimes (# speed 2) $ n "0 .. 7" # sound "arpy"
 d1 $ rarely (# speed 2) $ n "0 .. 7" # sound "arpy"
 
 -- sometimes play an event in a sequence..
-d1 $ sound "bd sn:2 cp? ~"
+d1 $ sound "bd*4? sn:2 cp? ~"
 
 hush
