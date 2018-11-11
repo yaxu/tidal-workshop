@@ -284,8 +284,20 @@ d1 $ sound (choose ["cp","bd","arpy"]) # speed (choose [2,1,4])
 d1 $ shuffle 8 $ n "0 .. 7" # sound "arpy"
 
 -- randomly remove 50% of events
-d1 $ degrade $ sound "bd*4 cp*4"
+d1 $ degrade $ sound "bd*4 cp*4"# room 0.2 # orbit 1
 
+d2 $ loopAt 2 $ chop 8 $ sound "arc"
 
+-- Sometimes applying a function
+
+d1 $ every 3 (# speed 2) $ n "0 .. 7" # sound "arpy"
+
+d1 $ sometimes (# speed 2) $ n "0 .. 7" # sound "arpy"
+
+-- less often
+d1 $ rarely (# speed 2) $ n "0 .. 7" # sound "arpy"
+
+-- sometimes play an event in a sequence..
+d1 $ sound "bd sn:2 cp? ~"
 
 hush
