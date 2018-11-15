@@ -3,19 +3,21 @@
 -- My slides
 -- https://docs.google.com/presentation/d/1Emu5NB_0gUaQhk317B5MkgsfBLgTI_mDvJNRJ8aiaeU/edit#slide=id.g24d24bd416_0_37
 
+Advanced examples:
+
 -- pattern parameters
-d3 $ fast "<1 0.5>" $ sound "clap snare" # speed 1.5 # crush 3
+d3 $ fast "<1 0.5>" $ sound "cp sn:2" # speed 1.5 # crush 3
 
 -- compress different patterns into different parts of cycle
-d2 $ compress (0,1/3) $ iter 4 $ n "0 .. 3" # sound "snare" # legato 1 # speed 1
+d2 $ compress (0,1/3) $ iter 4 $ n "0 .. 3" # sound "sn:3" # legato 1 # speed 1
 
-d3 $ compress (1/3,1) $ fast "<1 0.5>" $ sound "clap:4(3,8) snare*2" # speed 1.5 # crush 3
+d3 $ compress (1/3,1) $ fast "<1 0.5>" $ sound "cp:4(3,8) cp:2*2" # speed 1.5 # crush 3
 
 -- repeat random values
 d4 $ repeatCycles 4 $ struct "x*8?" $ sound "kicklinn"
 
 -- scan!
-d1 $ jux (rev . (0.25 <~)) $ n (scan 8) # sound "snare" # speed 2
+d1 $ jux (rev . (0.25 <~)) $ n (scan 8) # sound "sn" # speed 2
 
 -- fit
 d1 $ n (fit 3 [0,2,7,24] "0 [1 0] [~ 3] 1" )
@@ -27,7 +29,7 @@ d1 $ jux ((|+ n 12) . rev) $ off 0.25 ((# s "superpiano") . arpg . struct "x(3,8
   $ n (off (1/16) (+12) $ off 0.125 (+7) $ fit 3 [0,5,7,24] "0 [1 0] [~ 3] 1" )
   # s "supermandolin" # legato 1 |- n 12
 
-d1 $ degrade $ off 0.25 ((|+ n 24) .(# (s "jx" #  gain 0.9 # legato 0.5))) $ jux rev $ n (off 0.125 (+12) $ off 0.25 (+7) $ palindrome $ fit 3 [0,2,7,12] "0 [~ 1] 1 [~ 3]") # s "supermandolin"
+d1 $ degrade $ off 0.25 ((|+ n 24) .(# (s "supermandolin" #  gain 0.9 # legato 0.5))) $ jux rev $ n (off 0.125 (+12) $ off 0.25 (+7) $ palindrome $ fit 3 [0,2,7,12] "0 [~ 1] 1 [~ 3]") # s "supermandolin"
   # lpf (sine * 3000 + 3000)
   # lpq 0.2
   # legato 2
@@ -44,10 +46,6 @@ d4 $ jux rev $ n (off 0.25 (+12) $ off 0.125 (+7) $ "<c(3,8) e*2 f(3,8,2) g(3,8,
   # cps ("0.8")
   # lpf (slow 4 $ scale 3000 500 sine)
   # lpq 0.1
-
-d5 $ loopAt 4 $ chop 8 $ sound "pirate"
-
-d6 $ loopAt 2 $ chop 8 $ sound "os"
 
 -- slice
 
