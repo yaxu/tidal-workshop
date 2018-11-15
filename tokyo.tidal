@@ -104,6 +104,19 @@ d1 $ ply "<2 3 4>" $ sound "bd ~ sn:2" # speed 2
 d1 $ every 2 (ply "<2 3 4>") $ sound "bd ~ sn:2" # speed 2
 
 -- sew
+
+-- sew takes a pattern of true/false values, and two sound patterns, e.g.:
+d1 $ sew "t f" (sound "bd*8") (sound "cp*8")
+-- t == take events from the first pattern
+-- f == take events from the second pattern
+
+d1 $ sew "t f" (sound "bd*8") (sound "cp*8" # speed (slow 4 $ sine + 1))
+
+d1 $ sew (slow 2 "[t f] f")
+   (sound "bd*8")
+   (sound "cp*8" # speed (slow 4 $ sine + 1))
+
+
 d1 $ iter 4 $ sew (iter 4 "[t f] <f [t f]>")
   (sound "bd:4*8")
   (sound "sn:4(3,8)" # speed 1.5)
