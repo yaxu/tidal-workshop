@@ -6,6 +6,11 @@ d2 $ sound "cp"
 
 d1 silence
 
+
+-- ~ is a rest
+d1 $ sound "bd bd hh ~ sn ~ hh bd"
+
+
 -- on the raspberry pis it's different!
 
 -- no d1
@@ -90,6 +95,13 @@ d1 $ every 4 (linger (1/2)) $ iter 4 $ n "0 .. 7" # sound "sn"
 d1 $ every 4 (ply 2) $ slow 2 $ n "0 .. 7" # sound "drum"
   # legato 1
   # speed 0.5
+
+-- ply repeats each event
+d1 $ 2 $ sound "bd ~ sn:2" # speed 2
+
+d1 $ ply "<2 3 4>" $ sound "bd ~ sn:2" # speed 2
+
+d1 $ every 2 (ply "<2 3 4>") $ sound "bd ~ sn:2" # speed 2
 
 -- sew
 d1 $ iter 4 $ sew (iter 4 "[t f] <f [t f]>")
