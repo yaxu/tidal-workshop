@@ -56,21 +56,21 @@ d1 $ loopAt 2 $ slice ("[0 1?] <2*3 3*2> <4*2> 7") 8 $ sound "arc"
 
 -- linger
 
-d1 $ every 4 (linger (1/2)) $ iter 4 $ n "0 .. 7" # sound "tam"
+d1 $ every 4 (linger (1/2)) $ iter 4 $ n "0 .. 7" # sound "sn"
   # legato 1
   # speed 1
 
 -- off
 
 -- ply
-d1 $ every 4 (ply 2) $ slow 2 $ n "0 .. 7" # sound "tam"
+d1 $ every 4 (ply 2) $ slow 2 $ n "0 .. 7" # sound "drum"
   # legato 1
   # speed 0.5
 
 -- sew
 d1 $ iter 4 $ sew (iter 4 "[t f] <f [t f]>")
-  (sound "kick:4*8")
-  (sound "snare:4(3,8)" # speed 1.5)
+  (sound "bd:4*8")
+  (sound "sn:4(3,8)" # speed 1.5)
 
 -- spaceOut
 d1 $ spaceOut [1,2,0.5] $ sound "bd*2 hc:3"
@@ -80,17 +80,17 @@ d1 $ jux rev $ superimpose (stripe 2) $ sound "bd mt lt ~" # speed 2
 
 -- superimpose
 d1 $ someCycles (jux rev . (# speed 2))
-  $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 clap:4]"
+  $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
 
 -- within
 d1 $ within (0,0.5) (# crush 4) $ someCycles (jux rev . (# speed 2))
-  $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 clap:4]"
+  $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
 
 
 d1 $ smash 4 [1,2] $ within (0,0.5) (# crush 4) $ someCycles (jux rev . (# speed 2))
-  $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 clap:4]"
+  $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
 
 -- stut
 
-d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "kick clap:4 bd(3,8) clap:4"
+d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "bd cp:4 bd(3,8) cp:4"
   # legato 1
