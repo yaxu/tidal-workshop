@@ -1,4 +1,7 @@
 -- Hello!
 
+-- My slides
+-- https://docs.google.com/presentation/d/1Emu5NB_0gUaQhk317B5MkgsfBLgTI_mDvJNRJ8aiaeU/edit#slide=id.g24d24bd416_0_37
+
 d1 $ jux rev $ striate 3 $ slow 4 $ chop 8
    $ n "0 1" # sound "numbers" # pan "0 1"
