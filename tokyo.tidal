@@ -25,6 +25,8 @@ d1 $ sound "[bd sn:2, arpy arpy:2 arpy:4]"
 
 d1 $ sound "{bd sn:2, arpy arpy:2 arpy:4}"
 
+hush
+
 -- on the raspberry pis it's different!
 
 -- no d1
