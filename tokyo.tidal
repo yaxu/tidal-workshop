@@ -30,9 +30,18 @@ Advanced examples:
 d3 $ fast "<1 0.5>" $ sound "cp sn:2" # speed 1.5 # crush 3
 
 -- compress different patterns into different parts of cycle
+
+-- compress into the first half - from the start (0) to halfway (1/2):
+d1 $ compress (0,1/2) $ sound "bd*8"
+
+-- compress into the last quarter
+d2 $ compress (3/4,1) $ sound "bd*8"
+
 d2 $ compress (0,1/3) $ iter 4 $ n "0 .. 3" # sound "sn:3" # legato 1 # speed 1
 
 d3 $ compress (1/3,1) $ fast "<1 0.5>" $ sound "cp:4(3,8) cp:2*2" # speed 1.5 # crush 3
+
+
 
 -- repeat random values
 d4 $ repeatCycles 4 $ struct "x*8?" $ sound "kicklinn"
@@ -132,6 +141,18 @@ d1 $ someCycles (jux rev . (# speed 2))
   $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
 
 -- within
+
+-- applies a function within part of each cycl
+d1 $ within (0,0.5) (# crush 4) $ sound "bd*4"
+
+d1 $ within (0,0.5) (hurry 2) $ sound "bd sd:2 cp sn:3"
+
+-- .
+-- . is useful for joining together multiple functions:
+d1 $ every 2 (fast 2 . rev) $ sound "bd sn:2"
+
+-- superimpose is like jux but without panning
+
 d1 $ within (0,0.5) (# crush 4) $ someCycles (jux rev . (# speed 2))
   $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
 
