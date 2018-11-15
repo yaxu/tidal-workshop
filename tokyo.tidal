@@ -10,6 +10,16 @@ d1 silence
 -- ~ is a rest
 d1 $ sound "bd bd hh ~ sn ~ hh bd"
 
+d1 $ sound "bd sn:2"
+
+-- ? = play randomly
+d1 $ sound "bd sn:2? bd cp?"
+
+d1 $ sound "bd [sn:2 cp]"
+
+d1 $ sound "bd*2 sn:2"
+
+d1 $ sound "bd sn:2"
 
 -- on the raspberry pis it's different!
 
