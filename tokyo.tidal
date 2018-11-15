@@ -10,7 +10,7 @@ d1 silence
 
 -- no d1
 
-sound "bd"
+d1 $ sound "drum:0 drum:1 drum:2"
 
 -- run all patterns with alt-enter
 -- start/stop individual patterns with alt-1, alt-2, etc
@@ -37,7 +37,7 @@ d1 $ jux (rev . (0.25 <~)) $ n (scan 8) # sound "sn" # speed 2
 
 -- fit
 d1 $ n (fit 3 [0,2,7,24] "0 [1 0] [~ 3] 1" )
-  # s "supermandolin" # legato 2 |- n 12
+  # s "supermandolin" # legato 2 |-| n 12
   # lpf (sine * 5000 + 800)
   # lpq 0.2
 
