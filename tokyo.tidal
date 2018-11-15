@@ -1,5 +1,21 @@
 -- Hello!
 
+d1 $ sound "drum"
+
+d2 $ sound "cp"
+
+d1 silence
+
+-- on the raspberry pis it's different!
+
+-- no d1
+
+sound "bd"
+
+-- run all patterns with alt-enter
+-- start/stop individual patterns with alt-1, alt-2, etc
+-- stop all with alt-h
+
 -- My slides
 -- https://docs.google.com/presentation/d/1Emu5NB_0gUaQhk317B5MkgsfBLgTI_mDvJNRJ8aiaeU/edit#slide=id.g24d24bd416_0_37
 
