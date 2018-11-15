@@ -144,7 +144,7 @@ d1 $ sew (slow 2 "[t f] f")
 
 d1 $ iter 4 $ sew (iter 4 "[t f] <f [t f]>")
   (sound "bd:4*8")
-  (sound "sn:4(3,8)" # speed 1.5)
+  (sound "snare:4(3,8)" # speed 1.5)
 
 -- spaceOut
 d1 $ spaceOut [1,2,0.5] $ sound "bd*2 hc:3"
@@ -172,6 +172,8 @@ d1 $ every 2 (fast 2 . rev) $ sound "bd sn:2"
 d1 $ within (0,0.5) (# crush 4) $ someCycles (jux rev . (# speed 2))
   $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
 
+
+d1 $ slow 2 $ n "0 1 " # sound "numbers" # pan "0 1"
 
 d1 $ smash 4 [1,2] $ within (0,0.5) (# crush 4) $ someCycles (jux rev . (# speed 2))
   $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
