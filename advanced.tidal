@@ -56,6 +56,11 @@ https://userbase.tidalcycles.org/index.php/Main_Page#TidalCycles_version_1.0.0.2
 d1 $ (chop 16 $ sound "drum:2 drum")
   # cps (slow 8 $ sine + 1)
 
+d1 $ sound "bd sn" # speed "1 2 3"
+
+-- # is an alias for |>
+d1 $ sound "bd sn" |> speed "1 2 3"
+
 
 
 {-
