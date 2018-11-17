@@ -459,3 +459,13 @@ d1 $ stack [off 0.25 (|+| n 7) $ n "c*2 a f e(3,8)",
             discretise 16 $ ccv (slow 4 $ sine * 32)
                # ccn "42"
            ] # sound "volcafm"
+
+
+-- Orbits
+
+d1 $ sound "bd sn:2"
+  # orbit 0
+
+d2 $ sound "arpy*8"
+  # room 0.4 # sz saw
+  # orbit 1
