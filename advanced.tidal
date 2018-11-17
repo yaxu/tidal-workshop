@@ -48,6 +48,9 @@ https://github.com/Qirky/Troop/releases/tag/v0.7.5
 Requires pure-data 'vanilla'
 https://puredata.info/downloads
 
+Running this patch:
+https://raw.githubusercontent.com/tidalcycles/Tidal/master/pd/midi-osc-bridge.pd
+
 8. Feedforward
 
 9. Userbase wiki
