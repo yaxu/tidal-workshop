@@ -61,6 +61,11 @@ d1 $ sound "bd sn" # speed "1 2 3"
 -- # is an alias for |>
 d1 $ sound "bd sn" |> speed "1 2 3"
 
+-- |> means structure comes from the left
+d1 $ sound "bd sn" >| speed "1 2 3"
+-- >| means structure comes from the right
+d1 $ sound "bd sn" >| speed "1 2 3"
+
 
 
 {-
