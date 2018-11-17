@@ -20,11 +20,12 @@ hello konichiwa!
 
 {-
 Topics:
-1. Userbase wiki
+1. Userbase wiki [x]
 
 2. Understanding syntax and type signatures
 
 (Heavy topic)
+
 
 3. Some under-documented tidal features and functions
 
@@ -226,3 +227,19 @@ let pats =
          ]
 in
 d1 $ ur 12 "a b c" pats fx
+
+
+
+-- type signatures
+
+d1 $ every 4 (fast 2) $ sound "bd sn"
+
+:t fast
+fast :: Pattern Time -> Pattern a -> Pattern a
+:t fast 2
+fast 2 :: Pattern a -> Pattern a
+:t every
+every :: Pattern Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+
+:t (s "bd*8")
+(s "bd*8") :: ControlPattern
