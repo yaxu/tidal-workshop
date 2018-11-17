@@ -35,11 +35,6 @@ d4 $ repeatCycles 4 $ struct "x*8?" $ sound "kicklinn"
 d1 $ jux (rev . (0.25 <~)) $ n (scan 8) # sound "sn" # speed 2
 
 -- * fit
-d1 $ n (fit 3 [0,2,7,24] "0 [1 0] [~ 3] 1" )
-  # s "supermandolin" # legato 2 |-| n 12
-  # lpf (sine * 5000 + 800)
-  # lpq 0.2
-
 -- fit has three parameters
 -- a number - how far to move through the list per cycle
 -- a list of values
@@ -47,6 +42,11 @@ d1 $ n (fit 3 [0,2,7,24] "0 [1 0] [~ 3] 1" )
 d1 $ n (fit 3 [0,1,2,3,4,5] "0 [1 3]") # sound "drum"
 d2 $ n (fit 3 [0,3,4,5,6] "0 ~ 2 3") # sound "arpy"
 
+-- More complex examples
+d1 $ n (fit 3 [0,2,7,24] "0 [1 0] [~ 3] 1" )
+  # s "supermandolin" # legato 2 |-| n 12
+  # lpf (sine * 5000 + 800)
+  # lpq 0.2
 
 d1 $ jux ((|+ n 12) . rev) $ off 0.25 ((# s "superpiano") . arpg . struct "x(3,8)")
   $ n (off (1/16) (+12) $ off 0.125 (+7) $ fit 3 [0,5,7,24] "0 [1 0] [~ 3] 1" )
