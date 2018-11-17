@@ -169,7 +169,6 @@ d1 $ stut 4 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "bd cp:4 bd(3,8) cp:4
 d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "bd cp:4 bd(3,8) cp:4"
   # legato 1
 
-
 -- * Composing with ur
 
 -- `ur` is for composing patterns of patterns. you tell it the number
