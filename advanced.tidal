@@ -243,3 +243,9 @@ every :: Pattern Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 
 :t (s "bd*8")
 (s "bd*8") :: ControlPattern
+
+$ -- joining a function with a single parameter/value
+
+
+# -- joining together/combining patterns
+. -- joining together functions
