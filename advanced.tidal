@@ -185,5 +185,8 @@ let pats =
                     ]
         )
       ]
+    fx = [("rev", (# (room 0.5 # sz 0.9))),
+          ("faster", fast 2)
+         ]
 in
 d1 $ ur 12 "a b c" pats []
