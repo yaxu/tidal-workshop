@@ -168,7 +168,7 @@ d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "
   # legato 1
 
 
--- * ur
+-- * Composing with ur
 
 let pats = 
       [
