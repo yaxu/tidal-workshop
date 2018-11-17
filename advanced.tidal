@@ -128,7 +128,7 @@ d1 $ within (0,0.5) (# crush 4) $ someCycles (jux rev . (# speed 2))
 
 -- * stut
 
-d1 $ stut 8 0.5 0.5 $ sound "bd cp:4 bd(3,8) cp:4"
+d1 $ stut 32 0.5 0.25 $ sound "bd cp:4 bd(3,8) cp:4"
   # legato 1
 
 d1 $ stut 4 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "bd cp:4 bd(3,8) cp:4"
