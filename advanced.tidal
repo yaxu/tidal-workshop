@@ -196,7 +196,22 @@ d1 $ sound (discretise 8 $ choose ["bd","snare"]) # gain 1.2 # legato 2
 d1 $ sound (struct "okonomiyaki(3,8) sushi*2" $ choose ["bd","snare"]) # gain 1.2 # legato 2
 
 -- * scan
-d1 $ jux (rev . (0.25 <~)) $ n (scan 8) # sound "sn" # speed 2
+
+d1 $ n (scan 8) # sound "drum" # speed 2
+
+d1 $ n (scan 8) # sound "drum" # speed 2
+
+d1 $ jux (rev . (4.25 <~)) $ n (scan 8) # sound "sn" # speed 2
+
+-- run is kind of similar, run just counts up every cycle though (boring)
+d1 $ n (run 8) # sound "drum"
+-- the same as run:
+d1 $ n ("0 .. 7") # sound "drum"
+
+1: 0
+2: 0 1
+3: 0 1 2
+4: 0 1 2 3
 
 -- * fit
 -- fit has three parameters
@@ -207,6 +222,14 @@ d1 $ n (fit 3 [0,1,2,3,4,5] "0 [1 3]") # sound "drum"
 d2 $ n (fit 3 [0,3,4,5,6] "0 ~ 2 3") # sound "arpy"
 
 -- More complex examples of fit
+d1 $ slow 2 $ n (fit 2 [0,1,2,3] "0 1 0 1") # s "alphabet"
+
+d1 $ slow 2 $ n (fit 2 [0,1,2,3,4] "0 1 0 [1 4]") # s "arpy"
+
+d2 $ $ n (fit 4 [0,5,7,24,-5] "0 ~ [~ 4] 3 ") # sound "superzow"
+  # lpf (slow 4 $ scale 1000 2000 sine)
+  # lpq 0.2 # legato 0.5 # room 0.3 # sz 0.3
+
 d1 $ n (fit 3 [0,2,7,24] "0 [1 0] [~ 3] 1" )
   # s "supermandolin" # legato 2 |-| n 12
   # lpf (sine * 5000 + 800)
