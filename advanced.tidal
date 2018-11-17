@@ -60,7 +60,8 @@ d1 $ degrade $ off 0.25 ((|+ n 24) .(# (s "supermandolin" #  gain 0.9 # legato 0
 
 -- * slice
 
--- Give it a pattern of slice numbers, an the number of slices
+-- Give it a pattern of slice numbers, an the number of slices (I will
+-- probably reverse these parameters in 1.0.0!)
 
 d1 $ loopAt 2 $ slice ("[0 1?] <2*3 3*2> <4*2> 7") 8 $ sound "arc"
   # legato 1
