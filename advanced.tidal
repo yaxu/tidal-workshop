@@ -378,7 +378,6 @@ let pats = [("drums", s "drum clap*2"),
            ]
     fx = [("higher", (# speed 2))]
 in
-
 d1 $ ur 8 "[drums, melody] [drums,craziness,melody] melody:higher" pats []
 
 
