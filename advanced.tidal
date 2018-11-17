@@ -140,3 +140,7 @@ d1 $ smash 4 [1,2] $ within (0,0.5) (# crush 4) $ someCycles (jux rev . (# speed
 
 d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "bd cp:4 bd(3,8) cp:4"
   # legato 1
+
+-- cps fun
+
+
