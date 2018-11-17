@@ -17,33 +17,35 @@ Upgrade English Tokyo
 
 {-
 Topics:
-1. Understanding syntax and type signatures
+1. Userbase wiki
+
+2. Understanding syntax and type signatures
 
 (Heavy topic)
 
-2. Some under-documented tidal features and functions
+3. Some under-documented tidal features and functions
 
 Lets go through the examples below
 
-3. Composing with ur
+4. Composing with ur
 
-4. Orbits
+5. Orbits
 
 For multichannel sound, taming global effects (e.g. reverb), routing patterns
 to different DAW channels
 
-5. Upcoming features in tidal 1.0.0 !!
+6. Upcoming features in tidal 1.0.0 !!
 
-- 4a controlling patterns with external MIDI controllers
-- 4b flexible structural control
-- 4c flexible tempo control (cps patterns)
+- 6a controlling patterns with external MIDI controllers
+- 6b flexible structural control
+- 6c flexible tempo control (cps patterns)
 
-6. Collaboration, e.g. through the multi-user troop editor
+7. Collaboration, e.g. through the multi-user troop editor
 
 Please use version 0.7.5 for this:
 https://github.com/Qirky/Troop/releases/tag/v0.7.5
 
-7. Controlling MIDI synths
+8. Controlling MIDI synths
 
 Requires pure-data 'vanilla'
 https://puredata.info/downloads
@@ -51,12 +53,10 @@ https://puredata.info/downloads
 Running this patch:
 https://raw.githubusercontent.com/tidalcycles/Tidal/master/pd/midi-osc-bridge.pd
 
-8. Feedforward
+9. Feedforward
 
 Might be tricky to get working !
 https://github.com/yaxu/feedforward
-
-9. Userbase wiki
 
 10. Something else?
 -}
