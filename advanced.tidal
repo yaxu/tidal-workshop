@@ -168,7 +168,7 @@ d2 $ sound "cp(3,8)"
 -- * Repeat random values
 d4 $ struct "x*8?" $ sound "kicklinn"
 
-d4 $ repeatCycles 4 $ struct "x*8?" $ sound "kicklinn" # speed 2
+d4 $ repeatCycles 4 $ struct "x*8?" $ sound "arpy" +| note (irand 16)
 
 d4 $ loopFirst $ struct "x*8?" $ sound "kicklinn" # speed 2
 
