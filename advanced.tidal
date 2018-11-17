@@ -52,8 +52,11 @@ https://userbase.tidalcycles.org/index.php/Main_Page#TidalCycles_version_1.0.0.2
 - 6b flexible structural control
 -}
 
+-- cps is now a control!
 d1 $ (chop 16 $ sound "drum:2 drum")
-  # cps (slow 8 $ saw + 1)
+  # cps (slow 8 $ sine + 1)
+
+
 
 {-
 - 6c flexible tempo control (cps patterns)
