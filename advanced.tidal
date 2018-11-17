@@ -79,13 +79,13 @@ d1 $ every 4 (linger (1/2)) $ iter 4 $ n "0 .. 7" # sound "sn"
 -- ply repeats each event
 d1 $ ply 2 $ sound "bd ~ sn:2" # speed 2
 
-d1 $ every 4 (ply 2) $ slow 2 $ n "0 .. 7" # sound "drum"
-  # legato 1
-  # speed 0.5
-
 d1 $ ply "<2 3 4>" $ sound "bd ~ sn:2" # speed 2
 
 d1 $ every 2 (ply "<2 3 4>") $ sound "bd ~ sn:2" # speed 2
+
+d1 $ every 4 (ply 2) $ slow 2 $ n "0 .. 7" # sound "drum"
+  # legato 1
+  # speed 0.5
 
 -- * sew
 -- sew takes a pattern of true/false values, and two sound patterns, e.g.:
