@@ -182,8 +182,6 @@ d1 $ sound ""
 cps 0.8
 
 
-
-
 d1 $ sound "bd*5" # vowel "a e i o u"
 
 d1 $ sound "arpy [arpy arpy] ~ arpy" # speed "2 3"
