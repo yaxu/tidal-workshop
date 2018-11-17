@@ -185,8 +185,8 @@ let pats =
                     ]
         )
       ]
-    fx = [("rev", (# (room 0.5 # sz 0.9))),
+    fx = [("rev", (# (room 0.8 # sz 0.99 # orbit 1))),
           ("faster", fast 2)
          ]
 in
-d1 $ ur 12 "a b c" pats []
+d1 $ ur 12 "a b:rev c" pats []
