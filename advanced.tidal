@@ -18,6 +18,8 @@ Upgrade English Tokyo
 
 1. Understanding syntax (e.g. - '$', '.' and '#')
 
+2. Understanding type signatures
+
 2. Some under-documented tidal features and functions
 
 3. Orbits - multichannel sound, taming global effects (e.g. reverb),
@@ -160,10 +162,3 @@ d1 $ stut 4 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "bd cp:4 bd(3,8) cp:4
 d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "bd cp:4 bd(3,8) cp:4"
   # legato 1
 
--- * cps fun
-
-- How to find or search undocumented functions. And how to understand the usage and syntax of those.
-(eg. which part of codes should I look into? )
-- Understanding atom (ghc?) syntax error massage
-- Utilizing chord and scale in tidal
-- Usage of “let"
