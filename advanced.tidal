@@ -16,6 +16,25 @@ Upgrade English Tokyo
 --  downloaded-quarks > Dirt-Samples)
 
 
+1. Understanding syntax (e.g. - '$', '.' and '#')
+
+2. Some under-documented tidal features and functions
+
+3. Orbits - multichannel sound, taming global effects (e.g. reverb),
+routing patterns to different DAW channels
+
+4. Upcoming features in tidal 1.0.0, e.g.
+- 4a controlling patterns with external MIDI controllers (you could
+bring one to try, if you have one to hand)
+- 4b flexible structural control
+- 4c flexible tempo control (cps patterns)
+
+5. Collaboration, e.g. through the multi-user troop editor
+
+6. Controlling MIDI synths
+
+7. Something else?
+
 
 
 -- ** Some (maybe) underappreciated functions **
