@@ -62,9 +62,20 @@ d1 $ sound "bd sn" # speed "1 2 3"
 d1 $ sound "bd sn" |> speed "1 2 3"
 
 -- |> means structure comes from the left
-d1 $ sound "bd sn" >| speed "1 2 3"
+d1 $ sound "bd sn" |> speed "1 2 3"
 -- >| means structure comes from the right
 d1 $ sound "bd sn" >| speed "1 2 3"
+
+-- The '>' points to where the values come from
+-- this gives speed of "3 4 5"
+d1 $ speed "1 2" >| speed "3 4 5" # sound "bd sn"
+-- structure from left, values from right
+d1 $ speed "1 2" |> speed "3 4 5" # sound "bd sn"
+-- structure from right, values from left
+d1 $ speed "1 2" <| speed "3 4 5" # sound "bd sn"
+
+-- We can also take structure from both sides
+d1 $ speed "1 2" |<| speed "3 4 5" # sound "bd sn"
 
 
 
