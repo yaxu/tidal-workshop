@@ -127,8 +127,6 @@ d1 $ within (0,0.5) (hurry 2) $ sound "bd sd:2 cp sn:3"
 -- . is useful for joining together multiple functions:
 d1 $ every 2 (fast 2 . rev) $ sound "bd sn:2"
 
--- superimpose is like jux but without panning
-
 d1 $ within (0,0.5) (# crush 4) $ someCycles (jux rev . (# speed 2))
   $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
 
