@@ -189,4 +189,4 @@ let pats =
           ("faster", fast 2)
          ]
 in
-d1 $ ur 12 "a b:rev c:faster" pats []
+d1 $ ur 12 "a b:rev c:faster" pats fx
