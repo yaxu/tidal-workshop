@@ -170,8 +170,30 @@ d4 $ struct "x*8?" $ sound "kicklinn"
 
 d4 $ repeatCycles 4 $ struct "x*8?" $ sound "arpy" +| note (irand 16)
 
-d4 $ loopFirst $ struct "x*8?" $ sound "kicklinn" # speed 2
+d4 $ loopFirst $ struct "x*8?" $ sound "kicklinn" # speed 2 # room 0.1 # sz 0.5
 
+-- * wchoose
+wchoose :: [(a, Double)] -> Pattern a
+
+-- chooses equally between the given numbers
+d1 $ sound "supermandolin*8" # n (
+    choose [0,5,7,12]
+  ) # gain 1.2 # legato 2
+
+-- you can give weights with 'wchoose'
+d1 $ sound "supermandolin*8" # n (
+      wchoose [(0,0.1),(5,0.1),(7,0.1),(12,0.7)]
+    ) # gain 1.2 # legato 2
+
+-- be careful with random streams - they have no structure so are played at
+-- calculation rate
+d1 $ sound (choose ["bd","snare"]) # gain 1.2 # legato 2
+
+-- samples the pattern at the given rate
+d1 $ sound (discretise 8 $ choose ["bd","snare"]) # gain 1.2 # legato 2
+
+-- struct gives structure (the value 'x' isn't used, but its structure is)
+d1 $ sound (struct "x(3,8) x*2" $ choose ["bd","snare"]) # gain 1.2 # legato 2
 
 -- * scan
 d1 $ jux (rev . (0.25 <~)) $ n (scan 8) # sound "sn" # speed 2
