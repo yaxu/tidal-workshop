@@ -42,6 +42,7 @@ https://userbase.tidalcycles.org/index.php/Main_Page#TidalCycles_version_1.0.0.2
 - 6a controlling patterns with external MIDI controllers
 - 6b flexible structural control
 - 6c flexible tempo control (cps patterns)
+- 6d innards - the refactor
 
 7. Collaboration, e.g. through the multi-user troop editor
 
