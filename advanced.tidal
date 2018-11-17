@@ -245,7 +245,14 @@ every :: Pattern Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 (s "bd*8") :: ControlPattern
 
 $ -- joining a function with a single parameter/value
+d1 $ sound "bd sn" -- we usually do this
+d1 (sound "bd sn") -- this works
+d1 sound "bd sn" -- doesn't work!
 
+:t d1
+d1 :: ControlPattern -> IO ()
+:t ($)
+($) :: (a -> b) -> a -> b
 
 # -- joining together/combining patterns
 . -- joining together functions
