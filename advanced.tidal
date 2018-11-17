@@ -267,6 +267,13 @@ d1 $ every 2 rev $ every 2 (fast 2) $ sound "bd sn:2"
 
 d1 $ every 2 (rev . chop 8 . fast 4) $ sound "bd sn:2"
 
+-- this doesn't work !
+-- $ only works with the last parameter
+d1 $ every 2 $ rev . chop 8 . fast 4 $ sound "bd sn:2"
+
+d1 $ every 2 (rev . chop 8 . fast 4) $ sound "bd sn:2"
+
+
 :t fast 4
 :t chop 8
 :t rev
