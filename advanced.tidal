@@ -171,17 +171,19 @@ d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "
 -- * ur
 
 let pats = 
-  [
-   ("a", stack [n "c4 c5 g4 f4 f5 g4 e5 g4" # s "superpiano" # gain "0.7",
-                n "<c3,g4,c4>" # s "superpiano"# gain "0.7"
-               ]
-   ),
-   ("b", stack [n "d4 c5 g4 f4 f5 g4 e5 g4" # s "superpiano" # gain "0.7",
-                n "<d3,a4,d4>" # s "superpiano"# gain "0.7"
-               ]
-   ),
-   ("c", stack [n "f4 c5 g4 f4 f5 g4 e5 g4" # s "superpiano" # gain "0.7",
-                n "<f4,c5,f4>" # s "superpiano"# gain "0.7"
-               ]
-   )
-  ]
+      [
+        ("a", stack [n "c4 c5 g4 f4 f5 g4 e5 g4" # s "superpiano" # gain "0.7",
+                     n "<c3,g4,c4>" # s "superpiano"# gain "0.7"
+                    ]
+        ),
+        ("b", stack [n "d4 c5 g4 f4 f5 g4 e5 g4" # s "superpiano" # gain "0.7",
+                     n "<d3,a4,d4>" # s "superpiano"# gain "0.7"
+                    ]
+        ),
+        ("c", stack [n "f4 c5 g4 f4 f5 g4 e5 g4" # s "superpiano" # gain "0.7",
+                     n "<f4,c5,f4>" # s "superpiano"# gain "0.7"
+                    ]
+        )
+      ]
+in
+d1 $ ur 12 "a b c" pats []
