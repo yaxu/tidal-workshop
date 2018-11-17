@@ -133,7 +133,6 @@ d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "
 
 -- * cps fun
 
-
 - How to find or search undocumented functions. And how to understand the usage and syntax of those.
 (eg. which part of codes should I look into? )
 - Understanding atom (ghc?) syntax error massage
