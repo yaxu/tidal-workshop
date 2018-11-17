@@ -172,6 +172,9 @@ d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "
 
 -- * Composing with ur
 
+ur is for composing patterns of patterns
+you tell it the number of cycles the pattern will be, then give a pattern of pattern names (that's stretched out over the given number of cycles, but _without_ stretching out the patterns inside it), and then a list of named patterns.. plus a list of named pattern transformations that you can apply with
+
 let pats = 
       [
         ("a", stack [n "c4 c5 g4 f4 f5 g4 e5 g4" # s "superpiano" # gain "0.7",
