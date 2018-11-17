@@ -58,7 +58,7 @@ d1 $ degrade $ off 0.25 ((|+ n 24) .(# (s "supermandolin" #  gain 0.9 # legato 0
   # legato 2
   |*| speed 1.5
 
--- slice
+-- * slice
 
 d1 $ loopAt 2 $ slice ("[0 1?] <2*3 3*2> <4*2> 7") 8 $ sound "arc"
   # legato 1
