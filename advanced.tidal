@@ -22,12 +22,10 @@ d1 $ fast "<1 0.5>" $ sound "cp sn:2" # speed 1.5 # crush 3
 
 -- compress into the first half - from the start (0) to halfway (1/2):
 d1 $ compress (0,1/2) $ sound "bd*8"
-
 -- compress into the last quarter
 d2 $ compress (3/4,1) $ sound "bd*8"
 
 d2 $ compress (0,1/3) $ iter 4 $ n "0 .. 3" # sound "sn:3" # legato 1 # speed 1
-
 d3 $ compress (1/3,1) $ fast "<1 0.5>" $ sound "cp:4(3,8) cp:2*2" # speed 1.5 # crush 3
 
 
