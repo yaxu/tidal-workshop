@@ -376,9 +376,10 @@ let pats = [("drums", s "drum clap*2"),
             ("melody", s "arpy:2 arpy:3 arpy:5"),
             ("craziness", s "clap:4*8" # speed ( sine + 0.5))
            ]
-    fx = []
+    fx = [("higher", (# speed 2))]
 in
-d1 $ ur 8 "[drums, melody] [drums,craziness,melody] melody" pats fx
+d1 $ ur 8 "[drums, melody] [drums,craziness,melody] melody:higher" pats fx
+
 
 -- type signatures
 
