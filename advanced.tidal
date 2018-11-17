@@ -75,10 +75,24 @@ d1 $ speed "1 2" |> speed "3 4 5" # sound "bd sn"
 d1 $ speed "1 2" <| speed "3 4 5" # sound "bd sn"
 
 -- We can also take structure from both sides
-d1 $ speed "1 2" |<| speed "3 4 5" # sound "bd sn"
+d1 $ speed "2 3" |+| speed "4 5 6" # sound "bd sn"
+-- This is the same
+d1 $ speed "2 3" + speed "4 5 6" # sound "bd sn"
+d1 $ speed ("2 3" + "4 5 6") # sound "bd sn"
 
+"2 3" + "4 5 6" = "6 [7 8] 9"
 
+d1 $ n ("2 3" + "4 5 6") + s "bd sn"
 
+-- remove the d1 $ to print out
+-- the events:
+n ("2 3" + "4 5 6") + s "bd sn"
+
+(0>⅓)|n: 6.0f, s: "bd"
+(⅓>½)|n: 7.0f, s: "bd"
+(½>⅔)|n: 8.0f, s: "sn"
+(⅔>1)|n: 9.0f, s: "sn"
+--
 {-
 - 6c flexible tempo control (cps patterns)
 - 6d innards of the refactor - https://github.com/tidalcycles/Tidal/projects/2
