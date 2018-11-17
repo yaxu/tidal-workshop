@@ -15,10 +15,10 @@ Upgrade English Tokyo
 -- (in Supercollider, File -> Open user support directory >
 --  downloaded-quarks > Dirt-Samples)
 
+{-
+Topics:
+1. Understanding syntax and type signatures
 
-1. Understanding syntax (e.g. - '$', '.' and '#')
-
-2. Understanding type signatures
 
 2. Some under-documented tidal features and functions
 
