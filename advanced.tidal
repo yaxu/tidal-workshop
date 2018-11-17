@@ -130,7 +130,8 @@ https://github.com/yaxu/feedforward
 -- ** Some (maybe) underappreciated functions **
 
 -- * (almost) everything is a pattern
-d1 $ fast "<1 0.5>" $ sound "cp sn:2" # speed 1.5 # crush 3
+d1 $ fast "<1 0.5>" $ sound "cp sn:2"
+   # speed 1.5 # crush 3
 
 -- * Compress different patterns into different parts of cycle
 
