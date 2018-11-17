@@ -347,5 +347,7 @@ d2 $ select (cF 0 "24")
    jux rev $ chop 8 $ sound "arpy arpy:3" # speed 2
   ]
 
+d1 $ sound "clap" # speed (cF 2 "33")
+
 d1 $ (fast (cT 1 "22" * 8)) $ sound "bd" # speed (scale 1 2 $ cF 1 "21")
   # cps (cF 1 "23" * 2)
