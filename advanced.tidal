@@ -69,7 +69,6 @@ d3 $ jux rev $ loopAt 2 $ slice "0 <3 4*4> 2 4*8 5 2*4 4 7*2" 8 $ sound "arc" # 
 -- cps fun
 
 
-
 -- linger
 
 d1 $ every 4 (linger (1/2)) $ iter 4 $ n "0 .. 7" # sound "sn"
