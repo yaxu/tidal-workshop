@@ -334,3 +334,7 @@ d1 $ every 2 (rev . chop 8 . fast 4) $ sound "bd sn:2"
 :t fast 4
 :t chop 8
 :t rev
+
+d1 $ off 0.25 (|* speed 2) $ sound "gabba(3,8)"
+
+once $ (chop 16 $ s "airhorn") # speed sine
