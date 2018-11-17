@@ -257,13 +257,12 @@ d1 $ sound "drum(<3 5>,8,<0 2>)"
 do d1 $ sound "bd sn"
    d2 $ sound "clap"
 
+-- how to define aliases (functions) as you go
 let scratch p = jux (rev . hurry "<1 2 8>" . chop 8) p
     faster = fast 2
-    higher = (# speed 2)
-    higher2 = (speed 2)
+    higher = speed 2
 in
-d1 $ scratch $ faster $ sound "bd sd(3,8)" # higher2
-
+d1 $ scratch $ faster $ sound "bd sd(3,8)" # higher
 
 -- * slice
 
