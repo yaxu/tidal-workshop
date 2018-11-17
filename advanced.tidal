@@ -469,3 +469,15 @@ d1 $ sound "bd sn:2"
 d2 $ sound "arpy*8"
   # room 0.4 # sz saw
   # orbit 1
+
+
+
+d1 $ sound "bd sn:2"
+
+d2 $ sound "cp"
+
+d1 $ (n "<0 1 2 3>" # sound "alphabet")
+
+cps (-1)
+
+cps (1.1)
