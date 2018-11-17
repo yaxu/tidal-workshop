@@ -226,9 +226,11 @@ d1 $ slow 2 $ n (fit 2 [0,1,2,3] "0 1 0 1") # s "alphabet"
 
 d1 $ slow 2 $ n (fit 2 [0,1,2,3,4] "0 1 0 [1 4]") # s "arpy"
 
-d2 $ $ n (fit 4 [0,5,7,24,-5] "0 ~ [~ 4] 3 ") # sound "superzow"
+d2 $ off 0.125 (|+ n 12)
+  $ off 0.25 (|+ n 7) $ jux rev
+  $ n (fit 3 [0,5,7,24] "0(3,8) 2*2 [~ 4] 3 ") # sound "supermandolin"
   # lpf (slow 4 $ scale 1000 2000 sine)
-  # lpq 0.2 # legato 0.5 # room 0.3 # sz 0.3
+  # lpq 0.2 # legato 4 # room 0.3 # sz 0.3 # gain 1.2
 
 d1 $ n (fit 3 [0,2,7,24] "0 [1 0] [~ 3] 1" )
   # s "supermandolin" # legato 2 |-| n 12
