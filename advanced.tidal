@@ -166,7 +166,12 @@ xfade "1" $ fast 2 $ sound "snare(3,8,5)"
 d2 $ sound "cp(3,8)"
 
 -- * Repeat random values
-d4 $ repeatCycles 4 $ struct "x*8?" $ sound "kicklinn"
+d4 $ struct "x*8?" $ sound "kicklinn"
+
+d4 $ repeatCycles 4 $ struct "x*8?" $ sound "kicklinn" # speed 2
+
+d4 $ loopFirst $ struct "x*8?" $ sound "kicklinn" # speed 2
+
 
 -- * scan
 d1 $ jux (rev . (0.25 <~)) $ n (scan 8) # sound "sn" # speed 2
