@@ -15,3 +15,143 @@ Upgrade English Tokyo
 -- (in Supercollider, File -> Open user support directory >
 --  downloaded-quarks > Dirt-Samples)
 
+-- pattern parameters
+d1 $ fast "<1 0.5>" $ sound "cp sn:2" # speed 1.5 # crush 3
+
+-- compress different patterns into different parts of cycle
+
+-- compress into the first half - from the start (0) to halfway (1/2):
+d1 $ compress (0,1/2) $ sound "bd*8"
+
+-- compress into the last quarter
+d2 $ compress (3/4,1) $ sound "bd*8"
+
+d2 $ compress (0,1/3) $ iter 4 $ n "0 .. 3" # sound "sn:3" # legato 1 # speed 1
+
+d3 $ compress (1/3,1) $ fast "<1 0.5>" $ sound "cp:4(3,8) cp:2*2" # speed 1.5 # crush 3
+
+
+
+-- repeat random values
+d4 $ repeatCycles 4 $ struct "x*8?" $ sound "kicklinn"
+
+-- scan!
+d1 $ jux (rev . (0.25 <~)) $ n (scan 8) # sound "sn" # speed 2
+
+-- fit
+d1 $ n (fit 3 [0,2,7,24] "0 [1 0] [~ 3] 1" )
+  # s "supermandolin" # legato 2 |-| n 12
+  # lpf (sine * 5000 + 800)
+  # lpq 0.2
+
+-- fit has three parameters
+-- a number - how far to move through the list per cycle
+-- a list of values
+-- a pattern of numbers
+d1 $ n (fit 3 [0,1,2,3,4,5] "0 [1 3]") # sound "drum"
+d2 $ n (fit 3 [0,3,4,5,6] "0 ~ 2 3") # sound "arpy"
+
+
+d1 $ jux ((|+ n 12) . rev) $ off 0.25 ((# s "superpiano") . arpg . struct "x(3,8)")
+  $ n (off (1/16) (+12) $ off 0.125 (+7) $ fit 3 [0,5,7,24] "0 [1 0] [~ 3] 1" )
+  # s "supermandolin" # legato 1 |- n 12
+
+d1 $ degrade $ off 0.25 ((|+ n 24) .(# (s "supermandolin" #  gain 0.9 # legato 0.5))) $ jux rev $ n (off 0.125 (+12) $ off 0.25 (+7) $ palindrome $ fit 3 [0,2,7,12] "0 [~ 1] 1 [~ 3]") # s "supermandolin"
+  # lpf (sine * 3000 + 3000)
+  # lpq 0.2
+  # legato 2
+  |*| speed 1.5
+
+d2 $ iter 4 $ jux rev $ sound "kicklinn(3,8,<0 2 4 2>)" # speed 2
+  # gain 1.2
+  # room 0.1 # sz 0.9 # orbit 1
+
+d3 $ jux rev $ loopAt 2 $ slice "0 <3 4*4> 2 4*8 5 2*4 4 7*2" 8 $ sound "arc" # gain 1.3
+  # legato 1
+
+d4 $ jux rev $ n (off 0.25 (+12) $ off 0.125 (+7) $ "<c(3,8) e*2 f(3,8,2) g(3,8,4)>") # sound "rash" |+ n "36"
+  # cps ("0.8")
+  # lpf (slow 4 $ scale 3000 500 sine)
+  # lpq 0.1
+
+-- slice
+
+d1 $ loopAt 2 $ slice ("[0 1?] <2*3 3*2> <4*2> 7") 8 $ sound "arc"
+  # legato 1
+
+-- cps fun
+
+-- linger
+
+d1 $ every 4 (linger (1/2)) $ iter 4 $ n "0 .. 7" # sound "sn"
+  # legato 1
+  # speed 1
+
+-- off
+
+-- ply
+d1 $ every 4 (ply 2) $ slow 2 $ n "0 .. 7" # sound "drum"
+  # legato 1
+  # speed 0.5
+
+-- ply repeats each event
+d1 $ 2 $ sound "bd ~ sn:2" # speed 2
+
+d1 $ ply "<2 3 4>" $ sound "bd ~ sn:2" # speed 2
+
+d1 $ every 2 (ply "<2 3 4>") $ sound "bd ~ sn:2" # speed 2
+
+-- sew
+
+-- sew takes a pattern of true/false values, and two sound patterns, e.g.:
+d1 $ sew "t f" (sound "bd*8") (sound "cp*8")
+-- t == take events from the first pattern
+-- f == take events from the second pattern
+
+d1 $ sew "t f" (sound "bd*8") (sound "cp*8" # speed (slow 4 $ sine + 1))
+
+d1 $ sew (slow 2 "[t f] f")
+   (sound "bd*8")
+   (sound "cp*8" # speed (slow 4 $ sine + 1))
+
+
+d1 $ iter 4 $ sew (iter 4 "[t f] <f [t f]>")
+  (sound "bd:4*8")
+  (sound "snare:4(3,8)" # speed 1.5)
+
+-- spaceOut
+d1 $ spaceOut [1,2,0.5] $ sound "bd*2 hc:3"
+
+-- stripe
+d1 $ jux rev $ superimpose (stripe 2) $ sound "bd mt lt ~" # speed 2
+
+-- superimpose
+d1 $ someCycles (jux rev . (# speed 2))
+  $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
+
+-- within
+
+-- applies a function within part of each cycl
+d1 $ within (0,0.5) (# crush 4) $ sound "bd*4"
+
+d1 $ within (0,0.5) (hurry 2) $ sound "bd sd:2 cp sn:3"
+
+-- .
+-- . is useful for joining together multiple functions:
+d1 $ every 2 (fast 2 . rev) $ sound "bd sn:2"
+
+-- superimpose is like jux but without panning
+
+d1 $ within (0,0.5) (# crush 4) $ someCycles (jux rev . (# speed 2))
+  $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
+
+
+d1 $ slow 2 $ n "0 1 " # sound "numbers" # pan "0 1"
+
+d1 $ smash 4 [1,2] $ within (0,0.5) (# crush 4) $ someCycles (jux rev . (# speed 2))
+  $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
+
+-- stut
+
+d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "bd cp:4 bd(3,8) cp:4"
+  # legato 1
