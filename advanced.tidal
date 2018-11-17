@@ -441,3 +441,11 @@ d1 $ sound "clap" # speed (cF 2 "33")
 
 d1 $ (fast (cT 1 "22" * 8)) $ sound "bd" # speed (scale 1 2 $ cF 1 "21")
   # cps (cF 1 "23" * 2)
+
+
+
+d1 $ stack [off 0.25 (|+| n 7) $ n "c*2 a f e(3,8)",
+            discretise 16 $ ccv (slow 4 $ sine * 32)
+               # ccn "42"
+           ] # sound "volcafm"
+           
