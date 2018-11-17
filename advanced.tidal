@@ -99,18 +99,17 @@ d1 $ sew (slow 2 "[t f] f")
    (sound "bd*8")
    (sound "cp*8" # speed (slow 4 $ sine + 1))
 
-
 d1 $ iter 4 $ sew (iter 4 "[t f] <f [t f]>")
   (sound "bd:4*8")
   (sound "snare:4(3,8)" # speed 1.5)
 
--- spaceOut
+-- * spaceOut
 d1 $ spaceOut [1,2,0.5] $ sound "bd*2 hc:3"
 
--- stripe
+-- * stripe
 d1 $ jux rev $ superimpose (stripe 2) $ sound "bd mt lt ~" # speed 2
 
--- superimpose
+-- * superimpose
 d1 $ someCycles (jux rev . (# speed 2))
   $ every 2 (superimpose (hurry 4 . rev)) $ sound "bd [sn:2 cp:4]"
 
