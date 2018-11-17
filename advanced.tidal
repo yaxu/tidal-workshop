@@ -242,10 +242,15 @@ d1 $ jux ((|+ n 12) . rev) $ off 0.25 ((# s "superpiano") . arpg . struct "x(3,8
   # s "supermandolin" # legato 1 |- n 12
 
 d1 $ off 0.25 ((|+ n 24) .(# (s "supermandolin" #  gain 0.9 # legato 0.5))) $ jux rev $ n (off 0.125 (+12) $ off 0.25 (+7) $ palindrome $ fit 3 [0,2,7,12] "0 [~ 1] 1 [~ 3]") # s "supermandolin"
-  # lpf (sine * 3000 + 3000)
-  # lpq 0.2
-  # legato 2
-  |*| speed 1.5
+   # lpf (sine * 3000 + 3000)
+   # lpq 0.2
+   # legato 2
+   |*| speed 1.5
+
+
+do d1 $ sound "bd sn"
+   d2 $ sound "clap"
+
 
 -- * slice
 
