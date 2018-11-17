@@ -50,11 +50,12 @@ https://userbase.tidalcycles.org/index.php/Main_Page#TidalCycles_version_1.0.0.2
 
 - 6a controlling patterns with external MIDI controllers
 - 6b flexible structural control
+-}
 
 d1 $ (chop 16 $ sound "drum:2 drum")
   # cps (slow 8 $ saw + 1)
 
-
+{-
 - 6c flexible tempo control (cps patterns)
 - 6d innards of the refactor - https://github.com/tidalcycles/Tidal/projects/2
 
