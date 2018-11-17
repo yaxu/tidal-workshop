@@ -58,6 +58,11 @@ d1 $ degrade $ off 0.25 ((|+ n 24) .(# (s "supermandolin" #  gain 0.9 # legato 0
   # legato 2
   |*| speed 1.5
 
+-- slice
+
+d1 $ loopAt 2 $ slice ("[0 1?] <2*3 3*2> <4*2> 7") 8 $ sound "arc"
+  # legato 1
+
 d3 $ jux rev $ loopAt 2 $ slice "0 <3 4*4> 2 4*8 5 2*4 4 7*2" 8 $ sound "arc" # gain 1.3
   # legato 1
 
@@ -65,11 +70,6 @@ d4 $ jux rev $ n (off 0.25 (+12) $ off 0.125 (+7) $ "<c(3,8) e*2 f(3,8,2) g(3,8,
   # cps ("0.8")
   # lpf (slow 4 $ scale 3000 500 sine)
   # lpq 0.1
-
--- slice
-
-d1 $ loopAt 2 $ slice ("[0 1?] <2*3 3*2> <4*2> 7") 8 $ sound "arc"
-  # legato 1
 
 -- cps fun
 
