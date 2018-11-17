@@ -193,7 +193,7 @@ d1 $ sound (choose ["bd","snare"]) # gain 1.2 # legato 2
 d1 $ sound (discretise 8 $ choose ["bd","snare"]) # gain 1.2 # legato 2
 
 -- struct gives structure (the value 'x' isn't used, but its structure is)
-d1 $ sound (struct "x(3,8) x*2" $ choose ["bd","snare"]) # gain 1.2 # legato 2
+d1 $ sound (struct "okonomiyaki(3,8) sushi*2" $ choose ["bd","snare"]) # gain 1.2 # legato 2
 
 -- * scan
 d1 $ jux (rev . (0.25 <~)) $ n (scan 8) # sound "sn" # speed 2
