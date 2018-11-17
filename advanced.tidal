@@ -470,7 +470,7 @@ d2 $ sound "arpy*8"
   # room 0.4 # sz saw
   # orbit 1
 
-
+hush
 
 d1 $ sound "bd sn:2"
 
