@@ -338,3 +338,14 @@ d1 $ every 2 (rev . chop 8 . fast 4) $ sound "bd sn:2"
 d1 $ off 0.25 (|* speed 2) $ sound "gabba(3,8)"
 
 once $ (chop 16 $ s "airhorn") # speed sine
+
+:t select
+
+d2 $ select (cF 0 "24")
+  [sound "snare clap",
+   jux rev $ chop 8 $ sound "bd snare cp",
+   jux rev $ chop 8 $ sound "arpy arpy:3" # speed 2
+  ]
+
+d1 $ (fast (cT 1 "22" * 8)) $ sound "bd" # speed (scale 1 2 $ cF 1 "21")
+  # cps (cF 1 "23" * 2)
