@@ -262,3 +262,7 @@ d1 $ (speed "[2 4 3 2 6 4 3 2, 0.5 0.75]")
    # (sound "bd snare clap")
 
 . -- joining together functions
+
+d1 $ every 2 rev $ every 2 (fast 2) $ sound "bd sn:2"
+
+d1 $ every 2 (rev . chop 8 . fast 2) $ sound "bd sn:2"
