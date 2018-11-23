@@ -302,7 +302,7 @@ d1 $ every 4 (ply 2) $ slow 2 $ n "0 .. 7" # sound "drum"
 -- t == take events from the first pattern
 -- f == take events from the second pattern
 d1 $ sew "t f" (sound "bd*8") (sound "cp*8")
-:t rot
+:t every
 d1 $ sew "t f" (sound "bd*8") (sound "cp*8" # speed (slow 4 $ sine + 1))
 
 d1 $ sew (slow 2 "[t f] f")
