@@ -170,8 +170,12 @@ d2 $ sound "cp(3,8)"
 d4 $ struct "x*8?" $ sound "kicklinn"
 
 d4 $ repeatCycles 4 $ struct "x*8?" $ sound "arpy" +| note (irand 16)
-
+:t repeatCycles
 d4 $ loopFirst $ struct "x*8?" $ sound "kicklinn" # speed 2 # room 0.1 # sz 0.5
+
+:t chooseBy
+
+:t every
 
 -- * wchoose
 wchoose :: [(a, Double)] -> Pattern a
@@ -302,7 +306,7 @@ d1 $ every 4 (ply 2) $ slow 2 $ n "0 .. 7" # sound "drum"
 -- t == take events from the first pattern
 -- f == take events from the second pattern
 d1 $ sew "t f" (sound "bd*8") (sound "cp*8")
-:t every
+
 d1 $ sew "t f" (sound "bd*8") (sound "cp*8" # speed (slow 4 $ sine + 1))
 
 d1 $ sew (slow 2 "[t f] f")
