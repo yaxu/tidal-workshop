@@ -170,12 +170,8 @@ d2 $ sound "cp(3,8)"
 d4 $ struct "x*8?" $ sound "kicklinn"
 
 d4 $ repeatCycles 4 $ struct "x*8?" $ sound "arpy" +| note (irand 16)
-:t repeatCycles
+
 d4 $ loopFirst $ struct "x*8?" $ sound "kicklinn" # speed 2 # room 0.1 # sz 0.5
-
-:t chooseBy
-
-:t every
 
 -- * wchoose
 wchoose :: [(a, Double)] -> Pattern a
@@ -321,7 +317,9 @@ d1 $ iter 4 $ sew (iter 4 "[t f] <f [t f]>")
 d1 $ spaceOut [1,2,0.5] $ sound "bd*2 hc:3"
 
 -- * stripe
-d1 $ jux rev $ superimpose (stripe 2) $ sound "bd mt lt ~" # speed 2
+d1 $ stripe 2 $ sound "bd mt lt ~" # speed 2
+
+:t stripe
 
 -- * superimpose
 d1 $ someCycles (jux rev . (# speed 2))
@@ -343,7 +341,7 @@ d1 $ stut 32 0.5 0.25 $ sound "bd cp:4 bd(3,8) cp:4"
   # legato 1
 
 d1 $ stut 4 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "bd cp:4 bd(3,8) cp:4"
-
+:t palindrome
 d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "bd cp:4 bd(3,8) cp:4"
   # legato 1
 
@@ -355,7 +353,7 @@ d1 $ jux rev $ iter 4 $ stut 16 0.5 (toRational <$> sine * 0.4 + 0.04) $ sound "
 -- _without_ stretching out the patterns inside it), and then a list
 -- of named patterns.. plus a list of named pattern transformations
 -- that you can apply with.
-
+hush
 let pats =
       [
         ("a", stack [n "c4 c5 g4 f4 f5 g4 e5 g4" # s "superpiano" # gain "0.7",
@@ -383,7 +381,7 @@ let pats = [("drums", s "drum clap*2"),
            ]
     fx = [("higher", (# speed 2))]
 in
-d1 $ ur 8 "[drums, melody] [drums,craziness,melody] melody:higher" pats []
+d1 $ ur 8 "[drums, melody] [drums,craziness,melody] melody:higher" pats fx
 
 
 -- type signatures
@@ -485,3 +483,21 @@ d1 $ (n "<0 1 2 3>" # sound "alphabet")
 cps (-1)
 
 cps (1.1)
+
+:t juxBy
+
+d1 $ fix ( fast 2 ) (pF "cc64" 1)
+   $ fix ( # crush 4 ) (pF "cc65" 1)
+   -- $ fix ( stut' 4 (0.125/4) ( + up "1" )) (pF "cc66" 1)
+   $ fix ( |*| speed "-1" ) (pF "cc67" 1)
+   $ fix ( (# delaytime 0.125).(# delay 0.5)) (pF "cc68" 1)
+   $ fix ( # coarse 12) (pF "cc69" 1)
+   $ s "[808bd:1(3,8), dr(7,8)]"
+   #  pF "cc64" (cF 0 "64")
+   #  pF "cc65" (cF 0 "65")
+   #  pF "cc66" (cF 0 "66")
+   #  pF "cc67" (cF 0 "67")
+   #  pF "cc68" (cF 0 "68")
+   #  pF "cc69" (cF 0 "69")
+
+d1 $ sound "bd*8"
