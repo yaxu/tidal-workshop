@@ -1,0 +1,267 @@
+
+-- *Run code*
+
+-- Put your cursor on a line and run it with shift-and-enter
+d1 $ sound "bd cp"
+
+-- *Make it stop*
+
+-- There are two ways, silence a particular pattern:
+d1 $ silence
+
+-- Or, make *everything* stop with 'hush'
+hush
+
+-- If a pattern goes over more than one line, you can run it all with
+-- ctrl-and-enter
+
+d1 $ sound "bd cp"
+  # crush 3
+
+-- Please note!! You need to leave an empty line above and below a
+-- multi-line pattern
+
+-- *Cycle tempo*
+
+-- Set the 'cycles per second' with setcps, for example to 1 cycle per
+-- second:
+setcps 1
+
+-- Run this, and it'll now play one cycle (repetition) per cycle
+-- '~' is an empty step (or rest)
+d1 $ sound "bd ~ cp sd"
+
+-- Add more steps, and it'll play them faster to fit them in the
+-- cycle:
+d1 $ sound "bd ~ cp sd bd ~ cp sd"
+
+-- It's always possible to slow the pattern down:
+d1 $ slow 2 $ sound "bd ~ cp sd bd ~ cp sd"
+
+-- Or speed it up
+d1 $ fast 2 $ sound "bd ~ cp sd bd ~ cp sd"
+
+-- *Multi-patterns*
+
+-- Use 'd2' up to 'd12' to layer up more patterns!
+d2 $ sound "bd ~ cp sd*2"
+
+-- Remember you can make them all stop with hush
+hush
+
+-- *Effects*
+
+-- The 'sound' function creates one kind of 'control pattern'. There
+-- are many other kinds! Most of them add an effect to the sound in
+-- some way. Four example 'shape' is distortion:
+d1 $ sound "bd cp ~ sd"
+  # shape "0.9"
+
+-- For single, numerical values, you can leave the double quotes off,
+-- if you want:
+d1 $ sound "bd cp ~ sd"
+  # shape 0.9
+
+-- Remember that for multi-line patterns, you need to use
+-- ctrl-enter. Make sure there is a blank line between patterns.
+
+-- A vowel filter:
+d1 $ sound "bd cp ~ sd"
+  # vowel "a"
+
+-- For reverb you set 'room' for amount going into the room, and sz
+-- for 'size' of the room
+d1 $ sound "bd cp ~ sd"
+  # room 0.3
+  # sz 0.9
+
+-- speed sets the sample playback rate, changing both the pitch and
+-- duration
+d1 $ sound "bd cp ~ sd"
+  # speed 2
+
+-- You can pattern effects if you want:
+d1 $ sound "bd cp ~ sd"
+  # speed "0.5 3"
+
+-- *Sounds*
+
+{-
+Where do these sounds come from? You can find them all on your
+computer:
+
+* Go to SuperCollider
+* File -> 'Open user support directory' -> downloaded-quarks ->
+  Dirt-Samples
+-}
+
+{-
+Want to add some more?
+
+Here's a whole load more:
+http://slab.org/tmp/extra-samples.zip
+
+Save and 'unzip' them somewhere, then in SuperCollider, run:
+
+~dirt.loadSoundFiles("/where/you/put/the/folder/extra-samples/*");
+
+(The `/*` on the end is important)
+
+Put your 'SuperDirt.start' and this line in your startup (File -> Open
+Startup File) to have it load every time you start supercollider!
+-}
+
+-- Each 'sound' is actually a folder containing one or more
+-- sounds. You can select which one with a number, using the 'n'
+-- control pattern:
+
+d1 $ sound "drum"
+  # n "1"
+
+-- The following won't really work, it'll only play one sound:
+d1 $ sound "drum"
+  # n "0 1 2 3"
+
+-- That's because if you use '#' to join control patterns together,
+-- tidal will use the 'structure' from the first one, on the left. So,
+-- things go better if we swap them:
+d1 $ n "0 1 2 3"
+  # sound "drum"
+
+-- You can also use ':' to specify the sample number in the sound pattern:
+d1 $ s "drum:0 drum:1 drum:2 drum:3"
+
+-- This is longer but you can mix and match
+d1 $ s "drum:0 drum:1 arpy:2 arpy:5"
+
+-- *Mini-notation*
+
+-- By "mini notation", I mean the stuff between double quotes. It's
+-- like a mini language inside Tidal, designed for describing
+-- sequences with as little typing as possible.
+
+d1 $ s "bd sd"
+
+-- You can fit a subpattern into a step with []:
+
+d1 $ s "bd [sd bd] ~ bd"
+
+-- You can 'speed up' steps so they play multiple times::
+
+d1 $ s "bd*4 sd*2"
+
+-- You can 'slow down' steps so they don't play every time:
+
+d1 $ s "bd*2 sd/2"
+
+-- It has 'Euclidean' patterns built in, here's three hits spread as
+-- evenly possible over eight steps:
+
+d1 $ s "sd(3,8)"
+
+-- You can fit more than one subpattern into a step by separating them
+-- with a comma:
+
+d1 $ s "[sd cp bd, arpy arpy:2]"
+
+-- You can align the patterns step-wise to create polyrhythms:
+
+d1 $ s "{sd cp bd, arpy arpy:2}"
+
+-- This is already enough to do some complex sequences:
+
+d1 $ s "{cpu:4*6 cpu:5*2 cpu:4 cpu:6, cpu:0 cpu:8*2 cpu:4*3} [cpu:2 cpu:3, cpu:0(3,8)]"
+
+-- Again, often is easier to pattern the sampleset separately from the
+-- sample number.  Here's an example (note how the structure is formed
+-- from the left)
+
+d1 $ n "{4*6 5*2 4 6, 9 8*2 4*3} [2 3, 0(3,8)]"
+  # s "cpu"
+
+-- *Functions*
+
+-- There are a lot of functions for manipulating patterns in different ways
+-- There are also a lot of functions for changing how other functions work
+-- Lets look at some!
+
+-- A simple scale:
+d1 $ n "0 1 2 3" # sound "arpy"
+
+-- Reverse it:
+d1 $ rev $ n "0 1 2 3" # sound "arpy"
+
+-- 'rev' is a function that takes a pattern as a single input
+-- (sometimes called an 'argument'). The dollar '$' tells tidal to
+-- give everything on the right to it.
+
+-- If you miss it out, you get an error. This is because Tidal thinks
+-- you are trying to give 'rev' the single word 'n', which doesn't make sense.
+d1 $ rev n "0 1 2 3" # sound "arpy"
+
+-- An alternative is to wrap the input in brackets, to make clear that
+-- it needs to be worked out together before being passed to
+-- 'rev'. This works:
+d1 $ rev (n "0 1 2 3" # sound "arpy")
+
+-- '$' is handy though, as you don't have to match opening and closing
+-- brackets.
+
+-- It takes a while to get used to, but remember that
+-- '#' - joins two control patterns into one
+-- '$' - gives everything on the right to the function on the left
+
+-- We already saw 'fast', which takes two inputs, a number to speed a
+-- pattern up by, and the pattern itself:
+d1 $ fast 4 $ sound "bd sd"
+
+-- Note: if a function needs more than one input, the '$' trick only
+-- works with the final one. So this *doesn't* work:
+d1 $ fast $ 4 $ sound "bd sd"
+
+-- You can pattern that number:
+d1 $ fast "4 8" $ sound "bd sd"
+
+-- 'fast' speeds up a pattern. 'hurry' does the same but also speeds
+-- up playback of the sound:
+d1 $ hurry "4 8" $ sound "bd sd"
+
+-- 'every' lets you choose how often a function has an effect. For
+-- example, to reverse a pattern every third cycle:
+
+d1 $ every 3 rev $ n "0(3,8) 1 2*2 3*3" # sound "arpy"
+
+-- You can also use an effect as a function, like this:
+d1 $ every 3 (# speed 2) $ n "0(3,8) 1 2*2 3*3" # sound "arpy"
+
+-- That doubles the playback rate every third cycle.
+
+-- Instead of using '|+', you can use '|+', to add control patterns
+-- together. So here we add '2' to the 'n' pattern every third cycle:
+d1 $ every 3 (|+ n 2) $ n "0(3,8) 1 2*2 3*3" # sound "arpy"
+
+-- 'off' creates what is called a 'canon'. The following plays the
+-- original, but plays another version on top of it, following 1/8th
+-- of a cycle later, and with '7' added to 'n'
+d1 $ off 0.125 (|+ n 7) $ n "0(3,8) 1 2*2 3*3" # sound "arpy"
+
+-- *Synths*
+
+-- Superdirt also comes with some built-in software
+-- synthesisers. Instead of playing samples, you can play any
+-- note. You can specify them by note number:
+
+d1 $ n "c e f g" # sound "superpiano"
+
+-- You can do sharps with 's', flats with 'f', and specify octave by number:
+d1 $ n "cs4 ef7 fs g3" # sound "supermandolin"
+
+d1 $ slow 2 $ off 0.125 (|+ n 12)
+  $ off 0.25 (|+ n 7) $ n "c(3,8) e(2,8) f(3,8,2) g(3,8)"
+  # sound "superpiano"
+
+
+-- *More!*
+
+-- More workshop resources here: https://github.com/yaxu/tidal-worksheets
+-- + don't forget the website: https://tidalcycles.org/
