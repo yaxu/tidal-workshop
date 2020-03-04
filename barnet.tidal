@@ -99,7 +99,7 @@ computer:
 Want to add some more?
 
 Here's a whole load more:
-http://slab.org/tmp/extra-samples.zip
+http://slab.org/tmp/samples-extra.zip
 
 Save and 'unzip' them somewhere, then in SuperCollider, run:
 
@@ -259,7 +259,6 @@ d1 $ n "cs4 ef7 fs g3" # sound "supermandolin"
 d1 $ slow 2 $ off 0.125 (|+ n 12)
   $ off 0.25 (|+ n 7) $ n "c(3,8) e(2,8) f(3,8,2) g(3,8)"
   # sound "superpiano"
-
 
 -- *More!*
 
